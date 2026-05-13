@@ -1,0 +1,2196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>БАРВИХА ГРУПП — Сеть премиум кальянных</title>
+<meta name="description" content="Barvikha Group — сеть премиум кальянных в 9 городах России и СНГ. 27 заведений, европейская кухня, авторский бар, VIP-комнаты. Электрочаша — без угля, без горечи."/>
+<meta property="og:title" content="Барвиха Групп — Сеть премиум кальянных"/>
+<meta property="og:description" content="27 заведений · 9 городов · Премиум кальяны, авторская кухня, бар, VIP. Забронируй стол прямо сейчас."/>
+<meta property="og:image" content="https://barvikhagroup.ru/img/main/large-logo.png"/>
+<meta property="og:type" content="website"/>
+<meta name="theme-color" content="#C9A84C"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23000'/><text y='24' x='4' font-size='24' fill='%23C9A84C' font-family='serif' font-weight='bold'>B</text></svg>"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#000;--s1:#060606;--s2:#0d0d0d;--s3:#111;
+  --gold:#C9A84C;--gold-lt:#E8D5A3;--gold-dk:#8B6914;
+  --gold-grad:linear-gradient(135deg,#8B6914 0%,#C9A84C 30%,#E8D5A3 55%,#C9A84C 75%,#8B6914 100%);
+  --white:#F5F0E8;--muted:rgba(245,240,232,.38);--border:rgba(255,255,255,.06);
+  --b-gold:rgba(201,168,76,.18);--b-gold2:rgba(201,168,76,.35);
+  --glow:0 0 50px rgba(201,168,76,.25),0 0 100px rgba(201,168,76,.1);
+  --hd:'Montserrat',sans-serif;--bd:'Inter',sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1)
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--white);font-family:var(--bd);font-weight:300;overflow-x:hidden;line-height:1.65}
+a{color:inherit;text-decoration:none}
+button{font-family:var(--bd)}
+::-webkit-scrollbar{width:2px}
+::-webkit-scrollbar-track{background:#000}
+::-webkit-scrollbar-thumb{background:var(--gold-dk)}
+
+/* ═══ GOLD TEXT ═══ */
+.gold-text{
+  background:var(--gold-grad);
+  background-size:200% 100%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation:goldShimmer 10s ease-in-out infinite
+}
+@keyframes goldShimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+/* ═══ NAV ═══ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
+  padding:1.75rem 3rem;
+  transition:all .5s var(--ease)
+}
+.nav.on{
+  background:rgba(0,0,0,.92);
+  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  padding:1.1rem 3rem;
+  border-bottom:1px solid var(--b-gold)
+}
+.nav-logo{display:flex;align-items:center;gap:.9rem;grid-column:2;justify-self:center}
+.nav-logo-img{height:36px;width:auto;display:block;filter:brightness(1)}
+.nav-r{display:flex;align-items:center;gap:1.25rem;grid-column:3;justify-self:end}
+.nav-book{
+  font-family:var(--hd);font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:#000;background:var(--gold);padding:.7rem 1.6rem;border:none;cursor:pointer;
+  position:relative;overflow:hidden;transition:box-shadow .3s
+}
+.nav-book::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 40%,rgba(255,255,255,.3) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s}
+.nav-book:hover::after{transform:translateX(100%)}
+.nav-book:hover{box-shadow:var(--glow)}
+.brg{background:none;border:none;cursor:pointer;display:flex;flex-direction:column;gap:5px;padding:4px}
+.brg span{display:block;width:22px;height:1px;background:var(--white);transition:all .35s;transform-origin:center}
+.brg.on span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.brg.on span:nth-child(2){opacity:0;transform:scaleX(0)}
+.brg.on span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* ═══ BURGER OVERLAY ═══ */
+.mov{position:fixed;inset:0;z-index:190;background:rgba(0,0,0,.97);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .45s}
+.mov.on{opacity:1;pointer-events:all}
+.mov ul{list-style:none;text-align:center}
+.mov li{margin:1rem 0;opacity:0;transform:translateY(18px);transition:all .38s}
+.mov.on li:nth-child(1){opacity:1;transform:none;transition-delay:.06s}
+.mov.on li:nth-child(2){opacity:1;transform:none;transition-delay:.11s}
+.mov.on li:nth-child(3){opacity:1;transform:none;transition-delay:.16s}
+.mov.on li:nth-child(4){opacity:1;transform:none;transition-delay:.21s}
+.mov.on li:nth-child(5){opacity:1;transform:none;transition-delay:.26s}
+.mov a{font-family:var(--hd);font-size:clamp(1.6rem,4vw,3rem);font-weight:200;letter-spacing:.1em;color:var(--white);transition:color .25s}
+.mov a:hover{color:var(--gold)}
+
+/* ═══ HERO ═══ */
+.hero{
+  min-height:100vh;position:relative;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;overflow:hidden;
+  padding:8rem 1.5rem 3rem
+}
+/* Tree background — main (центральное, появляется при скролле) */
+.hero-tree-bg{
+  position:fixed;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:min(620px,72vw);height:auto;
+  opacity:0;
+  filter:sepia(1) saturate(5) hue-rotate(-5deg) brightness(1);
+  pointer-events:none;z-index:1;will-change:opacity,transform;
+  transition:opacity .4s linear
+}
+/* Призрачные маленькие деревья — фон с глубиной */
+.ghost-trees{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.ghost-trees img{
+  position:absolute;
+  filter:sepia(1) saturate(4) hue-rotate(-5deg) brightness(.9);
+  pointer-events:none;will-change:transform
+}
+.ghost-trees img:nth-child(1){top:8%;left:6%;width:90px;opacity:.018}
+.ghost-trees img:nth-child(2){top:32%;left:88%;width:70px;opacity:.022}
+.ghost-trees img:nth-child(3){top:62%;left:4%;width:120px;opacity:.015}
+.ghost-trees img:nth-child(4){top:18%;left:72%;width:55px;opacity:.025}
+.ghost-trees img:nth-child(5){top:78%;left:82%;width:85px;opacity:.018}
+.ghost-trees img:nth-child(6){top:48%;left:50%;width:48px;opacity:.022;transform:translateX(-50%)}
+.ghost-trees img:nth-child(7){top:88%;left:30%;width:64px;opacity:.014}
+/* Atmospheric background layers */
+.hero-atm{position:absolute;inset:0;z-index:0}
+.hero-atm::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 15% 40%,rgba(201,168,76,.09) 0%,transparent 50%),
+    radial-gradient(ellipse at 85% 25%,rgba(201,168,76,.06) 0%,transparent 45%),
+    radial-gradient(ellipse at 50% 90%,rgba(150,100,20,.05) 0%,transparent 40%)
+}
+.hero-grid-bg{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(201,168,76,.022) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(201,168,76,.022) 1px,transparent 1px);
+  background-size:70px 70px
+}
+.hero-vign{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 25%,rgba(0,0,0,.75) 100%)}
+#pc{position:absolute;inset:0;z-index:1;pointer-events:none}
+
+.hero-inner{position:relative;z-index:2;width:100%;max-width:1100px;text-align:center}
+
+/* Brand block */
+.hero-eyebrow{
+  font-family:var(--hd);font-size:.6rem;font-weight:500;letter-spacing:.38em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1.5rem;
+  opacity:0;animation:fu 1s var(--ease) forwards .2s
+}
+.hero-brand-name{
+  font-family:var(--hd);font-size:clamp(3.5rem,11vw,9rem);font-weight:200;
+  letter-spacing:.18em;line-height:.95;
+  background:var(--gold-grad);background-size:200% 100%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:goldShimmer 10s ease-in-out infinite, fu 1.1s var(--ease) forwards .35s;
+  opacity:0
+}
+.hero-brand-sub{
+  font-family:var(--hd);font-size:clamp(.7rem,2vw,1.1rem);font-weight:300;letter-spacing:.6em;
+  color:rgba(245,240,232,.35);margin:.5rem 0 .4rem;
+  opacity:0;animation:fu 1s var(--ease) forwards .5s
+}
+.hero-tagline{
+  font-family:var(--hd);font-size:clamp(.6rem,1.2vw,.75rem);font-weight:400;letter-spacing:.2em;
+  text-transform:uppercase;color:rgba(245,240,232,.3);margin-bottom:3rem;
+  opacity:0;animation:fu 1s var(--ease) forwards .65s
+}
+
+/* ── CITY GRID ── */
+.hero-city-label{
+  font-family:var(--hd);font-size:.52rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1.25rem;display:flex;align-items:center;justify-content:center;gap:1.5rem;
+  opacity:0;animation:fu 1s var(--ease) forwards .8s
+}
+.hero-city-label::before,.hero-city-label::after{content:'';flex:1;max-width:80px;height:1px;background:linear-gradient(to right,transparent,var(--b-gold2))}
+.hero-city-label::after{background:linear-gradient(to left,transparent,var(--b-gold2))}
+
+.city-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--b-gold);
+  border:1px solid var(--b-gold);
+  margin:0 auto 2.5rem;
+  opacity:0;animation:fu 1s var(--ease) forwards .95s
+}
+.city-card{
+  background:var(--s1);padding:1.75rem 1.75rem 1.5rem;
+  min-height:140px;position:relative;overflow:hidden;
+  cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;
+  border:none;text-align:left;color:var(--white);
+  transition:background .35s var(--ease)
+}
+.city-card.featured{
+  grid-column:1/3;grid-row:1/3;
+  min-height:280px;padding:2.25rem
+}
+.city-card::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:2px;
+  background:var(--gold-grad);transform:scaleY(0);transform-origin:bottom;
+  transition:transform .4s var(--ease)
+}
+.city-card::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(201,168,76,.06) 0%,transparent 60%);
+  opacity:0;transition:opacity .4s
+}
+.city-card:hover{background:#080808}
+.city-card:hover::before{transform:scaleY(1)}
+.city-card:hover::after{opacity:1}
+.city-card:hover .cc-name{
+  background:var(--gold-grad);background-size:200% 100%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;animation:goldShimmer 4s ease-in-out infinite
+}
+.city-card:hover .cc-arr{opacity:1;transform:translateX(0)}
+.city-card:hover .cc-bg{color:rgba(201,168,76,.07)}
+
+.cc-top{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
+.cc-num{
+  font-family:var(--hd);font-size:.46rem;font-weight:700;letter-spacing:.22em;
+  color:var(--gold);opacity:.7
+}
+.cc-tag{
+  font-family:var(--hd);font-size:.42rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);border:1px solid var(--b-gold);padding:.2rem .55rem;opacity:.8
+}
+.cc-bottom{position:relative;z-index:1}
+.cc-name{
+  font-family:var(--hd);font-weight:200;letter-spacing:.06em;
+  font-size:clamp(1.3rem,2.5vw,2rem);display:block;margin-bottom:.6rem;
+  transition:all .3s var(--ease);line-height:1.1
+}
+.city-card.featured .cc-name{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:.8rem}
+.cc-meta{display:flex;align-items:center;justify-content:space-between}
+.cc-count{font-size:.6rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.cc-status{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--hd);font-size:.46rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;padding:.3rem .55rem;margin-bottom:.55rem;border:1px solid var(--b-gold)}
+.cc-status.soon{color:rgba(245,240,232,.55);background:rgba(255,255,255,.02)}
+.cc-status.today{color:#000;background:var(--gold);border-color:var(--gold);animation:goldShimmer 6s ease-in-out infinite}
+.cc-status .cs-d{width:5px;height:5px;border-radius:50%;background:currentColor;animation:urgPulse 1.6s ease-in-out infinite}
+.city-card.is-soon{opacity:.55}
+.city-card.is-soon:hover{opacity:.78}
+@keyframes urgPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.cc-arr{
+  color:var(--gold);font-size:1rem;
+  opacity:0;transform:translateX(-6px);
+  transition:all .35s var(--ease)
+}
+.cc-bg{
+  position:absolute;right:-.05em;bottom:-.15em;
+  font-family:var(--hd);font-size:5.5rem;font-weight:800;letter-spacing:-.04em;
+  color:rgba(201,168,76,.03);line-height:1;
+  pointer-events:none;user-select:none;
+  transition:color .4s;
+  z-index:0
+}
+.city-card.featured .cc-bg{font-size:9rem}
+@media(max-width:768px){
+  .city-grid{grid-template-columns:repeat(2,1fr)}
+  .city-card.featured{grid-column:1/-1;grid-row:auto;min-height:200px}
+  .cc-bg{font-size:4rem}
+  .city-card.featured .cc-bg{font-size:6rem}
+}
+@media(max-width:480px){
+  .city-grid{grid-template-columns:1fr}
+  .city-card,.city-card.featured{grid-column:auto;grid-row:auto;min-height:120px}
+}
+
+/* Stats row */
+.hero-stats{
+  display:flex;align-items:center;justify-content:center;gap:0;
+  border:1px solid var(--b-gold);background:rgba(0,0,0,.6);backdrop-filter:blur(10px);
+  opacity:0;animation:fu 1s var(--ease) forwards 1.1s
+}
+.hstat{padding:1rem 2.25rem;text-align:center;flex:1}
+.hstat+.hstat{border-left:1px solid var(--b-gold)}
+.hstat-n{
+  font-family:var(--hd);font-size:1.5rem;font-weight:200;display:block;letter-spacing:-.02em;
+  background:var(--gold-grad);background-size:200% 100%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:goldShimmer 10s ease-in-out infinite
+}
+.hstat-l{font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-top:.2rem}
+
+/* Scroll indicator */
+.hero-scroll{
+  position:absolute;bottom:2.5rem;right:3rem;z-index:2;
+  display:flex;align-items:center;gap:.75rem;
+  opacity:0;animation:fi 1s forwards 1.8s
+}
+.hero-scroll-txt{font-family:var(--hd);font-size:.52rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.2);writing-mode:vertical-rl}
+.hero-scroll-ln{width:1px;height:44px;background:linear-gradient(to bottom,var(--gold),transparent);animation:sl 2.8s ease-in-out infinite}
+
+@keyframes fu{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+@keyframes sl{0%{transform:scaleY(0);transform-origin:top;opacity:1}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom;opacity:0}}
+
+/* ═══ SECTIONS ═══ */
+.section{padding:9rem 0;position:relative}
+.section::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--b-gold),transparent)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 3rem}
+.sec-lbl{
+  font-family:var(--hd);font-size:.56rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--gold);display:block;margin-bottom:.9rem
+}
+.sec-h2{
+  font-family:var(--hd);font-size:clamp(2rem,4.5vw,3.5rem);font-weight:200;
+  letter-spacing:.06em;line-height:1.15
+}
+
+/* ═══ REVEAL ═══ */
+.rv{opacity:0;transform:translateY(32px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.18s}.d3{transition-delay:.26s}
+.d4{transition-delay:.34s}.d5{transition-delay:.42s}
+
+/* ═══ FEAT MODAL ═══ */
+.feat-modal{
+  position:fixed;inset:0;z-index:500;
+  background:rgba(0,0,0,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  display:flex;align-items:center;justify-content:center;padding:1.5rem;
+  opacity:0;pointer-events:none;transition:opacity .35s var(--ease)
+}
+.feat-modal.active{opacity:1;pointer-events:all}
+.fm-wrap{
+  background:var(--s1);border:1px solid var(--b-gold);
+  max-width:540px;width:100%;position:relative;padding:3rem;
+  opacity:0;transform:translateY(20px) scale(.97);
+  transition:opacity .4s var(--ease),transform .4s var(--ease)
+}
+.feat-modal.active .fm-wrap{opacity:1;transform:none}
+.fm-close{
+  position:absolute;top:1rem;right:1rem;
+  background:transparent;border:1px solid var(--border);color:var(--muted);
+  width:32px;height:32px;font-size:1.2rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:all .25s;font-family:var(--hd)
+}
+.fm-close:hover{border-color:var(--gold);color:var(--gold)}
+.fm-tag{
+  font-family:var(--hd);font-size:.48rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--gold);border:1px solid var(--b-gold);padding:.3rem .7rem;display:inline-block;margin-bottom:.85rem
+}
+.fm-title{font-family:var(--hd);font-size:2rem;font-weight:200;letter-spacing:.08em;margin-bottom:.6rem}
+.fm-desc{font-size:.84rem;color:var(--muted);line-height:1.9;margin-bottom:1.5rem}
+.fm-points{display:flex;flex-direction:column;gap:.55rem;margin-bottom:2rem}
+.fm-point{display:flex;align-items:center;gap:.85rem;font-size:.82rem;color:var(--white)}
+.fm-point::before{content:'';width:5px;height:5px;background:var(--gold);border-radius:50%;flex-shrink:0}
+.fm-cta{
+  font-family:var(--hd);font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:#000;background:var(--gold);padding:1rem 2rem;border:none;cursor:pointer;
+  width:100%;position:relative;overflow:hidden;transition:box-shadow .3s
+}
+.fm-cta::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 40%,rgba(255,255,255,.28) 50%,transparent 60%);transform:translateX(-100%);transition:transform .55s}
+.fm-cta:hover::after{transform:translateX(100%)}
+.fm-cta:hover{box-shadow:var(--glow)}
+
+/* ═══ INDEX GALLERY ═══ */
+.idx-gal{background:var(--bg);padding:0;border-top:1px solid var(--b-gold);border-bottom:1px solid var(--b-gold)}
+.ig-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  grid-template-rows:260px 260px;
+  gap:2px;background:var(--b-gold)
+}
+.ig-item{overflow:hidden;position:relative}
+.ig-item.ig-main{grid-row:1/3}
+.ig-item img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .7s cubic-bezier(.22,.61,.36,1)
+}
+.ig-item:hover img{transform:scale(1.04)}
+.ig-item::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.45) 0%,transparent 50%);
+  pointer-events:none
+}
+@media(max-width:768px){
+  .ig-grid{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px 200px}
+  .ig-item.ig-main{grid-row:auto;grid-column:1/-1}
+}
+@media(max-width:480px){
+  .ig-grid{grid-template-columns:1fr;grid-template-rows:repeat(5,220px)}
+}
+
+/* ═══ FEATURES ═══ */
+.feat-bg{background:var(--s1)}
+.feat-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:4rem;flex-wrap:wrap;gap:1.5rem}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--b-gold);border:1px solid var(--b-gold)}
+.feat{
+  background:var(--s1);padding:3rem 2.5rem;
+  position:relative;overflow:hidden;transition:background .4s var(--ease);
+  cursor:pointer;text-align:center;display:flex;flex-direction:column;align-items:center
+}
+.feat::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(201,168,76,.05) 0%,transparent 60%);
+  opacity:0;transition:opacity .4s
+}
+.feat:hover{background:#090909}
+.feat:hover::after{opacity:1}
+.feat-ico{margin-bottom:1.5rem;position:relative;z-index:1}
+.feat-ico svg{width:52px;height:52px}
+.feat-t{
+  font-family:var(--hd);font-size:.8rem;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--white);margin-bottom:.75rem;position:relative;z-index:1
+}
+.feat-p{font-size:.84rem;color:var(--muted);line-height:1.75;position:relative;z-index:1}
+.feat-cta{
+  margin-top:1.5rem;font-family:var(--hd);font-size:.52rem;font-weight:600;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.5rem;
+  position:relative;z-index:1;transition:gap .3s var(--ease)
+}
+.feat:hover .feat-cta{gap:.9rem}
+.feat.feat-wide{
+  grid-column:1/-1;flex-direction:row;align-items:center;
+  text-align:left;padding:2.25rem 3rem;gap:3rem;justify-content:flex-start
+}
+.feat.feat-wide .feat-p{max-width:480px}
+.feat.feat-wide .feat-ico{margin-bottom:0;flex-shrink:0}
+.feat.feat-wide .feat-cta{margin-top:.5rem}
+@media(max-width:768px){.feat.feat-wide{flex-direction:column;text-align:center;padding:3rem 2.5rem}}
+
+/* ═══ FRANCHISE ═══ */
+.fr-bg{background:var(--bg);position:relative;overflow:hidden}
+.fr-bg::before{
+  content:'';position:absolute;left:-10%;top:50%;
+  width:720px;height:720px;transform:translateY(-50%);
+  background:radial-gradient(circle,rgba(201,168,76,.07) 0%,rgba(201,168,76,.025) 35%,transparent 65%);
+  pointer-events:none;filter:blur(8px)
+}
+.fr-bg::after{
+  content:'';position:absolute;right:-15%;bottom:-10%;
+  width:520px;height:520px;
+  background:radial-gradient(circle,rgba(201,168,76,.04) 0%,transparent 60%);
+  pointer-events:none
+}
+.fr-inner{display:grid;grid-template-columns:5fr 7fr;gap:6rem;align-items:center;position:relative;z-index:1}
+.fr-photo-wrap{position:relative}
+/* Дышащее золотое свечение позади фото */
+.fr-photo-wrap::before{
+  content:'';position:absolute;inset:-50px;z-index:-1;
+  background:radial-gradient(ellipse at 38% 48%,rgba(201,168,76,.22) 0%,rgba(201,168,76,.08) 35%,transparent 65%);
+  filter:blur(38px);pointer-events:none;
+  animation:photoAura 6s ease-in-out infinite
+}
+@keyframes photoAura{
+  0%,100%{opacity:.55;transform:scale(1)}
+  50%{opacity:.95;transform:scale(1.04)}
+}
+.fr-photo{
+  width:100%;aspect-ratio:3/4;max-height:620px;
+  position:relative;overflow:visible;
+  background:transparent;border:none
+}
+.fr-photo img.fr-static{
+  width:100%;height:100%;display:block;
+  position:absolute;inset:0;
+  object-fit:cover;object-position:top center;
+  filter:saturate(.94) contrast(1.05) drop-shadow(0 25px 60px rgba(0,0,0,.7));
+  opacity:0;transform:translateY(18px) scale(.985);
+  transition:opacity 1.4s var(--ease),transform 1.4s var(--ease),filter .8s
+}
+.fr-photo.in img.fr-static{opacity:1;transform:none}
+.fr-photo.in:hover img.fr-static{
+  filter:saturate(1) contrast(1.08) drop-shadow(0 25px 80px rgba(201,168,76,.18)) drop-shadow(0 25px 60px rgba(0,0,0,.7));
+  transform:scale(1.015)
+}
+.fr-photo-overlay{
+  position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(to top,rgba(0,0,0,.92) 0%,rgba(0,0,0,.45) 28%,transparent 55%);
+  opacity:0;transition:opacity .9s ease .6s
+}
+.fr-photo.in .fr-photo-overlay{opacity:1}
+.fr-caption{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:2.4rem 2rem 1.8rem;
+  display:flex;flex-direction:column;align-items:flex-start;gap:.55rem;
+  z-index:3;
+  opacity:0;transform:translateY(12px);
+  transition:opacity .9s ease .9s,transform .9s ease .9s
+}
+.fr-photo.in .fr-caption{opacity:1;transform:none}
+.fr-photo-role{
+  font-family:var(--hd);font-size:.46rem;font-weight:600;
+  letter-spacing:.32em;text-transform:uppercase;color:var(--gold);
+  display:flex;align-items:center;gap:.7rem
+}
+.fr-photo-role::before{content:'';width:24px;height:1px;background:var(--gold)}
+.fr-photo-name{
+  position:relative;z-index:1;
+  font-family:var(--hd);font-size:1.08rem;font-weight:300;letter-spacing:.08em;color:var(--white)
+}
+.fr-photo-quote{
+  font-family:var(--bd);font-size:.74rem;font-style:italic;line-height:1.65;
+  color:rgba(245,240,232,.5);margin-top:.3rem;max-width:90%
+}
+/* Stats - inline with subtle separators and animated underline */
+.fr-nums{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  margin:2.5rem 0 2.5rem;
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border)
+}
+.frn{
+  background:transparent;padding:1.85rem 1.4rem 1.65rem;
+  position:relative;text-align:left;
+  transition:background .45s var(--ease)
+}
+.frn+.frn::before{
+  content:'';position:absolute;left:0;top:22%;bottom:22%;width:1px;
+  background:linear-gradient(to bottom,transparent,var(--border) 30%,var(--border) 70%,transparent)
+}
+.frn::after{
+  content:'';position:absolute;left:0;right:0;bottom:-1px;height:1px;
+  background:var(--gold);transform:scaleX(0);transform-origin:left;
+  transition:transform .55s var(--ease)
+}
+.frn:hover{background:rgba(201,168,76,.025)}
+.frn:hover::after{transform:scaleX(1)}
+.frn:hover .frn-v{transform:translateY(-1px)}
+.frn-v{
+  font-family:var(--hd);font-size:1.65rem;font-weight:200;display:block;letter-spacing:-.01em;
+  background:var(--gold-grad);background-size:200% 100%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:goldShimmer 10s ease-in-out infinite;
+  transition:transform .35s var(--ease)
+}
+.frn-l{font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);display:block;margin-top:.55rem}
+.fr-txt p{font-size:.92rem;color:var(--muted);line-height:1.9;margin-bottom:1.5rem;max-width:46rem}
+/* Steps - vertical timeline */
+.fr-steps-lbl{
+  font-family:var(--hd);font-size:.5rem;font-weight:600;letter-spacing:.32em;
+  text-transform:uppercase;color:var(--gold);
+  display:flex;align-items:center;gap:.8rem;margin-bottom:1.1rem
+}
+.fr-steps-lbl::before{content:'';width:24px;height:1px;background:var(--gold)}
+.fr-steps{position:relative;padding-left:2.1rem}
+.fr-steps::before{
+  content:'';position:absolute;left:.55rem;top:1.4rem;bottom:1.4rem;width:1px;
+  background:linear-gradient(to bottom,transparent,rgba(201,168,76,.45) 15%,rgba(201,168,76,.25) 50%,rgba(201,168,76,.45) 85%,transparent)
+}
+.fr-step{
+  display:flex;gap:1.4rem;padding:1.4rem 0;
+  position:relative;border-bottom:1px solid var(--border);
+  transition:transform .4s var(--ease),padding-left .4s var(--ease)
+}
+.fr-step:last-child{border-bottom:none}
+.fr-step::before{
+  content:'';position:absolute;left:-2.1rem;top:1.85rem;
+  width:13px;height:13px;border-radius:50%;
+  background:var(--bg);border:1px solid var(--gold);
+  box-shadow:0 0 0 4px var(--bg);
+  transition:all .4s var(--ease)
+}
+.fr-step::after{
+  content:'';position:absolute;left:calc(-2.1rem + 4px);top:calc(1.85rem + 4px);
+  width:5px;height:5px;border-radius:50%;
+  background:var(--gold);transform:scale(0);
+  transition:transform .4s var(--ease)
+}
+.fr-step:hover{transform:translateX(6px)}
+.fr-step:hover::before{
+  border-color:var(--gold);box-shadow:0 0 0 4px var(--bg),0 0 18px rgba(201,168,76,.5)
+}
+.fr-step:hover::after{transform:scale(1)}
+.fr-step-n{
+  font-family:var(--hd);font-size:.6rem;font-weight:700;letter-spacing:.22em;
+  color:var(--gold);min-width:32px;padding-top:3px;flex-shrink:0;
+  opacity:.55;transition:opacity .4s
+}
+.fr-step:hover .fr-step-n{opacity:1}
+.fr-step-t{
+  font-family:var(--hd);font-size:.92rem;font-weight:400;letter-spacing:.05em;
+  margin-bottom:.3rem;transition:color .35s
+}
+.fr-step:hover .fr-step-t{color:var(--gold)}
+.fr-step-p{font-size:.78rem;color:var(--muted);line-height:1.7}
+.fr-cta{
+  display:inline-flex;align-items:center;gap:.9rem;margin-top:2.25rem;
+  font-family:var(--hd);font-size:.6rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+  color:#000;background:var(--gold);padding:1.15rem 2.6rem;border:none;cursor:pointer;
+  position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s
+}
+.fr-cta::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 40%,rgba(255,255,255,.28) 50%,transparent 60%);transform:translateX(-100%);transition:transform .55s}
+.fr-cta:hover::after{transform:translateX(100%)}
+.fr-cta:hover{box-shadow:0 12px 40px -8px rgba(201,168,76,.45),var(--glow);transform:translateY(-2px)}
+/* Urgency-strip — живые индикаторы */
+.fr-urgency{display:grid;grid-template-columns:repeat(3,1fr);gap:.65rem;margin:2rem 0 1.5rem}
+.fr-urg{
+  background:linear-gradient(135deg,rgba(201,168,76,.07),rgba(201,168,76,.02));
+  border:1px solid var(--b-gold);padding:.95rem 1.1rem;
+  position:relative;overflow:hidden
+}
+.fr-urg::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gold-grad)}
+.fr-urg-dot{
+  display:inline-block;width:6px;height:6px;border-radius:50%;background:#5dd95d;
+  margin-right:.45rem;vertical-align:middle;
+  box-shadow:0 0 8px rgba(93,217,93,.6);animation:urgPulse 1.6s ease-in-out infinite
+}
+@keyframes urgPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.fr-urg-l{font-family:var(--hd);font-size:.42rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,240,232,.5);display:block;margin-bottom:.35rem}
+.fr-urg-v{font-family:var(--hd);font-size:.95rem;font-weight:300;letter-spacing:.02em;color:var(--white);display:flex;align-items:baseline}
+.fr-urg-v b{font-weight:500;
+  background:var(--gold-grad);background-size:200% 100%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin-right:.4rem;font-size:1.2rem;animation:goldShimmer 10s ease-in-out infinite}
+/* Inline lead form */
+.fr-lead{
+  margin-top:1.85rem;
+  padding:1.7rem 1.6rem 1.5rem;border:1px solid var(--b-gold);
+  background:linear-gradient(135deg,rgba(201,168,76,.04),rgba(0,0,0,.3));
+  position:relative;overflow:hidden
+}
+.fr-lead::before{
+  content:'';position:absolute;top:-1px;left:-1px;width:40px;height:40px;
+  border-top:1.5px solid var(--gold);border-left:1.5px solid var(--gold);pointer-events:none
+}
+.fr-lead::after{
+  content:'';position:absolute;bottom:-1px;right:-1px;width:40px;height:40px;
+  border-bottom:1.5px solid var(--gold);border-right:1.5px solid var(--gold);pointer-events:none
+}
+.fr-lead-hd{font-family:var(--hd);font-size:1.05rem;font-weight:300;letter-spacing:.06em;color:var(--white);margin-bottom:.4rem}
+.fr-lead-sub{font-size:.78rem;color:var(--muted);margin-bottom:1.2rem;line-height:1.65}
+.fr-form{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.fr-form input,.fr-form select{
+  width:100%;background:rgba(0,0,0,.4);border:1px solid var(--border);color:var(--white);
+  font-family:var(--bd);font-size:.84rem;font-weight:300;padding:.95rem 1.05rem;outline:none;
+  transition:border-color .3s,background .3s;border-radius:0;-webkit-appearance:none;appearance:none
+}
+.fr-form input::placeholder{color:rgba(255,255,255,.2)}
+.fr-form select option{background:#0d0d0d}
+.fr-form input:focus,.fr-form select:focus{border-color:var(--gold);background:rgba(201,168,76,.04)}
+.fr-form .frf-full{grid-column:1/-1}
+.fr-form .fr-cta{margin-top:.45rem;width:100%;justify-content:center;padding:1.1rem 2rem}
+.fr-lead-note{font-size:.66rem;color:rgba(255,255,255,.3);margin-top:.85rem;text-align:center;letter-spacing:.04em}
+
+/* ═══ TESTIMONIALS — ИСТОРИИ ПАРТНЁРОВ ═══ */
+.tst-bg{background:var(--s1);position:relative;overflow:hidden}
+.tst-bg::before{
+  content:'';position:absolute;top:-15%;right:-10%;width:680px;height:680px;
+  background:radial-gradient(circle,rgba(201,168,76,.05) 0%,transparent 65%);
+  pointer-events:none;filter:blur(20px)
+}
+.tst-hd{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:3.5rem;position:relative;z-index:1}
+.tst-hd-r{font-size:.86rem;color:var(--muted);max-width:380px;line-height:1.85}
+.tst-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;position:relative;z-index:1}
+.tst-card{
+  background:var(--s2);border:1px solid var(--border);
+  padding:2.1rem 1.85rem 1.85rem;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;gap:1.25rem;
+  transition:border-color .4s,transform .4s var(--ease),box-shadow .4s
+}
+.tst-card::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gold-grad);
+  transform:scaleY(0);transform-origin:bottom;transition:transform .45s var(--ease)
+}
+.tst-card::after{
+  content:'\201C';position:absolute;top:.7rem;right:1.2rem;
+  font-family:'Cormorant Garamond',serif;font-size:5rem;color:rgba(201,168,76,.12);
+  line-height:1;font-weight:600
+}
+.tst-card:hover{transform:translateY(-4px);border-color:var(--b-gold);box-shadow:0 20px 50px -20px rgba(0,0,0,.6)}
+.tst-card:hover::before{transform:scaleY(1)}
+.tst-quote{font-family:var(--bd);font-size:.88rem;line-height:1.75;color:rgba(245,240,232,.88);font-style:italic;flex:1;position:relative;z-index:1}
+.tst-meta{display:flex;align-items:center;gap:.95rem;border-top:1px solid var(--border);padding-top:1.1rem;position:relative;z-index:1}
+.tst-ava{
+  width:48px;height:48px;flex-shrink:0;
+  border:1px solid var(--b-gold);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--hd);font-size:.78rem;font-weight:400;letter-spacing:.05em;
+  color:var(--gold);
+  background:linear-gradient(135deg,rgba(201,168,76,.08),rgba(0,0,0,.4))
+}
+.tst-info{flex:1;min-width:0}
+.tst-name{font-family:var(--hd);font-size:.86rem;font-weight:400;letter-spacing:.04em;color:var(--white);margin-bottom:.25rem}
+.tst-city{font-family:var(--hd);font-size:.5rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.55rem}
+.tst-city::before{content:'';width:18px;height:1px;background:var(--gold)}
+.tst-since{font-size:.66rem;color:var(--muted);margin-top:.25rem;letter-spacing:.04em}
+
+/* ═══ ATMOSPHERE — VIDEO REEL ═══ */
+.atm-bg{background:var(--bg);position:relative;overflow:hidden}
+.atm-grid{display:grid;grid-template-columns:5fr 4fr;gap:5rem;align-items:center}
+.atm-video-wrap{
+  position:relative;aspect-ratio:9/14;max-height:640px;
+  border:1px solid var(--b-gold);overflow:hidden;
+  background:linear-gradient(135deg,#0c0c0c,#000);
+  box-shadow:0 35px 90px -30px rgba(0,0,0,.85)
+}
+.atm-video-wrap img.atm-poster{
+  width:100%;height:100%;object-fit:cover;display:block;
+  filter:saturate(.95) contrast(1.07);
+  position:absolute;inset:0;z-index:1;
+  animation:atmKenburns 22s ease-in-out infinite alternate
+}
+@keyframes atmKenburns{
+  0%{transform:scale(1) translate(0,0)}
+  50%{transform:scale(1.06) translate(-1.5%,-1%)}
+  100%{transform:scale(1.04) translate(1%,-2%)}
+}
+.atm-smoke{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;mix-blend-mode:screen}
+.atm-video-wrap::before{
+  content:'';position:absolute;inset:0;z-index:3;pointer-events:none;
+  background:linear-gradient(to top,rgba(0,0,0,.7) 0%,transparent 38%),
+             linear-gradient(135deg,rgba(0,0,0,.2) 0%,transparent 30%,transparent 70%,rgba(0,0,0,.3) 100%)
+}
+.atm-tag{
+  position:absolute;top:1.2rem;left:1.2rem;z-index:3;
+  font-family:var(--hd);font-size:.42rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--gold);padding:.5rem .8rem;border:1px solid var(--b-gold);
+  background:rgba(0,0,0,.55);backdrop-filter:blur(8px);display:flex;align-items:center;gap:.45rem
+}
+.atm-tag .live-dot{width:6px;height:6px;border-radius:50%;background:#e54848;box-shadow:0 0 8px rgba(229,72,72,.7);animation:urgPulse 1.4s ease-in-out infinite}
+.atm-play{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;
+  width:78px;height:78px;border-radius:50%;
+  background:rgba(201,168,76,.92);color:#000;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;
+  box-shadow:0 0 0 0 rgba(201,168,76,.7);animation:atmPulse 2.4s ease-in-out infinite;
+  transition:transform .35s,box-shadow .35s
+}
+@keyframes atmPulse{0%{box-shadow:0 0 0 0 rgba(201,168,76,.55)}70%{box-shadow:0 0 0 28px rgba(201,168,76,0)}100%{box-shadow:0 0 0 0 rgba(201,168,76,0)}}
+.atm-play:hover{transform:translate(-50%,-50%) scale(1.1);background:#fff}
+.atm-play svg{margin-left:4px}
+.atm-meta{position:absolute;bottom:1.2rem;left:1.2rem;right:1.2rem;z-index:3;display:flex;justify-content:space-between;align-items:flex-end}
+.atm-meta-l{font-family:var(--hd);font-size:.52rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,240,232,.55)}
+.atm-meta-r{font-family:var(--hd);font-size:.52rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.atm-txt h2{margin-bottom:1.25rem}
+.atm-txt p{font-size:.92rem;color:var(--muted);line-height:1.9;margin-bottom:1.5rem}
+.atm-bullets{display:flex;flex-direction:column;gap:1rem;margin-top:1rem}
+.atm-bul{display:flex;align-items:flex-start;gap:1rem;font-size:.84rem;color:rgba(245,240,232,.85);line-height:1.6}
+.atm-bul-ico{width:24px;height:24px;flex-shrink:0;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:var(--hd);font-size:.6rem;font-weight:700;margin-top:1px}
+
+/* ═══ KARAOKE INVITE ═══ */
+.kar-inv-bg{background:var(--bg);position:relative;overflow:hidden}
+.kar-inv-bg::before{content:'';position:absolute;left:50%;top:50%;width:760px;height:760px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(201,168,76,.06) 0%,rgba(170,80,180,.04) 35%,transparent 70%);filter:blur(40px);pointer-events:none}
+.kar-inv-grid{display:grid;grid-template-columns:5fr 6fr;gap:5rem;align-items:center;position:relative;z-index:1}
+.kar-inv-img-wrap{position:relative;aspect-ratio:4/5;max-height:580px;overflow:hidden;border:1px solid var(--b-gold)}
+.kar-inv-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85) contrast(1.08) brightness(.7);transition:transform 1.4s var(--ease)}
+.kar-inv-img-wrap:hover img{transform:scale(1.04)}
+.kar-inv-img-wrap::before{content:'';position:absolute;inset:0;z-index:1;background:radial-gradient(circle at 70% 30%,rgba(201,168,76,.18),transparent 50%),radial-gradient(circle at 30% 80%,rgba(170,80,180,.12),transparent 55%);mix-blend-mode:screen;animation:karPulseImg 6s ease-in-out infinite;pointer-events:none}
+@keyframes karPulseImg{0%,100%{opacity:.55}50%{opacity:1}}
+.kar-inv-img-wrap::after{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,transparent 50%);pointer-events:none}
+.kar-inv-tag{position:absolute;top:1.4rem;left:1.4rem;z-index:3;font-family:var(--hd);font-size:.5rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);padding:.55rem .9rem;border:1px solid var(--b-gold);background:rgba(0,0,0,.55);backdrop-filter:blur(8px)}
+.kar-inv-corner{position:absolute;bottom:-1px;right:-1px;width:46px;height:46px;border-bottom:1.5px solid var(--gold);border-right:1.5px solid var(--gold);z-index:3;pointer-events:none}
+.kar-inv-txt h2{margin-bottom:1.4rem;font-family:var(--hd);font-size:clamp(2rem,4vw,3rem);font-weight:200;letter-spacing:.05em;line-height:1.05}
+.kar-inv-txt p{font-size:.94rem;color:var(--muted);line-height:1.95;margin-bottom:1.5rem}
+.kar-inv-points{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem 2.4rem;margin:1.8rem 0 2.2rem}
+.kar-inv-pt{font-size:.84rem;color:rgba(245,240,232,.85);line-height:1.55;display:flex;align-items:flex-start;gap:.7rem}
+.kar-inv-pt::before{content:'';width:14px;height:1px;background:var(--gold);margin-top:.55em;flex-shrink:0}
+.kar-inv-cta{display:inline-flex;align-items:center;gap:.85rem;font-family:var(--hd);font-size:.6rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);padding:1.05rem 2rem;border:1px solid var(--b-gold);transition:background .35s,color .35s,box-shadow .35s}
+.kar-inv-cta:hover{background:var(--gold);color:#000;box-shadow:0 12px 40px -8px rgba(201,168,76,.35)}
+
+/* ═══ MENU PREVIEW — что вас ждёт ═══ */
+.mpv-bg{background:var(--s1);position:relative}
+.mpv-hd{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:3rem}
+.mpv-hd-r{font-size:.86rem;color:var(--muted);max-width:380px;line-height:1.85}
+.mpv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.mpv-card{
+  background:var(--s2);border:1px solid var(--border);
+  position:relative;overflow:hidden;display:flex;flex-direction:column;
+  transition:border-color .4s,transform .4s var(--ease),box-shadow .4s;cursor:pointer
+}
+.mpv-card:hover{transform:translateY(-5px);border-color:var(--b-gold);box-shadow:0 25px 60px -20px rgba(0,0,0,.7)}
+.mpv-img{aspect-ratio:4/3;overflow:hidden;position:relative}
+.mpv-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s var(--ease)}
+.mpv-card:hover .mpv-img img{transform:scale(1.06)}
+.mpv-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55) 0%,transparent 50%);pointer-events:none}
+.mpv-tag{position:absolute;top:1rem;left:1rem;font-family:var(--hd);font-size:.45rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);padding:.4rem .7rem;border:1px solid var(--b-gold);background:rgba(0,0,0,.6);backdrop-filter:blur(8px);z-index:2}
+.mpv-body{padding:1.6rem 1.5rem 1.5rem;display:flex;flex-direction:column;gap:.55rem;flex:1}
+.mpv-name{font-family:var(--hd);font-size:1.05rem;font-weight:300;letter-spacing:.04em;color:var(--white)}
+.mpv-desc{font-size:.78rem;color:var(--muted);line-height:1.65;flex:1}
+.mpv-foot{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--border);padding-top:.95rem;margin-top:.4rem}
+.mpv-vol{font-family:var(--hd);font-size:.55rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,240,232,.45)}
+.mpv-price{
+  font-family:var(--hd);font-size:1.15rem;font-weight:300;
+  background:var(--gold-grad);background-size:200% 100%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:goldShimmer 10s ease-in-out infinite
+}
+.mpv-cta{margin-top:2.5rem;text-align:center}
+.mpv-cta a{
+  display:inline-flex;align-items:center;gap:.85rem;
+  font-family:var(--hd);font-size:.58rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--gold);padding:1rem 2rem;border:1px solid var(--b-gold);
+  transition:background .35s,color .35s
+}
+.mpv-cta a:hover{background:var(--gold);color:#000}
+
+/* ═══ CONTACT STRIP ═══ */
+.contact-strip{padding:5rem 0;background:var(--s1)}
+.cs-inner{display:flex;align-items:center;justify-content:space-between;gap:3rem;flex-wrap:wrap}
+.cs-left h2{font-family:var(--hd);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:300;letter-spacing:.04em;margin-bottom:.5rem}
+.cs-left p{font-size:.88rem;color:var(--muted)}
+.cs-links{display:flex;gap:.75rem;flex-wrap:wrap}
+.cs-link{
+  display:flex;align-items:center;gap:.75rem;
+  font-family:var(--hd);font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--muted);border:1px solid var(--b-gold);padding:.75rem 1.4rem;
+  transition:all .3s;cursor:pointer;background:transparent
+}
+.cs-link:hover{color:var(--gold);border-color:var(--b-gold2);background:rgba(201,168,76,.06)}
+.cs-link svg{width:14px;height:14px;flex-shrink:0}
+.cs-wa{opacity:.72}
+.cs-wa:hover{opacity:1}
+.cs-soon{margin-left:auto;padding:.18rem .5rem;font-size:.5rem;letter-spacing:.16em;background:rgba(201,168,76,.12);color:var(--gold);border:1px solid rgba(201,168,76,.3);border-radius:2px}
+
+/* ═══ EXIT-INTENT MODAL ═══ */
+.exit-modal{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:200;display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity .35s}
+.exit-modal.on{opacity:1;pointer-events:auto}
+.exit-wrap{position:relative;max-width:480px;width:100%;background:#0a0a0a;border:1px solid var(--b-gold);padding:3rem 2.5rem;transform:translateY(20px) scale(.98);transition:transform .4s;text-align:center}
+.exit-wrap::before,.exit-wrap::after{content:'';position:absolute;width:28px;height:28px;border:1px solid var(--gold);pointer-events:none}
+.exit-wrap::before{top:-1px;left:-1px;border-right:none;border-bottom:none}
+.exit-wrap::after{bottom:-1px;right:-1px;border-left:none;border-top:none}
+.exit-modal.on .exit-wrap{transform:none}
+.exit-x{position:absolute;top:.75rem;right:.75rem;background:transparent;border:none;color:var(--muted);font-size:1.6rem;line-height:1;cursor:pointer;width:32px;height:32px;transition:color .2s}
+.exit-x:hover{color:var(--gold)}
+.exit-tag{display:inline-block;font-family:var(--hd);font-size:.55rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);padding-bottom:.5rem;border-bottom:1px solid rgba(201,168,76,.3);margin-bottom:1.25rem}
+.exit-h{font-family:var(--hd);font-size:1.85rem;font-weight:300;color:var(--white);margin:0 0 .85rem;letter-spacing:.02em;line-height:1.15}
+.exit-p{font-family:var(--bd);font-size:.85rem;color:var(--muted);line-height:1.55;margin:0 0 1.75rem}
+.exit-form{display:flex;flex-direction:column;gap:.65rem}
+.exit-form input{font-family:var(--bd);font-size:1rem;padding:.95rem 1rem;background:#181818;border:1px solid var(--b-gold);color:var(--white);outline:none;text-align:center;letter-spacing:.04em}
+.exit-form input:focus{border-color:var(--gold)}
+.exit-cta{font-family:var(--hd);font-size:.62rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;padding:1.05rem 2rem;background:linear-gradient(135deg,var(--gold) 0%,#d4b256 100%);color:#0a0a0a;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.exit-cta:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(201,168,76,.3)}
+.exit-fine{display:block;margin-top:1rem;font-family:var(--bd);font-size:.7rem;color:var(--muted);opacity:.65}
+
+/* ═══ FLOATING CTA STACK ═══ */
+.fab-stack{position:fixed;right:1.5rem;bottom:1.5rem;z-index:80;display:flex;flex-direction:column;gap:.6rem;align-items:flex-end;opacity:0;transform:translateY(20px);transition:opacity .4s,transform .4s;pointer-events:none}
+.fab-stack.on{opacity:1;transform:none;pointer-events:auto}
+.fab{display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;text-decoration:none;font-family:var(--hd);font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:.6rem;box-shadow:0 8px 28px rgba(0,0,0,.45),0 0 0 1px rgba(201,168,76,.18)}
+.fab-tg{width:46px;height:46px;border-radius:50%;background:#229ED9;transition:transform .25s}
+.fab-tg:hover{transform:scale(1.08)}
+.fab-wa{width:46px;height:46px;border-radius:50%;background:#25D366;position:relative;transition:transform .25s;opacity:.78}
+.fab-wa:hover{transform:scale(1.08);opacity:1}
+.fab-wa .fab-soon{position:absolute;top:-5px;right:-12px;background:#0a0a0a;color:var(--gold);border:1px solid rgba(201,168,76,.5);padding:2px 5px;font-size:.45rem;letter-spacing:.1em;border-radius:2px}
+.fab-book{padding:.85rem 1.5rem;background:linear-gradient(135deg,var(--gold) 0%,#d4b256 100%);color:#0a0a0a;border-radius:30px;transition:transform .25s,box-shadow .25s}
+.fab-book:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(201,168,76,.4),0 0 0 1px rgba(201,168,76,.5)}
+@media(max-width:768px){
+  .fab-stack{right:.75rem;bottom:.75rem;gap:.5rem;display:none} /* на мобиле уже есть sticky-бар на location */
+}
+.fab-stack.on-mobile-allow{display:flex !important}
+
+/* ═══ FOOTER ═══ */
+.footer{background:var(--bg);border-top:1px solid var(--b-gold);padding:4rem 0 2.5rem}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4rem;padding-bottom:3rem;margin-bottom:2.5rem;border-bottom:1px solid var(--border)}
+.ft-logo-name{font-family:var(--hd);font-size:1.1rem;font-weight:300;letter-spacing:.22em;margin-bottom:.3rem}
+.ft-logo-name span{
+  background:var(--gold-grad);background-size:200% 100%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:goldShimmer 10s ease-in-out infinite
+}
+.ft-logo-since{font-family:var(--hd);font-size:.5rem;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:rgba(201,168,76,.45);margin-bottom:1rem}
+.ft-desc{font-size:.8rem;color:var(--muted);line-height:1.75}
+.ft-col h4{font-family:var(--hd);font-size:.54rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem}
+.ft-col ul{list-style:none}
+.ft-col li{margin-bottom:.6rem}
+.ft-col a{font-size:.82rem;color:var(--muted);transition:color .2s}
+.ft-col a:hover{color:var(--white)}
+.ft-col p{font-size:.82rem;color:var(--muted);margin-bottom:.5rem}
+.ft-soc{display:flex;gap:.6rem;margin-top:1.1rem}
+.ft-soc a{
+  width:34px;height:34px;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--hd);font-size:.58rem;font-weight:600;letter-spacing:.04em;
+  color:var(--muted);transition:all .3s
+}
+.ft-soc a:hover{border-color:var(--gold);color:var(--gold)}
+.ft-bottom{display:flex;justify-content:space-between;align-items:center;font-size:.68rem;color:rgba(255,255,255,.16)}
+
+.hero-main-title{
+  font-family:var(--hd);font-size:clamp(3.5rem,9vw,7.5rem);font-weight:200;
+  letter-spacing:.18em;line-height:1;
+  background:var(--gold-grad);background-size:200% 100%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:goldShimmer 10s ease-in-out infinite, fu 1.1s var(--ease) forwards .35s;
+  opacity:0;margin-bottom:.6rem
+}
+.hero-cta-row{
+  display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;
+  margin-top:2.5rem;opacity:0;animation:fu 1s var(--ease) forwards .9s
+}
+.hcta-pri{
+  font-family:var(--hd);font-size:.6rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:#000;background:var(--gold);padding:.9rem 2.2rem;border:none;cursor:pointer;
+  position:relative;overflow:hidden;transition:box-shadow .3s
+}
+.hcta-pri::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 40%,rgba(255,255,255,.3) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s}
+.hcta-pri:hover::after{transform:translateX(100%)}
+.hcta-pri:hover{box-shadow:var(--glow)}
+.hcta-sec{
+  font-family:var(--hd);font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--white);background:transparent;border:1px solid rgba(255,255,255,.3);padding:.9rem 2.2rem;cursor:pointer;
+  transition:all .3s
+}
+.hcta-sec:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ═══ CITIES SECTION ═══ */
+.cities-sec{background:var(--bg);padding:8rem 0 6rem}
+.cities-sec::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--b-gold),transparent)}
+.cities-sec{position:relative}
+.cities-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem}
+.cities-hd-r{font-size:.82rem;color:var(--muted);line-height:1.7;text-align:right;max-width:260px}
+.geo-cta{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1.4rem 1.6rem;background:rgba(201,168,76,.04);border:1px solid var(--b-gold);margin-bottom:2.5rem;flex-wrap:wrap}
+.geo-cta-l{display:flex;flex-direction:column;gap:.3rem}
+.geo-lbl{font-family:var(--hd);font-size:.62rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.geo-sub{font-size:.78rem;color:var(--muted);line-height:1.5}
+.geo-btn{display:inline-flex;align-items:center;gap:.65rem;font-family:var(--hd);font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--white);background:transparent;border:1px solid var(--b-gold2);padding:.85rem 1.6rem;cursor:pointer;transition:all .3s}
+.geo-btn:hover{color:var(--gold);border-color:var(--gold);background:rgba(201,168,76,.08)}
+.geo-btn:disabled{opacity:.5;cursor:wait}
+.geo-results{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2.5rem}
+.geo-card{display:block;padding:1.25rem 1.4rem;background:#0c0c0c;border:1px solid var(--b-gold);text-decoration:none;transition:all .3s;position:relative}
+.geo-card:hover{background:#111;border-color:var(--b-gold2)}
+.geo-card .gc-rank{position:absolute;top:.85rem;right:1rem;font-family:var(--hd);font-size:.55rem;letter-spacing:.18em;color:var(--gold);font-weight:600}
+.geo-card .gc-name{display:block;font-family:var(--hd);font-size:1.1rem;font-weight:500;color:var(--white);margin:.2rem 0 .3rem}
+.geo-card .gc-city{font-family:var(--hd);font-size:.5rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.geo-card .gc-dist{display:block;font-family:var(--hd);font-size:.62rem;color:var(--gold);letter-spacing:.12em;margin-top:.65rem}
+@media(max-width:768px){
+  .geo-cta{padding:1.1rem 1.2rem;gap:1rem}
+  .geo-btn{width:100%;justify-content:center}
+  .geo-results{grid-template-columns:1fr}
+}
+
+/* ═══ SPLASH SCREEN ═══ */
+.splash{position:fixed;inset:0;z-index:9999;background:radial-gradient(ellipse at center,#080604 0%,#000 70%);display:flex;align-items:center;justify-content:center;transition:opacity .85s ease;overflow:hidden}
+.splash.out{opacity:0;pointer-events:none}
+.splash.gone{display:none}
+.splash-stars{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.splash-vign{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 30%,rgba(0,0,0,.65) 100%);pointer-events:none;z-index:1}
+.splash-inner{position:relative;z-index:2;text-align:center;display:flex;flex-direction:column;align-items:center;gap:1.1rem}
+/* Decorative rule lines — draw from centre outward */
+.spl-rule{width:min(260px,58vw);display:block;overflow:visible}
+.spl-rl{stroke:var(--gold);stroke-width:.55;fill:none;stroke-linecap:round}
+@keyframes drw{to{stroke-dashoffset:0}}
+.spl-rl-a{stroke-dasharray:130;stroke-dashoffset:130;animation:drw .55s ease forwards 0s}
+.spl-rl-b{stroke-dasharray:130;stroke-dashoffset:130;animation:drw .55s ease forwards 0s}
+.spl-rl-c{stroke-dasharray:130;stroke-dashoffset:130;animation:drw .55s ease forwards .85s}
+.spl-rl-d{stroke-dasharray:130;stroke-dashoffset:130;animation:drw .55s ease forwards .85s}
+/* Eyebrow */
+.splash-eyebrow{font-family:var(--hd);font-size:.48rem;font-weight:500;letter-spacing:.52em;color:var(--gold);text-transform:uppercase;opacity:0;animation:fu .45s ease forwards .25s}
+/* Main title */
+.splash-name{
+  font-family:var(--hd);font-size:clamp(3rem,11vw,5.8rem);font-weight:200;
+  letter-spacing:.3em;text-transform:uppercase;
+  background:var(--gold-grad);background-size:200% 100%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:goldShimmer 8s ease-in-out infinite,splUp .75s var(--ease) forwards .35s;opacity:0
+}
+@keyframes splUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+/* Sub word */
+.splash-sub{font-family:var(--hd);font-size:clamp(.85rem,3vw,1.45rem);font-weight:300;letter-spacing:.7em;color:rgba(201,168,76,.52);text-transform:uppercase;opacity:0;animation:fu .55s var(--ease) forwards .65s}
+/* Since */
+.splash-since{font-family:var(--hd);font-size:.48rem;font-weight:400;letter-spacing:.4em;color:var(--muted);opacity:0;animation:fu .45s ease forwards 1.05s}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:1024px){
+  .wrap{padding:0 2rem}
+  .fr-inner{grid-template-columns:1fr;gap:3.5rem}
+  .fr-photo{max-height:360px;aspect-ratio:16/9}
+  .feat-grid{grid-template-columns:repeat(2,1fr)}
+  .ft-top{grid-template-columns:1fr 1fr}
+  .tst-grid,.mpv-grid{grid-template-columns:repeat(2,1fr)}
+  .tst-grid>:last-child,.mpv-grid>:last-child{grid-column:1/-1}
+  .kar-inv-grid{grid-template-columns:1fr;gap:3rem}
+  .kar-inv-img-wrap{aspect-ratio:16/10;max-height:440px}
+  .kar-inv-points{grid-template-columns:1fr;gap:.9rem}
+  .atm-grid{grid-template-columns:1fr;gap:3rem}
+  .atm-video-wrap{aspect-ratio:16/10;max-height:520px}
+}
+@media(max-width:768px){
+  .nav,.nav.on{padding:1.1rem 1.5rem}
+  .section{padding:5.5rem 0}
+  .wrap{padding:0 1.25rem}
+  .hstat{padding:.85rem 1.2rem}
+  .hero-scroll{display:none}
+  .feat-grid{grid-template-columns:1fr}
+  .fr-nums{grid-template-columns:repeat(3,1fr)}
+  .fr-urgency{grid-template-columns:1fr}
+  .fr-form{grid-template-columns:1fr}
+  .tst-grid,.mpv-grid{grid-template-columns:1fr}
+  .tst-grid>:last-child,.mpv-grid>:last-child{grid-column:auto}
+  .ft-top{grid-template-columns:1fr;gap:2.5rem}
+  .ft-bottom{flex-direction:column;gap:.4rem;text-align:center}
+  .cs-inner{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:500px){
+  .hero-stats{flex-direction:column}
+  .hstat+.hstat{border-left:none;border-top:1px solid var(--b-gold)}
+}
+
+/* ═══ MOBILE/TOUCH/iOS FIXES — универсальные правила ═══ */
+*{-webkit-tap-highlight-color:transparent}
+button,a,input,select,textarea{touch-action:manipulation}
+img,video,canvas,iframe{max-width:100%}
+/* iOS не зумит при фокусе если font-size >= 16px */
+@media(max-width:768px){
+  input[type="text"],input[type="tel"],input[type="email"],input[type="date"],input[type="time"],input[type="number"],input[type="search"],input[type="url"],select,textarea{font-size:16px !important}
+}
+/* iOS Safari URL-bar fix: 100svh лучше чем 100vh */
+@supports(min-height:100svh){
+  .hero,.loc-hero,.kar-hero{min-height:100svh}
+}
+/* Тач-устройства: hover-эффекты не повисают на тапе */
+@media(hover:none) and (pointer:coarse){
+  .city-card:hover,.tst-card:hover,.mpv-card:hover,.kp-card:hover,.menu-item:hover,.oloc:hover,.feat:hover,.fr-photo:hover,.about-photo:hover,.kar-inv-img-wrap:hover,.kd-img-wrap:hover{transform:none}
+}
+/* Min target size для всех кликабельных элементов на мобайле */
+@media(max-width:768px){
+  button,a.btn-g,a.btn-o,.fsub,.fr-cta,.kar-cta,.kb-cta,.soon-cta,.vip-cta,.kd-cta,.kar-inv-cta,.tab-btn,.nav-book,.sb-btn{min-height:48px}
+  /* Wrap-friendly: сетки не должны иметь дробных колонок */
+  .wrap{padding:0 1.25rem}
+}
+/* iPad portrait — компактнее */
+@media(min-width:769px) and (max-width:1024px){
+  .wrap{padding:0 2rem}
+}
+
+/* ═══ MOBILE OVERFLOW SAFETY ═══ */
+html,body{max-width:100vw;overflow-x:hidden}
+.hero-brand-name,.kar-name,.loc-title,.sec-h2,.splash-name,.km-cell h3{word-break:break-word;overflow-wrap:break-word;hyphens:auto}
+@media(max-width:480px){
+  .hero-brand-name,.splash-name{letter-spacing:.12em !important}
+  .loc-title{letter-spacing:.06em !important}
+  .kar-name{letter-spacing:.14em !important}
+  .section{padding:4rem 0 !important}
+  .wrap{padding:0 1rem !important}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+}
+
+/* ═══ FAQ MODAL ═══ */
+.faq-modal{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);opacity:0;pointer-events:none;transition:opacity .45s var(--ease);display:flex;align-items:center;justify-content:center;padding:5rem 1.5rem 2rem;overflow-y:auto}
+.faq-modal.on{opacity:1;pointer-events:all}
+.faq-modal-wrap{position:relative;max-width:920px;width:100%;background:linear-gradient(135deg,#0a0a0a,#000);border:1px solid var(--b-gold);max-height:calc(100vh - 7rem);overflow:hidden;display:flex;flex-direction:column;transform:translateY(28px);transition:transform .55s var(--ease);box-shadow:0 30px 90px rgba(0,0,0,.85),0 0 0 1px rgba(201,168,76,.04)}
+.faq-modal.on .faq-modal-wrap{transform:none}
+.faq-modal-wrap::before{content:'';position:absolute;top:-1px;left:-1px;width:48px;height:48px;border-top:1.5px solid var(--gold);border-left:1.5px solid var(--gold);pointer-events:none;z-index:2}
+.faq-modal-wrap::after{content:'';position:absolute;bottom:-1px;right:-1px;width:48px;height:48px;border-bottom:1.5px solid var(--gold);border-right:1.5px solid var(--gold);pointer-events:none;z-index:2}
+.faq-close{position:absolute;top:1rem;right:1rem;z-index:5;width:38px;height:38px;background:rgba(0,0,0,.6);border:1px solid var(--b-gold);color:var(--white);font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s;font-family:var(--hd)}
+.faq-close:hover{background:rgba(201,168,76,.15);color:var(--gold);border-color:var(--gold)}
+.faq-modal-inner{padding:3rem 2.8rem 2.5rem;overflow-y:auto;display:flex;flex-direction:column;gap:1.2rem}
+.faq-modal-h{font-family:var(--hd);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:200;letter-spacing:.05em;line-height:1.05;margin-top:.4rem}
+.faq-modal-p{font-size:.92rem;color:var(--muted);line-height:1.85;margin-bottom:.8rem;max-width:46rem}
+.faq-modal-cta{display:inline-flex;align-items:center;gap:.85rem;font-family:var(--hd);font-size:.6rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);padding:1rem 1.9rem;border:1px solid var(--b-gold);align-self:flex-start;transition:background .35s,color .35s;margin-top:1rem}
+.faq-modal-cta:hover{background:var(--gold);color:#000}
+@media(max-width:768px){
+  .faq-modal{padding:4rem .8rem 1rem}
+  .faq-modal-inner{padding:2.4rem 1.4rem 1.6rem}
+}
+
+/* ═══ FAQ (общий стиль аккордеона — используется и в модале, и на других страницах) ═══ */
+.faq-bg{background:var(--bg);position:relative;overflow:hidden}
+.faq-bg::before{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:680px;height:680px;background:radial-gradient(circle,rgba(201,168,76,.05) 0%,transparent 65%);pointer-events:none;filter:blur(28px)}
+.faq-grid{display:grid;grid-template-columns:5fr 7fr;gap:5rem;align-items:start;position:relative;z-index:1}
+.faq-hd h2{font-family:var(--hd);font-size:clamp(2rem,4vw,3rem);font-weight:200;letter-spacing:.05em;line-height:1.05;margin-bottom:1.4rem}
+.faq-hd p{font-size:.92rem;color:var(--muted);line-height:1.95;margin-bottom:1.5rem}
+.faq-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border)}
+.faq-q{border-bottom:1px solid var(--border);padding:0;cursor:pointer;list-style:none;background:transparent;width:100%;text-align:left;font-family:inherit;color:inherit;border-left:0;border-right:0;border-top:0;transition:background .35s}
+.faq-q::-webkit-details-marker{display:none}
+.faq-q:hover{background:rgba(201,168,76,.025)}
+.faq-q-h{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;gap:1.4rem;cursor:pointer;list-style:none}
+.faq-q-h::-webkit-details-marker{display:none}
+.faq-q-t{font-family:var(--hd);font-size:1rem;font-weight:300;letter-spacing:.03em;color:var(--white);transition:color .25s}
+.faq-q[open] .faq-q-t,.faq-q:hover .faq-q-t{color:var(--gold)}
+.faq-ico{width:24px;height:24px;flex-shrink:0;border:1px solid var(--b-gold);display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:var(--hd);font-weight:300;font-size:1rem;transition:transform .35s var(--ease),background .35s}
+.faq-q[open] .faq-ico{background:var(--gold);color:#000;transform:rotate(45deg)}
+.faq-a{padding:0 0 1.5rem 0;font-size:.86rem;color:var(--muted);line-height:1.85;max-width:46rem}
+.faq-a a{color:var(--gold);border-bottom:1px solid var(--b-gold2);transition:border-color .25s}
+.faq-a a:hover{border-color:var(--gold)}
+@media(max-width:1024px){.faq-grid{grid-template-columns:1fr;gap:2.5rem}}
+</style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <svg class="nav-tree" viewBox="0 0 30 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="ntg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#E8D5A3"/><stop offset="100%" stop-color="#8B6914"/>
+        </linearGradient>
+      </defs>
+      <path d="M12 32 Q11.5 26 11 22 Q10 17 15 13 Q20 17 19 22 Q18.5 26 18 32Z" fill="url(#ntg)"/>
+      <g stroke="#C9A84C" stroke-width=".9" fill="none">
+        <ellipse cx="15" cy="7" rx="4.5" ry="2" transform="rotate(-90 15 7)" opacity=".9"/>
+        <ellipse cx="22" cy="10" rx="4.5" ry="2" transform="rotate(-42 22 10)" opacity=".85"/>
+        <ellipse cx="25" cy="17" rx="4.5" ry="2" transform="rotate(0 25 17)" opacity=".8"/>
+        <ellipse cx="22" cy="24" rx="4.5" ry="2" transform="rotate(42 22 24)" opacity=".7"/>
+        <ellipse cx="8" cy="10" rx="4.5" ry="2" transform="rotate(42 8 10)" opacity=".85"/>
+        <ellipse cx="5" cy="17" rx="4.5" ry="2" transform="rotate(0 5 17)" opacity=".8"/>
+        <ellipse cx="8" cy="24" rx="4.5" ry="2" transform="rotate(-42 8 24)" opacity=".7"/>
+      </g>
+      <g stroke="#E8D5A3" stroke-width=".7" fill="none" opacity=".55">
+        <ellipse cx="15" cy="12" rx="3.5" ry="1.6" transform="rotate(-90 15 12)"/>
+        <ellipse cx="20" cy="14" rx="3.5" ry="1.6" transform="rotate(-45 20 14)"/>
+        <ellipse cx="21" cy="20" rx="3.5" ry="1.6"/>
+        <ellipse cx="10" cy="14" rx="3.5" ry="1.6" transform="rotate(45 10 14)"/>
+        <ellipse cx="9" cy="20" rx="3.5" ry="1.6"/>
+        <ellipse cx="15" cy="22" rx="3.5" ry="1.6" transform="rotate(-90 15 22)"/>
+      </g>
+    </svg>
+    <img src="https://barvikhagroup.ru/img/main/header-logo.png" alt="Barvikha" class="nav-logo-img"/>
+  </a>
+  <div class="nav-r">
+    <button class="nav-book" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Забронировать</button>
+    <button class="brg" id="brg" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ─── BURGER MENU ─── -->
+<div class="mov" id="mov">
+  <ul>
+    <li><a href="#cities" class="ml">Заведения</a></li>
+    <li><a href="karaoke.html" class="ml">Караоке</a></li>
+    <li><a href="#franchise" class="ml">Франшиза</a></li>
+    <li><a href="#" class="ml" onclick="event.preventDefault();closeBurger();openFaq()">Часто спрашивают</a></li>
+    <li><a href="#contact" class="ml">Контакты</a></li>
+    <li><a href="#contact" class="ml" style="color:var(--gold)">Забронировать</a></li>
+  </ul>
+</div>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+  <!-- Atmospheric layers -->
+  <div class="hero-atm"></div>
+  <div class="hero-grid-bg"></div>
+  <!-- Tree background -->
+  <img id="treeBg" src="https://barvikhagroup.ru/img/main/large-logo.png" alt="" class="hero-tree-bg"/>
+  <div class="ghost-trees" id="ghostTrees">
+    <img src="https://barvikhagroup.ru/img/main/large-logo.png" alt=""/>
+    <img src="https://barvikhagroup.ru/img/main/large-logo.png" alt=""/>
+    <img src="https://barvikhagroup.ru/img/main/large-logo.png" alt=""/>
+    <img src="https://barvikhagroup.ru/img/main/large-logo.png" alt=""/>
+    <img src="https://barvikhagroup.ru/img/main/large-logo.png" alt=""/>
+    <img src="https://barvikhagroup.ru/img/main/large-logo.png" alt=""/>
+    <img src="https://barvikhagroup.ru/img/main/large-logo.png" alt=""/>
+  </div>
+  <div class="hero-vign"></div>
+  <canvas id="pc"></canvas>
+
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Территория премиум-отдыха</p>
+    <h1 class="hero-main-title">БАРВИХА</h1>
+    <p class="hero-tagline">27 заведений · 9 городов · с 2017 года</p>
+    <div class="hero-cta-row">
+      <button class="hcta-pri" onclick="document.getElementById('cities').scrollIntoView({behavior:'smooth'})">Выбрать заведение</button>
+      <button class="hcta-sec" onclick="document.getElementById('franchise').scrollIntoView({behavior:'smooth'})">Франшиза</button>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="hero-scroll-ln"></div>
+    <span class="hero-scroll-txt">Scroll</span>
+  </div>
+</section>
+
+<!-- ─── CITIES ─── -->
+<section class="cities-sec" id="cities">
+  <div class="wrap">
+    <div class="cities-hd rv">
+      <div>
+        <span class="sec-lbl">Наши города</span>
+        <h2 class="sec-h2">Выберите<br>ваш город</h2>
+      </div>
+      <p class="cities-hd-r">9 городов России и СНГ.<br>Выберите ближайшее заведение.</p>
+    </div>
+
+    <!-- Geo: ближайшее заведение -->
+    <div class="geo-cta rv" id="geoCta">
+      <div class="geo-cta-l">
+        <span class="geo-lbl">Найти ближайшее</span>
+        <span class="geo-sub" id="geoSub">Мы определим ваше местоположение и покажем ближайшие 3 заведения</span>
+      </div>
+      <button class="geo-btn" id="geoBtn" onclick="findNearest()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z" fill="currentColor"/></svg>
+        <span id="geoBtnT">Найти ближайшее</span>
+      </button>
+    </div>
+    <div class="geo-results" id="geoResults" style="display:none"></div>
+
+    <div class="city-grid">
+
+      <!-- МОСКВА — featured -->
+      <button class="city-card featured rv" onclick="location.href='moscow.html'">
+        <div class="cc-top">
+          <span class="cc-num">01</span>
+          <span class="cc-tag">17 заведений</span>
+        </div>
+        <div class="cc-bottom">
+          <span class="cc-name">Москва</span>
+          <div class="cc-meta">
+            <span class="cc-count">Флагманская сеть</span>
+            <span class="cc-arr">→</span>
+          </div>
+        </div>
+        <div class="cc-bg">МСК</div>
+      </button>
+
+      <!-- COL 3 stacked: SPb + Tula -->
+      <button class="city-card rv d1" onclick="location.href='location.html?city=spb'">
+        <div class="cc-top"><span class="cc-num">02</span></div>
+        <div class="cc-bottom">
+          <span class="cc-name">Санкт-Петербург</span>
+          <div class="cc-meta"><span class="cc-count">1 заведение</span><span class="cc-arr">→</span></div>
+        </div>
+        <div class="cc-bg">СПБ</div>
+      </button>
+
+      <button class="city-card is-soon rv d2" onclick="location.href='location.html?city=tula'">
+        <div class="cc-top"><span class="cc-num">03</span></div>
+        <div class="cc-bottom">
+          <span class="cc-status soon"><span class="cs-d"></span>Скоро · Q2 2026</span>
+          <span class="cc-name">Тула</span>
+          <div class="cc-meta"><span class="cc-count">Открытие в Q2</span><span class="cc-arr">→</span></div>
+        </div>
+        <div class="cc-bg">ТУЛ</div>
+      </button>
+
+      <!-- ROW 3 -->
+      <button class="city-card is-soon rv d1" onclick="location.href='location.html?city=saratov'">
+        <div class="cc-top"><span class="cc-num">04</span></div>
+        <div class="cc-bottom">
+          <span class="cc-status soon"><span class="cs-d"></span>Скоро · Q2 2026</span>
+          <span class="cc-name">Саратов</span>
+          <div class="cc-meta"><span class="cc-count">Открытие в Q2</span><span class="cc-arr">→</span></div>
+        </div>
+        <div class="cc-bg">СРТ</div>
+      </button>
+
+      <button class="city-card is-soon rv d2" onclick="location.href='location.html?city=penza'">
+        <div class="cc-top"><span class="cc-num">05</span></div>
+        <div class="cc-bottom">
+          <span class="cc-status soon"><span class="cs-d"></span>Скоро · Q3 2026</span>
+          <span class="cc-name">Пенза</span>
+          <div class="cc-meta"><span class="cc-count">Открытие в Q3</span><span class="cc-arr">→</span></div>
+        </div>
+        <div class="cc-bg">ПНЗ</div>
+      </button>
+
+      <button class="city-card is-soon rv d3" onclick="location.href='location.html?city=nn'">
+        <div class="cc-top"><span class="cc-num">06</span></div>
+        <div class="cc-bottom">
+          <span class="cc-status soon"><span class="cs-d"></span>Скоро · Q2 2026</span>
+          <span class="cc-name">Нижний Новгород</span>
+          <div class="cc-meta"><span class="cc-count">Открытие в Q2</span><span class="cc-arr">→</span></div>
+        </div>
+        <div class="cc-bg">НН</div>
+      </button>
+
+      <!-- ROW 4 -->
+      <button class="city-card is-soon rv d1" onclick="location.href='location.html?city=yerevan'">
+        <div class="cc-top"><span class="cc-num">07</span></div>
+        <div class="cc-bottom">
+          <span class="cc-status soon"><span class="cs-d"></span>Скоро · Q3 2026</span>
+          <span class="cc-name">Ереван</span>
+          <div class="cc-meta"><span class="cc-count">Открытие в Q3</span><span class="cc-arr">→</span></div>
+        </div>
+        <div class="cc-bg">ЕРВ</div>
+      </button>
+
+      <button class="city-card rv d2" onclick="location.href='location.html?city=makhachkala'">
+        <div class="cc-top"><span class="cc-num">08</span></div>
+        <div class="cc-bottom">
+          <span class="cc-status today"><span class="cs-d"></span>Открываемся сегодня</span>
+          <span class="cc-name">Махачкала</span>
+          <div class="cc-meta"><span class="cc-count">Открытие в 18:00</span><span class="cc-arr">→</span></div>
+        </div>
+        <div class="cc-bg">МХЧ</div>
+      </button>
+
+      <button class="city-card is-soon rv d3" onclick="location.href='location.html?city=tashkent'">
+        <div class="cc-top"><span class="cc-num">09</span></div>
+        <div class="cc-bottom">
+          <span class="cc-status soon"><span class="cs-d"></span>Скоро · Q4 2026</span>
+          <span class="cc-name">Ташкент</span>
+          <div class="cc-meta"><span class="cc-count">Открытие в Q4</span><span class="cc-arr">→</span></div>
+        </div>
+        <div class="cc-bg">ТШК</div>
+      </button>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── FRANCHISE ─── -->
+<section class="section fr-bg" id="franchise">
+  <div class="wrap">
+    <div class="fr-inner">
+      <div class="rv">
+        <div class="fr-photo-wrap">
+          <div class="fr-photo" id="frPhoto">
+            <img class="fr-static" src="jamil.png" alt="Джамиль Расулович"/>
+            <div class="fr-photo-overlay"></div>
+            <div class="fr-caption">
+              <span class="fr-photo-role">Основатель сети</span>
+              <div class="fr-photo-name">Джамиль Расулович</div>
+              <p class="fr-photo-quote">«Мы не продаём франшизу — мы передаём 7 лет опыта и команду, которая ведёт каждого партнёра до первого гостя.»</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fr-txt">
+        <span class="sec-lbl rv">Партнёрство</span>
+        <h2 class="sec-h2 rv" style="margin-bottom:1.25rem">Откройте свою<br>«Барвиху»</h2>
+        <p class="rv">Передаём партнёрам проверенную бизнес-модель, полный стандарт операций и поддержку на каждом этапе — от выбора помещения до первого гостя.</p>
+        <div class="fr-nums rv">
+          <div class="frn"><span class="frn-v">от 3.5 млн ₽</span><span class="frn-l">инвестиции</span></div>
+          <div class="frn"><span class="frn-v">4–6 мес</span><span class="frn-l">окупаемость</span></div>
+          <div class="frn"><span class="frn-v">30+</span><span class="frn-l">партнёров</span></div>
+        </div>
+        <span class="fr-steps-lbl rv">Этапы запуска</span>
+        <div class="fr-steps rv">
+          <div class="fr-step"><span class="fr-step-n">01</span><div><div class="fr-step-t">Заявка и знакомство</div><div class="fr-step-p">Обсуждаем город, локацию, подписываем NDA</div></div></div>
+          <div class="fr-step"><span class="fr-step-n">02</span><div><div class="fr-step-t">Дизайн и ремонт</div><div class="fr-step-p">Интерьер по стандарту сети, закупка оборудования</div></div></div>
+          <div class="fr-step"><span class="fr-step-n">03</span><div><div class="fr-step-t">Обучение и запуск</div><div class="fr-step-p">Персонал, маркетинг, поддержка первых 90 дней</div></div></div>
+        </div>
+        <div class="fr-urgency rv">
+          <div class="fr-urg">
+            <span class="fr-urg-l"><span class="fr-urg-dot"></span>Свободно на 2026</span>
+            <div class="fr-urg-v"><b>6</b> заведений</div>
+          </div>
+          <div class="fr-urg">
+            <span class="fr-urg-l">Городов в работе</span>
+            <div class="fr-urg-v"><b>14</b></div>
+          </div>
+          <div class="fr-urg">
+            <span class="fr-urg-l">Заведений в сети</span>
+            <div class="fr-urg-v"><b>24</b></div>
+          </div>
+        </div>
+        <div class="fr-lead rv">
+          <div class="fr-lead-hd">Заявка на франшизу</div>
+          <p class="fr-lead-sub">Оставьте контакты — менеджер перезвонит в течение 30 минут и расскажет о свободных городах, условиях и встрече с Джамилем.</p>
+          <form class="fr-form" id="frForm" onsubmit="handleFranchiseForm(event)">
+            <input type="text" name="name" placeholder="Ваше имя" required/>
+            <input type="tel" id="frPhone" name="phone" placeholder="+7 (___) ___-__-__" required/>
+            <select name="city" class="frf-full" required>
+              <option value="" disabled selected>Город для открытия</option>
+              <option>Москва и область</option>
+              <option>Санкт-Петербург</option>
+              <option>Города-миллионники</option>
+              <option>Региональные центры</option>
+              <option>СНГ / Другая страна</option>
+            </select>
+            <button type="submit" class="fr-cta frf-full" id="frSubmitBtn">
+              Отправить заявку
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </form>
+          <div class="fr-lead-note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── ATMOSPHERE — VIDEO REEL ─── -->
+<section class="section atm-bg" id="atmosphere">
+  <div class="wrap">
+    <div class="atm-grid">
+      <div class="atm-video-wrap rv" id="atmReel">
+        <img class="atm-poster" src="кальян 1.jpeg" alt="Интерьер Barvikha"/>
+        <canvas class="atm-smoke" id="atmSmoke"></canvas>
+        <div class="atm-tag" style="z-index:4"><span class="live-dot"></span>Прямой эфир</div>
+        <div class="atm-meta" style="z-index:4">
+          <span class="atm-meta-l">Москва · Патриаршие</span>
+          <a href="https://t.me/BARVIKHAGROUP" target="_blank" class="atm-meta-r">Все ролики →</a>
+        </div>
+      </div>
+      <div class="atm-txt rv d1">
+        <span class="sec-lbl">Атмосфера</span>
+        <h2 class="sec-h2">Внутри одной<br>из 27 заведений</h2>
+        <p>Полумрак, тёплый свет, тихий джаз и вечерние ароматы. Каждое заведение «Барвихи» — это законченное эстетическое высказывание, не просто кальянная.</p>
+        <div class="atm-bullets">
+          <div class="atm-bul"><span class="atm-bul-ico">✓</span><span><b style="color:var(--white)">Авторский интерьер</b> — единый стандарт сети, разработанный архитектурным бюро.</span></div>
+          <div class="atm-bul"><span class="atm-bul-ico">✓</span><span><b style="color:var(--white)">Звуковое оформление</b> — собственные плейлисты, подобранные под время суток.</span></div>
+          <div class="atm-bul"><span class="atm-bul-ico">✓</span><span><b style="color:var(--white)">Аромадизайн</b> — точечная диффузия эфирных масел в воздухе.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── KARAOKE INVITE ─── -->
+<section class="section kar-inv-bg" id="karaoke">
+  <div class="wrap">
+    <div class="kar-inv-grid">
+      <div class="kar-inv-img-wrap rv">
+        <span class="kar-inv-tag">Karaoke</span>
+        <img src="бар 4.jpeg" alt="Атмосфера караоке Barvikha"/>
+        <span class="kar-inv-corner"></span>
+      </div>
+      <div class="kar-inv-txt rv d1">
+        <span class="sec-lbl">Авторский формат</span>
+        <h2>Karaoke<br>в Barvikha</h2>
+        <p>Шесть заведений сети с приватной сценой и резидентным звукорежиссёром. Каталог из десяти тысяч треков, профессиональный звук, фактурные диваны и игра света от диско-шара.</p>
+        <div class="kar-inv-points">
+          <div class="kar-inv-pt">Профессиональное оборудование и сценический свет</div>
+          <div class="kar-inv-pt">Бэк-вокал и звукорежиссёр на каждом вечере</div>
+          <div class="kar-inv-pt">10 000+ треков · добавляем по запросу</div>
+          <div class="kar-inv-pt">Минимум три часа · депозит включает кухню и бар</div>
+        </div>
+        <a href="karaoke.html" class="kar-inv-cta">
+          Все заведения с караоке
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── MENU PREVIEW — ЧТО ВАС ЖДЁТ ─── -->
+<section class="section mpv-bg" id="menupreview">
+  <div class="wrap">
+    <div class="mpv-hd">
+      <div class="rv">
+        <span class="sec-lbl">Что на меню</span>
+        <h2 class="sec-h2">Авторская карта<br>каждого заведения</h2>
+      </div>
+      <p class="mpv-hd-r rv d1">Каждое блюдо, кальян и коктейль — авторская работа. Ниже несколько сигнатур из карты. Полная — открывается на странице вашей локации.</p>
+    </div>
+    <div class="mpv-grid">
+      <article class="mpv-card rv" onclick="location.href='location.html?city=msk_arbat'">
+        <div class="mpv-img">
+          <span class="mpv-tag">Хит сезона</span>
+          <img src="кальян 1.jpeg" alt="Tropicana Mama"/>
+        </div>
+        <div class="mpv-body">
+          <div class="mpv-name">Tropicana Mama</div>
+          <p class="mpv-desc">Чаша ананас · в колбе пюре маракуйи, малина, киви и свежая мята</p>
+          <div class="mpv-foot">
+            <span class="mpv-vol">Авторский кальян</span>
+            <span class="mpv-price">7 000 ₽</span>
+          </div>
+        </div>
+      </article>
+      <article class="mpv-card rv d1" onclick="location.href='location.html?city=msk_arbat'">
+        <div class="mpv-img">
+          <span class="mpv-tag">Шеф-повар</span>
+          <img src="кухня 6.jpeg" alt="Тартар из говядины"/>
+        </div>
+        <div class="mpv-body">
+          <div class="mpv-name">Тартар из говядины классический</div>
+          <p class="mpv-desc">Говяжья вырезка · бородинский · перепелиное яйцо · горчица · каперсы</p>
+          <div class="mpv-foot">
+            <span class="mpv-vol">160 г</span>
+            <span class="mpv-price">1 050 ₽</span>
+          </div>
+        </div>
+      </article>
+      <article class="mpv-card rv d2" onclick="location.href='location.html?city=msk_arbat'">
+        <div class="mpv-img">
+          <span class="mpv-tag">Сигнатура бара</span>
+          <img src="бар 5.jpeg" alt="Pina Colada"/>
+        </div>
+        <div class="mpv-body">
+          <div class="mpv-name">Pina Colada</div>
+          <p class="mpv-desc">Белый и тёмный ром · ананас · кокос · ириска · сливки</p>
+          <div class="mpv-foot">
+            <span class="mpv-vol">350 мл</span>
+            <span class="mpv-price">1 100 ₽</span>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="mpv-cta rv">
+      <a href="location.html?city=msk_arbat">
+        Смотреть полное меню
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ MODAL (открывается из бургер-меню) ─── -->
+<div class="faq-modal" id="faqModal" onclick="if(event.target===this)closeFaq()">
+  <div class="faq-modal-wrap">
+    <button class="faq-close" onclick="closeFaq()" aria-label="Закрыть">×</button>
+    <div class="faq-modal-inner">
+      <span class="sec-lbl">Вопросы</span>
+      <h2 class="faq-modal-h">Часто<br>спрашивают</h2>
+      <p class="faq-modal-p">Если ответа нет — напишите менеджеру в Telegram или позвоните по единой линии. Отвечаем в течение 30 минут.</p>
+      <div class="faq-list">
+        <details class="faq-q">
+          <summary class="faq-q-h"><span class="faq-q-t">Можно ли прийти без брони?</span><span class="faq-ico">+</span></summary>
+          <div class="faq-a">Можно, но не всегда — особенно в выходные и в часы пиковой загрузки. Бронь гарантирует стол к нужному времени и подходящий зал. Бронируется бесплатно, отменить можно без штрафа.</div>
+        </details>
+        <details class="faq-q">
+          <summary class="faq-q-h"><span class="faq-q-t">Какой возрастной ценз?</span><span class="faq-ico">+</span></summary>
+          <div class="faq-a">18+. На входе администратор может попросить документ, удостоверяющий личность.</div>
+        </details>
+        <details class="faq-q">
+          <summary class="faq-q-h"><span class="faq-q-t">Есть ли дресс-код?</span><span class="faq-ico">+</span></summary>
+          <div class="faq-a">Smart casual. Спортивный костюм и пляжная одежда нежелательны. В VIP-залах и караоке мы рекомендуем строгий формат вечера.</div>
+        </details>
+        <details class="faq-q">
+          <summary class="faq-q-h"><span class="faq-q-t">Можно ли со своим алкоголем?</span><span class="faq-ico">+</span></summary>
+          <div class="faq-a">В большинстве заведений сети — нельзя, мы предлагаем полную алкогольную карту. Исключение — Рублёвка (загородный формат, ресторан-партнёр), где допустим свой напиток при наличии чека.</div>
+        </details>
+        <details class="faq-q">
+          <summary class="faq-q-h"><span class="faq-q-t">Что входит в депозит VIP-салона?</span><span class="faq-ico">+</span></summary>
+          <div class="faq-a">Минимальный заказ от стола: кухня, бар, кальяны. Точные тарифы зависят от заведения и времени бронирования — уточняйте у администратора при оформлении брони.</div>
+        </details>
+        <details class="faq-q">
+          <summary class="faq-q-h"><span class="faq-q-t">Какие способы оплаты?</span><span class="faq-ico">+</span></summary>
+          <div class="faq-a">Принимаем наличные, банковские карты, оплату по СБП и QR-коду. Чаевые официанту/мастеру — на усмотрение гостя.</div>
+        </details>
+        <details class="faq-q">
+          <summary class="faq-q-h"><span class="faq-q-t">Можно ли с детьми?</span><span class="faq-ico">+</span></summary>
+          <div class="faq-a">Заведение работает в формате 18+ из-за алкогольной карты и кальянного формата. Для семейного отдыха рекомендуем дневное время до 20:00 — атмосфера спокойнее.</div>
+        </details>
+        <details class="faq-q">
+          <summary class="faq-q-h"><span class="faq-q-t">Корпоративы и закрытые мероприятия?</span><span class="faq-ico">+</span></summary>
+          <div class="faq-a">Проводим события под ключ — отдельный зал, индивидуальное меню, тематическое оформление, артисты на сцене. Минимальная компания от 10 гостей. Заявку оставляйте через форму бронирования или Telegram.</div>
+        </details>
+        <details class="faq-q">
+          <summary class="faq-q-h"><span class="faq-q-t">Курят ли в заведении?</span><span class="faq-ico">+</span></summary>
+          <div class="faq-a">Сигареты и вейпы — нет, согласно ФЗ-15. Кальяны — да, это часть нашего формата. Гостям с непереносимостью кальянного дыма мы не рекомендуем посещение.</div>
+        </details>
+      </div>
+      <a href="https://t.me/BARVIKHAGROUP" target="_blank" class="faq-modal-cta">Связаться с менеджером →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ─── FEATURES ─── -->
+<section class="section feat-bg" id="features">
+  <div class="wrap">
+    <div class="feat-hd">
+      <div>
+        <span class="sec-lbl rv">Всё что нужно</span>
+        <h2 class="sec-h2 rv">для идеального<br>вечера</h2>
+      </div>
+      <p class="rv" style="max-width:320px;font-size:.88rem;color:var(--muted);line-height:1.8;text-align:right">Каждая деталь продумана,<br>чтобы вы просто отдыхали</p>
+    </div>
+    <div class="feat-grid">
+
+      <button onclick="openFeat('drinks')" class="feat rv">
+        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><path d="M12 12 L28 42 L44 12 Z" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/><line x1="28" y1="42" x2="28" y2="50" stroke="#C9A84C" stroke-width="1.4"/><line x1="18" y1="50" x2="38" y2="50" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round"/><line x1="18" y1="28" x2="38" y2="28" stroke="#C9A84C" stroke-width=".8" opacity=".45"/><circle cx="40" cy="17" r="4" stroke="#C9A84C" stroke-width="1" opacity=".6"/><line x1="36" y1="17" x2="30" y2="22" stroke="#C9A84C" stroke-width="1" opacity=".5"/></svg></div>
+        <div class="feat-t">Напитки</div>
+        <p class="feat-p">Авторские коктейли, первоклассный алкоголь, элитный китайский чай и классические лимонады</p>
+        <div class="feat-cta">Узнать подробнее <span>→</span></div>
+      </button>
+
+      <button onclick="openFeat('hookahs')" class="feat rv d1">
+        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><ellipse cx="28" cy="12" rx="12" ry="5" stroke="#C9A84C" stroke-width="1.4"/><rect x="24.5" y="17" width="7" height="14" stroke="#C9A84C" stroke-width="1.4"/><ellipse cx="28" cy="37" rx="11" ry="8" stroke="#C9A84C" stroke-width="1.4"/><path d="M17 45 Q11 47 10 52" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/><path d="M39 45 Q45 47 46 52" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/><path d="M24 7 Q22 3 24 0" stroke="#C9A84C" stroke-width="1" opacity=".45"/><path d="M28 5 Q30 1 28 -2" stroke="#C9A84C" stroke-width="1" opacity=".35"/><path d="M32 7 Q34 3 32 0" stroke="#C9A84C" stroke-width="1" opacity=".4"/></svg></div>
+        <div class="feat-t">Кальяны</div>
+        <p class="feat-p">Премиальные Wookah и Egeglas. Табаки WTO, Daily Hookah, Tangiers, Darkside — только лучшее</p>
+        <div class="feat-cta">Узнать подробнее <span>→</span></div>
+      </button>
+
+      <button onclick="openFeat('food')" class="feat rv d2">
+        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><ellipse cx="28" cy="36" rx="18" ry="6" stroke="#C9A84C" stroke-width="1.4"/><path d="M10 36 Q10 18 28 18 Q46 18 46 36" stroke="#C9A84C" stroke-width="1.4" fill="none"/><circle cx="28" cy="18" r="3.5" stroke="#C9A84C" stroke-width="1.4"/><line x1="8" y1="18" x2="8" y2="44" stroke="#C9A84C" stroke-width="1.1" opacity=".4"/><line x1="48" y1="18" x2="48" y2="44" stroke="#C9A84C" stroke-width="1.1" opacity=".4"/></svg></div>
+        <div class="feat-t">Еда</div>
+        <p class="feat-p">Собственная кухня: блюда шеф-повара, десерты, мороженое, снеки и натуральное вяленое мясо</p>
+        <div class="feat-cta">Узнать подробнее <span>→</span></div>
+      </button>
+
+      <button onclick="openFeat('games')" class="feat rv d1">
+        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><rect x="8" y="18" width="40" height="24" rx="4" stroke="#C9A84C" stroke-width="1.4"/><circle cx="20" cy="30" r="4" stroke="#C9A84C" stroke-width="1.2"/><circle cx="36" cy="30" r="4" stroke="#C9A84C" stroke-width="1.2"/><line x1="28" y1="26" x2="28" y2="34" stroke="#C9A84C" stroke-width="1"/><line x1="24" y1="30" x2="32" y2="30" stroke="#C9A84C" stroke-width="1"/><line x1="18" y1="42" x2="14" y2="50" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/><line x1="38" y1="42" x2="42" y2="50" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+        <div class="feat-t">Игры</div>
+        <p class="feat-p">Зоны с игровыми приставками PS4 и широкий выбор настольных игр для весёлого времяпровождения</p>
+        <div class="feat-cta">Узнать подробнее <span>→</span></div>
+      </button>
+
+      <button onclick="openFeat('vip')" class="feat rv d2">
+        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><path d="M10 24 L28 10 L46 24 L46 48 L10 48 Z" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/><path d="M20 48 L20 34 L36 34 L36 48" stroke="#C9A84C" stroke-width="1.2"/><line x1="10" y1="24" x2="46" y2="24" stroke="#C9A84C" stroke-width=".7" opacity=".38"/><path d="M24 18 Q28 14 32 18" stroke="#C9A84C" stroke-width="1" opacity=".5" fill="none"/></svg></div>
+        <div class="feat-t">VIP</div>
+        <p class="feat-p">Приватные комнаты для больших компаний — идеально для праздников и закрытых мероприятий</p>
+        <div class="feat-cta">Узнать подробнее <span>→</span></div>
+      </button>
+
+      <button onclick="openFeat('streams')" class="feat rv d3">
+        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><rect x="6" y="10" width="44" height="30" rx="3" stroke="#C9A84C" stroke-width="1.4"/><line x1="28" y1="40" x2="28" y2="48" stroke="#C9A84C" stroke-width="1.4"/><line x1="18" y1="48" x2="38" y2="48" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round"/><circle cx="28" cy="25" r="7" stroke="#C9A84C" stroke-width="1.2"/><path d="M25 25 L27 28 L32 21" stroke="#C9A84C" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="feat-t">Трансляции</div>
+        <p class="feat-p">Огромные проекторы для прямых трансляций спортивных матчей и главных событий страны и мира</p>
+        <div class="feat-cta">Узнать подробнее <span>→</span></div>
+      </button>
+
+      <button onclick="openFeat('karaoke')" class="feat feat-wide rv">
+        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><rect x="20" y="5" width="16" height="24" rx="8" stroke="#C9A84C" stroke-width="1.4"/><path d="M13 28c0 8.284 6.716 15 15 15s15-6.716 15-15" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/><line x1="28" y1="43" x2="28" y2="51" stroke="#C9A84C" stroke-width="1.4"/><line x1="18" y1="51" x2="38" y2="51" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round"/><line x1="20" y1="17" x2="36" y2="17" stroke="#C9A84C" stroke-width="1" opacity=".4"/><line x1="20" y1="22" x2="36" y2="22" stroke="#C9A84C" stroke-width="1" opacity=".3"/><circle cx="43" cy="12" r="4.5" stroke="#C9A84C" stroke-width="1" opacity=".55"/><path d="M41 12 L43 14 L47 9" stroke="#C9A84C" stroke-width=".9" stroke-linecap="round" stroke-linejoin="round" opacity=".7"/></svg></div>
+        <div>
+          <div class="feat-t">Живая сцена · Karaoke</div>
+          <p class="feat-p">Приватные комнаты с профессиональным звуком, тысячи треков на русском и английском. Идеально для вечеринки или просто хорошего настроения</p>
+          <div class="feat-cta">Узнать подробнее <span>→</span></div>
+        </div>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section class="contact-strip" id="contact">
+  <div class="wrap">
+    <div class="cs-inner">
+      <div class="cs-left rv">
+        <h2>Забронировать стол</h2>
+        <p>Отвечаем сразу · бронируем моментально</p>
+      </div>
+      <div class="cs-links rv">
+        <a href="tel:+78002012781" class="cs-link">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="#C9A84C"/></svg>
+          8 800 201-27-81
+        </a>
+        <a href="https://t.me/BARVIKHAGROUP" target="_blank" class="cs-link" data-src="contact">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.93 6.842l-1.68 7.92c-.123.553-.453.688-.917.428l-2.54-1.872-1.226 1.18c-.136.136-.25.25-.512.25l.183-2.586 4.718-4.26c.205-.183-.045-.284-.318-.101L8.21 14.84l-2.505-.782c-.544-.17-.555-.544.114-.806l9.782-3.772c.453-.164.85.101.33.362z" fill="#C9A84C"/></svg>
+          Telegram
+        </a>
+        <a href="#" class="cs-link cs-wa" onclick="event.preventDefault();alert('WhatsApp подключим после получения номера')">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.92 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24a8.21 8.21 0 0 1-4.21-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.264 8.264 0 0 1-1.26-4.38c.01-4.54 3.7-8.25 8.27-8.25zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.74 2.79 4.29 3.8 2.12.84 2.55.67 3.01.62.46-.04 1.49-.6 1.7-1.19.21-.59.21-1.1.15-1.19-.06-.1-.22-.16-.45-.27-.24-.12-1.41-.7-1.62-.78-.22-.08-.38-.12-.54.12-.16.25-.62.78-.76.94-.14.17-.28.18-.51.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.32-1.65-.13-.24-.01-.36.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.17.04-.31-.02-.43-.06-.12-.51-1.31-.72-1.78-.18-.43-.37-.41-.5-.42a8.4 8.4 0 0 0-.47-.01h.5z" fill="#25D366"/></svg>
+          WhatsApp <span class="cs-soon">скоро</span>
+        </a>
+        <a href="https://vk.com/barvikhagroup" target="_blank" class="cs-link" data-src="contact">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4.5 6h15a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5h-15a.5.5 0 0 1-.5-.5v-11A.5.5 0 0 1 4.5 6zm5.5 4v5m0-5c0 0 0-2 2.5-2S15 12 15 12v3" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          ВКонтакте
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="ft-top">
+      <div>
+        <div class="ft-logo-name">БАРВИХА <span>ГРУПП</span></div>
+        <div class="ft-logo-since">Since 2017</div>
+        <p class="ft-desc">Сеть премиум кальянных<br>в России и СНГ.<br>«Новый уровень привычного удовольствия»</p>
+      </div>
+      <div class="ft-col">
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="#features">Предложение</a></li>
+          <li><a href="#franchise">Франшиза</a></li>
+          <li><a href="moscow.html">Заведения</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Контакты</h4>
+        <p>8 800 201-27-81</p>
+        <p>Пн–Вс: 12:00–06:00</p>
+        <div class="ft-soc">
+          <a href="https://t.me/BARVIKHAGROUP" target="_blank" data-src="footer">TG</a>
+          <a href="#" onclick="event.preventDefault();alert('WhatsApp подключим после получения номера')" title="Скоро">WA</a>
+          <a href="https://vk.com/barvikhagroup" target="_blank" data-src="footer">VK</a>
+        </div>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>© 2026 Barvikha Group. Все права защищены.</span>
+      <span>18+ Курение вредит вашему здоровью · <a href="#" style="color:inherit;text-decoration:underline;opacity:.5">Политика конфиденциальности</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── SPLASH ─── -->
+<div class="splash" id="splash">
+  <canvas class="splash-stars" id="splashStars"></canvas>
+  <div class="splash-vign"></div>
+  <div class="splash-inner">
+    <!-- top rule: draws from centre outward -->
+    <svg class="spl-rule" viewBox="0 0 260 1" preserveAspectRatio="none">
+      <line class="spl-rl spl-rl-a" x1="130" y1=".5" x2="0"   y2=".5"/>
+      <line class="spl-rl spl-rl-b" x1="130" y1=".5" x2="260" y2=".5"/>
+    </svg>
+    <div class="splash-eyebrow">Premium Hookah Lounge</div>
+    <div class="splash-name">БАРВИХА</div>
+    <div class="splash-sub">ГРУПП</div>
+    <!-- bottom rule -->
+    <svg class="spl-rule" viewBox="0 0 260 1" preserveAspectRatio="none">
+      <line class="spl-rl spl-rl-c" x1="130" y1=".5" x2="0"   y2=".5"/>
+      <line class="spl-rl spl-rl-d" x1="130" y1=".5" x2="260" y2=".5"/>
+    </svg>
+    <div class="splash-since">— SINCE 2017 —</div>
+  </div>
+</div>
+
+
+<!-- FEAT MODAL -->
+<div class="feat-modal" id="featModal" onclick="if(event.target===this)closeFeat()">
+  <div class="fm-wrap">
+    <button class="fm-close" onclick="closeFeat()">×</button>
+    <span class="fm-tag" id="fmTag"></span>
+    <h2 class="fm-title" id="fmTitle"></h2>
+    <p class="fm-desc" id="fmDesc"></p>
+    <div class="fm-points" id="fmPoints"></div>
+    <button class="fm-cta" id="fmCta"></button>
+  </div>
+</div>
+
+<!-- ─── EXIT-INTENT MODAL ─── -->
+<div class="exit-modal" id="exitModal" onclick="if(event.target===this)closeExit()">
+  <div class="exit-wrap">
+    <button class="exit-x" onclick="closeExit()" aria-label="Закрыть">×</button>
+    <span class="exit-tag">Подождите</span>
+    <h3 class="exit-h">Получите —10% на первый визит</h3>
+    <p class="exit-p">Оставьте номер — менеджер пришлёт промокод в Telegram. Действителен на все 24 заведения сети, 30 дней.</p>
+    <form class="exit-form" onsubmit="handleExitForm(event)">
+      <input type="tel" id="exitPhone" placeholder="+7 (___) ___-__-__" required/>
+      <button type="submit" class="exit-cta" id="exitBtn">Получить промокод</button>
+    </form>
+    <span class="exit-fine">Без спама. Промокод — один раз.</span>
+  </div>
+</div>
+
+<!-- ─── FLOATING CTA STACK (desktop sticky booking + TG/WA) ─── -->
+<div class="fab-stack" id="fabStack" aria-hidden="false">
+  <a href="https://t.me/BARVIKHAGROUP" target="_blank" data-src="fab" class="fab fab-tg" title="Telegram" aria-label="Telegram">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.93 6.842l-1.68 7.92c-.123.553-.453.688-.917.428l-2.54-1.872-1.226 1.18c-.136.136-.25.25-.512.25l.183-2.586 4.718-4.26c.205-.183-.045-.284-.318-.101L8.21 14.84l-2.505-.782c-.544-.17-.555-.544.114-.806l9.782-3.772c.453-.164.85.101.33.362z" fill="#fff"/></svg>
+  </a>
+  <a href="#" onclick="event.preventDefault();alert('WhatsApp подключим после получения номера')" class="fab fab-wa" title="WhatsApp · скоро" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.92 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24a8.21 8.21 0 0 1-4.21-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.264 8.264 0 0 1-1.26-4.38c.01-4.54 3.7-8.25 8.27-8.25zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.74 2.79 4.29 3.8 2.12.84 2.55.67 3.01.62.46-.04 1.49-.6 1.7-1.19.21-.59.21-1.1.15-1.19-.06-.1-.22-.16-.45-.27-.24-.12-1.41-.7-1.62-.78-.22-.08-.38-.12-.54.12-.16.25-.62.78-.76.94-.14.17-.28.18-.51.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.32-1.65-.13-.24-.01-.36.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.17.04-.31-.02-.43-.06-.12-.51-1.31-.72-1.78-.18-.43-.37-.41-.5-.42a8.4 8.4 0 0 0-.47-.01h.5z" fill="#fff"/></svg>
+    <span class="fab-soon">скоро</span>
+  </a>
+  <button class="fab fab-book" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" title="Забронировать">
+    <span>Бронь</span>
+  </button>
+</div>
+
+<script>
+// ── SPLASH STARFIELD (до 40 000 микро-звёзд, рендер через ImageData) ──
+(function(){
+  const canvas=document.getElementById('splashStars');
+  const splash=document.getElementById('splash');
+  if(!canvas||!splash)return;
+  const ctx=canvas.getContext('2d',{alpha:true});
+  const dpr=Math.min(window.devicePixelRatio||1,2);
+  let W=0,H=0,stars=null,bigStars=null,N=0,Nbig=0,stopped=false,imgData=null,buf=null;
+
+  function build(){
+    W=canvas.width=Math.round(window.innerWidth*dpr);
+    H=canvas.height=Math.round(window.innerHeight*dpr);
+    canvas.style.width=window.innerWidth+'px';
+    canvas.style.height=window.innerHeight+'px';
+    imgData=ctx.createImageData(W,H);
+    buf=imgData.data;
+    // Адаптивно с учётом устройства: мобайл / низкое железо → меньше звёзд для плавности
+    const area=window.innerWidth*window.innerHeight;
+    const isMobile=window.innerWidth<=768;
+    const lowEnd=(navigator.hardwareConcurrency||4)<=4 || isMobile;
+    const cap=isMobile?6000:(lowEnd?18000:40000);
+    const mult=isMobile?0.01:(lowEnd?0.014:0.022);
+    N=Math.min(cap,Math.max(2500,Math.round(area*mult)));
+    // 92% — 1px (быстрый ImageData рендер), 8% — крупнее (через fillRect)
+    Nbig=Math.round(N*0.08);
+    const Nsmall=N-Nbig;
+    // small: x, y, phase, speed, brightness-base, isWhite (0/1)
+    stars=new Float32Array(Nsmall*6);
+    for(let i=0;i<Nsmall;i++){
+      const k=i*6;
+      stars[k+0]=Math.floor(Math.random()*W);
+      stars[k+1]=Math.floor(Math.random()*H);
+      stars[k+2]=Math.random()*Math.PI*2;
+      stars[k+3]=0.5+Math.random()*1.6;
+      stars[k+4]=0.35+Math.random()*0.65;
+      stars[k+5]=Math.random()<0.018?1:0; // ~1.8% тёплые белые
+    }
+    // big: x, y, size, phase, speed, brightness-base, isWhite
+    bigStars=new Float32Array(Nbig*7);
+    for(let i=0;i<Nbig;i++){
+      const k=i*7;
+      bigStars[k+0]=Math.random()*W;
+      bigStars[k+1]=Math.random()*H;
+      bigStars[k+2]=(1.4+Math.random()*0.9)*dpr;
+      bigStars[k+3]=Math.random()*Math.PI*2;
+      bigStars[k+4]=0.5+Math.random()*1.6;
+      bigStars[k+5]=0.45+Math.random()*0.55;
+      bigStars[k+6]=Math.random()<0.04?1:0;
+    }
+  }
+  build();
+  let resizeT;
+  window.addEventListener('resize',()=>{clearTimeout(resizeT);resizeT=setTimeout(build,180)});
+
+  function frame(t){
+    if(stopped)return;
+    const time=t*0.001;
+    const wA=time*0.45,wB=time*0.62,wC=time*0.32;
+
+    // Сброс альфы ImageData (только альфа-канал)
+    for(let i=3;i<buf.length;i+=4)buf[i]=0;
+
+    // Маленькие 1px звёзды → прямая запись в ImageData (очень быстро)
+    const Nsmall=stars.length/6|0;
+    for(let i=0;i<Nsmall;i++){
+      const k=i*6;
+      const x=stars[k],y=stars[k+1],ph=stars[k+2],sp=stars[k+3],b=stars[k+4],wh=stars[k+5];
+      const w1=Math.sin(wA + x*0.0032 + y*0.0018);
+      const w2=Math.sin(wB - x*0.0014 + y*0.0036);
+      const w3=Math.sin(wC + (x+y)*0.0024);
+      const wave=(w1+w2*0.7+w3*0.5)/2.2;
+      const tw=Math.sin(time*sp*1.6 + ph);
+      let a=0.04 + b*(0.07 + wave*0.13 + tw*0.1);
+      if(a<0.012)continue;
+      if(a>0.7)a=0.7;
+      const px=(y*W + x)*4;
+      if(wh){buf[px]=244;buf[px+1]=231;buf[px+2]=197}
+      else  {buf[px]=201;buf[px+1]=168;buf[px+2]=76}
+      buf[px+3]=(a*255)|0;
+    }
+    ctx.putImageData(imgData,0,0);
+
+    // Крупные звёзды поверх через fillRect
+    for(let i=0;i<Nbig;i++){
+      const k=i*7;
+      const x=bigStars[k],y=bigStars[k+1],s=bigStars[k+2],ph=bigStars[k+3],sp=bigStars[k+4],b=bigStars[k+5],wh=bigStars[k+6];
+      const w1=Math.sin(wA + x*0.0032 + y*0.0018);
+      const w2=Math.sin(wB - x*0.0014 + y*0.0036);
+      const w3=Math.sin(wC + (x+y)*0.0024);
+      const wave=(w1+w2*0.7+w3*0.5)/2.2;
+      const tw=Math.sin(time*sp*1.6 + ph);
+      let a=0.05 + b*(0.08 + wave*0.14 + tw*0.12);
+      if(a<0.015)continue;
+      if(a>0.85)a=0.85;
+      ctx.globalAlpha=a;
+      ctx.fillStyle=wh?'#f4e7c5':'#c9a84c';
+      ctx.fillRect(x,y,s,s);
+    }
+    ctx.globalAlpha=1;
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+
+  // Останавливаем рендер когда splash скрыт (экономим CPU/батарею)
+  const mo=new MutationObserver(()=>{
+    if(splash.classList.contains('out')||splash.classList.contains('gone')){
+      stopped=true;mo.disconnect();
+      setTimeout(()=>{canvas.remove()},1100);
+    }
+  });
+  mo.observe(splash,{attributes:true,attributeFilter:['class']});
+})();
+
+// FEAT MODAL DATA
+const FEATS={
+  drinks:{tag:'Барная карта',title:'Напитки',desc:'Коктейльная карта, разработанная совместно с приглашёнными барменами. Каждая позиция — отдельная история вкуса.',points:['Авторские коктейли — 10+ позиций','Безалкогольные версии всех хитов','Элитный китайский улун и белый чай','Первоклассный крепкий алкоголь','Локальные крафтовые позиции','Сезонные лимитированные напитки'],cta:'Смотреть меню',href:'location.html'},
+  hookahs:{tag:'Электрочаша',title:'Кальяны',desc:'Электрическая чаша заменяет уголь: стабильная температура, нет горечи, нет запаха горения. К каждому столу — персональный мастер.',points:['60+ авторских табачных миксов','Колбы Wookah и Egeglas — премиум','WTO, Darkside, Tangiers, Daily Hookah','Стабильная температура без угля','Персональный кальянный мастер','Кастомный микс под вкус гостя'],cta:'Смотреть меню',href:'location.html'},
+  food:{tag:'Авторская кухня',title:'Европейская кухня',desc:'Меню шеф-повара разработано так, чтобы не перебивать вкус кальяна, но быть полноценным ужином. Кухня работает до 02:00.',points:['Закуски и снеки для кальяна','Горячие блюда от шеф-повара','Десерты и авторское мороженое','Натуральное вяленое мясо','Вегетарианские и безглютеновые опции','Сезонное обновление меню'],cta:'Смотреть меню',href:'location.html'},
+  games:{tag:'Развлечения',title:'Игры',desc:'Для тех, кто хочет не просто отдохнуть, а провести вечер активно. Игровые зоны органично вписаны в атмосферу без лишнего шума.',points:['PlayStation 4 в выделенных зонах','Большой выбор настольных игр','Мафия, Alias, Активити и другие','Квизы и тематические вечера','Форматы для больших компаний'],cta:'Забронировать стол',href:'#contact'},
+  vip:{tag:'Приватные комнаты',title:'VIP',desc:'Закрытые комнаты для больших компаний. Свой вход, свой мастер, своя атмосфера. Идеально для праздников и корпоративов.',points:['Вместимость 8–20 человек','Приватный вход и отдельная зона','Персональный сервис и мастер','Система для трансляций внутри','Дни рождения и корпоративы','Гибкое меню под мероприятие'],cta:'Забронировать VIP',href:'#contact'},
+  streams:{tag:'Прямые эфиры',title:'Трансляции',desc:'Огромные проекторы для прямых трансляций главных спортивных событий планеты. Кальян + матч — это уже традиция.',points:['Все матчи РПЛ и Лиги Чемпионов','UFC и профессиональный бокс','Формула-1 и MotoGP','Хоккей НХЛ и КХЛ','Тематические вечера по событиям','Атмосфера стадиона без толпы'],cta:'Забронировать стол',href:'#contact'},
+  karaoke:{tag:'Живая сцена',title:'Karaoke & Live',desc:'Приватные комнаты с профессиональным звуком и освещением. Тысячи треков, персональный саундчек и атмосфера настоящего выступления — без посторонних глаз.',points:['Приватные комнаты на 4–20 человек','10 000+ треков на русском и английском','Профессиональный звук и микрофоны','Цветовое сценическое освещение','Запись вашего выступления по желанию','Доступно в большинстве заведений сети'],cta:'Забронировать комнату',href:'#contact'}
+};
+function openFeat(key){
+  const f=FEATS[key];
+  document.getElementById('fmTag').textContent=f.tag;
+  document.getElementById('fmTitle').textContent=f.title;
+  document.getElementById('fmDesc').textContent=f.desc;
+  document.getElementById('fmPoints').innerHTML=f.points.map(p=>`<div class="fm-point">${p}</div>`).join('');
+  const btn=document.getElementById('fmCta');
+  btn.textContent=f.cta;
+  btn.onclick=()=>{closeFeat();if(f.href.startsWith('#')){document.querySelector(f.href).scrollIntoView({behavior:'smooth'})}else{location.href=f.href}};
+  document.getElementById('featModal').classList.add('active');
+  document.body.style.overflow='hidden';
+}
+function closeFeat(){document.getElementById('featModal').classList.remove('active');document.body.style.overflow=''}
+
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeFeat()});
+
+// ── ATMOSPHERE: ДЫМ КАЛЬЯНА (canvas, бесшовный loop) ──
+(function(){
+  const canvas=document.getElementById('atmSmoke');
+  const wrap=document.getElementById('atmReel');
+  if(!canvas||!wrap)return;
+  const ctx=canvas.getContext('2d');
+  const dpr=Math.min(window.devicePixelRatio||1,2);
+  let W=0,H=0,particles=[],running=false,raf=0;
+
+  function resize(){
+    const r=wrap.getBoundingClientRect();
+    W=canvas.width=Math.round(r.width*dpr);
+    H=canvas.height=Math.round(r.height*dpr);
+    canvas.style.width=r.width+'px';
+    canvas.style.height=r.height+'px';
+  }
+  resize();
+  let resT;window.addEventListener('resize',()=>{clearTimeout(resT);resT=setTimeout(resize,150)});
+
+  function spawn(){
+    // источник дыма ~центр (где обычно чаша/угли на фото)
+    const x=W*(0.42+Math.random()*0.16);
+    const y=H*(0.42+Math.random()*0.04);
+    particles.push({
+      x,y,
+      vx:(Math.random()-0.5)*0.3,
+      vy:-0.6-Math.random()*0.7,
+      r:18*dpr+Math.random()*22*dpr,
+      grow:0.18+Math.random()*0.22,
+      life:0,
+      maxLife:160+Math.random()*180,
+      alpha:0.12+Math.random()*0.18,
+      drift:(Math.random()-0.5)*0.012
+    });
+  }
+
+  function frame(){
+    if(!running)return;
+    ctx.clearRect(0,0,W,H);
+    // спавним 1-2 частицы за кадр пока < 90 живых
+    const _smokeMax=window.innerWidth<=768?45:90;
+    if(particles.length<_smokeMax){spawn();if(window.innerWidth>768&&Math.random()<0.5)spawn()}
+    for(let i=particles.length-1;i>=0;i--){
+      const p=particles[i];
+      p.life++;
+      p.x+=p.vx;
+      p.y+=p.vy;
+      p.vx+=p.drift;
+      p.vy*=0.995;
+      p.r+=p.grow;
+      // fade in/out
+      const t=p.life/p.maxLife;
+      let a=p.alpha;
+      if(t<0.2)a*=t/0.2;
+      else if(t>0.7)a*=(1-(t-0.7)/0.3);
+      if(t>=1||p.y<-50||p.x<-100||p.x>W+100){particles.splice(i,1);continue}
+      // радиальный градиент дымка
+      const g=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);
+      g.addColorStop(0,`rgba(220,200,170,${a*0.55})`);
+      g.addColorStop(0.5,`rgba(180,165,140,${a*0.25})`);
+      g.addColorStop(1,'rgba(160,140,110,0)');
+      ctx.fillStyle=g;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();
+    }
+    raf=requestAnimationFrame(frame);
+  }
+
+  // Запуск только когда блок в зоне видимости
+  const io=new IntersectionObserver(entries=>{
+    const vis=entries[0].isIntersecting;
+    if(vis&&!running){running=true;raf=requestAnimationFrame(frame)}
+    else if(!vis&&running){running=false;cancelAnimationFrame(raf)}
+  },{threshold:0.15});
+  io.observe(wrap);
+})();
+
+// ── FRANCHISE FORM + LIVE COUNTER ──
+function handleFranchiseForm(e){
+  e.preventDefault();
+  const btn=document.getElementById('frSubmitBtn');
+  btn.innerHTML='Заявка принята ✓';
+  btn.style.background='#1a4a1a';btn.style.color='#7ecb7e';
+  btn.disabled=true;
+  setTimeout(()=>{window.open('https://t.me/BARVIKHAGROUP','_blank')},1100);
+}
+(function(){
+  const ph=document.getElementById('frPhone');
+  if(ph)ph.addEventListener('input',e=>{let v=e.target.value.replace(/\D/g,'');if(v.startsWith('8'))v='7'+v.slice(1);if(v.startsWith('7')){let f='+7';if(v.length>1)f+=' ('+v.slice(1,4);if(v.length>=5)f+=') '+v.slice(4,7);if(v.length>=8)f+='-'+v.slice(7,9);if(v.length>=10)f+='-'+v.slice(9,11);e.target.value=f}});
+})();
+
+// ── FOUNDER PHOTO: SOFT REVEAL ──
+(function(){
+  const photo=document.getElementById('frPhoto');
+  if(!photo)return;
+  const io=new IntersectionObserver(entries=>{
+    if(entries[0].isIntersecting){photo.classList.add('in');io.disconnect()}
+  },{threshold:0.25});
+  io.observe(photo);
+})();
+
+// ── TREE PARALLAX ──
+(function(){
+  const tree=document.getElementById('treeBg');
+  const ghosts=document.querySelectorAll('#ghostTrees img');
+  if(!tree)return;
+  // Запоминаем базовые top/left призраков, чтобы плавно сдвигать
+  const ghostBase=[...ghosts].map(g=>({el:g,k:0.008+Math.random()*0.018}));
+  let raf=0;
+  function update(){
+    const y=window.scrollY;
+    const vh=window.innerHeight;
+    // Прячем дерево на самом верху, плавно показываем по мере скролла, max ~0.06
+    const fade=Math.min(1,Math.max(0,(y-vh*0.15)/(vh*0.6)));
+    tree.style.opacity=(fade*0.06).toFixed(3);
+    // Дерево практически стоит — едва заметный «вдох» (макс 6% высоты экрана)
+    const drift=Math.min(y*0.012,vh*0.06);
+    tree.style.transform=`translate(-50%,calc(-50% + ${drift}px)) scale(${1+fade*0.04})`;
+    // Призраки тоже почти неподвижны
+    ghostBase.forEach(g=>{
+      const d=Math.min(y*g.k,vh*0.12);
+      g.el.style.transform=(g.el.style.transform.includes('translateX(-50%)')?'translateX(-50%) ':'')+`translateY(${-d}px)`;
+    });
+    raf=0;
+  }
+  window.addEventListener('scroll',()=>{if(!raf)raf=requestAnimationFrame(update)},{passive:true});
+  update();
+})();
+
+// ── SPLASH ──
+(function(){
+  const splash=document.getElementById('splash');
+  const logo=document.querySelector('.nav-logo');
+  function dismissSplash(){
+    splash.classList.add('out');
+    document.body.style.overflow='';
+    setTimeout(()=>{splash.classList.add('gone');window.scrollTo({top:0,behavior:'smooth'})},850);
+  }
+  // Auto-dismiss on page load
+  document.body.style.overflow='hidden';
+  setTimeout(dismissSplash,1800);
+  function showSplash(){
+    splash.classList.remove('gone','out');
+    document.body.style.overflow='hidden';
+    const els=[...splash.querySelectorAll('.splash-eyebrow,.splash-name,.splash-sub,.splash-since,.spl-rl')];
+    els.forEach(el=>{el.style.animation='none'});
+    void splash.offsetWidth;
+    els.forEach(el=>{el.style.animation=''});
+    setTimeout(dismissSplash,1800);
+  }
+  logo.addEventListener('click',e=>{e.preventDefault();showSplash()});
+})();
+
+// ── NAV ──
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('on',scrollY>60),{passive:true});
+
+// ── BURGER ──
+const brg=document.getElementById('brg'),mov=document.getElementById('mov');
+let mo=false;
+function closeBurger(){mo=false;brg.classList.remove('on');mov.classList.remove('on');document.body.style.overflow=''}
+brg.addEventListener('click',()=>{mo=!mo;brg.classList.toggle('on',mo);mov.classList.toggle('on',mo);document.body.style.overflow=mo?'hidden':''});
+document.querySelectorAll('.ml').forEach(l=>l.addEventListener('click',closeBurger));
+
+// ── FAQ MODAL ──
+function openFaq(){const m=document.getElementById('faqModal');if(!m)return;m.classList.add('on');document.body.style.overflow='hidden'}
+function closeFaq(){const m=document.getElementById('faqModal');if(!m)return;m.classList.remove('on');document.body.style.overflow='';m.querySelectorAll('details[open]').forEach(d=>d.removeAttribute('open'))}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeFaq()}});
+
+// ── REVEAL ──
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');obs.unobserve(x.target)}}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+
+// ── PARTICLES on hero canvas ──
+const cv=document.getElementById('pc'),cx=cv.getContext('2d');
+function rsz(){cv.width=window.innerWidth;cv.height=window.innerHeight}rsz();
+window.addEventListener('resize',rsz,{passive:true});
+const pts=Array.from({length:40},()=>({
+  x:Math.random()*innerWidth,y:Math.random()*innerHeight,
+  r:Math.random()*1.2+.2,
+  dx:(Math.random()-.5)*.18,dy:-(Math.random()*.3+.05),
+  a:Math.random()*.18+.03,life:Math.random()
+}));
+(function loop(){
+  cx.clearRect(0,0,cv.width,cv.height);
+  pts.forEach(p=>{
+    cx.beginPath();cx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    cx.fillStyle=`rgba(201,168,76,${p.a*(1-p.life)})`;cx.fill();
+    p.x+=p.dx;p.y+=p.dy;p.life+=.002;
+    if(p.life>=1||p.y<-5){p.x=Math.random()*cv.width;p.y=cv.height+5;p.life=0}
+  });
+  requestAnimationFrame(loop);
+})();
+
+// ═══ ГЕОЛОКАЦИЯ → БЛИЖАЙШИЕ 3 ЗАВЕДЕНИЯ ═══
+const BV_LOCATIONS=[
+  {k:'msk_krylatskoe',n:'Крылатское',c:'Москва',co:[55.7547,37.4181]},
+  {k:'msk_otradnoe',n:'Отрадное',c:'Москва',co:[55.8629,37.6024]},
+  {k:'msk_teplystan',n:'Тёплый стан',c:'Москва',co:[55.6195,37.4881]},
+  {k:'msk_marino',n:'Марьино',c:'Москва',co:[55.6504,37.7458]},
+  {k:'msk_cska',n:'ЦСКА',c:'Москва',co:[55.7785,37.5304]},
+  {k:'msk_mitino',n:'Митино',c:'Москва',co:[55.8489,37.3621]},
+  {k:'msk_yugozapadnaya',n:'Юго-Западная',c:'Москва',co:[55.6634,37.4838]},
+  {k:'msk_ramenki',n:'Раменки',c:'Москва',co:[55.6970,37.5050]},
+  {k:'msk_krasnaya',n:'Красная площадь',c:'Москва',co:[55.7558,37.6213]},
+  {k:'msk_mendeleevskaya',n:'Менделеевская',c:'Москва',co:[55.7919,37.6010]},
+  {k:'msk_kievskaya',n:'Киевская',c:'Москва',co:[55.7458,37.5670]},
+  {k:'msk_seligerskaya',n:'Селигерская',c:'Москва',co:[55.8839,37.5430]},
+  {k:'msk_city',n:'Москва-Сити',c:'Москва',co:[55.7494,37.5378]},
+  {k:'msk_baumanskaya',n:'Бауманская',c:'Москва',co:[55.7807,37.6783]},
+  {k:'msk_paveletskaya',n:'Павелецкая',c:'Москва',co:[55.7280,37.6510]},
+  {k:'msk_kolomenskaya',n:'Коломенская',c:'Москва',co:[55.6810,37.6650]},
+  {k:'msk_rublyovka',n:'Рублёвка',c:'Москва',co:[55.7530,37.2670]},
+  {k:'spb',n:'Невский',c:'Санкт-Петербург',co:[59.9367,30.3260]},
+  {k:'makhachkala',n:'Центр',c:'Махачкала',co:[42.9849,47.5047]}
+];
+function haversine(a,b){
+  const R=6371,toR=x=>x*Math.PI/180;
+  const dLat=toR(b[0]-a[0]),dLon=toR(b[1]-a[1]);
+  const h=Math.sin(dLat/2)**2+Math.cos(toR(a[0]))*Math.cos(toR(b[0]))*Math.sin(dLon/2)**2;
+  return 2*R*Math.asin(Math.sqrt(h));
+}
+function fmtDist(km){return km<1?Math.round(km*1000)+' м':km<10?km.toFixed(1)+' км':Math.round(km)+' км'}
+window.findNearest=function(){
+  const btn=document.getElementById('geoBtn'),btnT=document.getElementById('geoBtnT'),sub=document.getElementById('geoSub'),res=document.getElementById('geoResults');
+  if(!navigator.geolocation){sub.textContent='Геолокация недоступна. Выберите город ниже.';return}
+  btn.disabled=true;btnT.textContent='Определяем...';
+  navigator.geolocation.getCurrentPosition(pos=>{
+    const me=[pos.coords.latitude,pos.coords.longitude];
+    const sorted=BV_LOCATIONS.map(l=>({...l,d:haversine(me,l.co)})).sort((a,b)=>a.d-b.d).slice(0,3);
+    res.style.display='grid';
+    res.innerHTML=sorted.map((l,i)=>`
+      <a class="geo-card rv in" href="location.html?city=${l.k}" data-src="geo">
+        <span class="gc-rank">${i+1}</span>
+        <span class="gc-city">${l.c}</span>
+        <span class="gc-name">${l.n}</span>
+        <span class="gc-dist">${fmtDist(l.d)} от вас →</span>
+      </a>`).join('');
+    sub.textContent='Ваши 3 ближайших заведения:';
+    btnT.textContent='Обновить';btn.disabled=false;
+    res.scrollIntoView({behavior:'smooth',block:'nearest'});
+  },err=>{
+    btn.disabled=false;btnT.textContent='Найти ближайшее';
+    sub.textContent=err.code===1?'Доступ к геолокации запрещён — выберите город вручную ниже.':'Не удалось определить местоположение.';
+  },{enableHighAccuracy:false,timeout:8000,maximumAge:60000});
+};
+
+// ═══ EXIT-INTENT POPUP (десктоп: при движении курсора к закрытию вкладки; мобайл: после 25с скролла) ═══
+(function(){
+  const m=document.getElementById('exitModal');
+  if(!m)return;
+  const KEY='_bv_exit_shown';
+  let shown=false,armed=false;
+  function show(){
+    if(shown||sessionStorage.getItem(KEY)==='1')return;
+    shown=true;
+    sessionStorage.setItem(KEY,'1');
+    m.classList.add('on');
+    document.body.style.overflow='hidden';
+  }
+  window.closeExit=function(){m.classList.remove('on');document.body.style.overflow=''};
+  // Прогреваем триггер после 8 секунд (чтобы не дёргать сразу при заходе)
+  setTimeout(()=>{armed=true},8000);
+  // Desktop: курсор уходит к верхней кромке окна
+  document.addEventListener('mouseleave',e=>{
+    if(armed&&e.clientY<=0&&!shown)show();
+  });
+  // Mobile fallback: после 30 секунд + хотя бы 50% scroll
+  if(window.innerWidth<=768){
+    let scrolled=false;
+    window.addEventListener('scroll',()=>{
+      if(window.scrollY>document.documentElement.scrollHeight*0.4)scrolled=true;
+    },{passive:true});
+    setTimeout(()=>{if(scrolled)show()},30000);
+  }
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.classList.contains('on'))closeExit()});
+  // phone mask
+  const ph=document.getElementById('exitPhone');
+  if(ph)ph.addEventListener('input',e=>{let v=e.target.value.replace(/\D/g,'');if(v.startsWith('8'))v='7'+v.slice(1);if(v.startsWith('7')){let f='+7';if(v.length>1)f+=' ('+v.slice(1,4);if(v.length>=5)f+=') '+v.slice(4,7);if(v.length>=8)f+='-'+v.slice(7,9);if(v.length>=10)f+='-'+v.slice(9,11);e.target.value=f}});
+})();
+window.handleExitForm=function(e){
+  e.preventDefault();
+  const ph=document.getElementById('exitPhone').value;
+  const btn=document.getElementById('exitBtn');
+  btn.innerHTML='Промокод отправлен ✓';btn.style.background='#1a4a1a';btn.style.color='#7ecb7e';btn.disabled=true;
+  setTimeout(()=>{
+    const msg=encodeURIComponent(`Промокод 10% (exit-intent)\nТел: ${ph}`);
+    window.open(`https://t.me/BARVIKHAGROUP?text=${msg}`,'_blank');
+  },800);
+};
+
+// ═══ FAB STACK — показываем после прокрутки 1 экрана; скрываем в зоне формы ═══
+(function(){
+  const fab=document.getElementById('fabStack');
+  const contact=document.getElementById('contact');
+  if(!fab)return;
+  function update(){
+    const y=window.scrollY,vh=window.innerHeight;
+    const shouldShow=y>vh*0.8;
+    let inContact=false;
+    if(contact){const r=contact.getBoundingClientRect();inContact=r.top<vh*0.5&&r.bottom>vh*0.3}
+    fab.classList.toggle('on',shouldShow&&!inContact);
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  update();
+})();
+
+// ═══ UTM / SOURCE TRACKING ═══
+// t.me: добавляем ?start=src_<page>_<position> — менеджер видит источник в боте
+// tel:  пишем в localStorage историю кликов (last 50) — для последующей выгрузки в метрику
+(function(){
+  const PAGE='index';
+  function init(){
+    document.querySelectorAll('a[href^="https://t.me/"]').forEach(a=>{
+      if(a.dataset.bvTracked)return;a.dataset.bvTracked='1';
+      const src=a.dataset.src||(a.closest('section')?.id||'cta');
+      const u=new URL(a.href);
+      if(!u.searchParams.has('start')&&!u.searchParams.has('text')){
+        u.searchParams.set('start',`src_${PAGE}_${src}`);
+        a.href=u.toString();
+      }
+    });
+    document.querySelectorAll('a[href^="tel:"]').forEach(a=>{
+      if(a.dataset.bvTracked)return;a.dataset.bvTracked='1';
+      a.addEventListener('click',()=>{
+        try{
+          const k='_bv_taps';
+          const arr=JSON.parse(localStorage.getItem(k)||'[]');
+          arr.push({t:Date.now(),src:a.dataset.src||'tel',page:PAGE});
+          localStorage.setItem(k,JSON.stringify(arr.slice(-50)));
+        }catch(e){}
+      });
+    });
+  }
+  if(document.readyState!=='loading')init();else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+</body>
+</html>

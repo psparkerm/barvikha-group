@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Барвиха · Караоке — приватные сцены сети</title>
+<meta name="description" content="Авторский караоке-формат в шести заведениях «Барвиха». Приватные сцены, профессиональное оборудование, резидентный звукорежиссёр и каталог из 10 000 треков."/>
+<meta property="og:title" content="Barvikha Karaoke"/>
+<meta property="og:description" content="Шесть заведений сети с приватной караоке-сценой. Резидентный звукорежиссёр, авторский формат вечера."/>
+<meta property="og:type" content="website"/>
+<meta name="theme-color" content="#C9A84C"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23000'/><text y='24' x='4' font-size='24' fill='%23C9A84C' font-family='serif' font-weight='bold'>B</text></svg>"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#000;--s1:#060606;--s2:#0d0d0d;--s3:#111;
+  --gold:#C9A84C;--gold-lt:#E8D5A3;--gold-dk:#8B6914;
+  --gold-grad:linear-gradient(135deg,#8B6914 0%,#C9A84C 30%,#E8D5A3 55%,#C9A84C 75%,#8B6914 100%);
+  --white:#F5F0E8;--muted:rgba(245,240,232,.38);--border:rgba(255,255,255,.06);
+  --b-gold:rgba(201,168,76,.18);--b-gold2:rgba(201,168,76,.35);
+  --glow:0 0 50px rgba(201,168,76,.25),0 0 100px rgba(201,168,76,.1);
+  --hd:'Montserrat',sans-serif;--bd:'Inter',sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1)
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:var(--bd);font-weight:300;overflow-x:hidden;line-height:1.65}
+a{color:inherit;text-decoration:none}
+button{font-family:var(--bd)}
+::-webkit-scrollbar{width:2px}::-webkit-scrollbar-track{background:#000}::-webkit-scrollbar-thumb{background:var(--gold-dk)}
+@keyframes goldShimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes fu{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes urgPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.4rem 2rem;display:flex;justify-content:space-between;align-items:center;transition:background .35s,backdrop-filter .35s;background:transparent}
+.nav.on{background:rgba(0,0,0,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--b-gold);padding:.95rem 2rem}
+.nav-back{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--hd);font-size:.55rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);background:none;border:none;cursor:pointer;transition:color .25s}
+.nav-back:hover{color:var(--gold)}
+.nav-logo img{height:24px;width:auto;display:block}
+.nav-book{font-family:var(--hd);font-size:.55rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#000;background:var(--gold);padding:.85rem 1.5rem;border:none;cursor:pointer;transition:box-shadow .3s}
+.nav-book:hover{box-shadow:var(--glow)}
+
+/* COMMON */
+.section{padding:5.5rem 0}
+.wrap{max-width:1280px;margin:0 auto;padding:0 2.5rem}
+.sec-lbl{font-family:var(--hd);font-size:.5rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}
+.sec-lbl::before{content:'';width:24px;height:1px;background:var(--gold)}
+.sec-h2{font-family:var(--hd);font-size:clamp(2rem,4.4vw,3.2rem);font-weight:200;letter-spacing:.05em;line-height:1.05}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.18s}.d3{transition-delay:.26s}
+.gold-text{background:var(--gold-grad);background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldShimmer 10s ease-in-out infinite}
+
+/* HERO */
+.kar-hero{position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;padding:8rem 1.5rem 5rem;overflow:hidden}
+.kar-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 40%,rgba(201,168,76,.13) 0%,transparent 55%),radial-gradient(ellipse at 70% 60%,rgba(170,80,180,.06) 0%,transparent 55%);pointer-events:none}
+.kar-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.025) 1px,transparent 1px);background-size:80px 80px;pointer-events:none}
+/* «Дискошар» — мерцающее золотое свечение */
+.kar-disco{position:absolute;top:50%;left:50%;transform:translate(-50%,-55%);width:min(640px,72vw);height:min(640px,72vw);border-radius:50%;
+  background:radial-gradient(circle,rgba(201,168,76,.12) 0%,rgba(201,168,76,.04) 35%,transparent 65%);
+  filter:blur(28px);pointer-events:none;animation:discoPulse 5s ease-in-out infinite}
+@keyframes discoPulse{0%,100%{opacity:.6;transform:translate(-50%,-55%) scale(1)}50%{opacity:1;transform:translate(-50%,-55%) scale(1.06)}}
+.kar-vign{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 30%,rgba(0,0,0,.7) 100%);pointer-events:none}
+.kar-hero-inner{position:relative;z-index:2;text-align:center;max-width:880px}
+.kar-eyebrow{font-family:var(--hd);font-size:.55rem;font-weight:500;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;opacity:0;animation:fu 1s var(--ease) forwards .25s}
+.kar-eyebrow::before,.kar-eyebrow::after{content:'·';margin:0 .9rem;color:rgba(201,168,76,.35)}
+.kar-name{font-family:var(--hd);font-size:clamp(2.5rem,9vw,7rem);font-weight:200;letter-spacing:.18em;line-height:.95;background:var(--gold-grad);background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldShimmer 10s ease-in-out infinite,fu 1.1s var(--ease) forwards .4s;opacity:0}
+.kar-tag{font-family:var(--hd);font-size:clamp(.7rem,1.4vw,.9rem);font-weight:300;letter-spacing:.28em;color:rgba(245,240,232,.45);margin:1.6rem 0 2.5rem;text-transform:uppercase;opacity:0;animation:fu 1s var(--ease) forwards .65s}
+.kar-cta{display:inline-flex;align-items:center;gap:1rem;font-family:var(--hd);font-size:.6rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#000;background:var(--gold);padding:1.15rem 2.6rem;border:none;cursor:pointer;transition:box-shadow .3s,transform .3s;position:relative;overflow:hidden;opacity:0;animation:fu 1s var(--ease) forwards .85s}
+.kar-cta::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 40%,rgba(255,255,255,.28) 50%,transparent 60%);transform:translateX(-100%);transition:transform .6s}
+.kar-cta:hover::after{transform:translateX(100%)}
+.kar-cta:hover{box-shadow:0 12px 40px -8px rgba(201,168,76,.45),var(--glow);transform:translateY(-2px)}
+
+/* MANIFEST */
+.kar-manifest{background:var(--bg);position:relative}
+.km-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--b-gold);border:1px solid var(--b-gold)}
+.km-cell{background:#060606;padding:3rem 2.5rem;display:flex;flex-direction:column;gap:1rem;position:relative;overflow:hidden;transition:background .35s}
+.km-cell::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gold-grad);transform:scaleY(0);transform-origin:bottom;transition:transform .45s var(--ease)}
+.km-cell:hover{background:#0a0a0a}
+.km-cell:hover::before{transform:scaleY(1)}
+.km-cell-l{font-family:var(--hd);font-size:.5rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.6rem;margin-bottom:.4rem}
+.km-cell-l::before{content:'';width:18px;height:1px;background:var(--gold)}
+.km-cell h3{font-family:var(--hd);font-size:1.4rem;font-weight:300;letter-spacing:.04em;color:var(--white)}
+.km-cell p{font-size:.85rem;color:var(--muted);line-height:1.85}
+
+/* POINTS */
+.kar-points{background:var(--s1);position:relative;overflow:hidden}
+.kar-points::before{content:'';position:absolute;right:-10%;top:30%;width:560px;height:560px;background:radial-gradient(circle,rgba(201,168,76,.05) 0%,transparent 65%);pointer-events:none;filter:blur(20px)}
+.kp-hd{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:2rem;margin-bottom:3rem;position:relative;z-index:1}
+.kp-hd-r{font-size:.86rem;color:var(--muted);max-width:380px;line-height:1.85}
+.kp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;position:relative;z-index:1}
+.kp-card{background:var(--s2);border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;cursor:pointer;transition:transform .4s var(--ease),border-color .4s,box-shadow .4s;position:relative}
+.kp-card:hover{transform:translateY(-6px);border-color:var(--b-gold);box-shadow:0 25px 60px -20px rgba(0,0,0,.7)}
+.kp-img{aspect-ratio:4/3;overflow:hidden;position:relative;background:linear-gradient(135deg,#0c0c0c,#000)}
+.kp-img img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.9) contrast(1.05) brightness(.85);transition:transform 1.2s var(--ease),filter .6s}
+.kp-card:hover .kp-img img{transform:scale(1.06);filter:saturate(1) contrast(1.05) brightness(.95)}
+.kp-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(201,168,76,.18),transparent 45%);pointer-events:none}
+.kp-tag{position:absolute;top:1rem;left:1rem;font-family:var(--hd);font-size:.45rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);padding:.45rem .8rem;border:1px solid var(--b-gold);background:rgba(0,0,0,.6);backdrop-filter:blur(8px);z-index:2}
+.kp-status{position:absolute;top:1rem;right:1rem;display:inline-flex;align-items:center;gap:.4rem;font-family:var(--hd);font-size:.42rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;padding:.4rem .65rem;border:1px solid var(--b-gold);background:rgba(0,0,0,.6);backdrop-filter:blur(8px);z-index:2}
+.kp-status.open{color:#7ecb7e;border-color:rgba(126,203,126,.3)}
+.kp-status.closed{color:rgba(245,240,232,.55)}
+.kp-status.soon{color:var(--gold);border-color:var(--b-gold2)}
+.kp-status .ks-d{width:5px;height:5px;border-radius:50%;background:currentColor;animation:urgPulse 1.6s ease-in-out infinite}
+.kp-body{padding:1.5rem 1.5rem 1.4rem;display:flex;flex-direction:column;gap:.55rem;flex:1}
+.kp-city{font-family:var(--hd);font-size:.46rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+.kp-name{font-family:var(--hd);font-size:1.05rem;font-weight:300;letter-spacing:.04em;color:var(--white)}
+.kp-meta{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--border);padding-top:.9rem;margin-top:auto}
+.kp-cap{font-family:var(--hd);font-size:.55rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,240,232,.5)}
+.kp-arr{font-family:var(--hd);font-size:.55rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);transition:transform .25s}
+.kp-card:hover .kp-arr{transform:translateX(3px)}
+
+/* FORMAT */
+.kar-format{background:var(--bg);position:relative;overflow:hidden}
+.kar-format::before{content:'';position:absolute;left:-10%;bottom:-10%;width:520px;height:520px;background:radial-gradient(circle,rgba(170,80,180,.04) 0%,transparent 65%);pointer-events:none;filter:blur(20px)}
+.kf-grid{display:grid;grid-template-columns:5fr 7fr;gap:5rem;align-items:start;position:relative;z-index:1}
+.kf-txt h2{margin-bottom:1.4rem}
+.kf-txt p{font-size:.94rem;color:var(--muted);line-height:1.95;margin-bottom:1.2rem}
+.kf-list{display:flex;flex-direction:column;gap:1px;background:var(--b-gold);border:1px solid var(--b-gold)}
+.kf-item{background:#060606;padding:1.4rem 1.6rem;display:flex;justify-content:space-between;align-items:baseline;gap:1.5rem;transition:background .3s}
+.kf-item:hover{background:#0a0a0a}
+.kf-item-l{font-family:var(--hd);font-size:.95rem;font-weight:300;letter-spacing:.04em;color:var(--white)}
+.kf-item-v{font-family:var(--hd);font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-align:right;flex-shrink:0}
+.kf-note{margin-top:1.5rem;padding:1.1rem 1.3rem;border-left:2px solid var(--gold);background:rgba(255,255,255,.02);font-size:.78rem;color:rgba(245,240,232,.65);line-height:1.7}
+
+/* BOOKING */
+.kar-booking{background:var(--s1);position:relative;overflow:hidden}
+.kar-booking::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:720px;height:720px;background:radial-gradient(circle,rgba(201,168,76,.06) 0%,transparent 65%);pointer-events:none;filter:blur(28px)}
+.kb-inner{max-width:560px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.kb-inner h2{margin-bottom:1.1rem}
+.kb-inner p{font-size:.88rem;color:var(--muted);line-height:1.8;margin-bottom:2rem}
+.kb-form{display:flex;flex-direction:column;gap:.65rem}
+.kb-form input,.kb-form select{width:100%;background:rgba(0,0,0,.4);border:1px solid var(--border);color:var(--white);font-family:var(--bd);font-size:.86rem;font-weight:300;padding:1.05rem 1.2rem;outline:none;transition:border-color .3s,background .3s;text-align:center;border-radius:0;-webkit-appearance:none;appearance:none}
+.kb-form select option{background:#0d0d0d}
+.kb-form input::placeholder{color:rgba(255,255,255,.2)}
+.kb-form input:focus,.kb-form select:focus{border-color:var(--gold);background:rgba(201,168,76,.04)}
+.kb-cta{margin-top:.35rem}
+.kb-note{font-size:.66rem;color:rgba(255,255,255,.3);margin-top:1rem;letter-spacing:.04em}
+
+/* FOOTER */
+.footer{background:#000;border-top:1px solid var(--b-gold);padding:2.5rem 0}
+.ft-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.ft-logo img{height:22px;width:auto}
+.ft-links{display:flex;gap:1.5rem}
+.ft-links a{font-size:.75rem;color:var(--muted);transition:color .2s}
+.ft-links a:hover{color:var(--white)}
+.ft-copy{font-size:.66rem;color:rgba(255,255,255,.16);letter-spacing:.04em}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .wrap{padding:0 2rem}
+  .km-grid,.kp-grid{grid-template-columns:repeat(2,1fr)}
+  .kf-grid{grid-template-columns:1fr;gap:3rem}
+}
+@media(max-width:768px){
+  .nav{padding:1rem 1.5rem}
+  .section{padding:4.5rem 0}
+  .wrap{padding:0 1.25rem}
+  .km-grid,.kp-grid{grid-template-columns:1fr}
+  .kp-grid>*:last-child,.km-grid>*:last-child{grid-column:auto}
+  .ft-inner{flex-direction:column;gap:.75rem;text-align:center}
+}
+
+/* ═══ MOBILE/TOUCH/iOS FIXES — универсальные правила ═══ */
+*{-webkit-tap-highlight-color:transparent}
+button,a,input,select,textarea{touch-action:manipulation}
+img,video,canvas,iframe{max-width:100%}
+/* iOS не зумит при фокусе если font-size >= 16px */
+@media(max-width:768px){
+  input[type="text"],input[type="tel"],input[type="email"],input[type="date"],input[type="time"],input[type="number"],input[type="search"],input[type="url"],select,textarea{font-size:16px !important}
+}
+/* iOS Safari URL-bar fix: 100svh лучше чем 100vh */
+@supports(min-height:100svh){
+  .hero,.loc-hero,.kar-hero{min-height:100svh}
+}
+/* Тач-устройства: hover-эффекты не повисают на тапе */
+@media(hover:none) and (pointer:coarse){
+  .city-card:hover,.tst-card:hover,.mpv-card:hover,.kp-card:hover,.menu-item:hover,.oloc:hover,.feat:hover,.fr-photo:hover,.about-photo:hover,.kar-inv-img-wrap:hover,.kd-img-wrap:hover{transform:none}
+}
+/* Min target size для всех кликабельных элементов на мобайле */
+@media(max-width:768px){
+  button,a.btn-g,a.btn-o,.fsub,.fr-cta,.kar-cta,.kb-cta,.soon-cta,.vip-cta,.kd-cta,.kar-inv-cta,.tab-btn,.nav-book,.sb-btn{min-height:48px}
+  /* Wrap-friendly: сетки не должны иметь дробных колонок */
+  .wrap{padding:0 1.25rem}
+}
+/* iPad portrait — компактнее */
+@media(min-width:769px) and (max-width:1024px){
+  .wrap{padding:0 2rem}
+}
+
+/* ═══ MOBILE OVERFLOW SAFETY ═══ */
+html,body{max-width:100vw;overflow-x:hidden}
+.hero-brand-name,.kar-name,.loc-title,.sec-h2,.splash-name,.km-cell h3{word-break:break-word;overflow-wrap:break-word;hyphens:auto}
+@media(max-width:480px){
+  .hero-brand-name,.splash-name{letter-spacing:.12em !important}
+  .loc-title{letter-spacing:.06em !important}
+  .kar-name{letter-spacing:.14em !important}
+  .section{padding:4rem 0 !important}
+  .wrap{padding:0 1rem !important}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+}
+
+/* ═══ FAQ ═══ */
+.faq-bg{background:var(--bg);position:relative;overflow:hidden}
+.faq-bg::before{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:680px;height:680px;background:radial-gradient(circle,rgba(201,168,76,.05) 0%,transparent 65%);pointer-events:none;filter:blur(28px)}
+.faq-grid{display:grid;grid-template-columns:5fr 7fr;gap:5rem;align-items:start;position:relative;z-index:1}
+.faq-hd h2{font-family:var(--hd);font-size:clamp(2rem,4vw,3rem);font-weight:200;letter-spacing:.05em;line-height:1.05;margin-bottom:1.4rem}
+.faq-hd p{font-size:.92rem;color:var(--muted);line-height:1.95;margin-bottom:1.5rem}
+.faq-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border)}
+.faq-q{border-bottom:1px solid var(--border);padding:0;cursor:pointer;list-style:none;background:transparent;width:100%;text-align:left;font-family:inherit;color:inherit;border-left:0;border-right:0;border-top:0;transition:background .35s}
+.faq-q::-webkit-details-marker{display:none}
+.faq-q:hover{background:rgba(201,168,76,.025)}
+.faq-q-h{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;gap:1.4rem;cursor:pointer;list-style:none}
+.faq-q-h::-webkit-details-marker{display:none}
+.faq-q-t{font-family:var(--hd);font-size:1rem;font-weight:300;letter-spacing:.03em;color:var(--white);transition:color .25s}
+.faq-q[open] .faq-q-t,.faq-q:hover .faq-q-t{color:var(--gold)}
+.faq-ico{width:24px;height:24px;flex-shrink:0;border:1px solid var(--b-gold);display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:var(--hd);font-weight:300;font-size:1rem;transition:transform .35s var(--ease),background .35s}
+.faq-q[open] .faq-ico{background:var(--gold);color:#000;transform:rotate(45deg)}
+.faq-a{padding:0 0 1.5rem 0;font-size:.86rem;color:var(--muted);line-height:1.85;max-width:46rem}
+.faq-a a{color:var(--gold);border-bottom:1px solid var(--b-gold2);transition:border-color .25s}
+.faq-a a:hover{border-color:var(--gold)}
+@media(max-width:1024px){.faq-grid{grid-template-columns:1fr;gap:2.5rem}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <button class="nav-back" onclick="history.back()">
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M3 8L7 4M3 8L7 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Назад
+  </button>
+  <div class="nav-logo">
+    <a href="index.html"><img src="https://barvikhagroup.ru/img/main/header-logo.png" alt="Barvikha"/></a>
+  </div>
+  <button class="nav-book" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Забронировать</button>
+</nav>
+
+<!-- HERO -->
+<section class="kar-hero">
+  <div class="kar-hero-bg"></div>
+  <div class="kar-hero-grid"></div>
+  <div class="kar-disco"></div>
+  <div class="kar-vign"></div>
+  <div class="kar-hero-inner">
+    <p class="kar-eyebrow">Авторский формат сети</p>
+    <h1 class="kar-name">БАРВИХА<br>КАРАОКЕ</h1>
+    <p class="kar-tag">Шесть заведений · приватная сцена · резидентный звукорежиссёр</p>
+    <button class="kar-cta" onclick="document.getElementById('points').scrollIntoView({behavior:'smooth'})">
+      Все заведения с караоке
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- MANIFEST -->
+<section class="section kar-manifest">
+  <div class="wrap">
+    <div class="km-grid rv">
+      <div class="km-cell">
+        <span class="km-cell-l">Атмосфера</span>
+        <h3>Глубокие цвета,<br>мягкий свет</h3>
+        <p>Фактурные диваны, неоновые акценты, игра теней от диско-шара. Зал, в котором вечер превращается в событие.</p>
+      </div>
+      <div class="km-cell">
+        <span class="km-cell-l">Звук</span>
+        <h3>Профессиональное<br>оборудование</h3>
+        <p>Стейдж-звук, четыре микрофона, дым-машина и сценическое освещение. Резидентный звукорежиссёр с навыками бэк-вокала с 20:00.</p>
+      </div>
+      <div class="km-cell">
+        <span class="km-cell-l">Каталог</span>
+        <h3>Десять тысяч<br>треков</h3>
+        <p>Русская и зарубежная классика, современные хиты, редкие позиции. По запросу — добавляем нужное к вечеру.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POINTS -->
+<section class="section kar-points" id="points">
+  <div class="wrap">
+    <div class="kp-hd">
+      <div class="rv">
+        <span class="sec-lbl">Где петь</span>
+        <h2 class="sec-h2">Шесть заведений<br>с приватной сценой</h2>
+      </div>
+      <p class="kp-hd-r rv d1">Каждое заведение — это отдельный зал и/или приватные VIP-комнаты караоке. Минимальное бронирование от трёх часов.</p>
+    </div>
+    <div class="kp-grid" id="kpGrid"></div>
+  </div>
+</section>
+
+<!-- FORMAT -->
+<section class="section kar-format">
+  <div class="wrap">
+    <div class="kf-grid">
+      <div class="kf-txt rv">
+        <span class="sec-lbl">Формат вечера</span>
+        <h2 class="sec-h2">Прозрачные<br>правила</h2>
+        <p>Бронь караоке оформляется минимум на три часа. Депозит вносится на гостя — внутри есть всё, кроме кальянов: кухня, бар, алкоголь.</p>
+        <p>Под крупное мероприятие или закрытое событие — обсудим отдельно с администратором.</p>
+      </div>
+      <div class="rv d1">
+        <div class="kf-list">
+          <div class="kf-item">
+            <span class="kf-item-l">Минимальное бронирование</span>
+            <span class="kf-item-v">от 3 часов</span>
+          </div>
+          <div class="kf-item">
+            <span class="kf-item-l">Депозит</span>
+            <span class="kf-item-v">3 000 ₽ с гостя</span>
+          </div>
+          <div class="kf-item">
+            <span class="kf-item-l">Входит в депозит</span>
+            <span class="kf-item-v">Кухня · бар · алкоголь</span>
+          </div>
+          <div class="kf-item">
+            <span class="kf-item-l">Кальяны</span>
+            <span class="kf-item-v">отдельный прайс</span>
+          </div>
+          <div class="kf-item">
+            <span class="kf-item-l">Звукорежиссёр</span>
+            <span class="kf-item-v">с 20:00 ежедневно</span>
+          </div>
+        </div>
+        <div class="kf-note">Точные условия аренды зала и больших компаний — у администратора заведения.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq-bg" id="faq">
+  <div class="wrap">
+    <div class="faq-grid">
+      <div class="faq-hd rv">
+        <span class="sec-lbl">Вопросы о караоке</span>
+        <h2>Что нужно<br>знать заранее</h2>
+        <p>Если ответа нет — напишите нам в Telegram, расскажем подробнее об интересующем заведении и подберём зал под ваш формат вечера.</p>
+        <a href="https://t.me/BARVIKHAGROUP" target="_blank" class="kar-cta" style="margin-top:.5rem">Написать в Telegram →</a>
+      </div>
+      <div class="faq-list rv d1">
+        <details class="faq-q">
+          <summary class="faq-q-h"><span class="faq-q-t">Сколько треков в каталоге?</span><span class="faq-ico">+</span></summary>
+          <div class="faq-a">Более 10 000 треков на русском и зарубежных языках — от классики до современных хитов. Если нужного нет — добавим к вашему вечеру по запросу заранее.</div>
+        </details>
+        <details class="faq-q">
+          <summary class="faq-q-h"><span class="faq-q-t">Какая минимальная бронь?</span><span class="faq-ico">+</span></summary>
+          <div class="faq-a">От трёх часов в любой день недели. Дальше — почасовая аренда по тарифу зала, который выбираете при бронировании.</div>
+        </details>
+        <details class="faq-q">
+          <summary class="faq-q-h"><span class="faq-q-t">Что входит в депозит?</span><span class="faq-ico">+</span></summary>
+          <div class="faq-a">Алкоголь, барная продукция и блюда кухни. Кальяны не входят в депозит — оплачиваются отдельно по прайсу.</div>
+        </details>
+        <details class="faq-q">
+          <summary class="faq-q-h"><span class="faq-q-t">Есть ли звукорежиссёр?</span><span class="faq-ico">+</span></summary>
+          <div class="faq-a">Резидентный звукорежиссёр с навыками бэк-вокала с 20:00 ежедневно. В будние дни — по запросу при бронировании.</div>
+        </details>
+        <details class="faq-q">
+          <summary class="faq-q-h"><span class="faq-q-t">Можно ли провести закрытое мероприятие?</span><span class="faq-ico">+</span></summary>
+          <div class="faq-a">Да — день рождения, корпоратив, девичник, выпускной. Подбираем зал под количество гостей, формат вечера и бюджет. Оформление под событие — за наш счёт.</div>
+        </details>
+        <details class="faq-q">
+          <summary class="faq-q-h"><span class="faq-q-t">В каких заведениях есть караоке?</span><span class="faq-ico">+</span></summary>
+          <div class="faq-a">В Москве: Красная Площадь, Юго-Западная, Менделеевская, Марьино, Крылатское. Скоро откроется в Пензе. В каждом заведении — свой формат: общий зал и/или приватные VIP-салоны караоке.</div>
+        </details>
+        <details class="faq-q">
+          <summary class="faq-q-h"><span class="faq-q-t">Как выглядит сцена и звук?</span><span class="faq-ico">+</span></summary>
+          <div class="faq-a">Профессиональная караоке-машина, большой экран с проектором и плазменные ТВ по периметру, два-четыре микрофона, дым-машина, сценическое световое оборудование. Качество — клубного уровня.</div>
+        </details>
+        <details class="faq-q">
+          <summary class="faq-q-h"><span class="faq-q-t">Как забронировать?</span><span class="faq-ico">+</span></summary>
+          <div class="faq-a">Через форму ниже, по телефону единой линии или в Telegram-канале. Менеджер свяжется в течение 30 минут — уточнит дату, формат вечера и поможет с выбором зала.</div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="section kar-booking" id="booking">
+  <div class="wrap">
+    <div class="kb-inner">
+      <span class="sec-lbl rv" style="justify-content:center">Забронировать</span>
+      <h2 class="sec-h2 rv">Караоке-вечер<br>в Barvikha</h2>
+      <p class="rv d1">Оставьте контакты — менеджер свяжется в течение получаса, подберёт зал под ваше количество гостей и дату.</p>
+      <form class="kb-form rv d2" id="kbForm" onsubmit="handleKBForm(event)">
+        <input type="text" name="name" placeholder="Ваше имя" required/>
+        <input type="tel" id="kbPhone" name="phone" placeholder="+7 (___) ___-__-__" required/>
+        <select name="point" required>
+          <option value="" disabled selected>Точка для караоке</option>
+          <option value="msk_krasnaya">Красная Площадь</option>
+          <option value="msk_yugozapadnaya">Юго-Западная</option>
+          <option value="msk_mendeleevskaya">Менделеевская</option>
+          <option value="msk_marino">Марьино</option>
+          <option value="msk_krylatskoe">Крылатское</option>
+          <option value="penza">Пенза (после открытия)</option>
+        </select>
+        <button type="submit" class="kar-cta kb-cta" id="kbSubmit">
+          Отправить заявку
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </form>
+      <p class="kb-note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="ft-inner">
+      <div class="ft-logo">
+        <img src="https://barvikhagroup.ru/img/main/header-logo.png" alt="Barvikha"/>
+      </div>
+      <div class="ft-links">
+        <a href="index.html">Главная</a>
+        <a href="moscow.html">Москва</a>
+        <a href="index.html#franchise">Франшиза</a>
+        <a href="https://t.me/BARVIKHAGROUP" target="_blank">Telegram</a>
+      </div>
+      <span class="ft-copy">БАРВИХА ГРУПП · с 2017 · 18+</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// REVEAL
+function _setupReveal(){try{const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');obs.unobserve(x.target)}}),{threshold:.05,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.rv').forEach(el=>obs.observe(el))}catch(e){document.querySelectorAll('.rv').forEach(el=>el.classList.add('in'))}}
+setTimeout(()=>document.querySelectorAll('.rv').forEach(el=>el.classList.add('in')),1200);
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',_setupReveal);else _setupReveal();
+
+// NAV
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('on',scrollY>60),{passive:true});
+
+// POINTS
+const KAR_POINTS=[
+  {key:'msk_krasnaya',city:'Москва',loc:'Красная Площадь',cap:'до 50 гостей · 5 VIP-салонов',img:'гавно 1.jpeg',h1v:'12:00 — 03:00',h2v:'12:00 — 06:00',status:'open'},
+  {key:'msk_yugozapadnaya',city:'Москва',loc:'Юго-Западная',cap:'до 40 гостей · 33 этаж',img:'кальян 1.jpeg',h1v:'12:00 — 03:00',h2v:'12:00 — 06:00',status:'open'},
+  {key:'msk_mendeleevskaya',city:'Москва',loc:'Менделеевская',cap:'до 40 гостей · общий зал',img:'бар 1.jpeg',h1v:'12:00 — 03:00',h2v:'12:00 — 06:00',status:'open'},
+  {key:'msk_marino',city:'Москва',loc:'Марьино',cap:'до 40 гостей · 3 VIP-караоке',img:'бар 4.jpeg',h1v:'12:00 — 03:00',h2v:'12:00 — 06:00',status:'open'},
+  {key:'msk_krylatskoe',city:'Москва',loc:'Крылатское',cap:'до 40 гостей · общий зал',img:'бар 6.jpeg',h1v:'12:00 — 03:00',h2v:'12:00 — 06:00',status:'open'},
+  {key:'penza',city:'Пенза',loc:'Центр',cap:'до 30 гостей · скоро открытие',img:'десерт 1.jpeg',status:'soon'}
+];
+function statusForPoint(p){
+  if(p.status==='soon')return{cls:'soon',label:'Скоро'};
+  const now=new Date(),day=now.getDay(),isFs=day===5||day===6;
+  const v=isFs?p.h2v:p.h1v;const m=v.match(/(\d{1,2}):(\d{2})/g);
+  if(!m||m.length<2)return{cls:'closed',label:'Закрыто'};
+  const t=m.map(s=>{const[h,mn]=s.split(':').map(Number);return h*60+mn});
+  const cur=now.getHours()*60+now.getMinutes();
+  let open=false;if(t[1]<t[0])open=cur>=t[0]||cur<t[1];else open=cur>=t[0]&&cur<t[1];
+  return open?{cls:'open',label:'Открыто'}:{cls:'closed',label:'Закрыто'};
+}
+function renderPoints(){
+  const grid=document.getElementById('kpGrid');
+  grid.innerHTML=KAR_POINTS.map((p,i)=>{
+    const st=statusForPoint(p);
+    const cls=i<3?'rv':(i<6?'rv d1':'rv d2');
+    const href=p.status==='soon'?'#':`location.html?city=${p.key}`;
+    return `<a class="kp-card ${cls}" href="${href}">
+      <div class="kp-img">
+        <span class="kp-tag">Karaoke</span>
+        <span class="kp-status ${st.cls}"><span class="ks-d"></span>${st.label}</span>
+        <img src="${p.img}" alt="${p.loc}" loading="lazy"/>
+      </div>
+      <div class="kp-body">
+        <span class="kp-city">${p.city}</span>
+        <span class="kp-name">${p.loc}</span>
+        <div class="kp-meta">
+          <span class="kp-cap">${p.cap}</span>
+          <span class="kp-arr">${p.status==='soon'?'Скоро →':'К точке →'}</span>
+        </div>
+      </div>
+    </a>`;
+  }).join('');
+  // re-attach reveal observer to fresh cards
+  if(window.IntersectionObserver){
+    const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');obs.unobserve(x.target)}}),{threshold:.05,rootMargin:'0px 0px -8% 0px'});
+    grid.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+  }
+}
+renderPoints();
+
+// PHONE MASK
+const kbPhone=document.getElementById('kbPhone');
+kbPhone&&kbPhone.addEventListener('input',e=>{let v=e.target.value.replace(/\D/g,'');if(v.startsWith('8'))v='7'+v.slice(1);if(v.startsWith('7')){let f='+7';if(v.length>1)f+=' ('+v.slice(1,4);if(v.length>=5)f+=') '+v.slice(4,7);if(v.length>=8)f+='-'+v.slice(7,9);if(v.length>=10)f+='-'+v.slice(9,11);e.target.value=f}});
+
+// BOOKING FORM
+const KAR_WEBHOOK='';
+async function handleKBForm(e){
+  e.preventDefault();
+  const f=e.target;const btn=document.getElementById('kbSubmit');
+  const data={kind:'karaoke_booking',name:f.name.value,phone:f.phone.value,point:f.point.value};
+  btn.innerHTML='Отправка...';btn.disabled=true;
+  if(KAR_WEBHOOK){try{await fetch(KAR_WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})}catch(err){}}
+  btn.innerHTML='Заявка принята ✓';btn.style.background='#1a4a1a';btn.style.color='#7ecb7e';
+  setTimeout(()=>{
+    const msg=encodeURIComponent(`Караоке-бронь\nИмя: ${data.name}\nТел: ${data.phone}\nТочка: ${data.point}`);
+    window.open(`https://t.me/BARVIKHAGROUP?text=${msg}`,'_blank');
+  },900);
+}
+
+// UTM / source tracking
+(function(){
+  const PAGE='karaoke';
+  function init(){
+    document.querySelectorAll('a[href^="https://t.me/"]').forEach(a=>{
+      if(a.dataset.bvTracked)return;a.dataset.bvTracked='1';
+      const src=a.dataset.src||'cta';
+      const u=new URL(a.href);
+      if(!u.searchParams.has('start')&&!u.searchParams.has('text')){u.searchParams.set('start',`src_${PAGE}_${src}`);a.href=u.toString()}
+    });
+    document.querySelectorAll('a[href^="tel:"]').forEach(a=>{
+      if(a.dataset.bvTracked)return;a.dataset.bvTracked='1';
+      a.addEventListener('click',()=>{try{const k='_bv_taps';const arr=JSON.parse(localStorage.getItem(k)||'[]');arr.push({t:Date.now(),src:a.dataset.src||'tel',page:PAGE});localStorage.setItem(k,JSON.stringify(arr.slice(-50)))}catch(e){}});
+    });
+  }
+  if(document.readyState!=='loading')init();else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+</body>
+</html>

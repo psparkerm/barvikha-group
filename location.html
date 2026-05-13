@@ -1,0 +1,2447 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Москва · Сити — Барвиха Групп</title>
+<meta name="description" content="Barvikha Group — Москва Сити. Премиум кальянная на Пресненской набережной. Электрочаши, авторская кухня, бар, VIP-комнаты. Работаем до 06:00."/>
+<meta property="og:title" content="Barvikha Group · Москва Сити"/>
+<meta property="og:description" content="Премиум кальянная в Москва Сити. Электрочаши, авторская кухня, бар. Работаем до 06:00. Забронируй стол прямо сейчас."/>
+<meta property="og:image" content="https://barvikhagroup.ru/img/main/large-logo.png"/>
+<meta property="og:type" content="website"/>
+<meta name="theme-color" content="#C9A84C"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23000'/><text y='24' x='4' font-size='24' fill='%23C9A84C' font-family='serif' font-weight='bold'>B</text></svg>"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#000;--s1:#060606;--s2:#0d0d0d;--s3:#111;
+  --gold:#C9A84C;--gold-lt:#E8D5A3;--gold-dk:#8B6914;
+  --gold-grad:linear-gradient(135deg,#8B6914 0%,#C9A84C 30%,#E8D5A3 55%,#C9A84C 75%,#8B6914 100%);
+  --white:#F5F0E8;--muted:rgba(245,240,232,.38);--border:rgba(255,255,255,.06);
+  --b-gold:rgba(201,168,76,.18);--b-gold2:rgba(201,168,76,.35);
+  --glow:0 0 50px rgba(201,168,76,.25),0 0 100px rgba(201,168,76,.1);
+  --hd:'Montserrat',sans-serif;--bd:'Inter',sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1)
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:var(--bd);font-weight:300;overflow-x:hidden;line-height:1.65}
+a{color:inherit;text-decoration:none}
+button{font-family:var(--bd)}
+::-webkit-scrollbar{width:2px}::-webkit-scrollbar-track{background:#000}::-webkit-scrollbar-thumb{background:var(--gold-dk)}
+.gold-text{background:var(--gold-grad);background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldShimmer 10s ease-in-out infinite}
+@keyframes goldShimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 3rem;background:rgba(0,0,0,.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--b-gold)}
+.nav-back{display:flex;align-items:center;gap:.6rem;font-family:var(--hd);font-size:.56rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);background:none;border:none;cursor:pointer;transition:color .25s;padding:0}
+.nav-back:hover{color:var(--gold)}
+.nav-back svg{transition:transform .25s}
+.nav-back:hover svg{transform:translateX(-3px)}
+.nav-logo{display:flex;flex-direction:column;align-items:center;gap:.2rem}
+.nav-logo-img{height:34px;width:auto;display:block}
+.nav-book{font-family:var(--hd);font-size:.56rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#000;background:var(--gold);padding:.65rem 1.5rem;border:none;cursor:pointer;transition:all .3s}
+.nav-book:hover{box-shadow:var(--glow)}
+
+/* HERO */
+.loc-hero{min-height:60vh;display:flex;align-items:flex-end;position:relative;overflow:hidden;padding:8rem 0 4rem}
+.loc-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 60%,rgba(201,168,76,.08) 0%,transparent 55%),radial-gradient(ellipse at 80% 20%,rgba(201,168,76,.04) 0%,transparent 45%)}
+.loc-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.02) 1px,transparent 1px);background-size:70px 70px}
+.loc-hero-vign{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.2),transparent 60%)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 3rem}
+.loc-hero-inner{position:relative;z-index:1}
+.loc-crumbs{display:flex;align-items:center;gap:.6rem;font-family:var(--hd);font-size:.54rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem}
+.loc-crumbs .sep{color:rgba(201,168,76,.35)}
+.loc-crumbs .cur{color:var(--gold)}
+.loc-crumbs .cb-l{color:var(--muted);text-decoration:none;transition:color .25s}
+.loc-crumbs .cb-l:hover{color:var(--gold)}
+.loc-title{font-family:var(--hd);font-size:clamp(2.2rem,8vw,7rem);font-weight:200;letter-spacing:.08em;line-height:.95;margin-bottom:.75rem;word-break:break-word;hyphens:auto;overflow-wrap:break-word}
+.loc-subtitle{font-family:var(--hd);font-size:.72rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:2.5rem}
+.loc-meta{display:flex;gap:1px;background:var(--b-gold);border:1px solid var(--b-gold);margin-bottom:2.5rem;flex-wrap:wrap}
+.lm{background:var(--s1);padding:1rem 1.75rem;flex:1;min-width:160px}
+.lm-l{font-family:var(--hd);font-size:.5rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.3rem}
+.lm-v{font-size:.86rem;color:rgba(245,240,232,.85)}
+.loc-actions{display:flex;gap:.85rem;flex-wrap:wrap}
+.btn-g{display:inline-flex;align-items:center;gap:.75rem;font-family:var(--hd);font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#000;background:var(--gold);padding:1rem 2.25rem;border:none;cursor:pointer;position:relative;overflow:hidden;transition:box-shadow .3s}
+.btn-g::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 40%,rgba(255,255,255,.28) 50%,transparent 60%);transform:translateX(-100%);transition:transform .55s}
+.btn-g:hover::after{transform:translateX(100%)}
+.btn-g:hover{box-shadow:var(--glow)}
+.btn-o{display:inline-flex;align-items:center;gap:.75rem;font-family:var(--hd);font-size:.58rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);background:transparent;border:1px solid var(--b-gold);padding:1rem 1.75rem;cursor:pointer;transition:all .3s}
+.btn-o:hover{border-color:var(--b-gold2);color:var(--gold)}
+.btn-wa{opacity:.7}
+.btn-wa:hover{opacity:1}
+.btn-soon,.bk-soon{margin-left:.5em;padding:.15em .45em;font-size:.75em;letter-spacing:.12em;background:rgba(201,168,76,.12);color:var(--gold);border:1px solid rgba(201,168,76,.3);border-radius:2px}
+.bk-wa{opacity:.75}
+.bk-wa:hover{opacity:1}
+
+/* FAB stack (desktop sticky CTAs) */
+.fab-stack{position:fixed;right:1.5rem;bottom:1.5rem;z-index:80;display:flex;flex-direction:column;gap:.6rem;align-items:flex-end;opacity:0;transform:translateY(20px);transition:opacity .4s,transform .4s;pointer-events:none}
+.fab-stack.on{opacity:1;transform:none;pointer-events:auto}
+.fab{display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;text-decoration:none;font-family:var(--hd);font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:.6rem;box-shadow:0 8px 28px rgba(0,0,0,.45),0 0 0 1px rgba(201,168,76,.18)}
+.fab-tg{width:46px;height:46px;border-radius:50%;background:#229ED9;transition:transform .25s}
+.fab-tg:hover{transform:scale(1.08)}
+.fab-wa{width:46px;height:46px;border-radius:50%;background:#25D366;position:relative;transition:transform .25s;opacity:.78}
+.fab-wa:hover{transform:scale(1.08);opacity:1}
+.fab-wa .fab-soon{position:absolute;top:-5px;right:-12px;background:#0a0a0a;color:var(--gold);border:1px solid rgba(201,168,76,.5);padding:2px 5px;font-size:.45rem;letter-spacing:.1em;border-radius:2px}
+.fab-book{padding:.85rem 1.5rem;background:linear-gradient(135deg,var(--gold) 0%,#d4b256 100%);color:#0a0a0a;border-radius:30px;transition:transform .25s,box-shadow .25s}
+.fab-book:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(201,168,76,.4),0 0 0 1px rgba(201,168,76,.5)}
+@media(max-width:768px){.fab-stack{display:none}} /* на мобиле есть sticky-бар */
+
+/* GALLERY */
+.gallery{padding:3rem 0;background:var(--bg);border-top:1px solid var(--b-gold)}
+.gal-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:240px 240px;gap:3px}
+.gi{position:relative;overflow:hidden}
+.gi.main{grid-row:1/3}
+.gi-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;transition:transform .6s var(--ease)}
+.gi:hover .gi-inner{transform:scale(1.03)}
+.gi:nth-child(1) .gi-inner{background:linear-gradient(135deg,#0a0a0a,#141414)}
+.gi:nth-child(2) .gi-inner{background:linear-gradient(225deg,#0d0d0d,#111)}
+.gi:nth-child(3) .gi-inner{background:linear-gradient(45deg,#0a0a0a,#0f0f0f)}
+.gi:nth-child(4) .gi-inner{background:linear-gradient(135deg,#0d0d0d,#0a0a0a)}
+.gi-overlay{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(201,168,76,.06) 0%,transparent 65%);pointer-events:none}
+.gi-ph{font-family:var(--hd);font-size:.54rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,168,76,.28)}
+.gi-corner{position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none}
+.gi-corner::before{content:'';position:absolute;top:10px;left:10px;width:24px;height:24px;border-top:1px solid var(--b-gold);border-left:1px solid var(--b-gold)}
+.gi-corner::after{content:'';position:absolute;bottom:10px;right:10px;width:24px;height:24px;border-bottom:1px solid var(--b-gold);border-right:1px solid var(--b-gold)}
+
+/* SECTION BASE */
+.section{padding:6rem 0;position:relative}
+.section::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--b-gold),transparent)}
+.sec-lbl{font-family:var(--hd);font-size:.54rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.9rem}
+.sec-h2{font-family:var(--hd);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:200;letter-spacing:.06em;line-height:1.2;margin-bottom:2.5rem}
+
+/* MENU */
+.menu-tabs{display:flex;gap:1px;background:var(--b-gold);border:1px solid var(--b-gold);width:fit-content;margin-bottom:3rem}
+.tab-btn{font-family:var(--hd);font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:.9rem 2rem;background:#000;color:var(--muted);border:none;cursor:pointer;transition:all .3s;position:relative}
+.tab-btn::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold-grad);transform:scaleX(0);transition:transform .35s var(--ease)}
+.tab-btn.active::after,.tab-btn:hover::after{transform:scaleX(1)}
+.tab-btn.active,.tab-btn:hover{background:#080808;color:var(--white)}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.menu-grid{display:grid;grid-template-columns:repeat(2,1fr)}
+.menu-grid>.menu-item,.menu-grid>.menu-cat{outline:1px solid var(--b-gold);outline-offset:-1px}
+.menu-cat{grid-column:1/-1;background:var(--s2);padding:.8rem 1.75rem;display:flex;align-items:center;gap:1rem}
+.menu-cat::before{content:'';width:20px;height:1px;background:var(--gold);flex-shrink:0}
+.menu-cat-t{font-family:var(--hd);font-size:.52rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(201,168,76,.65)}
+.menu-item{
+  background:#000;padding:1.4rem 1.75rem;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;
+  transition:background .3s,border-color .3s;cursor:pointer;border:none;color:var(--white);text-align:left;
+  width:100%;position:relative;overflow:hidden;min-height:96px
+}
+.menu-item>div:first-child{flex:1;min-width:0}
+.mi-desc{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.menu-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gold-grad);transform:scaleY(0);transform-origin:bottom;transition:transform .35s var(--ease)}
+.menu-item:hover{background:#060606}
+.menu-item:hover::before{transform:scaleY(1)}
+.menu-item:hover .mi-open{opacity:1;transform:translateX(0)}
+.mi-name{font-family:var(--hd);font-size:.9rem;font-weight:400;letter-spacing:.04em;margin-bottom:.3rem}
+.mi-desc{font-size:.76rem;color:var(--muted);line-height:1.5}
+.mi-right{display:flex;align-items:center;gap:.75rem;flex-shrink:0}
+.mi-price{font-family:var(--hd);font-size:1.05rem;font-weight:300;white-space:nowrap;background:var(--gold-grad);background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldShimmer 10s ease-in-out infinite}
+.mi-open{font-size:.55rem;color:var(--gold);opacity:0;transform:translateX(-6px);transition:all .3s var(--ease);white-space:nowrap;font-family:var(--hd);letter-spacing:.12em}
+.mi-vol{font-size:.66rem;color:rgba(245,240,232,.4);letter-spacing:.04em;font-family:var(--bd);white-space:nowrap}
+.menu-root>.menu-grid+.menu-grid{margin-top:1.5rem}
+.menu-cat-sub{font-family:var(--bd);font-size:.55rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-left:.6rem}
+
+/* DISH MODAL */
+.dish-modal{
+  position:fixed;inset:0;z-index:500;
+  background:rgba(0,0,0,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  display:flex;align-items:center;justify-content:center;padding:1.5rem;
+  opacity:0;pointer-events:none;transition:opacity .35s var(--ease)
+}
+.dish-modal.active{opacity:1;pointer-events:all}
+.dm-wrap{
+  background:var(--s2);border:1px solid var(--b-gold);
+  max-width:820px;width:100%;max-height:90vh;overflow:hidden;
+  position:relative;display:grid;grid-template-columns:1fr 1fr;
+  opacity:0;transform:scale(.95) translateY(20px);transition:opacity .4s var(--ease),transform .4s var(--ease)
+}
+.dish-modal.active .dm-wrap{opacity:1;transform:none}
+.dm-close{
+  position:absolute;top:1rem;right:1rem;z-index:10;
+  background:rgba(0,0,0,.7);border:1px solid var(--b-gold);
+  color:var(--white);width:34px;height:34px;font-size:1.2rem;line-height:1;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:all .25s;font-family:var(--hd)
+}
+.dm-close:hover{background:rgba(201,168,76,.2);color:var(--gold)}
+.dm-photo-wrap{position:relative;overflow:hidden;min-height:300px}
+.dm-photo{width:100%;height:100%;object-fit:cover;display:block}
+.dm-photo-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to right,transparent 55%,var(--s2) 100%),
+             linear-gradient(to top,rgba(0,0,0,.5) 0%,transparent 40%)
+}
+.dm-body{padding:2.25rem 2rem 2rem;display:flex;flex-direction:column;gap:1.1rem;overflow-y:auto;max-height:90vh}
+.dm-cat{font-family:var(--hd);font-size:.48rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);border:1px solid var(--b-gold);padding:.3rem .7rem;display:inline-block;margin-bottom:.4rem}
+.dm-name{font-family:var(--hd);font-size:1.35rem;font-weight:300;letter-spacing:.06em;margin-bottom:.1rem}
+.dm-price{font-family:var(--hd);font-size:1.2rem;font-weight:300;background:var(--gold-grad);background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldShimmer 10s ease-in-out infinite}
+.dm-story{font-size:.82rem;color:var(--muted);line-height:1.85}
+.dm-section-lbl{font-family:var(--hd);font-size:.48rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:rgba(201,168,76,.55);margin-bottom:.6rem}
+.dm-tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.dm-tag{font-size:.7rem;color:var(--white);background:rgba(255,255,255,.04);border:1px solid var(--border);padding:.3rem .65rem;letter-spacing:.03em}
+.dm-kbzu{border-top:1px solid var(--border);padding-top:1.1rem}
+.dm-kbzu-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--b-gold);margin-top:.6rem}
+.dm-k{background:var(--s3);padding:.75rem .4rem;text-align:center}
+.dm-kv{font-family:var(--hd);font-size:.95rem;font-weight:500;background:var(--gold-grad);background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldShimmer 10s ease-in-out infinite}
+.dm-kl{font-size:.55rem;color:var(--muted);letter-spacing:.06em;margin-top:.15rem}
+.dm-btn{
+  font-family:var(--hd);font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:#000;background:var(--gold);padding:1rem 2rem;border:none;cursor:pointer;margin-top:.4rem;
+  position:relative;overflow:hidden;transition:box-shadow .3s
+}
+.dm-btn::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 40%,rgba(255,255,255,.28) 50%,transparent 60%);transform:translateX(-100%);transition:transform .55s}
+.dm-btn:hover::after{transform:translateX(100%)}
+.dm-btn:hover{box-shadow:0 0 30px rgba(201,168,76,.3)}
+@media(max-width:680px){
+  .dm-wrap{grid-template-columns:1fr}
+  .dm-photo-wrap{min-height:200px;max-height:220px}
+}
+
+/* BOOKING */
+.booking-bg{background:var(--s1)}
+.booking-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:6rem;align-items:start}
+.bk-p{font-size:.9rem;color:var(--muted);line-height:1.85;margin-bottom:2.25rem}
+.bk-contacts{display:flex;flex-direction:column;gap:.9rem}
+.bk-ct{display:flex;align-items:center;gap:.85rem;font-size:.84rem;color:var(--muted);transition:color .25s;text-decoration:none}
+.bk-ct:hover{color:var(--gold)}
+.bk-ico{width:36px;height:36px;border:1px solid var(--b-gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .3s}
+.bk-ct:hover .bk-ico{background:rgba(201,168,76,.1)}
+/* Form */
+.form{display:flex;flex-direction:column;gap:.65rem}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:.65rem}
+.ff input,.ff select,.ff textarea{width:100%;background:rgba(255,255,255,.025);border:1px solid var(--border);color:var(--white);font-family:var(--bd);font-size:.84rem;font-weight:300;padding:1.05rem 1.2rem;outline:none;transition:border-color .3s,background .3s;border-radius:0;-webkit-appearance:none;appearance:none}
+.ff input::placeholder,.ff textarea::placeholder{color:rgba(255,255,255,.18)}
+.ff select option{background:#0d0d0d;color:var(--white)}
+.ff input:focus,.ff select:focus,.ff textarea:focus{border-color:var(--gold);background:rgba(201,168,76,.03)}
+.ff textarea{resize:none;height:100px}
+.fsub{width:100%;font-family:var(--hd);font-size:.6rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#000;background:var(--gold);padding:1.05rem 2rem;border:none;cursor:pointer;margin-top:.35rem;transition:box-shadow .3s;position:relative;overflow:hidden}
+.fsub::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 40%,rgba(255,255,255,.28) 50%,transparent 60%);transform:translateX(-100%);transition:transform .55s}
+.fsub:hover::after{transform:translateX(100%)}
+.fsub:hover{box-shadow:var(--glow)}
+.fnote{font-size:.64rem;color:rgba(255,255,255,.16);text-align:center}
+
+/* OTHER LOCATIONS */
+.other-bg{background:var(--bg)}
+.other-hd{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:2rem}
+.other-hd-r{font-size:.78rem;color:var(--muted);max-width:340px;line-height:1.7;display:flex;align-items:center;gap:.6rem}
+.other-hd-r::before{content:'';width:24px;height:1px;background:var(--gold);flex-shrink:0}
+.other-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--b-gold);border:1px solid var(--b-gold);margin-top:1.5rem}
+.oloc{display:block;background:#000;padding:1.5rem 1.4rem;cursor:pointer;transition:background .3s,transform .35s var(--ease);text-align:left;border:none;color:var(--white);width:100%;position:relative;text-decoration:none;overflow:hidden}
+.oloc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gold-grad);transform:scaleY(0);transform-origin:bottom;transition:transform .35s var(--ease)}
+.oloc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--gold-grad);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.oloc:hover{background:#060606}
+.oloc:hover::before{transform:scaleY(1)}
+.oloc:hover::after{transform:scaleX(1)}
+.oloc:hover .oloc-arr{opacity:1;transform:translateX(0)}
+.oloc-code{font-family:var(--hd);font-size:.5rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.55rem;margin-bottom:.5rem}
+.oloc-dist{display:inline-flex;align-items:center;gap:.35rem;color:rgba(245,240,232,.55);font-weight:500}
+.oloc-dist::before{content:'';width:3px;height:3px;background:var(--gold);border-radius:50%;display:inline-block}
+.oloc-name{font-family:var(--hd);font-size:.92rem;font-weight:400;letter-spacing:.04em;margin-bottom:.3rem}
+.oloc-addr{font-size:.74rem;color:var(--muted);margin-bottom:.4rem}
+.oloc-arr{font-size:.55rem;color:var(--gold);opacity:0;transform:translateX(-6px);transition:all .3s var(--ease);font-family:var(--hd);letter-spacing:.18em;text-transform:uppercase;display:inline-flex;align-items:center;gap:.4rem}
+
+/* FOOTER */
+.footer{background:#000;border-top:1px solid var(--b-gold);padding:2.5rem 0}
+.ft-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.ft-logo{display:flex;flex-direction:column;gap:.25rem}
+.ft-logo img{height:22px;width:auto}
+.ft-links{display:flex;gap:1.5rem}
+.ft-links a{font-size:.75rem;color:var(--muted);transition:color .2s}
+.ft-links a:hover{color:var(--white)}
+.ft-copy{font-size:.66rem;color:rgba(255,255,255,.16)}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.18s}.d3{transition-delay:.26s}.d4{transition-delay:.34s}
+
+/* ═══ OPEN-NOW INDICATOR + ROUTE BUTTON В HERO ═══ */
+.loc-status{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--hd);font-size:.5rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;padding:.5rem .85rem;border:1px solid var(--b-gold);background:rgba(0,0,0,.45);backdrop-filter:blur(8px);margin-bottom:1.4rem}
+.loc-status.open{color:#7ecb7e;border-color:rgba(126,203,126,.35)}
+.loc-status.closed{color:#e8a55c;border-color:rgba(232,165,92,.35)}
+.loc-status .ls-dot{width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 10px currentColor;animation:urgPulse 1.6s ease-in-out infinite}
+@keyframes urgPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.loc-status .ls-time{color:rgba(245,240,232,.55);font-weight:400;letter-spacing:.04em}
+.loc-status .ls-left{color:#f3a648;font-weight:600;animation:lsLeftPulse 2s infinite}
+@keyframes lsLeftPulse{0%,100%{opacity:1}50%{opacity:.6}}
+
+/* ═══ TOP-3 SIGNATURES (превью меню сверху) ═══ */
+.top3-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin:2rem 0 3.5rem}
+.top3-card{background:var(--s2);border:1px solid var(--border);position:relative;overflow:hidden;display:flex;flex-direction:column;transition:transform .4s var(--ease),border-color .4s,box-shadow .4s;cursor:pointer}
+.top3-card:hover{transform:translateY(-5px);border-color:var(--b-gold);box-shadow:0 25px 60px -20px rgba(0,0,0,.7)}
+.top3-img{aspect-ratio:4/3;overflow:hidden;position:relative}
+.top3-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s var(--ease)}
+.top3-card:hover .top3-img img{transform:scale(1.06)}
+.top3-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6) 0%,transparent 50%);pointer-events:none}
+.top3-tag{position:absolute;top:1rem;left:1rem;font-family:var(--hd);font-size:.45rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);padding:.4rem .7rem;border:1px solid var(--b-gold);background:rgba(0,0,0,.6);backdrop-filter:blur(8px);z-index:2}
+.top3-body{padding:1.5rem 1.4rem 1.4rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.top3-name{font-family:var(--hd);font-size:1rem;font-weight:300;letter-spacing:.04em;color:var(--white)}
+.top3-desc{font-size:.74rem;color:var(--muted);line-height:1.6;flex:1}
+.top3-foot{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--border);padding-top:.85rem;margin-top:.4rem}
+.top3-vol{font-family:var(--hd);font-size:.5rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,240,232,.45)}
+.top3-price{font-family:var(--hd);font-size:1.05rem;font-weight:300;background:var(--gold-grad);background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldShimmer 10s ease-in-out infinite}
+
+/* ═══ REELS С ДЫМОМ ═══ */
+.lreel-bg{background:var(--bg);position:relative;overflow:hidden;padding:5rem 0}
+.lreel-grid{display:grid;grid-template-columns:5fr 4fr;gap:5rem;align-items:center}
+.lreel-wrap{position:relative;aspect-ratio:9/14;max-height:560px;border:1px solid var(--b-gold);overflow:hidden;background:#0c0c0c;box-shadow:0 35px 90px -30px rgba(0,0,0,.85)}
+.lreel-wrap img.lreel-poster{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.95) contrast(1.07);position:absolute;inset:0;z-index:1;animation:lreelKb 22s ease-in-out infinite alternate}
+@keyframes lreelKb{0%{transform:scale(1) translate(0,0)}50%{transform:scale(1.06) translate(-1.5%,-1%)}100%{transform:scale(1.04) translate(1%,-2%)}}
+.lreel-smoke{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;mix-blend-mode:screen}
+.lreel-wrap::before{content:'';position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,transparent 38%)}
+.lreel-tag{position:absolute;top:1.2rem;left:1.2rem;z-index:4;font-family:var(--hd);font-size:.42rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);padding:.5rem .8rem;border:1px solid var(--b-gold);background:rgba(0,0,0,.55);backdrop-filter:blur(8px);display:flex;align-items:center;gap:.45rem}
+.lreel-tag .live-dot{width:6px;height:6px;border-radius:50%;background:#e54848;box-shadow:0 0 8px rgba(229,72,72,.7);animation:urgPulse 1.4s ease-in-out infinite}
+.lreel-meta{position:absolute;bottom:1.2rem;left:1.2rem;right:1.2rem;z-index:4;display:flex;justify-content:space-between;align-items:flex-end}
+.lreel-meta-l{font-family:var(--hd);font-size:.52rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,240,232,.55)}
+.lreel-meta-r{font-family:var(--hd);font-size:.52rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.lreel-txt h2{margin-bottom:1.25rem;font-family:var(--hd);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;letter-spacing:.04em}
+.lreel-txt p{font-size:.92rem;color:var(--muted);line-height:1.9;margin-bottom:1.5rem}
+
+/* ═══ REVIEWS — ОТЗЫВЫ ГОСТЕЙ ═══ */
+.rv-bg{background:var(--s1);position:relative;overflow:hidden}
+.rv-bg::before{content:'';position:absolute;left:-10%;top:50%;width:580px;height:580px;background:radial-gradient(circle,rgba(201,168,76,.05) 0%,transparent 65%);pointer-events:none;filter:blur(20px);transform:translateY(-50%)}
+.rv-hd{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:2rem;margin-bottom:3rem;position:relative;z-index:1}
+.rv-rate{display:flex;align-items:center;gap:1rem}
+.rv-rate-stars{display:flex;gap:.2rem;color:var(--gold);font-size:1.1rem;letter-spacing:.05em}
+.rv-rate-num{font-family:var(--hd);font-size:1.6rem;font-weight:300;background:var(--gold-grad);background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldShimmer 10s ease-in-out infinite;line-height:1}
+.rv-rate-l{font-size:.7rem;color:var(--muted);letter-spacing:.04em}
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;position:relative;z-index:1}
+.rv-card{background:var(--s2);border:1px solid var(--border);padding:2rem 1.85rem 1.7rem;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:1.1rem;transition:border-color .4s,transform .4s var(--ease),box-shadow .4s}
+.rv-card::before{content:'\201C';position:absolute;top:.5rem;right:1rem;font-family:'Cormorant Garamond',serif;font-size:4.5rem;color:rgba(201,168,76,.12);line-height:1;font-weight:600}
+.rv-card::after{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gold-grad);transform:scaleY(0);transform-origin:bottom;transition:transform .45s var(--ease)}
+.rv-card:hover{transform:translateY(-4px);border-color:var(--b-gold);box-shadow:0 20px 50px -20px rgba(0,0,0,.6)}
+.rv-card:hover::after{transform:scaleY(1)}
+.rv-stars{color:var(--gold);font-size:.85rem;letter-spacing:.05em;position:relative;z-index:1}
+.rv-quote{font-family:var(--bd);font-size:.84rem;line-height:1.75;color:rgba(245,240,232,.88);font-style:italic;flex:1;position:relative;z-index:1}
+.rv-meta{display:flex;align-items:center;gap:.95rem;border-top:1px solid var(--border);padding-top:.95rem}
+.rv-ava{width:40px;height:40px;flex-shrink:0;border-radius:50%;border:1px solid var(--b-gold);display:flex;align-items:center;justify-content:center;font-family:var(--hd);font-size:.7rem;color:var(--gold);background:linear-gradient(135deg,rgba(201,168,76,.08),rgba(0,0,0,.4))}
+.rv-info-name{font-family:var(--hd);font-size:.78rem;font-weight:400;letter-spacing:.04em;color:var(--white);margin-bottom:.15rem}
+.rv-info-src{font-size:.65rem;color:var(--muted);letter-spacing:.04em}
+
+/* ═══ MAP ═══ */
+.map-bg{background:var(--bg);position:relative}
+.map-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--b-gold);min-height:380px}
+.map-iframe-wrap{position:relative;background:#0a0a0a;overflow:hidden}
+.map-iframe-wrap iframe{width:100%;height:100%;border:0;display:block;filter:invert(.92) hue-rotate(180deg) saturate(.6) brightness(.95)}
+.map-info{padding:2.5rem 2.5rem;display:flex;flex-direction:column;justify-content:center;background:var(--s2);gap:1.4rem}
+.map-info-row{display:flex;flex-direction:column;gap:.35rem}
+.map-info-l{font-family:var(--hd);font-size:.46rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.6rem}
+.map-info-l::before{content:'';width:18px;height:1px;background:var(--gold)}
+.map-info-v{font-family:var(--hd);font-size:.95rem;font-weight:300;letter-spacing:.03em;color:var(--white)}
+.map-info-v.s{font-size:.78rem;color:var(--muted);font-family:var(--bd);font-weight:300}
+.map-route{display:inline-flex;align-items:center;justify-content:center;gap:.85rem;font-family:var(--hd);font-size:.55rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#000;background:var(--gold);padding:1rem 1.7rem;margin-top:.9rem;cursor:pointer;border:none;transition:box-shadow .3s,transform .3s;text-align:center}
+.map-route:hover{box-shadow:var(--glow);transform:translateY(-2px)}
+
+/* ═══ VIP & CERTIFICATES ═══ */
+.vip-bg{background:var(--s1);position:relative;overflow:hidden}
+.vip-bg::after{content:'';position:absolute;right:-10%;bottom:-15%;width:520px;height:520px;background:radial-gradient(circle,rgba(201,168,76,.05) 0%,transparent 65%);pointer-events:none}
+.vip-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:3rem;align-items:start;position:relative;z-index:1}
+.vip-block{background:var(--s2);border:1px solid var(--b-gold);padding:2.4rem 2.2rem 2.1rem;position:relative;overflow:hidden}
+.vip-block::before{content:'';position:absolute;top:-1px;left:-1px;width:40px;height:40px;border-top:1.5px solid var(--gold);border-left:1.5px solid var(--gold)}
+.vip-block::after{content:'';position:absolute;bottom:-1px;right:-1px;width:40px;height:40px;border-bottom:1.5px solid var(--gold);border-right:1.5px solid var(--gold)}
+.vip-block h3{font-family:var(--hd);font-size:1.3rem;font-weight:300;letter-spacing:.05em;color:var(--white);margin:.5rem 0 .85rem}
+.vip-block p{font-size:.84rem;color:var(--muted);line-height:1.85;margin-bottom:1.4rem}
+.vip-features{display:flex;flex-direction:column;gap:.65rem;margin-bottom:1.5rem}
+.vip-feat{display:flex;align-items:flex-start;gap:.75rem;font-size:.78rem;color:rgba(245,240,232,.85);line-height:1.55}
+.vip-feat-ico{width:18px;height:18px;flex-shrink:0;border:1px solid var(--gold);color:var(--gold);font-family:var(--hd);font-size:.55rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.vip-cta{display:inline-flex;align-items:center;gap:.7rem;font-family:var(--hd);font-size:.55rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);padding:.85rem 1.4rem;border:1px solid var(--b-gold);transition:background .3s,color .3s;cursor:pointer}
+.vip-cta:hover{background:var(--gold);color:#000}
+.vip-certs{display:flex;flex-direction:column;gap:.85rem}
+.vip-cert{display:flex;align-items:center;gap:1rem;padding:1.2rem 1.3rem;background:var(--s2);border:1px solid var(--border);transition:border-color .35s}
+.vip-cert:hover{border-color:var(--b-gold)}
+.vip-cert-ico{width:42px;height:42px;flex-shrink:0;border:1px solid var(--gold);color:var(--gold);font-family:var(--hd);font-size:.85rem;font-weight:200;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(201,168,76,.08),rgba(0,0,0,.3))}
+.vip-cert-info{display:flex;flex-direction:column;gap:.2rem}
+.vip-cert-l{font-family:var(--hd);font-size:.78rem;font-weight:400;letter-spacing:.04em;color:var(--white)}
+.vip-cert-s{font-size:.65rem;color:var(--muted);letter-spacing:.04em}
+
+/* ═══ HERO TOP ROW: Сегодня + статус ═══ */
+.loc-hero-top{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-bottom:1.5rem}
+
+/* Сегодня в заведении */
+.loc-today{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--hd);font-size:.5rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;padding:.5rem .85rem;border:1px solid var(--b-gold);background:rgba(0,0,0,.45);backdrop-filter:blur(8px)}
+.loc-today .lt-i{color:var(--gold);font-size:.7rem;line-height:1}
+.loc-today .lt-t{color:var(--white)}
+.loc-today .lt-s{color:rgba(245,240,232,.5);font-weight:400;letter-spacing:.04em}
+
+/* Премиум-бейдж локации */
+.loc-badge{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--hd);font-size:.5rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;padding:.5rem .9rem;color:#000;background:var(--gold-grad);background-size:200% 100%;animation:goldShimmer 8s ease-in-out infinite;box-shadow:0 4px 18px -4px rgba(201,168,76,.5)}
+.loc-badge .lb-i{font-size:.85rem;line-height:1}
+
+/* Кухня-пилл в meta */
+.lm-kitchen{display:flex;flex-direction:column;flex:1;background:#000;padding:1.05rem 1.4rem;min-width:0;border-left:2px solid var(--gold)}
+.lm-kitchen .lm-l{font-family:var(--hd);font-size:.46rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:.45rem;display:flex;align-items:center;gap:.5rem}
+
+/* ═══ FEATURES STRIP ═══ */
+.feat-strip{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:2.5rem}
+.feat-pill{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--hd);font-size:.5rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:.55rem .9rem;border:1px solid var(--border);color:rgba(245,240,232,.78);background:rgba(255,255,255,.02);transition:border-color .35s,color .35s}
+.feat-pill:hover{border-color:var(--b-gold);color:var(--white)}
+.feat-pill .fp-i{font-size:.85rem;line-height:1}
+
+/* ═══ INFO ROW (метро/парковка/VIP/как добраться) ═══ */
+/* ═══ ABOUT (О заведении) ═══ */
+.about-bg{background:var(--s1);position:relative;overflow:hidden}
+.about-bg::before{content:'';position:absolute;left:-12%;top:50%;width:540px;height:540px;transform:translateY(-50%);background:radial-gradient(circle,rgba(201,168,76,.05) 0%,transparent 65%);pointer-events:none;filter:blur(28px)}
+.about-grid{display:grid;grid-template-columns:5fr 6fr;gap:4rem;align-items:start;position:relative;z-index:1}
+.about-photo{position:relative;aspect-ratio:4/5;max-height:580px;overflow:hidden;border:1px solid var(--b-gold)}
+.about-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.92) contrast(1.05);transition:transform 1.4s var(--ease)}
+.about-photo:hover img{transform:scale(1.04)}
+.about-photo-overlay{position:absolute;inset:0;pointer-events:none;background:linear-gradient(135deg,transparent 50%,rgba(201,168,76,.05) 100%),linear-gradient(to top,rgba(0,0,0,.55) 0%,transparent 45%)}
+.about-txt{display:flex;flex-direction:column;gap:1.5rem}
+.about-txt .loc-highlight,.about-txt .info-row,.about-txt .loc-directions,.about-txt .feat-strip{margin-bottom:0}
+
+.info-row{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--b-gold);border:1px solid var(--b-gold);margin-bottom:3rem}
+.info-cell{background:#060606;padding:1.4rem 1.4rem 1.3rem;display:flex;flex-direction:column;gap:.45rem;position:relative;overflow:hidden;transition:background .3s}
+.info-cell::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gold-grad);transform:scaleY(0);transform-origin:bottom;transition:transform .35s var(--ease)}
+.info-cell:hover{background:#0a0a0a}
+.info-cell:hover::before{transform:scaleY(1)}
+.info-cell-l{font-family:var(--hd);font-size:.46rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.6rem}
+.info-cell-l::before{content:'';width:14px;height:1px;background:var(--gold)}
+.info-cell-v{font-family:var(--hd);font-size:.88rem;font-weight:300;letter-spacing:.02em;color:var(--white);line-height:1.4}
+.info-cell-s{font-size:.7rem;color:var(--muted);line-height:1.55}
+.info-park-free{color:#7ecb7e}
+.info-park-paid{color:var(--gold)}
+.info-park-metro{color:rgba(245,240,232,.55)}
+
+/* ═══ Highlight + Directions ═══ */
+.loc-highlight{margin-bottom:2.5rem;padding:1.5rem 1.7rem;border:1px solid var(--b-gold);background:linear-gradient(135deg,rgba(201,168,76,.06),rgba(0,0,0,.4));position:relative;overflow:hidden}
+.loc-highlight::before{content:'';position:absolute;top:-1px;left:-1px;width:32px;height:32px;border-top:1.5px solid var(--gold);border-left:1.5px solid var(--gold)}
+.loc-highlight-l{font-family:var(--hd);font-size:.46rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:.55rem;display:flex;align-items:center;gap:.55rem}
+.loc-highlight-l::before{content:'';width:18px;height:1px;background:var(--gold)}
+.loc-highlight-t{font-family:var(--hd);font-size:1.05rem;font-weight:300;letter-spacing:.04em;color:var(--white);line-height:1.55}
+
+.loc-directions{margin-bottom:2.5rem;padding:1.3rem 1.6rem;border-left:2px solid var(--gold);background:rgba(255,255,255,.015);font-size:.84rem;color:rgba(245,240,232,.78);line-height:1.75;display:flex;align-items:flex-start;gap:1rem}
+.loc-directions .ld-l{display:block;font-family:var(--hd);font-size:.46rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
+
+/* ═══ COMING SOON OVERLAY ═══ */
+body.is-soon .gallery,body.is-soon .menu-tabs,body.is-soon #menuRoot,body.is-soon #booking,
+body.is-soon #reviews,body.is-soon #atmosphere,body.is-soon #vip,body.is-soon #map,
+body.is-soon .lreel-bg,body.is-soon .top3-grid,body.is-soon #nearbySection .other-grid,
+body.is-soon .info-row,body.is-soon .feat-strip,body.is-soon .loc-highlight{filter:blur(20px) brightness(.55) saturate(.6);pointer-events:none;user-select:none}
+.soon-modal{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:300;max-width:520px;width:90%;background:linear-gradient(135deg,#0a0a0a,#000);border:1px solid var(--b-gold);box-shadow:0 0 80px rgba(201,168,76,.25),0 30px 80px rgba(0,0,0,.85);padding:3rem 2.5rem 2.5rem;text-align:center;display:none}
+.soon-modal::before{content:'';position:absolute;top:-1px;left:-1px;width:48px;height:48px;border-top:1.5px solid var(--gold);border-left:1.5px solid var(--gold)}
+.soon-modal::after{content:'';position:absolute;bottom:-1px;right:-1px;width:48px;height:48px;border-bottom:1.5px solid var(--gold);border-right:1.5px solid var(--gold)}
+body.is-soon .soon-modal{display:block;animation:fu .8s var(--ease)}
+.soon-modal-l{font-family:var(--hd);font-size:.5rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;display:flex;align-items:center;justify-content:center;gap:.7rem}
+.soon-modal-l::before,.soon-modal-l::after{content:'';width:24px;height:1px;background:var(--gold)}
+.soon-modal-t{font-family:var(--hd);font-size:clamp(1.6rem,4vw,2.6rem);font-weight:200;letter-spacing:.08em;color:var(--white);margin-bottom:.5rem}
+.soon-modal-c{font-family:var(--hd);font-size:.55rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;background:var(--gold-grad);background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldShimmer 10s ease-in-out infinite;margin-bottom:1.5rem}
+.soon-modal-p{font-size:.85rem;color:var(--muted);line-height:1.75;margin-bottom:1.6rem}
+.soon-form{display:flex;flex-direction:column;gap:.55rem;margin-bottom:.85rem}
+.soon-form input{width:100%;background:rgba(0,0,0,.5);border:1px solid var(--border);color:var(--white);font-family:var(--bd);font-size:.84rem;font-weight:300;padding:.95rem 1.1rem;outline:none;transition:border-color .3s;text-align:center}
+.soon-form input:focus{border-color:var(--gold)}
+.soon-cta{display:inline-flex;align-items:center;justify-content:center;gap:.85rem;font-family:var(--hd);font-size:.55rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#000;background:var(--gold);padding:1.05rem 1.7rem;border:none;cursor:pointer;width:100%;transition:box-shadow .3s,transform .3s}
+.soon-cta:hover{box-shadow:0 12px 40px -8px rgba(201,168,76,.45);transform:translateY(-1px)}
+
+/* ═══ OPENING TODAY BANNER ═══ */
+.opening-today{position:relative;margin-bottom:2.5rem;padding:1.6rem 1.8rem;border:1.5px solid var(--gold);background:linear-gradient(135deg,rgba(229,72,72,.07),rgba(201,168,76,.07),rgba(0,0,0,.4));overflow:hidden}
+.opening-today::before{content:'';position:absolute;left:-50%;right:-50%;top:0;bottom:0;background:linear-gradient(110deg,transparent 35%,rgba(201,168,76,.18) 50%,transparent 65%);animation:openShimmer 3.5s ease-in-out infinite}
+@keyframes openShimmer{0%,100%{transform:translateX(-100%)}50%{transform:translateX(100%)}}
+.ot-row{display:flex;align-items:center;gap:1.4rem;position:relative;z-index:1}
+.ot-dot{width:14px;height:14px;border-radius:50%;background:#e54848;box-shadow:0 0 0 0 rgba(229,72,72,.7);animation:otPulse 1.4s ease-in-out infinite;flex-shrink:0}
+@keyframes otPulse{0%{box-shadow:0 0 0 0 rgba(229,72,72,.6)}70%{box-shadow:0 0 0 18px rgba(229,72,72,0)}100%{box-shadow:0 0 0 0 rgba(229,72,72,0)}}
+.ot-l{font-family:var(--hd);font-size:.52rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem}
+.ot-t{font-family:var(--hd);font-size:1.4rem;font-weight:300;letter-spacing:.06em;color:var(--white)}
+.ot-cd{margin-left:auto;font-family:var(--hd);font-size:1.3rem;font-weight:300;color:var(--white);letter-spacing:.04em;flex-shrink:0;background:var(--gold-grad);background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldShimmer 6s ease-in-out infinite}
+.ot-cd-l{display:block;font-family:var(--hd);font-size:.46rem;letter-spacing:.32em;text-transform:uppercase;color:rgba(245,240,232,.45);margin-bottom:.2rem;-webkit-text-fill-color:rgba(245,240,232,.45)}
+
+/* ═══ STICKY MOBILE BAR ═══ */
+.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(8,8,8,.96);backdrop-filter:blur(12px);border-top:1px solid var(--b-gold);padding:.65rem .8rem calc(.65rem + env(safe-area-inset-bottom));box-shadow:0 -8px 30px rgba(0,0,0,.6)}
+.sticky-bar-inner{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}
+.sb-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3rem;padding:.6rem .4rem;color:var(--white);background:transparent;border:1px solid var(--border);font-family:var(--hd);font-size:.5rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:background .25s,color .25s,border-color .25s}
+.sb-btn svg{width:18px;height:18px;color:var(--gold)}
+.sb-btn:active{background:rgba(201,168,76,.08)}
+.sb-btn.primary{background:var(--gold);color:#000;border-color:var(--gold)}
+.sb-btn.primary svg{color:#000}
+
+/* ═══ KARAOKE DETAIL — на странице локации, если есть фича ═══ */
+.kd-bg{background:var(--bg);position:relative;overflow:hidden}
+.kd-bg::before{content:'';position:absolute;left:50%;top:50%;width:680px;height:680px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(201,168,76,.05) 0%,rgba(170,80,180,.03) 35%,transparent 70%);filter:blur(40px);pointer-events:none}
+.kd-grid{display:grid;grid-template-columns:6fr 5fr;gap:5rem;align-items:center;position:relative;z-index:1}
+.kd-txt h2{font-family:var(--hd);font-size:clamp(1.9rem,3.6vw,2.8rem);font-weight:200;letter-spacing:.05em;line-height:1.05;margin-bottom:1.4rem}
+.kd-txt p{font-size:.92rem;color:var(--muted);line-height:1.95;margin-bottom:1.5rem;max-width:46rem}
+.kd-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--b-gold);border:1px solid var(--b-gold);margin:2rem 0 1.8rem}
+.kd-meta-c{background:#060606;padding:1.3rem 1.3rem 1.2rem;display:flex;flex-direction:column;gap:.4rem;transition:background .3s}
+.kd-meta-c:hover{background:#0a0a0a}
+.kd-meta-l{font-family:var(--hd);font-size:.45rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.55rem}
+.kd-meta-l::before{content:'';width:14px;height:1px;background:var(--gold)}
+.kd-meta-v{font-family:var(--hd);font-size:.92rem;font-weight:300;letter-spacing:.02em;color:var(--white);line-height:1.4}
+.kd-meta-s{font-size:.7rem;color:var(--muted);line-height:1.5}
+.kd-cta{display:inline-flex;align-items:center;gap:.85rem;font-family:var(--hd);font-size:.6rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);padding:1rem 1.9rem;border:1px solid var(--b-gold);transition:background .35s,color .35s}
+.kd-cta:hover{background:var(--gold);color:#000}
+.kd-img-wrap{position:relative;aspect-ratio:4/5;max-height:520px;overflow:hidden;border:1px solid var(--b-gold)}
+.kd-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85) contrast(1.08) brightness(.7);transition:transform 1.4s var(--ease)}
+.kd-img-wrap::before{content:'';position:absolute;inset:0;z-index:1;background:radial-gradient(circle at 70% 30%,rgba(201,168,76,.16),transparent 50%),radial-gradient(circle at 30% 80%,rgba(170,80,180,.1),transparent 55%);mix-blend-mode:screen;animation:karPulseImg 6s ease-in-out infinite;pointer-events:none}
+.kd-img-wrap::after{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(to top,rgba(0,0,0,.65) 0%,transparent 50%);pointer-events:none}
+.kd-img-tag{position:absolute;top:1.2rem;left:1.2rem;z-index:3;font-family:var(--hd);font-size:.45rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);padding:.5rem .8rem;border:1px solid var(--b-gold);background:rgba(0,0,0,.55);backdrop-filter:blur(8px)}
+@keyframes karPulseImg{0%,100%{opacity:.55}50%{opacity:1}}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .booking-grid{grid-template-columns:1fr;gap:3.5rem}
+  .other-grid{grid-template-columns:repeat(2,1fr)}
+  .gal-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .gi.main{grid-row:auto}
+  .wrap{padding:0 2rem}
+  .top3-grid,.rv-grid{grid-template-columns:repeat(2,1fr)}
+  .top3-grid>:last-child,.rv-grid>:last-child{grid-column:1/-1}
+  .info-row{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr;gap:2.5rem}
+  .about-photo{aspect-ratio:16/10;max-height:380px}
+  .ot-row{flex-wrap:wrap}
+  .ot-cd{margin-left:0;width:100%;text-align:left;margin-top:.5rem}
+  .lreel-grid{grid-template-columns:1fr;gap:3rem}
+  .kd-grid{grid-template-columns:1fr;gap:3rem}
+  .kd-img-wrap{aspect-ratio:16/10;max-height:420px}
+  .kd-meta{grid-template-columns:1fr}
+  .lreel-wrap{aspect-ratio:16/10;max-height:520px}
+  .map-grid{grid-template-columns:1fr}
+  .map-iframe-wrap{min-height:340px}
+  .vip-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .nav{padding:1rem 1.5rem}
+  .section{padding:4.5rem 0}
+  .wrap{padding:0 1.25rem}
+  .gal-grid{grid-template-columns:1fr}
+  .menu-grid{grid-template-columns:1fr}
+  .menu-cat{grid-column:1}
+  .frow{grid-template-columns:1fr}
+  .other-grid{grid-template-columns:1fr 1fr}
+  .ft-inner{flex-direction:column;gap:.75rem;align-items:flex-start}
+  .loc-meta{flex-direction:column}
+  .top3-grid,.rv-grid{grid-template-columns:1fr}
+  .top3-grid>:last-child,.rv-grid>:last-child{grid-column:auto}
+  .info-row{grid-template-columns:1fr}
+  .feat-strip{gap:.45rem}
+  .sticky-bar{display:block}
+  .footer{padding-bottom:6rem}
+}
+
+/* ═══ MOBILE/TOUCH/iOS FIXES — универсальные правила ═══ */
+*{-webkit-tap-highlight-color:transparent}
+button,a,input,select,textarea{touch-action:manipulation}
+img,video,canvas,iframe{max-width:100%}
+/* iOS не зумит при фокусе если font-size >= 16px */
+@media(max-width:768px){
+  input[type="text"],input[type="tel"],input[type="email"],input[type="date"],input[type="time"],input[type="number"],input[type="search"],input[type="url"],select,textarea{font-size:16px !important}
+}
+/* iOS Safari URL-bar fix: 100svh лучше чем 100vh */
+@supports(min-height:100svh){
+  .hero,.loc-hero,.kar-hero{min-height:100svh}
+}
+/* Тач-устройства: hover-эффекты не повисают на тапе */
+@media(hover:none) and (pointer:coarse){
+  .city-card:hover,.tst-card:hover,.mpv-card:hover,.kp-card:hover,.menu-item:hover,.oloc:hover,.feat:hover,.fr-photo:hover,.about-photo:hover,.kar-inv-img-wrap:hover,.kd-img-wrap:hover{transform:none}
+}
+/* Min target size для всех кликабельных элементов на мобайле */
+@media(max-width:768px){
+  button,a.btn-g,a.btn-o,.fsub,.fr-cta,.kar-cta,.kb-cta,.soon-cta,.vip-cta,.kd-cta,.kar-inv-cta,.tab-btn,.nav-book,.sb-btn{min-height:48px}
+  /* Wrap-friendly: сетки не должны иметь дробных колонок */
+  .wrap{padding:0 1.25rem}
+}
+/* iPad portrait — компактнее */
+@media(min-width:769px) and (max-width:1024px){
+  .wrap{padding:0 2rem}
+}
+
+/* ═══ MOBILE OVERFLOW SAFETY ═══ */
+html,body{max-width:100vw;overflow-x:hidden}
+.hero-brand-name,.kar-name,.loc-title,.sec-h2,.splash-name,.km-cell h3{word-break:break-word;overflow-wrap:break-word;hyphens:auto}
+@media(max-width:480px){
+  .hero-brand-name,.splash-name{letter-spacing:.12em !important}
+  .loc-title{letter-spacing:.06em !important}
+  .kar-name{letter-spacing:.14em !important}
+  .section{padding:4rem 0 !important}
+  .wrap{padding:0 1rem !important}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <button class="nav-back" onclick="window.location.href='index.html'">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M3 8L7 4M3 8L7 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Все города
+  </button>
+  <div class="nav-logo">
+    <img src="https://barvikhagroup.ru/img/main/header-logo.png" alt="Barvikha" class="nav-logo-img"/>
+  </div>
+  <button class="nav-book" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Забронировать</button>
+</nav>
+
+<!-- HERO -->
+<section class="loc-hero">
+  <div class="loc-hero-bg"></div>
+  <div class="loc-hero-grid"></div>
+  <div class="loc-hero-vign"></div>
+  <div class="wrap">
+    <div class="loc-hero-inner">
+      <div class="loc-crumbs">
+        <span>Барвиха Групп</span>
+        <span class="sep">/</span>
+        <span>Москва</span>
+        <span class="sep">/</span>
+        <span class="cur">Сити</span>
+      </div>
+      <div class="loc-hero-top" id="locHeroTop">
+        <span class="loc-status open" id="locStatus"><span class="ls-dot"></span><span id="locStatusText">Открыто сейчас</span><span class="ls-time" id="locStatusTime">· до 03:00</span></span>
+        <span class="loc-today" id="locToday" style="display:none"><span class="lt-i" id="ltIco">●</span><span class="lt-t" id="ltText"></span><span class="lt-s" id="ltSub"></span></span>
+        <span class="loc-badge" id="locBadge" style="display:none"><span class="lb-i" id="lbIco"></span><span id="lbText"></span></span>
+      </div>
+      <div id="openingToday" class="opening-today" style="display:none">
+        <div class="ot-row">
+          <span class="ot-dot"></span>
+          <div>
+            <div class="ot-l">Открываемся сегодня</div>
+            <div class="ot-t" id="otTitle">МАХАЧКАЛА</div>
+          </div>
+          <div class="ot-cd"><span class="ot-cd-l">До открытия</span><span id="otCountdown">—</span></div>
+        </div>
+      </div>
+      <h1 class="loc-title">МОСКВА<br>СИТИ</h1>
+      <p class="loc-subtitle">Барвиха Лаунж</p>
+      <div class="loc-meta">
+        <div class="lm"><span class="lm-l">Адрес</span><span class="lm-v">Пресненская наб., 4 с.1</span></div>
+        <div class="lm"><span class="lm-l">Пн–Чт, Вс</span><span class="lm-v">12:00 — 03:00</span></div>
+        <div class="lm"><span class="lm-l">Пт – Сб</span><span class="lm-v">12:00 — 06:00</span></div>
+        <div class="lm"><span class="lm-l">Телефон</span><span class="lm-v">8 800 201-27-81</span></div>
+      </div>
+      <div class="loc-actions">
+        <button class="btn-g" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">
+          Забронировать стол
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <a href="tel:+78002012781" class="btn-o">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+          Позвонить
+        </a>
+        <a href="#" id="locRouteBtn" target="_blank" class="btn-o">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z" fill="currentColor"/></svg>
+          Маршрут
+        </a>
+        <a href="https://t.me/BARVIKHAGROUP" target="_blank" class="btn-o" data-src="hero">Telegram</a>
+        <a href="#" onclick="event.preventDefault();alert('WhatsApp подключим после получения номера')" class="btn-o btn-wa" title="WhatsApp · скоро">WhatsApp <span class="btn-soon">скоро</span></a>
+        <button class="btn-o btn-share" onclick="shareLocation(this)" title="Поделиться">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M18 8a3 3 0 1 0-2.83-4H15.2L9 9.5a3 3 0 1 0 0 5L15.2 20h-.03A3 3 0 1 0 18 16a3 3 0 0 0-2.83 2H15.2L9 12.5a3.02 3.02 0 0 0 0-1l6.2-5.5h-.03A3 3 0 0 0 18 8z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          Поделиться
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- О ЗАВЕДЕНИИ -->
+<section class="section about-bg">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-photo rv">
+        <img src="гавно 1.jpeg" alt="Интерьер Barvikha"/>
+        <div class="about-photo-overlay"></div>
+      </div>
+      <div class="about-txt rv d1">
+        <span class="sec-lbl">О заведении</span>
+        <div class="loc-highlight" id="locHighlight" style="display:none">
+          <div class="loc-highlight-l">Особенность заведения</div>
+          <div class="loc-highlight-t" id="locHighlightT"></div>
+        </div>
+        <div class="info-row" id="infoRow" style="display:none">
+          <div class="info-cell"><div class="info-cell-l">Метро</div><div class="info-cell-v" id="iMetro">—</div></div>
+          <div class="info-cell"><div class="info-cell-l">Парковка</div><div class="info-cell-v" id="iParkV">—</div><div class="info-cell-s" id="iParkS"></div></div>
+          <div class="info-cell"><div class="info-cell-l">Кухня</div><div class="info-cell-v" id="iKitchen">—</div></div>
+          <div class="info-cell"><div class="info-cell-l">VIP-салоны</div><div class="info-cell-v" id="iVipV">—</div><div class="info-cell-s" id="iVipS"></div></div>
+        </div>
+        <div class="loc-directions" id="locDirections" style="display:none">
+          <div><span class="ld-l">Как добраться</span><span id="locDirT"></span></div>
+        </div>
+        <div class="feat-strip" id="featStrip"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="section" id="menu">
+  <div class="wrap">
+    <span class="sec-lbl rv">Меню</span>
+    <h2 class="sec-h2 rv">Что вас ждёт</h2>
+    <!-- TOP-3 SIGNATURES -->
+    <div class="top3-grid">
+      <article class="top3-card rv">
+        <div class="top3-img">
+          <span class="top3-tag">Хит сезона</span>
+          <img src="кальян 1.jpeg" alt="Tropicana Mama"/>
+        </div>
+        <div class="top3-body">
+          <div class="top3-name">Tropicana Mama</div>
+          <p class="top3-desc">Чаша ананас · в колбе пюре маракуйи, малина, киви и свежая мята</p>
+          <div class="top3-foot"><span class="top3-vol">Авторский кальян</span><span class="top3-price">7 000 ₽</span></div>
+        </div>
+      </article>
+      <article class="top3-card rv d1">
+        <div class="top3-img">
+          <span class="top3-tag">Шеф-повар</span>
+          <img src="кухня 6.jpeg" alt="Тартар из говядины"/>
+        </div>
+        <div class="top3-body">
+          <div class="top3-name">Тартар из говядины</div>
+          <p class="top3-desc">Говяжья вырезка · бородинский · перепелиное яйцо · горчица · каперсы</p>
+          <div class="top3-foot"><span class="top3-vol">160 г</span><span class="top3-price">1 050 ₽</span></div>
+        </div>
+      </article>
+      <article class="top3-card rv d2">
+        <div class="top3-img">
+          <span class="top3-tag">Сигнатура бара</span>
+          <img src="бар 5.jpeg" alt="Pina Colada"/>
+        </div>
+        <div class="top3-body">
+          <div class="top3-name">Pina Colada</div>
+          <p class="top3-desc">Белый и тёмный ром · ананас · кокос · ириска · сливки</p>
+          <div class="top3-foot"><span class="top3-vol">350 мл</span><span class="top3-price">1 100 ₽</span></div>
+        </div>
+      </article>
+    </div>
+    <div class="menu-tabs rv">
+      <button class="tab-btn active" data-tab="hookahs">Кальяны</button>
+      <button class="tab-btn" data-tab="food">Кухня</button>
+      <button class="tab-btn" data-tab="bar">Бар</button>
+      <button class="tab-btn" data-tab="drinks">Чай и напитки</button>
+    </div>
+    <div id="menuRoot" class="menu-root"></div>
+  </div>
+</section>
+<!-- /MENU -->
+
+<!-- REELS С ДЫМОМ -->
+<section class="lreel-bg">
+  <div class="wrap">
+    <div class="lreel-grid">
+      <div class="lreel-wrap rv" id="lreelWrap">
+        <img class="lreel-poster" src="кальян 1.jpeg" alt="Атмосфера Barvikha"/>
+        <canvas class="lreel-smoke" id="lreelSmoke"></canvas>
+        <span class="lreel-tag"><span class="live-dot"></span>Прямой эфир</span>
+        <div class="lreel-meta">
+          <span class="lreel-meta-l" id="lreelMetaL">Москва · Сити</span>
+          <a class="lreel-meta-r" href="https://t.me/BARVIKHAGROUP" target="_blank">Все ролики →</a>
+        </div>
+      </div>
+      <div class="lreel-txt rv d1">
+        <span class="sec-lbl">Атмосфера</span>
+        <h2>Внутри<br>заведения</h2>
+        <p>Полумрак, тёплый свет, тихий джаз. Эфирные масла в воздухе и идеальная температура — каждая деталь продумана для глубокого вечера.</p>
+        <p style="font-size:.78rem;color:rgba(245,240,232,.5)">Видео-обзор интерьера и кальянов смотрите в нашем Telegram — обновляем каждую неделю.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="section booking-bg" id="booking">
+  <div class="wrap">
+    <div class="booking-grid">
+      <div>
+        <span class="sec-lbl rv">Бронирование</span>
+        <h2 class="sec-h2 rv">Забронировать<br>стол</h2>
+        <p class="bk-p rv">Оставьте заявку — свяжемся сразу и подтвердим бронь. Для компаний 6+ человек — рекомендуем VIP-комнаты.</p>
+        <div class="bk-contacts">
+          <a href="tel:+78002012781" class="bk-ct rv">
+            <span class="bk-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="#C9A84C"/></svg></span>
+            8 800 201-27-81
+          </a>
+          <a href="https://t.me/BARVIKHAGROUP" target="_blank" class="bk-ct rv d1" data-src="booking">
+            <span class="bk-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.93 6.842l-1.68 7.92c-.123.553-.453.688-.917.428l-2.54-1.872-1.226 1.18c-.136.136-.25.25-.512.25l.183-2.586 4.718-4.26c.205-.183-.045-.284-.318-.101L8.21 14.84l-2.505-.782c-.544-.17-.555-.544.114-.806l9.782-3.772c.453-.164.85.101.33.362z" fill="#C9A84C"/></svg></span>
+            Telegram
+          </a>
+          <a href="#" onclick="event.preventDefault();alert('WhatsApp подключим после получения номера')" class="bk-ct bk-wa rv d2">
+            <span class="bk-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.92 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z" fill="#25D366"/></svg></span>
+            WhatsApp <span class="bk-soon">скоро</span>
+          </a>
+        </div>
+      </div>
+      <form class="form rv" onsubmit="handleForm(event)">
+        <div class="frow">
+          <div class="ff"><input type="text" placeholder="Ваше имя" required/></div>
+          <div class="ff"><input type="tel" id="ph" placeholder="+7 (___) ___-__-__" required/></div>
+        </div>
+        <div class="ff"><input type="date" required/></div>
+        <button type="submit" class="fsub" id="fsb">Отправить заявку</button>
+        <p class="fnote">Менеджер перезвонит в течение 30 минут — уточнит время и количество гостей</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- KARAOKE DETAIL (показывается JS только если features включает 'karaoke') -->
+<section class="section kd-bg" id="karaokeDetail" style="display:none">
+  <div class="wrap">
+    <div class="kd-grid">
+      <div class="kd-txt rv">
+        <span class="sec-lbl">Караоке-формат</span>
+        <h2>Приватная сцена<br>в этой точке</h2>
+        <p>Глубокие цвета, мягкий свет, неоновые акценты и игра теней от диско-шара. Резидентный звукорежиссёр с навыками бэк-вокала · профессиональный звук · каталог из десяти тысяч треков.</p>
+        <div class="kd-meta">
+          <div class="kd-meta-c">
+            <span class="kd-meta-l">Вместимость</span>
+            <span class="kd-meta-v" id="kdCap">—</span>
+          </div>
+          <div class="kd-meta-c">
+            <span class="kd-meta-l">Минимальная бронь</span>
+            <span class="kd-meta-v">3 часа</span>
+          </div>
+          <div class="kd-meta-c">
+            <span class="kd-meta-l">Звукорежиссёр</span>
+            <span class="kd-meta-v">с 20:00 ежедневно</span>
+          </div>
+        </div>
+        <a href="karaoke.html" class="kd-cta">
+          О формате караоке
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="kd-img-wrap rv d1">
+        <span class="kd-img-tag">Karaoke</span>
+        <img src="бар 4.jpeg" alt="Караоке-зал"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS — ОТЗЫВЫ ГОСТЕЙ -->
+<section class="section rv-bg" id="reviews">
+  <div class="wrap">
+    <div class="rv-hd">
+      <div class="rv">
+        <span class="sec-lbl">Отзывы гостей</span>
+        <h2 class="sec-h2">Что говорят<br>о нас</h2>
+      </div>
+      <div class="rv-rate rv d1">
+        <span class="rv-rate-num">4.9</span>
+        <div>
+          <div class="rv-rate-stars">★★★★★</div>
+          <div class="rv-rate-l">на основе 1 200+ отзывов · Яндекс.Карты</div>
+        </div>
+      </div>
+    </div>
+    <div class="rv-grid">
+      <article class="rv-card rv">
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-quote">«Атмосфера — топ. Кальянщики реально слышат, что просишь, а не суют классику. Кухня выше, чем в большинстве ресторанов на которые ходим. Будем возвращаться.»</p>
+        <div class="rv-meta">
+          <div class="rv-ava">ЕМ</div>
+          <div>
+            <div class="rv-info-name">Елена М.</div>
+            <div class="rv-info-src">Яндекс.Карты · 2 нед. назад</div>
+          </div>
+        </div>
+      </article>
+      <article class="rv-card rv d1">
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-quote">«Отметили день рождения в VIP-комнате на 12 человек. Команда подготовила всё под нас: меню, музыку, освещение. Гости до сих пор спрашивают, где это было.»</p>
+        <div class="rv-meta">
+          <div class="rv-ava">ДК</div>
+          <div>
+            <div class="rv-info-name">Дмитрий К.</div>
+            <div class="rv-info-src">Яндекс.Карты · 1 мес. назад</div>
+          </div>
+        </div>
+      </article>
+      <article class="rv-card rv d2">
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-quote">«Электрочаши — без угольной горечи, держится 2+ часа. Заказывала Tropicana Mama — лучший фруктовый кальян, что пробовала. Цена соответствует качеству.»</p>
+        <div class="rv-meta">
+          <div class="rv-ava">АС</div>
+          <div>
+            <div class="rv-info-name">Анна С.</div>
+            <div class="rv-info-src">Яндекс.Карты · 3 нед. назад</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- VIP & CERTIFICATES -->
+<section class="section vip-bg" id="vip">
+  <div class="wrap">
+    <div class="vip-grid">
+      <div class="vip-block rv">
+        <span class="sec-lbl">VIP-комнаты</span>
+        <h3>Закрытая комната<br>для важного вечера</h3>
+        <p>Отдельный вход, свой кальянный мастер, персональное меню и саундчек. Идеально для дней рождения, корпоративов и переговоров.</p>
+        <div class="vip-features">
+          <div class="vip-feat"><span class="vip-feat-ico">✓</span><span>Вместимость 8–20 человек</span></div>
+          <div class="vip-feat"><span class="vip-feat-ico">✓</span><span>Свой кальянный мастер на весь вечер</span></div>
+          <div class="vip-feat"><span class="vip-feat-ico">✓</span><span>Караоке-система премиум-уровня</span></div>
+          <div class="vip-feat"><span class="vip-feat-ico">✓</span><span>Гибкое меню под мероприятие</span></div>
+          <div class="vip-feat"><span class="vip-feat-ico">✓</span><span>Бесплатное оформление под событие</span></div>
+        </div>
+        <button class="vip-cta" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">
+          Забронировать VIP
+          <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <div class="rv d1">
+        <span class="sec-lbl" style="display:block;margin-bottom:1.5rem">Регалии заведения</span>
+        <div class="vip-certs">
+          <div class="vip-cert">
+            <div class="vip-cert-ico">★</div>
+            <div class="vip-cert-info">
+              <div class="vip-cert-l">Top-10 Lounge Russia · 2024</div>
+              <div class="vip-cert-s">Ресторанный гид Restoclub</div>
+            </div>
+          </div>
+          <div class="vip-cert">
+            <div class="vip-cert-ico">⌘</div>
+            <div class="vip-cert-info">
+              <div class="vip-cert-l">Лучший кальянный сервис Москвы</div>
+              <div class="vip-cert-s">Яндекс.Карты — рейтинг 4.9</div>
+            </div>
+          </div>
+          <div class="vip-cert">
+            <div class="vip-cert-ico">✦</div>
+            <div class="vip-cert-info">
+              <div class="vip-cert-l">Сертифицированный бар Wookah</div>
+              <div class="vip-cert-s">Эксклюзивный партнёр чешских колб</div>
+            </div>
+          </div>
+          <div class="vip-cert">
+            <div class="vip-cert-ico">◈</div>
+            <div class="vip-cert-info">
+              <div class="vip-cert-l">Авторская кухня от шеф-повара</div>
+              <div class="vip-cert-s">Стажировка в Италии и Франции</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="section map-bg" id="map">
+  <div class="wrap">
+    <div style="margin-bottom:2rem">
+      <span class="sec-lbl rv">Как нас найти</span>
+      <h2 class="sec-h2 rv" style="margin-top:.4rem">Маршрут до заведения</h2>
+    </div>
+    <div class="map-grid rv">
+      <div class="map-iframe-wrap" id="mapWrap"></div>
+      <div class="map-info">
+        <div class="map-info-row">
+          <span class="map-info-l">Адрес</span>
+          <span class="map-info-v" id="mapAddr">Пресненская наб., 4 с.1</span>
+        </div>
+        <div class="map-info-row">
+          <span class="map-info-l">Метро поблизости</span>
+          <span class="map-info-v s" id="mapMetro">Деловой Центр · 5 мин пешком</span>
+        </div>
+        <div class="map-info-row">
+          <span class="map-info-l">Парковка</span>
+          <span class="map-info-v s">Подземная · бесплатная для гостей</span>
+        </div>
+        <a href="#" id="mapRouteCta" target="_blank" class="map-route">
+          Построить маршрут
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M21 11l-3.45-3.45a1 1 0 00-1.41 0L13 11M21 11l-3.45 3.45a1 1 0 01-1.41 0L13 11M21 11H3l3 3M3 11l3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OTHER LOCATIONS -->
+<section class="section other-bg" id="nearbySection">
+  <div class="wrap">
+    <div class="other-hd">
+      <div class="rv">
+        <span class="sec-lbl">Поблизости</span>
+        <h2 class="sec-h2" style="font-size:clamp(1.4rem,2.4vw,1.85rem);margin-top:.4rem">Поблизости — заведения сети</h2>
+      </div>
+      <p class="other-hd-r rv d1">Сменить заведение в один клик — все локации сети с расстоянием до текущей.</p>
+    </div>
+    <div class="other-grid" id="nearbyGrid"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="ft-inner">
+      <div class="ft-logo">
+        <img src="https://barvikhagroup.ru/img/main/header-logo.png" alt="Barvikha"/>
+        <span style="font-family:var(--hd);font-size:.42rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)">GROUP · SINCE 2017</span>
+      </div>
+      <div class="ft-links">
+        <a href="index.html">← Все города</a>
+        <a href="#menu">Меню</a>
+        <a href="#booking">Забронировать</a>
+      </div>
+      <span class="ft-copy">18+ Курение вредит здоровью</span>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING CTA STACK (desktop sticky) -->
+<div class="fab-stack" id="fabStack" aria-hidden="false">
+  <a href="https://t.me/BARVIKHAGROUP" target="_blank" data-src="fab" class="fab fab-tg" title="Telegram" aria-label="Telegram">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.93 6.842l-1.68 7.92c-.123.553-.453.688-.917.428l-2.54-1.872-1.226 1.18c-.136.136-.25.25-.512.25l.183-2.586 4.718-4.26c.205-.183-.045-.284-.318-.101L8.21 14.84l-2.505-.782c-.544-.17-.555-.544.114-.806l9.782-3.772c.453-.164.85.101.33.362z" fill="#fff"/></svg>
+  </a>
+  <a href="#" onclick="event.preventDefault();alert('WhatsApp подключим после получения номера')" class="fab fab-wa" title="WhatsApp · скоро" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.92 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z" fill="#fff"/></svg>
+    <span class="fab-soon">скоро</span>
+  </a>
+  <button class="fab fab-book" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})" title="Забронировать">
+    <span>Бронь</span>
+  </button>
+</div>
+
+<!-- DISH MODAL -->
+<div class="dish-modal" id="dishModal" onclick="if(event.target===this)closeDish()">
+  <div class="dm-wrap">
+    <button class="dm-close" onclick="closeDish()">×</button>
+    <div class="dm-photo-wrap">
+      <img class="dm-photo" id="dmPhoto" src="" alt=""/>
+      <div class="dm-photo-overlay"></div>
+    </div>
+    <div class="dm-body">
+      <div>
+        <span class="dm-cat" id="dmCat"></span>
+        <div class="dm-name" id="dmName"></div>
+        <div class="dm-price" id="dmPrice"></div>
+      </div>
+      <p class="dm-story" id="dmStory"></p>
+      <div>
+        <div class="dm-section-lbl">Состав</div>
+        <div class="dm-tags" id="dmTags"></div>
+      </div>
+      <div class="dm-kbzu" id="dmKbzu" style="display:none">
+        <div class="dm-section-lbl">КБЖУ на порцию</div>
+        <div class="dm-kbzu-row">
+          <div class="dm-k"><div class="dm-kv" id="dmKcal">—</div><div class="dm-kl">ккал</div></div>
+          <div class="dm-k"><div class="dm-kv" id="dmProt">—</div><div class="dm-kl">белки г</div></div>
+          <div class="dm-k"><div class="dm-kv" id="dmFat">—</div><div class="dm-kl">жиры г</div></div>
+          <div class="dm-k"><div class="dm-kv" id="dmCarb">—</div><div class="dm-kl">углев. г</div></div>
+        </div>
+      </div>
+      <button class="dm-btn" onclick="closeDish();document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Забронировать стол →</button>
+    </div>
+  </div>
+</div>
+
+<!-- COMING SOON MODAL -->
+<div class="soon-modal" id="soonModal">
+  <div class="soon-modal-l">Скоро открытие</div>
+  <h2 class="soon-modal-t" id="soonCity">—</h2>
+  <div class="soon-modal-c" id="soonOpens">Q2 2026</div>
+  <p class="soon-modal-p">Готовим премиум-локацию по стандартам Barvikha. Оставьте контакты — пригласим на закрытое открытие до публичного запуска.</p>
+  <form class="soon-form" id="soonForm" onsubmit="handleSoonForm(event)">
+    <input type="text" name="name" placeholder="Ваше имя" required/>
+    <input type="tel" id="soonPhone" name="phone" placeholder="+7 (___) ___-__-__" required/>
+    <button type="submit" class="soon-cta">Сообщить когда откроемся
+      <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </form>
+</div>
+
+<!-- STICKY MOBILE BAR -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="sticky-bar-inner">
+    <a href="#" id="sbRoute" target="_blank" class="sb-btn">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z" fill="currentColor"/></svg>
+      Маршрут
+    </a>
+    <a href="tel:+78002012781" id="sbCall" class="sb-btn">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+      Звонок
+    </a>
+    <a href="#booking" class="sb-btn primary">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z" fill="currentColor"/></svg>
+      Бронь
+    </a>
+  </div>
+</div>
+
+<script>
+// ═══ REVEAL — самый первый блок, чтобы контент был виден всегда ═══
+// FALLBACK: показываем все .rv через 1.2 сек на случай, если что-то сломается
+setTimeout(()=>document.querySelectorAll('.rv').forEach(el=>el.classList.add('in')),1200);
+// Параллельно настраиваем правильный наблюдатель
+function _setupReveal(){
+  try{
+    const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');obs.unobserve(x.target)}}),{threshold:.05,rootMargin:'0px 0px -10% 0px'});
+    document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+  }catch(err){document.querySelectorAll('.rv').forEach(el=>el.classList.add('in'))}
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',_setupReveal);
+else _setupReveal();
+
+// City & location data — 17 реальных Москва + 1 СПб + регионы (soon/opening_today)
+// status: 'open' | 'opening_today' | 'soon'
+// hours: рабочее время / kitchen: до скольки кухня
+// parking: {type: 'free'|'paid'|'metro_only', cost, note}
+// features: ['live_music','dj','karaoke','projector','panorama','ps5','photographer','verandah','24h']
+// vip: { count, capacity, has_karaoke }
+// badge: 'panorama' | '24h' | 'historic' | 'rooftop'
+const STD_W={day:'Пн–Чт, Вс',work:'12:00 — 03:00',kitchen:'до 01:30'};
+const STD_E={day:'Пт – Сб',work:'12:00 — 06:00',kitchen:'до 02:30'};
+const LOC_DATA={
+  // ═══ МОСКВА — 17 РЕАЛЬНЫХ ТОЧЕК ═══
+  msk_krylatskoe:{bgCode:'МСК',status:'open',city:'Москва',loc:'Крылатское',titleHtml:'КРЫЛАТСКОЕ',sub:'Барвиха Лаунж · Крылатское',
+    addr:'Осенний бул., 7к1 · ТЦ «Матрица», 2 этаж',phone:'+7 (925) 830-80-01',
+    metro:'Крылатское · 1 мин · выход 2',
+    parking:{type:'paid',cost:'от 60 ₽/час',note:'напротив ТЦ'},
+    h1l:STD_W.day,h1v:STD_W.work,h2l:STD_E.day,h2v:STD_E.work,kitchen:'до 01:30 · ПТ-СБ до 02:30',
+    features:['live_music','karaoke','projector','panorama','ps5'],
+    vip:{count:5,capacity:'4–6 гостей',has_karaoke:true},
+    highlight:'Приватная караоке-сцена со звукорежиссёром · ужин до утра',
+    coords:[55.7547,37.4181],back:'moscow.html'},
+  msk_otradnoe:{bgCode:'МСК',status:'open',city:'Москва',loc:'Отрадное',titleHtml:'ОТРАДНОЕ',sub:'Барвиха Лаунж · Отрадное',
+    addr:'Алтуфьевское ш., 24к1 · ТЦ «Улей», 2 этаж',phone:'+7 (926) 713-40-01',
+    metro:'Отрадное · 16 мин · выход 7',
+    parking:{type:'paid',cost:'от 200 ₽/час',note:'первые 2 часа бесплатно'},
+    h1l:STD_W.day,h1v:STD_W.work,h2l:STD_E.day,h2v:STD_E.work,kitchen:'до 01:30 · ПТ-СБ до 02:30',
+    features:['live_music','projector','panorama','ps5','photographer'],
+    vip:{count:3,capacity:'до 10 гостей'},
+    highlight:'Камерный формат · три VIP-салона с панорамными окнами',
+    coords:[55.8629,37.6024],back:'moscow.html'},
+  msk_teplystan:{bgCode:'МСК',status:'open',city:'Москва',loc:'Тёплый стан',titleHtml:'ТЁПЛЫЙ СТАН',sub:'Барвиха Лаунж · Тёплый стан',
+    addr:'Новоясеневский пр., 1 · ТЦ «Спектр», 3 этаж',phone:'+7 (925) 771-60-01',
+    metro:'Тёплый стан · 1 мин · выход 5',
+    parking:{type:'paid',cost:'4 часа · 100 ₽',note:'далее 50 ₽/час'},
+    h1l:STD_W.day,h1v:STD_W.work,h2l:STD_E.day,h2v:STD_E.work,kitchen:'до 01:30 · ПТ-СБ до 02:30',
+    features:['dj','verandah','ps5'],
+    vip:{count:2,capacity:'до 10 гостей'},
+    highlight:'Летняя веранда на крыше · лаунж-зоны и закатные виды',
+    badge:'rooftop',
+    coords:[55.6195,37.4881],back:'moscow.html'},
+  msk_marino:{bgCode:'МСК',status:'open',city:'Москва',loc:'Марьино',titleHtml:'МАРЬИНО',sub:'Барвиха Лаунж · Марьино',
+    addr:'ул. Люблинская, 92к2 · ТАЦ, 2 этаж',phone:'+7 (926) 677-20-01',
+    metro:'Марьино · 11 мин · выход 5',
+    parking:{type:'free',note:'без пропусков перед зданием'},
+    h1l:STD_W.day,h1v:STD_W.work,h2l:STD_E.day,h2v:STD_E.work,kitchen:'до 01:30 · ПТ-СБ до 02:30',
+    features:['live_music','dj','karaoke','projector','ps5','photographer'],
+    vip:{count:5,capacity:'8–10 гостей',has_karaoke:true},
+    highlight:'Караоке-зал и пять закрытых салонов · приватные сцены до 20 гостей',
+    coords:[55.6504,37.7458],back:'moscow.html'},
+  msk_cska:{bgCode:'МСК',status:'open',city:'Москва',loc:'ЦСКА',titleHtml:'ЦСКА',sub:'Барвиха Лаунж · ЦСКА',
+    addr:'ул. Полины Осипенко, 14А',phone:'+7 (925) 818-10-01',
+    metro:'ЦСКА · 11 мин · выход 2',
+    parking:{type:'free',note:'+ платная зона 4013 (40 ₽/час)'},
+    h1l:STD_W.day,h1v:STD_W.work,h2l:'Пт – Сб',h2v:'12:00 — 02:30',kitchen:'до 01:30 · ПТ-СБ до 02:00',
+    features:['live_music','panorama','ps5','photographer','verandah'],
+    vip:{count:9,capacity:'8–12 гостей'},
+    highlight:'Девять VIP-салонов на двух этажах · летняя веранда',
+    coords:[55.7785,37.5304],back:'moscow.html'},
+  msk_mitino:{bgCode:'МСК',status:'open',city:'Москва',loc:'Митино',titleHtml:'МИТИНО',sub:'Барвиха Лаунж · Митино',
+    addr:'Пятницкое ш., 3 · ТЦ «Пятница», 3 этаж',phone:'+7 (968) 887-70-01',
+    metro:'Волоколамская · 3 мин · выход 2',
+    parking:{type:'paid',cost:'от 100 ₽/час',note:'первые 2 часа бесплатно'},
+    h1l:STD_W.day,h1v:STD_W.work,h2l:STD_E.day,h2v:STD_E.work,kitchen:'до 01:30 · ПТ-СБ до 02:30',
+    features:['dj','projector','panorama'],
+    vip:{count:9,capacity:'6–15 гостей'},
+    highlight:'Девять VIP-салонов · два приватных балкона',
+    coords:[55.8489,37.3621],back:'moscow.html'},
+  msk_yugozapadnaya:{bgCode:'МСК',status:'open',city:'Москва',loc:'Юго-Западная',titleHtml:'ЮГО-<br>ЗАПАДНАЯ',sub:'Барвиха Лаунж · 33 этаж',
+    addr:'Ленинский пр., 146 · ГК «Аструс», 33 этаж',phone:'+7 (910) 009-30-01',
+    metro:'Юго-Западная · 13–15 мин · выход 1 или 2',
+    parking:{type:'paid',cost:'150 ₽/час',note:'парковка ГК Аструс'},
+    h1l:STD_W.day,h1v:STD_W.work,h2l:STD_E.day,h2v:STD_E.work,kitchen:'до 01:30 · ПТ-СБ до 02:30',
+    features:['live_music','karaoke','projector','panorama','ps5','photographer'],
+    vip:{count:5,capacity:'8–20 гостей',has_karaoke:true},
+    highlight:'33-й этаж · виды Москвы из панорамных VIP-салонов',
+    badge:'panorama',
+    directions:'Поднимитесь на 33 этаж главного корпуса гостиничного комплекса Аструс. Лифты — в холле первого этажа.',
+    coords:[55.6634,37.4838],back:'moscow.html'},
+  msk_ramenki:{bgCode:'МСК',status:'open',city:'Москва',loc:'Раменки',titleHtml:'РАМЕНКИ',sub:'Барвиха Лаунж · Раменки',
+    addr:'Мичуринский пр., 9к5 · 2 этаж · вход с лицевой стороны',phone:'+7 (925) 060-20-01',
+    metro:'Раменки · 5 мин · выход 7',
+    parking:{type:'free',note:'городская парковка возле здания'},
+    h1l:STD_W.day,h1v:STD_W.work,h2l:STD_E.day,h2v:STD_E.work,kitchen:'до 01:30 · ПТ-СБ до 02:30',
+    features:['live_music','panorama','ps5','photographer'],
+    vip:{count:4,capacity:'10–20 гостей'},
+    highlight:'Игровые консоли в зонах · мужской формат вечера',
+    coords:[55.6970,37.5050],back:'moscow.html'},
+  msk_krasnaya:{bgCode:'МСК',status:'open',city:'Москва',loc:'Красная площадь',titleHtml:'КРАСНАЯ<br>ПЛОЩАДЬ',sub:'Барвиха Лаунж · Красная площадь',
+    addr:'Ветошный пер., 13 · −1 этаж · между Никольским пассажем и ГУМом',phone:'+7 (999) 113-30-01',
+    metro:'Площадь Революции · 5 мин · выход 10',
+    parking:{type:'paid',cost:'600 ₽/час',note:'городская парковка №9010 на Ветошном'},
+    h1l:STD_W.day,h1v:STD_W.work,h2l:STD_E.day,h2v:STD_E.work,kitchen:'до 01:30 · ПТ-СБ до 02:30',
+    features:['dj','karaoke','projector','ps5'],
+    vip:{count:11,capacity:'12–30 гостей',has_karaoke:true},
+    highlight:'Пять караоке-салонов до 30 гостей · в сердце Москвы',
+    badge:'historic',
+    directions:'Вход в здание справа от магазина Kicksmania, спуск на −1 этаж по лестнице.',
+    coords:[55.7558,37.6213],back:'moscow.html'},
+  msk_mendeleevskaya:{bgCode:'МСК',status:'open',city:'Москва',loc:'Менделеевская',titleHtml:'МЕНДЕЛЕЕВСКАЯ',sub:'Барвиха Лаунж · Менделеевская',
+    addr:'ул. Тихвинская, 2 · вход с Перуновского переулка',phone:'+7 (968) 000-30-01',
+    metro:'Менделеевская · 5–7 мин · выход 4',
+    parking:{type:'metro_only',note:'городские: Тихвинская 380 ₽/час, Новосущёвская 150 ₽/час'},
+    h1l:STD_W.day,h1v:STD_W.work,h2l:STD_E.day,h2v:STD_E.work,kitchen:'до 01:30 · ПТ-СБ до 02:30',
+    features:['dj','karaoke','verandah','ps5'],
+    vip:{count:10,capacity:'8–15 гостей',has_karaoke:true},
+    highlight:'Десять VIP-салонов · летняя веранда · приватная караоке-сцена',
+    coords:[55.7919,37.6010],back:'moscow.html'},
+  msk_kievskaya:{bgCode:'МСК',status:'open',city:'Москва',loc:'Киевская',titleHtml:'КИЕВСКАЯ',sub:'Барвиха Лаунж · 12 этаж',
+    addr:'ул. Киевская, 2 · ТГК «Киевский», 12 этаж',phone:'+7 (999) 796-91-11',
+    metro:'Киевская · 2 мин · выход 5',
+    parking:{type:'paid',cost:'400 ₽/час',note:'подземная ТГК (-1 этаж предпочтительнее)'},
+    h1l:STD_W.day,h1v:STD_W.work,h2l:'Пт – Сб',h2v:'12:00 — 06:00',kitchen:'до 01:30 · ПТ-СБ до 05:30',
+    features:['dj','projector','panorama','ps5'],
+    vip:{count:18,capacity:'4–25 гостей'},
+    highlight:'Восемнадцать VIP-салонов · крупнейший приватный зал сети',
+    badge:'panorama',
+    directions:'Главный вход гостиницы Новотель со стороны Киевской улицы, лифт справа от ресепшен — на 12 этаж.',
+    coords:[55.7458,37.5670],back:'moscow.html'},
+  msk_seligerskaya:{bgCode:'МСК',status:'open',city:'Москва',loc:'Селигерская',titleHtml:'СЕЛИГЕРСКАЯ',sub:'Барвиха Лаунж · Селигерская',
+    addr:'Дмитровское ш., 85 · БЦ «РТС», 1 этаж',phone:'+7 (999) 997-30-01',
+    metro:'Селигерская · 5 мин · выход 3 или 4',
+    parking:{type:'paid',cost:'40 ₽/час',note:'на территории БЦ'},
+    h1l:STD_W.day,h1v:STD_W.work,h2l:STD_E.day,h2v:STD_E.work,kitchen:'до 01:30 · ПТ-СБ до 02:30',
+    features:['live_music','projector','panorama','photographer','ps5'],
+    vip:{count:3,capacity:'до 6 гостей'},
+    highlight:'Панорамные окна, открывающиеся летом · спортивные трансляции',
+    coords:[55.8839,37.5430],back:'moscow.html'},
+  msk_city:{bgCode:'МСК',status:'open',city:'Москва',loc:'Москва-Сити',titleHtml:'МОСКВА-<br>СИТИ',sub:'Барвиха Лаунж · круглосуточно',
+    addr:'Пресненская наб., 4 с.1 · рядом с ТЦ «Галерея Эволюция»',phone:'+7 (999) 66-77-001',
+    metro:'Деловой центр · 3 мин · выход 4 или 5',
+    parking:{type:'paid',cost:'от 100 ₽/час',note:'подземный паркинг ТЦ Афимолл, заезд №3'},
+    h1l:'Ежедневно',h1v:'круглосуточно',h2l:'Ежедневно',h2v:'круглосуточно',kitchen:'круглосуточно',
+    features:['24h','dj','panorama','ps5'],
+    vip:{count:3,capacity:'4–12 гостей'},
+    highlight:'Круглосуточный формат · единственное такое заведение сети',
+    badge:'24h',
+    directions:'В связи с ремонтом моста «Багратион» — заезд со стороны Пресненской набережной, ориентир «Тайгапар».',
+    coords:[55.7494,37.5378],back:'moscow.html'},
+  msk_baumanskaya:{bgCode:'МСК',status:'open',city:'Москва',loc:'Бауманская',titleHtml:'БАУМАНСКАЯ',sub:'Барвиха Лаунж · Гастроферма',
+    addr:'Нижняя Красносельская, 35 с.59 · «Гастроферма», 6 этаж',phone:'+7 (999) 772-20-01',
+    metro:'Бауманская · 6 мин',
+    parking:{type:'paid',cost:'200 ₽/час',note:'двор Гастрофермы'},
+    h1l:STD_W.day,h1v:STD_W.work,h2l:STD_E.day,h2v:STD_E.work,kitchen:'до 01:30 · ПТ-СБ до 02:30',
+    features:['dj','panorama','ps5'],
+    vip:{count:5,capacity:'6–20 гостей'},
+    highlight:'Просторный VIP-салон до 20 гостей · панорамы Гастрофермы',
+    coords:[55.7807,37.6783],back:'moscow.html'},
+  msk_paveletskaya:{bgCode:'МСК',status:'open',city:'Москва',loc:'Павелецкая',titleHtml:'ПАВЕЛЕЦКАЯ',sub:'Барвиха Лаунж · «Новоспасский»',
+    addr:'Дербеневская наб., 7 с.7 · ДК «Новоспасский»',phone:'+7 (999) 773-30-01',
+    metro:'Павелецкая (Зелёная) · 15 мин',
+    parking:{type:'free',note:'на территории делового квартала'},
+    h1l:STD_W.day,h1v:STD_W.work,h2l:'Пт – Сб',h2v:'12:00 — 06:00',kitchen:'до 01:30 · ПТ-СБ до 05:30',
+    features:['dj','projector','verandah','ps5'],
+    vip:{count:6,capacity:'4–20 гостей'},
+    highlight:'Кинематический формат трансляций · веранда с обогревом',
+    coords:[55.7280,37.6510],back:'moscow.html'},
+  msk_kolomenskaya:{bgCode:'МСК',status:'open',city:'Москва',loc:'Коломенская',titleHtml:'КОЛОМЕНСКАЯ',sub:'Барвиха Лаунж · Коломенская',
+    addr:'пр. Андропова, 22 · ТЦ «Нора», 2 этаж',phone:'+7 (999) 982-20-01',
+    metro:'Коломенская · 5 мин · выход 6',
+    parking:{type:'free',note:'наземная ТЦ (после 22:00 по предупреждению)'},
+    h1l:STD_W.day,h1v:STD_W.work,h2l:STD_E.day,h2v:STD_E.work,kitchen:'до 01:30 · ПТ-СБ до 02:30',
+    features:['live_music','ps5','photographer'],
+    vip:{count:2,capacity:'до 10 гостей'},
+    highlight:'Игровые зоны и живой звук в выходные',
+    coords:[55.6810,37.6650],back:'moscow.html'},
+  msk_rublyovka:{bgCode:'МСК',status:'open',city:'Москва',loc:'Рублёвка',titleHtml:'РУБЛЁВКА',sub:'Барвиха Лаунж · загородный формат',
+    addr:'МО, Одинцовский р-н, Рублёво-Успенское ш., д. Борки, 19, 2 этаж',phone:'+7 (996) 967-20-01',
+    metro:'м. Молодёжная · маршрутка 121 до Борки',
+    parking:{type:'free',note:'наземная у здания'},
+    h1l:STD_W.day,h1v:STD_W.work,h2l:STD_E.day,h2v:STD_E.work,kitchen:'японская кухня · 12:00–23:00',
+    features:['verandah','ps5'],
+    vip:{count:1,capacity:'до 10 гостей'},
+    highlight:'Загородный формат · возможен свой алкоголь · веранда на крыше',
+    coords:[55.7530,37.2670],back:'moscow.html'},
+  // ═══ САНКТ-ПЕТЕРБУРГ ═══
+  spb:{bgCode:'СПБ',status:'open',city:'Санкт-Петербург',loc:'Невский',titleHtml:'САНКТ-<br>ПЕТЕРБУРГ',sub:'Барвиха Лаунж · Невский, 26',
+    addr:'Невский пр., 26 · вход с Малой Конюшенной, 2 этаж',phone:'+7 (966) 007-70-01',
+    metro:'Невский проспект · 1 мин · выход на канал Грибоедова',
+    parking:{type:'metro_only',note:'городская: 280–360 ₽/час'},
+    h1l:STD_W.day,h1v:STD_W.work,h2l:'Пт – Сб',h2v:'12:00 — 06:00',kitchen:'до 01:30 · ПТ-СБ до 05:30',
+    features:['live_music','projector','ps5'],
+    vip:{count:'несколько',capacity:'до 15 гостей'},
+    highlight:'Единственное заведение в Санкт-Петербурге · кухня до утра в выходные',
+    coords:[59.9367,30.3260],back:'index.html'},
+  // ═══ ОТКРЫВАЕМСЯ СЕГОДНЯ ═══
+  makhachkala:{bgCode:'МХЧ',status:'opening_today',city:'Махачкала',loc:'Центр',titleHtml:'МАХАЧКАЛА',sub:'Открываемся сегодня в 18:00',
+    addr:'пр. Расула Гамзатова, 12',phone:'+7 (800) 201-27-81',
+    h1l:STD_W.day,h1v:STD_W.work,h2l:STD_E.day,h2v:STD_E.work,kitchen:'до 01:30 · ПТ-СБ до 02:30',
+    opens_at:'18:00',
+    coords:[42.9849,47.5047],back:'index.html'},
+  // ═══ СКОРО ОТКРЫТИЕ ═══
+  tula:{bgCode:'ТУЛ',status:'soon',city:'Тула',loc:'Центр',titleHtml:'ТУЛА',opens:'Q2 2026',coords:[54.1933,37.6172],back:'index.html'},
+  saratov:{bgCode:'СРТ',status:'soon',city:'Саратов',loc:'Центр',titleHtml:'САРАТОВ',opens:'Q2 2026',coords:[51.5331,46.0342],back:'index.html'},
+  penza:{bgCode:'ПНЗ',status:'soon',city:'Пенза',loc:'Центр',titleHtml:'ПЕНЗА',opens:'Q3 2026',coords:[53.1959,45.0185],back:'index.html'},
+  nn:{bgCode:'НН',status:'soon',city:'Нижний Новгород',loc:'Центр',titleHtml:'НИЖНИЙ<br>НОВГОРОД',opens:'Q2 2026',coords:[56.3268,44.0066],back:'index.html'},
+  yerevan:{bgCode:'ЕРВ',status:'soon',city:'Ереван',loc:'Центр',titleHtml:'ЕРЕВАН',opens:'Q3 2026',coords:[40.1772,44.5126],back:'index.html'},
+  tashkent:{bgCode:'ТШК',status:'soon',city:'Ташкент',loc:'Центр',titleHtml:'ТАШКЕНТ',opens:'Q4 2026',coords:[41.3111,69.2797],back:'index.html'}
+};
+// Координаты выводятся из LOC_DATA[key].coords
+const LOC_COORDS=Object.fromEntries(Object.entries(LOC_DATA).map(([k,v])=>[k,v.coords||[0,0]]));
+function haversine(c1,c2){
+  if(!c1||!c2)return Infinity;
+  const r=Math.PI/180,R=6371;
+  const dLat=(c2[0]-c1[0])*r,dLon=(c2[1]-c1[1])*r;
+  const a=Math.sin(dLat/2)**2 + Math.cos(c1[0]*r)*Math.cos(c2[0]*r)*Math.sin(dLon/2)**2;
+  return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
+}
+function renderNearby(currentKey){
+  const grid=document.getElementById('nearbyGrid');
+  if(!grid)return;
+  const cur=LOC_DATA[currentKey];
+  const curC=LOC_COORDS[currentKey];
+  // 1) точки в том же городе, отсортированы по расстоянию
+  // 2) если в этом городе других нет — показываем 8 других городов сети
+  const sameCity=Object.entries(LOC_DATA)
+    .filter(([k,v])=>k!==currentKey && v.city===cur.city)
+    .map(([k,v])=>({key:k,...v,dist:haversine(curC,LOC_COORDS[k])}))
+    .sort((a,b)=>a.dist-b.dist)
+    .slice(0,8);
+  let list=sameCity;
+  let lblText='Поблизости';
+  let subText='Сменить заведение в один клик — все локации сети с расстоянием до текущей.';
+  if(list.length===0){
+    // показываем другие города сети
+    list=Object.entries(LOC_DATA)
+      .filter(([k,v])=>k!==currentKey)
+      .map(([k,v])=>({key:k,...v,dist:haversine(curC,LOC_COORDS[k])}))
+      .sort((a,b)=>a.dist-b.dist)
+      .slice(0,8);
+    lblText='Другие города сети';
+    subText='В вашем городе одно заведение. Мы ждём вас в других регионах сети.';
+  }
+  // обновим заголовок
+  const lbl=document.querySelector('#nearbySection .sec-lbl');
+  const subEl=document.querySelector('#nearbySection .other-hd-r');
+  if(lbl)lbl.textContent=lblText;
+  if(subEl)subEl.textContent=subText;
+  // карточки
+  grid.innerHTML=list.map((loc,i)=>{
+    const distTxt=loc.dist&&loc.dist<10000?`${loc.dist<10?loc.dist.toFixed(1):Math.round(loc.dist)} км`:'';
+    return `<a class="oloc" href="location.html?city=${loc.key}">
+      <span class="oloc-code"><span>${loc.bgCode} · ${String(i+1).padStart(2,'0')}</span>${distTxt?`<span class="oloc-dist">${distTxt}</span>`:''}</span>
+      <div class="oloc-name">${loc.loc}</div>
+      <div class="oloc-addr">${loc.addr}</div>
+      <span class="oloc-arr">Сменить →</span>
+    </a>`;
+  }).join('');
+}
+(function(){try{
+  let key=new URLSearchParams(location.search).get('city');
+  if(!key||!LOC_DATA[key])key='msk_krylatskoe';
+  const d=LOC_DATA[key];
+  // Заголовок и подзаголовок (всегда)
+  document.querySelector('.loc-title').innerHTML=d.titleHtml;
+  document.querySelector('.loc-subtitle').textContent=d.sub||'Barvikha Lounge';
+  // Кликабельные крошки
+  const cityHref=d.city==='Москва'?'moscow.html':'index.html';
+  document.querySelector('.loc-crumbs').innerHTML=`<a href="index.html" class="cb-l">Барвиха Групп</a><span class="sep">/</span><a href="${cityHref}" class="cb-l">${d.city}</a><span class="sep">/</span><span class="cur">${d.loc}</span>`;
+  document.title=`Barvikha · ${d.city} ${d.loc!=='Центр'?d.loc:''}`.trim();
+  const back=document.querySelector('.nav-back');
+  if(back)back.onclick=()=>location.href=d.back||'index.html';
+
+  // ── РЕЖИМЫ: SOON / OPENING_TODAY / OPEN ──
+  if(d.status==='soon'){
+    document.body.classList.add('is-soon');
+    const sm=document.getElementById('soonModal');
+    document.getElementById('soonCity').textContent=d.city;
+    document.getElementById('soonOpens').textContent='Открытие · '+(d.opens||'2026');
+    // отключаем основные блоки заполнения и завершаем init
+    document.querySelectorAll('.lm').forEach(el=>el.style.visibility='hidden');
+    document.querySelectorAll('.loc-actions a,.loc-actions button').forEach(el=>el.style.opacity='.5');
+    return;
+  }
+  if(d.status==='opening_today'){
+    const ot=document.getElementById('openingToday');
+    if(ot){
+      ot.style.display='block';
+      document.getElementById('otTitle').textContent=d.city.toUpperCase();
+      // countdown до d.opens_at (HH:MM)
+      function tick(){
+        const now=new Date();
+        const [oh,om]=String(d.opens_at||'18:00').split(':').map(Number);
+        const target=new Date(now);target.setHours(oh,om,0,0);
+        if(target<=now){
+          document.getElementById('otCountdown').textContent='УЖЕ ОТКРЫТЫ';
+        } else {
+          const diff=target-now;
+          const h=Math.floor(diff/3600000),m=Math.floor((diff%3600000)/60000),s=Math.floor((diff%60000)/1000);
+          document.getElementById('otCountdown').textContent=`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+        }
+      }
+      tick();setInterval(tick,1000);
+    }
+  }
+
+  // ── ОБЫЧНЫЙ РЕЖИМ (open или opening_today) ──
+  const ms=document.querySelectorAll('.lm');
+  if(ms[0])ms[0].innerHTML=`<span class="lm-l">Адрес</span><span class="lm-v">${d.addr}</span>`;
+  if(ms[1])ms[1].innerHTML=`<span class="lm-l">${d.h1l}</span><span class="lm-v">${d.h1v}</span>`;
+  if(ms[2])ms[2].innerHTML=`<span class="lm-l">${d.h2l}</span><span class="lm-v">${d.h2v}</span>`;
+  // Телефон — реальный по точке
+  if(ms[3]){
+    const phoneRaw=(d.phone||'+7 (800) 201-27-81').replace(/\s|\(|\)|-/g,'');
+    ms[3].innerHTML=`<span class="lm-l">Телефон</span><a href="tel:${phoneRaw}" class="lm-v" style="text-decoration:none;color:inherit">${d.phone||'8 800 201-27-81'}</a>`;
+  }
+  // Кнопка «Позвонить» в hero — на реальный номер
+  document.querySelectorAll('a[href^="tel:"]').forEach(a=>{
+    if(d.phone){const raw=d.phone.replace(/\s|\(|\)|-/g,'');a.setAttribute('href',`tel:${raw}`)}
+  });
+  try{renderNearby(key)}catch(e){console.error('nearby:',e)}
+  try{initLocationFeatures(key,d)}catch(e){console.error('features:',e)}
+}catch(err){console.error('Location init error:',err)}})();
+
+// ═══ Helpers (var — чтобы избежать TDZ при вызове из IIFE выше) ═══
+// Premium minimal: без эмодзи, только текст
+var FEATURE_META={
+  live_music:{l:'Живой звук'},
+  dj:{l:'DJ-сет'},
+  karaoke:{l:'Караоке-салон'},
+  projector:{l:'Спортивные трансляции'},
+  panorama:{l:'Панорамные окна'},
+  ps5:{l:'Игровые зоны'},
+  photographer:{l:'Резидентный фотограф'},
+  verandah:{l:'Летняя веранда'},
+  '24h':{l:'Круглосуточно'}
+};
+var BADGE_META={
+  panorama:{l:'Виды Москвы'},
+  '24h':{l:'Круглосуточно'},
+  historic:{l:'В сердце Москвы'},
+  rooftop:{l:'Веранда на крыше'}
+};
+var PARK_META={
+  free:{cls:'info-park-free',l:'Бесплатная'},
+  paid:{cls:'info-park-paid',l:'Платная'},
+  metro_only:{cls:'info-park-metro',l:'Городские стоянки'}
+};
+
+// «Сегодня в заведении» — авто-генерация
+function todayMessage(d){
+  const day=new Date().getDay();
+  const hasLive=d.features&&d.features.includes('live_music');
+  const hasDJ=d.features&&d.features.includes('dj');
+  const hasKaraoke=d.features&&d.features.includes('karaoke');
+  // ЧТ
+  if(day===4){
+    if(hasLive&&d.loc!=='Раменки'&&d.loc!=='Коломенская'&&d.loc!=='Тёплый стан')return{t:'Живой звук',s:'· артист на сцене с 22:00'};
+    return{t:'Тихий вечер',s:'· камерная атмосфера'};
+  }
+  // ПТ-СБ
+  if(day===5||day===6){
+    if(hasKaraoke)return{t:'Караоке и живой звук',s:'· с 22:00'};
+    if(hasDJ)return{t:'DJ-сет с 22:00',s:'· кухня до утра'};
+    if(hasLive)return{t:'Живой звук с 22:00',s:'· артист на сцене'};
+    return{t:'Ночной формат',s:'· до 06:00'};
+  }
+  // Воскресенье
+  if(day===0)return{t:'Воскресный вечер',s:'· камерная атмосфера'};
+  // ПН-СР
+  return{t:'Тихий вечер',s:'· идеально для встреч'};
+}
+
+// ═══ ENHANCEMENTS: Open-now, route, map, meta, lreel, sticky, form ═══
+function initLocationFeatures(key,d){
+  // ── 0) «Сегодня» + бейдж + инфо-row + фичи + highlight + directions ──
+  if(d.features&&d.features.length){
+    const today=todayMessage(d);
+    const lt=document.getElementById('locToday');
+    if(lt){lt.style.display='';const ico=document.getElementById('ltIco');if(ico)ico.style.display='none';document.getElementById('ltText').textContent=today.t;document.getElementById('ltSub').textContent=today.s}
+  }
+  // Бейдж премиум-локации
+  if(d.badge&&BADGE_META[d.badge]){
+    const lb=document.getElementById('locBadge');
+    if(lb){lb.style.display='';document.getElementById('lbIco').textContent='';document.getElementById('lbText').textContent=BADGE_META[d.badge].l}
+  }
+  // Highlight
+  if(d.highlight){
+    const lh=document.getElementById('locHighlight');
+    if(lh){lh.style.display='';document.getElementById('locHighlightT').textContent=d.highlight}
+  }
+  // Directions
+  if(d.directions){
+    const ld=document.getElementById('locDirections');
+    if(ld){ld.style.display='';document.getElementById('locDirT').textContent=d.directions}
+  }
+  // Info-row (метро/парковка/кухня/VIP)
+  if(d.metro||d.parking||d.kitchen||d.vip){
+    const ir=document.getElementById('infoRow');
+    if(ir)ir.style.display='';
+    if(d.metro)document.getElementById('iMetro').textContent=d.metro;
+    if(d.parking){
+      const p=PARK_META[d.parking.type]||PARK_META.metro_only;
+      const pv=document.getElementById('iParkV');pv.textContent=p.l;pv.className='info-cell-v '+p.cls;
+      const ps=document.getElementById('iParkS');ps.textContent=[d.parking.cost,d.parking.note].filter(Boolean).join(' · ');
+    }
+    if(d.kitchen)document.getElementById('iKitchen').textContent=d.kitchen;
+    if(d.vip){
+      document.getElementById('iVipV').textContent=`${d.vip.count} комнат`;
+      document.getElementById('iVipS').textContent=d.vip.capacity+(d.vip.has_karaoke?' · с караоке':'');
+    }
+  }
+  // Иконки-фичи
+  if(d.features&&d.features.length){
+    const fs=document.getElementById('featStrip');
+    if(fs){
+      fs.innerHTML=d.features.map(f=>{
+        const m=FEATURE_META[f];if(!m)return'';
+        return `<span class="feat-pill">${m.l}</span>`;
+      }).join('');
+    }
+  }
+
+  // Караоке-блок (только если в фичах)
+  if(d.features&&d.features.includes('karaoke')){
+    const kdSection=document.getElementById('karaokeDetail');
+    if(kdSection){
+      kdSection.style.display='';
+      // вместимость — берём из VIP-данных или из кастомных правил
+      const KAR_CAP={
+        msk_krasnaya:'до 50 гостей · 5 VIP-салонов',
+        msk_yugozapadnaya:'до 40 гостей · 33 этаж',
+        msk_mendeleevskaya:'до 40 гостей · общий зал',
+        msk_marino:'до 40 гостей · 3 VIP-караоке',
+        msk_krylatskoe:'до 40 гостей · общий зал'
+      };
+      const kdCap=document.getElementById('kdCap');
+      if(kdCap)kdCap.textContent=KAR_CAP[key]||(d.vip?d.vip.capacity:'уточняется');
+    }
+  }
+
+  // ── 1) Open-now индикатор ──
+  // Парсим часы. Формат "12:00 — 03:00". Если конец < начала — закрытие на следующий день.
+  function parse(t){const m=String(t).match(/(\d{1,2}):(\d{2})/g);return m?m.map(s=>{const[h,mn]=s.split(':').map(Number);return h*60+mn}):null}
+  function isOpenNow(){
+    const now=new Date();
+    const day=now.getDay();
+    const isFriSat=(day===5||day===6);
+    const v=isFriSat?d.h2v:d.h1v;
+    if(/круглосуточно/i.test(v||''))return{open:true,h24:true};
+    const t=parse(v);
+    if(!t||t.length<2)return{open:false,close:'—',open_at:'—',minLeft:0};
+    const cur=now.getHours()*60+now.getMinutes();
+    const [start,end]=t;
+    let open=false,minLeft=0;
+    if(end<start){
+      if(cur>=start){open=true;minLeft=(24*60-cur)+end}
+      else if(cur<end){open=true;minLeft=end-cur}
+    } else {
+      if(cur>=start&&cur<end){open=true;minLeft=end-cur}
+    }
+    return{open,close:v.split(' — ')[1],open_at:v.split(' — ')[0],minLeft};
+  }
+  function fmtLeft(m){const h=Math.floor(m/60),mm=m%60;return h>0?`${h} ч ${mm} мин`:`${mm} мин`}
+  const st=document.getElementById('locStatus');
+  const stT=document.getElementById('locStatusText');
+  const stTm=document.getElementById('locStatusTime');
+  function updateStatus(){
+    if(!st)return;
+    const s=isOpenNow();
+    if(s.h24){st.classList.add('open');st.classList.remove('closed');stT.textContent='Открыто сейчас';stTm.textContent='· круглосуточно'}
+    else if(s.open){
+      st.classList.add('open');st.classList.remove('closed');stT.textContent='Открыто сейчас';
+      // Urgency: показываем «осталось X» только когда <120 мин (последние 2 часа)
+      if(s.minLeft<=120&&s.minLeft>0){
+        stTm.innerHTML='· до '+s.close+' <span class="ls-left">· осталось '+fmtLeft(s.minLeft)+'</span>';
+      } else {
+        stTm.textContent='· до '+s.close;
+      }
+    }
+    else{st.classList.add('closed');st.classList.remove('open');stT.textContent='Закрыто';stTm.textContent='· откроется в '+s.open_at}
+  }
+  updateStatus();
+  setInterval(updateStatus,60000);
+
+  // ── 2) Кнопка маршрута: Яндекс.Карты по адресу ──
+  const addrQ=encodeURIComponent(`${d.city}, ${d.addr}`);
+  const yandexUrl=`https://yandex.ru/maps/?text=${addrQ}&z=16`;
+  document.getElementById('locRouteBtn')?.setAttribute('href',yandexUrl);
+  document.getElementById('mapRouteCta')?.setAttribute('href',yandexUrl);
+  document.getElementById('sbRoute')?.setAttribute('href',yandexUrl);
+
+  // ── 3) Map iframe ──
+  const mapWrap=document.getElementById('mapWrap');
+  if(mapWrap){
+    const c=LOC_COORDS[key];
+    if(c){
+      const ll=`${c[1]},${c[0]}`;
+      // Yandex map static-iframe (легковесный)
+      mapWrap.innerHTML=`<iframe src="https://yandex.ru/map-widget/v1/?ll=${ll}&z=15&pt=${ll},pmgnm" allowfullscreen loading="lazy"></iframe>`;
+    }
+  }
+  document.getElementById('mapAddr')&&(document.getElementById('mapAddr').textContent=d.addr);
+  document.getElementById('lreelMetaL')&&(document.getElementById('lreelMetaL').textContent=`${d.city} · ${d.loc}`);
+
+  // ── 4) Meta-теги + JSON-LD по локации ──
+  const docTitle=`Barvikha · ${d.city} ${d.loc} — премиум кальянная`;
+  document.title=docTitle;
+  function setMeta(name,val,attr='name'){
+    let el=document.querySelector(`meta[${attr}="${name}"]`);
+    if(!el){el=document.createElement('meta');el.setAttribute(attr,name);document.head.appendChild(el)}
+    el.setAttribute('content',val);
+  }
+  const desc=`Barvikha Group · ${d.city} ${d.loc}. ${d.addr}. Электрочаши, авторская кухня, бар. ${d.h1l} ${d.h1v}, ${d.h2l} ${d.h2v}. Бронь онлайн.`;
+  setMeta('description',desc);
+  setMeta('og:title',`Barvikha · ${d.city} ${d.loc}`,'property');
+  setMeta('og:description',desc,'property');
+  setMeta('og:type','restaurant.restaurant','property');
+  setMeta('og:url',location.href,'property');
+  // JSON-LD Schema.org Restaurant
+  const c=LOC_COORDS[key]||[0,0];
+  const ld={
+    "@context":"https://schema.org","@type":"Restaurant",
+    "name":`Barvikha Lounge · ${d.loc}`,
+    "image":location.origin+'/'+'кальян 1.jpeg'.replace(/ /g,'%20'),
+    "address":{"@type":"PostalAddress","streetAddress":d.addr,"addressLocality":d.city,"addressCountry":"RU"},
+    "geo":{"@type":"GeoCoordinates","latitude":c[0],"longitude":c[1]},
+    "telephone":"+78002012781",
+    "url":location.href,
+    "priceRange":"$$$",
+    "servesCuisine":["European","Hookah Lounge"],
+    "openingHours":[`Mo-Th,Su ${d.h1v.replace(' — ','-')}`,`Fr-Sa ${d.h2v.replace(' — ','-')}`],
+    "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"1200"}
+  };
+  const ldEl=document.createElement('script');
+  ldEl.type='application/ld+json';
+  ldEl.textContent=JSON.stringify(ld);
+  document.head.appendChild(ldEl);
+
+  // ── 5) Reel canvas — дым (как на главной) ──
+  (function smoke(){
+    const cv=document.getElementById('lreelSmoke');
+    const wrap=document.getElementById('lreelWrap');
+    if(!cv||!wrap)return;
+    const ctx=cv.getContext('2d');
+    const dpr=Math.min(window.devicePixelRatio||1,2);
+    let W=0,H=0,parts=[],running=false,raf=0;
+    function resize(){const r=wrap.getBoundingClientRect();W=cv.width=Math.round(r.width*dpr);H=cv.height=Math.round(r.height*dpr);cv.style.width=r.width+'px';cv.style.height=r.height+'px'}
+    resize();let rT;window.addEventListener('resize',()=>{clearTimeout(rT);rT=setTimeout(resize,150)});
+    function spawn(){const x=W*(0.42+Math.random()*0.16);const y=H*(0.42+Math.random()*0.04);parts.push({x,y,vx:(Math.random()-0.5)*0.3,vy:-0.6-Math.random()*0.7,r:18*dpr+Math.random()*22*dpr,grow:0.18+Math.random()*0.22,life:0,maxLife:160+Math.random()*180,alpha:0.12+Math.random()*0.18,drift:(Math.random()-0.5)*0.012})}
+    function frame(){
+      if(!running)return;
+      ctx.clearRect(0,0,W,H);
+      const _smokeMax=window.innerWidth<=768?45:90;
+      if(parts.length<_smokeMax){spawn();if(window.innerWidth>768&&Math.random()<0.5)spawn()}
+      for(let i=parts.length-1;i>=0;i--){
+        const p=parts[i];p.life++;p.x+=p.vx;p.y+=p.vy;p.vx+=p.drift;p.vy*=0.995;p.r+=p.grow;
+        const t=p.life/p.maxLife;let a=p.alpha;
+        if(t<0.2)a*=t/0.2;else if(t>0.7)a*=(1-(t-0.7)/0.3);
+        if(t>=1||p.y<-50||p.x<-100||p.x>W+100){parts.splice(i,1);continue}
+        const g=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);
+        g.addColorStop(0,`rgba(220,200,170,${a*0.55})`);
+        g.addColorStop(0.5,`rgba(180,165,140,${a*0.25})`);
+        g.addColorStop(1,'rgba(160,140,110,0)');
+        ctx.fillStyle=g;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();
+      }
+      raf=requestAnimationFrame(frame);
+    }
+    const io=new IntersectionObserver(es=>{
+      const v=es[0].isIntersecting;
+      if(v&&!running){running=true;raf=requestAnimationFrame(frame)}
+      else if(!v&&running){running=false;cancelAnimationFrame(raf)}
+    },{threshold:0.15});
+    io.observe(wrap);
+  })();
+}
+
+// ═══ MENU DATA ═══
+const MENU={
+hookahs:[
+{c:'Авторское предложение · 7 000 ₽',x:[
+{n:'Tropicana Mama',p:'7 000 ₽',d:'Чаша: ананас · в колбе: пюре маракуйя, малина, киви, мята',i:'Чаша ананас|Пюре маракуйя|Ягоды малины|Киви|Свежая мята',ph:'кальян 1.jpeg'},
+{n:'Black Edition',p:'7 000 ₽',d:'Чаша: гранат · ежевика, ананас. сок, лайм, чипсы апельсина, мята',i:'Чаша гранат|Ягоды ежевики|Ананасовый сок|Пюре лайма|Чипсы апельсина|Свежая мята',ph:'кальян 1.jpeg'},
+{n:'One More Please',p:'7 000 ₽',d:'Чаша: ананас · ванильное мороженое, кокос, малина, фисташки',i:'Чаша ананас|Ванильное мороженое|Свежий кокос|Ягоды малины|Фисташки',ph:'кальян 1.jpeg'},
+{n:'Du Barry',p:'7 000 ₽',d:'Чаша: гранат · малина, клубничное мороженое, Raffaello',i:'Чаша гранат|Ягоды малины|Клубничное мороженое|Raffaello',ph:'кальян 1.jpeg'},
+{n:'Dolce Vita',p:'7 000 ₽',d:'Чаша: ананас · шоколадное мороженое, Oreo, корица, мята',i:'Чаша ананас|Шоколадное мороженое|Печенье Oreo|Корица|Свежая мята',ph:'кальян 1.jpeg'}]},
+{c:'Основное меню',x:[
+{n:'Кальян Барвиха',p:'20 000 ₽',d:'Чаша: грейпфрут / ананас / гранат · табак по желанию · колба арбуз или тыква',i:'Грейпфрут|Ананас|Гранат|Любой табак|Колба арбуз/тыква',ph:'кальян 1.jpeg'},
+{n:'Кальян на чаше',p:'3 700 ₽',d:'Классическая чаша · любой табак (кроме Perfume)',i:'Классическая чаша|Любой табак|Кроме Perfume',ph:'кальян 1.jpeg'},
+{n:'Кальян на фрукте',p:'4 200 ₽',d:'Чаша: грейпфрут / ананас / гранат · любой табак (кроме Perfume)',i:'Грейпфрут|Ананас|Гранат|Любой табак|Кроме Perfume',ph:'кальян 1.jpeg'},
+{n:'Perfume на чаше',p:'5 500 ₽',d:'Классическая чаша · любой табак с добавлением Perfume',i:'Классическая чаша|Любой табак|С Perfume',ph:'кальян 1.jpeg'},
+{n:'Perfume на фрукте',p:'6 500 ₽',d:'Чаша на фрукте · любой табак с добавлением Perfume',i:'Грейпфрут|Ананас|Гранат|Любой табак|С Perfume',ph:'кальян 1.jpeg'}]}
+],
+food:[
+{c:'Салаты',x:[
+{n:'Классический Цезарь с креветками',p:'1 290 ₽',d:'Романо · соус цезарь · креветки · черри · сухарики · пармезан',i:'Салат Романо|Соус Цезарь|Креветка|Томаты черри|Сухарики|Пармезан',ph:'кухня 3.jpeg'},
+{n:'Классический Цезарь с курицей',p:'990 ₽',d:'Романо · куриная грудка · сухарики · черри · пармезан',i:'Куриная грудка|Романо|Сухарики|Пармезан|Томаты черри',ph:'кухня 3.jpeg'},
+{n:'Оливье со слабосолёным лососем',p:'890 ₽',d:'Лосось с/с · картофель · морковь · горошек · огурцы',i:'Лосось с/с|Картофель|Морковь|Горошек|Огурцы|Майонез',ph:'кухня 3.jpeg'},
+{n:'Оливье с куриной грудкой',p:'520 ₽',d:'Куриная грудка · картофель · морковь · яйцо · огурцы',i:'Куриная грудка|Картофель|Морковь|Яйцо|Огурцы|Майонез',ph:'кухня 3.jpeg'},
+{n:'Салат с печёной свёклой и копчёной уткой',p:'690 ₽',d:'Свёкла · апельсиновый соус · выбитый сыр · утиная грудка · шпинат',i:'Свёкла печёная|Утиная грудка|Апельсиновый соус|Выбитый сыр|Шпинат|Грецкий орех|Миндаль',ph:'кухня 3.jpeg'},
+{n:'Салат по-деревенски с копчёной сметаной',p:'550 ₽',d:'Томаты · огурцы · редис · лук · укроп · сметана с жидким дымом',i:'Томаты|Огурцы|Редис|Лук красный|Укроп|Сметана 20%|Жидкий дым',ph:'кухня 3.jpeg'},
+{n:'Салат греческий',p:'990 ₽',d:'Томаты · огурцы · перец · брынза · маслины · крем-чиз',i:'Томаты|Огурцы|Перец|Брынза|Маслины Каламата|Крем-чиз|Базилик',ph:'кухня 3.jpeg'},
+{n:'Баклажан темпура с узбекскими томатами',p:'850 ₽',d:'Баклажан темпура · фисташки · соус Sweet Chile',i:'Баклажан|Темпурный кляр|Томаты|Фисташки|Соус чили сладкий|Кинза',ph:'кухня 3.jpeg'},
+{n:'Тёплый салат с мясом бычка Primebeef',p:'990 ₽',d:'Ростбиф · мини картофель · соус из тунца · фасоль · черри',i:'Ростбиф|Мини картофель|Соус тунец|Фасоль стручковая|Томаты черри|Редис',ph:'кухня 3.jpeg'},
+{n:'Руккола с креветками, клубникой и пармезаном',p:'1 400 ₽',d:'Авокадо · креветки · клубника · бальзамик · пармезан',i:'Авокадо|Креветка|Клубника|Руккола|Пармезан|Бальзамик|Черри',ph:'кухня 3.jpeg'},
+{n:'Гриль-салат с морепродуктами и соусом дашикомбу',p:'1 300 ₽',d:'Кабачки · баклажан · перец · креветки · кальмар · икра тобико',i:'Кабачки|Баклажан|Перец|Креветка|Кальмар|Соус Дашикомбу|Икра Тобико|Глазурь азиатская',ph:'кухня 3.jpeg'}]},
+{c:'RAW',x:[
+{n:'Тартар из лосося',p:'1 290 ₽',d:'Лосось · соус юдзу · соус шисо · авокадо',i:'Лосось филе|Соус Юдзу|Соус Шисо|Лук шалот|Авокадо|Рис|Шпинат',ph:'кухня 4.jpeg'},
+{n:'Тартар из тунца',p:'950 ₽',d:'Тунец красный · заправка цитрон · лук резанец',i:'Тунец красный|Заправка Цитрон|Лук резанец|Масло оливковое|Сок апельсина|Сок лайма',ph:'кухня 4.jpeg'},
+{n:'Тартар из говядины классический',p:'1 050 ₽',d:'Говядина · бородинский · перепелиное яйцо · горчица · каперсы',i:'Говядина филе|Бородинский хлеб|Яйцо перепелиное|Горчица зернистая|Каперсы|Лук шалот|Огурцы маринованные|Чёрная соль',ph:'кухня 4.jpeg'}]},
+{c:'Закуски',x:[
+{n:'Брускетта с лососем',p:'990 ₽',d:'Санчос · лосось с/с · креметте · юдзу · икра масаго',i:'Хлеб Санчос|Лосось с/с|Сыр Креметте|Огурцы|Соус Юдзу|Укроп|Икра Масаго|Апельсин',ph:'кухня 5.jpeg'},
+{n:'Брускетта с лососем спайси',p:'990 ₽',d:'Санчос · лосось · кимчи · авокадо · горчичный соус',i:'Хлеб Санчос|Майонез Кимчи|Авокадо|Соус горчичный|Лосось с/с|Томаты|Огурцы',ph:'кухня 5.jpeg'},
+{n:'Брускетта с ростбифом',p:'990 ₽',d:'Санчос · ростбиф · ореховый соус · печёные перец, баклажан, кабачок',i:'Хлеб Санчос|Ростбиф|Огурцы|Соус ореховый|Перец печёный|Кинза|Баклажан печёный|Кабачок печёный',ph:'кухня 5.jpeg'},
+{n:'Мясная тарелка',p:'1 700 ₽',d:'Утиная грудка · ростбиф · брезаола · вяленые томаты · оливки',i:'Утиная грудка|Ростбиф|Брезаола|Томаты вяленые|Оливки гигантские|Гриссини',ph:'кухня 5.jpeg'},
+{n:'Мясная тарелка халяль',p:'1 000 ₽',d:'Сервелат халяль · колбаса казы · султанская · халяль с сыром',i:'Сервелат Халяль|Колбаса Казы|Колбаса Султанская|Колбаса Халяль с сыром|Томаты черри|Кинза',ph:'кухня 5.jpeg'},
+{n:'Сырная тарелка',p:'1 700 ₽',d:'Блю чиз · монтазио с трюфелем · пармезан · бри · виноград · мёд',i:'Сыр Блю Чиз|Монтазио с трюфелем|Пармезан|Сыр Бри|Гриссини|Виноград|Клубника|Орех грецкий|Мёд|Маслины',ph:'кухня 5.jpeg'},
+{n:'Овощной сет с соусом',p:'1 100 ₽',d:'Огурцы · морковь · перец · сельдерей · руккола · соус Блю Чиз',i:'Огурцы|Морковь|Болгарский перец|Сельдерей|Руккола|Томаты черри|Соус Блю Чиз',ph:'кухня 5.jpeg'},
+{n:'Оливки',p:'690 ₽',d:'Гигантские · тимьян · розмарин · соус шрирача',i:'Оливки гигантские|Тимьян|Розмарин|Соус Шрирача|Уксус винный|Масло оливковое',ph:'кухня 5.jpeg'},
+{n:'Маслины Каламата',p:'690 ₽',d:'Греческие чёрные маслины с косточкой',i:'Маслины Каламата',ph:'кухня 5.jpeg'},
+{n:'Закуска с сельдью',p:'590 ₽',d:'Сельдь · бородинский · яйцо · мини картофель · масло сливочное',i:'Сельдь филе|Бородинский хлеб|Яйцо|Картофель мини|Масло сливочное|Лук красный|Укроп|Майонез',ph:'кухня 5.jpeg'}]},
+{c:'Горячие закуски',x:[
+{n:'Попкорн из креветок',p:'1 090 ₽',d:'Креветка · темпура · миндаль · икра тобико · креми спайси',i:'Креветка|Темпурный кляр|Миндаль|Икра Тобико|Соус креми спайси|Лук резанец',ph:'кухня 6.jpeg'},
+{n:'Попкорн из курицы',p:'590 ₽',d:'Куриная грудка · темпура · соус терияки · майонез кимчи',i:'Куриная грудка|Темпурный кляр|Кинза|Кунжут|Соус Терияки|Майонез Кимчи',ph:'кухня 6.jpeg'},
+{n:'Сырные палочки с брусничным соусом',p:'590 ₽',d:'Хрустящие палочки · домашний брусничный соус',i:'Сырные палочки|Соус брусничный|Брусника|Сахар',ph:'кухня 6.jpeg'}]},
+{c:'Стейки',x:[
+{n:'Стейк Миньон Латинская Америка',p:'2 300 ₽',v:'200 г',d:'С зелёным сливочным маслом',i:'Говяжья вырезка|Розмарин|Масло зелёное|Перец чёрный|Соль крупная',ph:'кухня 6.jpeg'},
+{n:'Стейк Рибай Primebeef Black Angus',p:'1 490 ₽',v:'за 100 г',d:'200 дней зернового откорма · с зелёным маслом',i:'Рибай|Чипсы из мини картофеля|Томаты черри|Масло зелёное|Соль крупная',ph:'кухня 6.jpeg'},
+{n:'Стейк Стриплойн Primebeef Black Angus',p:'1 100 ₽',v:'за 100 г',d:'200 дней зернового откорма · с зелёным маслом',i:'Стриплойн|Чипсы из мини картофеля|Томаты черри|Масло зелёное',ph:'кухня 6.jpeg'},
+{n:'Стейк Денвер Primebeef Black Angus',p:'1 900 ₽',v:'250 г',d:'200 дней зернового откорма · с зелёным маслом',i:'Денвер|Чипсы из мини картофеля|Томаты черри|Масло зелёное',ph:'кухня 6.jpeg'}]},
+{c:'Горячее',x:[
+{n:'Стейк из лосося со шпинатом и шампиньонами',p:'1 690 ₽',d:'Лосось · терияки · мидии · черри · лимон',i:'Лосось|Шампиньоны|Соус Терияки|Лук шалот|Шпинат|Мидии|Томаты черри|Лимон',ph:'кухня 7.jpeg'},
+{n:'Гречка с креветками',p:'850 ₽',d:'Креветка · гречка · кинза · сливочное масло · пармезан',i:'Креветка|Гречка|Кинза|Масло сливочное|Пармезан',ph:'кухня 7.jpeg'},
+{n:'Куриное бедро с булгуром',p:'890 ₽',d:'Бедро куриное · булгур · перечный соус',i:'Бедро куриное|Булгур|Соус перечный',ph:'кухня 7.jpeg'},
+{n:'Куриный стейк тандури',p:'1 150 ₽',d:'Куриная грудка · маринад тандури · брюссельская капуста · черри',i:'Куриная грудка|Маринад Тандури|Томаты черри|Брюссельская капуста|Йогурт греческий|Паприка|Лайм',ph:'кухня 7.jpeg'},
+{n:'Шницель куриный',p:'1 390 ₽',d:'Куриная грудка · соус деми глас · сухари панко · яблоко',i:'Куриная грудка|Соус Деми Глас|Сухари Панко|Микс салата|Яблоки|Пармезан|Сельдерей|Васаби|Лимон',ph:'кухня 7.jpeg'},
+{n:'Цыплёнок на гриле с узбекскими томатами',p:'1 590 ₽',d:'Цыплёнок корнишон · томаты розовые · соус терияки',i:'Цыплёнок корнишон|Томаты розовые|Соус Терияки|Лук красный|Кинза|Паприка',ph:'кухня 7.jpeg'},
+{n:'Котлетки из индейки с пюре',p:'1 100 ₽',d:'Соус на выбор: грибной, брусничный или кетчуп',i:'Индейка|Пюре картофельное|Брокколи|Редис|Соус на выбор',ph:'кухня 7.jpeg'},
+{n:'Щёчки бычка с пюре и соусом Коги',p:'1 400 ₽',d:'Томлёные щёчки · картофельное пюре · соус коги · лук порей фри',i:'Щёчки бычка томлёные|Пюре картофельное|Лук порей фри|Соус Коги',ph:'кухня 7.jpeg'},
+{n:'Говядина в азиатском стиле с рисом',p:'1 490 ₽',d:'Вырезка · рис · перец · сельдерей · шампиньоны · арахис',i:'Говяжья вырезка|Рис|Болгарский перец|Сельдерей|Шампиньоны|Арахис|Соус барбекю|Соус соевый|Кинза|Кунжут',ph:'кухня 7.jpeg'},
+{n:'Говяжьи рёбра копчёные с соусом из еловых шишек',p:'1 590 ₽',d:'Копчёные рёбра · морковное пюре · соус деми глас с шишками',i:'Копчёные рёбра|Морковное пюре|Соус деми глас с еловыми шишками|Лук порей фри',ph:'кухня 7.jpeg'},
+{n:'Брискет с пюре васаби и соусом из тыквы',p:'1 790 ₽',d:'Запечённый брискет · пюре с васаби · тыквенный соус',i:'Брискет запечённый|Суп пюре из тыквы|Пюре картофельное|Васаби',ph:'кухня 7.jpeg'},
+{n:'Бефстроганов с картофельным пюре',p:'1 300 ₽',d:'Говяжья вырезка · сливочный соус · шампиньоны · пюре',i:'Говяжья вырезка|Сливки 22%|Лук|Шампиньоны|Пюре|Чипс гречневый|Огурцы маринованные|Соус Вортчестер',ph:'кухня 7.jpeg'},
+{n:'Каша из топора',p:'790 ₽',d:'Тушёнка говядина · гречка · лук · сливочное масло · кинза · чеснок',i:'Тушёнка говядина|Гречка|Лук|Масло сливочное|Кинза|Чеснок',ph:'кухня 7.jpeg'}]},
+{c:'Паста',x:[
+{n:'Паппарделле с лососем и красной икрой',p:'990 ₽',d:'Лосось · сливки · икра красная · пармезан',i:'Паппарделле|Сливки 22%|Лосось|Пармезан|Икра красная|Лук шалот|Масло сливочное',ph:'кухня 7.jpeg'},
+{n:'Лапша с курицей и креветками вок',p:'850 ₽',d:'Кокосовый вок · бонито · соус терияки · удон',i:'Куриная грудка|Креветка|Лапша удон|Лук порей фри|Стружка тунца|Соус вок кокос|Соус Терияки',ph:'кухня 7.jpeg'},
+{n:'Фетучини с куриным бедром терияки',p:'690 ₽',d:'Фетучини и фунчёза · куриное бедро · терияки · кунжут',i:'Фетучини|Фунчёза|Куриная грудка|Сливки 22%|Темпура|Соус Терияки|Кунжут|Пармезан',ph:'кухня 7.jpeg'},
+{n:'Лингвини карбонара',p:'790 ₽',d:'Бекон · сливки · яичный соус · пармезан',i:'Лингвини|Бекон|Лук шалот|Сливки 22%|Пармезан|Яйцо|Перец чёрный',ph:'кухня 7.jpeg'},
+{n:'Пенне с ростбифом в трюфельном соусе',p:'1 150 ₽',d:'Ростбиф · сливки · трюфель · вяленые томаты · пармезан',i:'Пенне|Сливки 22%|Ростбиф|Пармезан|Паста трюфельная|Томаты вяленые',ph:'кухня 7.jpeg'}]},
+{c:'Соусы · 170 ₽',x:[
+{n:'Кетчуп',p:'170 ₽',ph:'кухня 5.jpeg'},
+{n:'Майонез',p:'170 ₽',ph:'кухня 5.jpeg'},
+{n:'Свитчили',p:'170 ₽',ph:'кухня 5.jpeg'},
+{n:'Брусничный',p:'170 ₽',ph:'кухня 5.jpeg'},
+{n:'Кисло-сладкий',p:'170 ₽',ph:'кухня 5.jpeg'},
+{n:'Сырный',p:'170 ₽',ph:'кухня 5.jpeg'},
+{n:'Барбекю',p:'170 ₽',ph:'кухня 5.jpeg'},
+{n:'Блю-чиз',p:'170 ₽',ph:'кухня 5.jpeg'},
+{n:'Шрирача',p:'170 ₽',ph:'кухня 5.jpeg'},
+{n:'Бальзамический',p:'170 ₽',ph:'кухня 5.jpeg'},
+{n:'Перечный',p:'170 ₽',ph:'кухня 5.jpeg'}]},
+{c:'Бургеры',x:[
+{n:'Бургер «Барвиха»',p:'1 390 ₽',d:'Двойная котлета · коньячный соус · крем из белых грибов',i:'Котлета 180 г ×2|Бургерная булка|Соус барвиха|Моцарелла|Соус унаги|Томаты розовые|Лук красный|Руккола',ph:'кухня 6.jpeg'},
+{n:'Бургер «Классика»',p:'950 ₽',d:'Мраморная говядина · медово-горчичный · чеддер',i:'Котлета 180 г|Чеддер|Лук|Огурцы солёные|Томаты|Соус сырный|Кетчуп|Соус медово-горчичный',ph:'кухня 6.jpeg'},
+{n:'Бургер «Сырный»',p:'1 150 ₽',d:'Мраморная говядина · бекон · яйцо · чеддер',i:'Соус барбекю|Романо|Томаты|Котлета 180 г|Соус сырный|Яйцо|Свиной бекон|Чеддер|Лук',ph:'кухня 6.jpeg'},
+{n:'Бургер с камамбером и брусникой',p:'1 350 ₽',d:'Говядина · камамбер · брусничный соус · романо',i:'Соус брусника|Камамбер|Томаты|Романо|Лук|Майонез|Котлета 180 г|Бургерная булка',ph:'кухня 6.jpeg'},
+{n:'Бургер с рваной говядиной, манго и халапеньо',p:'1 590 ₽',d:'Шея говяжья · манго · халапеньо · чеддер · барбекю',i:'Шея говяжья|Манго тайское|Чеддер|Романо|Соус барбекю|Майонез|Халапеньо',ph:'кухня 6.jpeg'},
+{n:'Бургер с хрустящим цыплёнком',p:'690 ₽',d:'Хрустящий цыплёнок · майонез свитчили · чеддер · барбекю',i:'Цыплёнок|Майонез свитчили|Соус барбекю|Чеддер|Томаты|Романо|Лук',ph:'кухня 6.jpeg'}]},
+{c:'Бургеры халяль',x:[
+{n:'Халяль бургер «Классика»',p:'1 050 ₽',d:'Мраморная говядина · медово-горчичный соус',i:'Мраморная говядина|Медово-горчичный соус|Бургерная булка',ph:'кухня 6.jpeg'},
+{n:'Халяль бургер «Сырный»',p:'1 250 ₽',d:'Мраморная говядина · яйцо · чеддер',i:'Мраморная говядина|Яйцо|Чеддер|Бургерная булка',ph:'кухня 6.jpeg'}]},
+{c:'Япония · Роллы',x:[
+{n:'Ролл Барвиха',p:'1 590 ₽',d:'Краб · лосось · тунец · икра нерки · авокадо · манго · золото',i:'Краб роза|Лосось|Тунец|Икра нерки|Креми спайси|Соус манго|Соус Чили-кимчи|Авокадо|Манго|Нори|Золото',ph:'десерт 2.jpeg'},
+{n:'Ролл Филадельфия',p:'1 390 ₽',d:'Лосось · огурцы · креметте',i:'Рис|Лосось|Огурцы|Креметте|Нори',ph:'десерт 2.jpeg'},
+{n:'Ролл Калифорния с лососем',p:'950 ₽',d:'Лосось · огурцы · креметте · авокадо · тобико',i:'Лосось|Огурцы|Креметте|Авокадо|Икра Тобико|Нори',ph:'десерт 2.jpeg'},
+{n:'Ролл Калифорния с креветкой',p:'990 ₽',d:'Тигровая креветка · огурцы · авокадо · креметте · тобико',i:'Креветка тигровая|Икра Тобико|Авокадо|Огурцы|Креметте|Нори',ph:'десерт 2.jpeg'},
+{n:'Ролл Калифорния с крабом',p:'1 490 ₽',d:'Краб роза · огурцы · креметте · авокадо · тобико',i:'Краб роза|Огурцы|Креметте|Авокадо|Икра Тобико|Нори',ph:'десерт 2.jpeg'},
+{n:'Ролл с авокадо и лососем',p:'690 ₽',d:'Лосось · авокадо · креметте · унаги · кунжут',i:'Лосось|Соус Унаги|Авокадо|Креметте|Нори|Кунжут',ph:'десерт 2.jpeg'},
+{n:'Ролл опалённый лосось с апельсином',p:'850 ₽',d:'Лосось · креметте · апельсин · икра тобико',i:'Лосось|Креметте|Нори|Икра Тобико|Сахар тростниковый|Апельсин',ph:'десерт 2.jpeg'},
+{n:'Ролл креветка темпура',p:'950 ₽',d:'Креветка · авокадо · темпура · унаги · соус Том Ям с масаго',i:'Креветка|Авокадо|Темпурный кляр|Нори|Кунжут|Соус Унаги|Соус Том Ям с масаго',ph:'десерт 2.jpeg'},
+{n:'Тёплый ролл с креветкой и лососем',p:'850 ₽',d:'Лосось · креветка · креметте · сухари · унаги · кунжут',i:'Лосось|Креветка|Нори|Креметте|Темпурный кляр|Сухари|Соус Унаги|Кунжут',ph:'десерт 2.jpeg'}]},
+{c:'Гунканы',x:[
+{n:'Гункан кани',p:'280 ₽',d:'Краб снежный · икра тобико · майонез кимчи',i:'Краб снежный|Икра Тобико|Майонез Кимчи|Нори|Рис',ph:'десерт 2.jpeg'},
+{n:'Гункан магуро',p:'380 ₽',d:'Тунец · кунжут · майонез кимчи',i:'Тунец|Кунжут|Майонез Кимчи|Нори|Рис',ph:'десерт 2.jpeg'},
+{n:'Гункан сяке',p:'450 ₽',d:'Лосось · кунжут · майонез кимчи',i:'Лосось|Кунжут|Майонез Кимчи|Нори|Рис',ph:'десерт 2.jpeg'}]},
+{c:'Поке',x:[
+{n:'Поке с креветкой',p:'1 050 ₽',d:'Креветка · кукуруза · ореховый соус · эдамаме · чука',i:'Рис|Креветка|Кукуруза|Соус ореховый|Соус медово-горчичный|Огурцы|Эдамаме|Чука|Нори|Кунжут',ph:'десерт 2.jpeg'},
+{n:'Поке с лососем',p:'1 100 ₽',d:'Лосось · кукуруза · мисо · ореховый · эдамаме · редис',i:'Рис|Лосось|Кукуруза|Огурцы|Эдамаме|Соус Мисо|Соус ореховый|Редис|Нори|Кунжут',ph:'десерт 2.jpeg'},
+{n:'Поке с лососем спайси',p:'1 150 ₽',d:'Лосось · битые огурцы · кимчи · авокадо · эдамаме · чука',i:'Рис|Лосось|Битые огурцы|Майонез Кимчи|Авокадо|Эдамаме|Чука|Нори|Кунжут',ph:'десерт 2.jpeg'},
+{n:'Поке с тунцом',p:'990 ₽',d:'Тунец · авокадо · эдамаме · лимонный кимчи · свитчили',i:'Рис|Тунец|Огурцы|Авокадо|Эдамаме|Лимонный кимчи|Майонез Свитчили|Нори|Кунжут',ph:'десерт 2.jpeg'}]},
+{c:'Римская пицца',x:[
+{n:'Пицца Барвиха',p:'890 ₽',d:'Окорок · пепперони · бекон · салями · моцарелла',i:'Лук красный|Базилик|Моцарелла|Окорок Тамбовский|Пепперони|Свиной бекон|Салями|Соус томатный|Тесто пинса',ph:'кухня 4.jpeg'},
+{n:'Пицца Маргарита',p:'600 ₽',d:'Моцарелла · базилик · томатный соус',i:'Моцарелла|Базилик|Соус томатный|Тесто пинса',ph:'кухня 4.jpeg'},
+{n:'Пицца Пепперони халяль',p:'890 ₽',d:'Моцарелла · сервелат пепперони · томатный соус',i:'Моцарелла|Пепперони|Соус томатный|Базилик|Тесто пинса',ph:'кухня 4.jpeg'},
+{n:'Пицца Цезарь',p:'1 190 ₽',d:'Куриная грудка · романо · черри · соус цезарь · пармезан',i:'Пармезан|Томаты черри|Романо|Куриная грудка|Моцарелла|Соус Цезарь|Тесто пинса',ph:'кухня 4.jpeg'},
+{n:'Пицца Четыре сыра',p:'890 ₽',d:'Джерси Блю · пармезан · моцарелла · чеддер',i:'Сыр Джерси Блю|Базилик|Пармезан|Моцарелла|Сливки 22%|Тесто пинса|Чеддер',ph:'кухня 4.jpeg'},
+{n:'Пицца Халяль',p:'990 ₽',d:'Сервелат крымский · итальянская с сыром · султанская · барбекю',i:'Базилик|Соус барбекю|Огурцы солёные|Сервелат Крымский|Колбаса итальянская с сыром|Колбаса Султанская|Моцарелла|Тесто пинса',ph:'кухня 4.jpeg'}]},
+{c:'Супы',x:[
+{n:'Борщ халяль',p:'690 ₽',d:'Свекольный фреш · говядина · сметана · бородинский · чесночное масло',i:'Свёкла|Капуста|Томатная паста|Говядина|Перец сладкий|Картофель|Морковь|Лук|Чеснок|Жидкий дым',ph:'кухня 5.jpeg'},
+{n:'Суп куриный',p:'590 ₽',d:'Куриный бульон · фетучини · перепелиное яйцо · укроп',i:'Куриный бульон|Фетучини|Куриная грудка|Куриные окорочка|Укроп|Яйцо перепелиное',ph:'кухня 5.jpeg'},
+{n:'Том ям с морепродуктами',p:'1 100 ₽',d:'Креветка · кальмар · кокос · лимонграсс · лайм · кинза',i:'Том-Ям|Креветочное масло|Рис басмати|Шампиньоны|Креветка|Кальмар|Кинза|Молоко кокосовое|Имбирь|Чили|Лайм|Лимонграсс',ph:'кухня 5.jpeg'},
+{n:'Суп тыквенный с креветкой',p:'750 ₽',d:'Тыквенное пюре · креветки · сливки · семена тыквы',i:'Суп пюре из тыквы|Креветки|Сливки 22%|Масло оливковое|Семена тыквы',ph:'кухня 5.jpeg'},
+{n:'Крем-суп грибной капучино со сливками',p:'690 ₽',d:'Грибы · сливки · вешенки фри · трюфельная нота',i:'Шампиньоны|Картофель|Лук|Сливки 22%|Молоко|Вешенки фри',ph:'кухня 5.jpeg'},
+{n:'Сырный суп с гриссини',p:'790 ₽',d:'Плавленый сыр · сливки · гриссини · трюфельное масло',i:'Сыр плавленый|Картофель|Лук|Морковь|Сливки 22%|Гриссини|Масло трюфельное|Чипсы базилика',ph:'кухня 5.jpeg'},
+{n:'Хлеб с ароматным маслом',p:'390 ₽',d:'На выбор: санчес / итальянский / гречишный / бородинский',i:'Итальянский|Гречишный|Масло сливочное лайм|Санчос|Чёрная соль|Бородинский',ph:'кухня 5.jpeg'}]},
+{c:'Гарниры',x:[
+{n:'Овощи на гриле',p:'750 ₽',d:'Баклажан · перец · томаты · кабачки · шампиньоны · прованские травы',i:'Баклажан|Перец|Томаты|Кабачки|Шампиньоны|Лук красный|Прованские травы',ph:'кухня 3.jpeg'},
+{n:'Гречка с грибами',p:'250 ₽',d:'Гречка · шампиньоны · лук шалот',i:'Гречка|Шампиньоны|Лук шалот',ph:'кухня 3.jpeg'},
+{n:'Пюре картофельное',p:'300 ₽',d:'Со сливочным маслом и молоком',i:'Картофель|Масло сливочное|Молоко 3.2%',ph:'кухня 3.jpeg'},
+{n:'Мини картофель',p:'300 ₽',d:'Запечённый · чесночная паста · зелень',i:'Картофель мини|Чесночная паста|Зелень',ph:'кухня 3.jpeg'},
+{n:'Картофель фри',p:'390 ₽',d:'Хрустящий картофель фри',i:'Картофель|Соль',ph:'кухня 3.jpeg'},
+{n:'Батат фри',p:'490 ₽',d:'Хрустящий батат',i:'Батат|Соль',ph:'кухня 3.jpeg'}]},
+{c:'Десерты',x:[
+{n:'Тирамису',p:'690 ₽',d:'Маскарпоне · кофейная пропитка · какао · фирменный рецепт шефа',i:'Маскарпоне|Кофе|Бисквит|Яйцо|Сахар|Какао',ph:'десерт 1.jpeg'},
+{n:'Шоколадный фондан',p:'690 ₽',d:'Горький шоколад 70% · соус манго · ванильное мороженое · золотая пудра',i:'Шоколад 70%|Соус манго|Мороженое ванильное|Фрукты сублимированные|Золотая пудра',ph:'десерт 1.jpeg'},
+{n:'Чизкейк',p:'690 ₽',d:'Сливочный сыр · солёная карамель · клубника · морковная пыль',i:'Сливочный сыр|Солёная карамель|Клубника|Бисквит|Морковная пыль|Миндаль',ph:'десерт 1.jpeg'},
+{n:'Медовик',p:'690 ₽',d:'Мёд · сливки · клубника · голубика · фисташки',i:'Мёд|Яйцо|Сахар|Масло сливочное|Молоко|Сливки 33%|Клубника|Голубика|Фисташки|Мята',ph:'десерт 1.jpeg'},
+{n:'Фруктовая тарелка',p:'1 600 ₽',d:'Виноград · апельсины · яблоки · груши · киви · ананасы · мята',i:'Виноград|Апельсины|Яблоки|Груши|Киви|Ананасы|Мята|Сахарная пудра',ph:'десерт 1.jpeg'}]},
+{c:'Сезонное предложение',x:[
+{n:'Салат с тунцом и трюфельной заправкой',p:'990 ₽',d:'Тунец · фасоль · картофель беби · перепелиное яйцо · трюфель',i:'Тунец красный|Фасоль стручковая|Картофель беби|Яйцо перепелиное|Трюфельная заправка|Кунжут|Руккола|Шпинат|Лоло россо',ph:'кухня 4.jpeg'},
+{n:'Севиче из лосося',p:'750 ₽',d:'Лосось · авокадо · томаты кимчи · фурикакэ васаби',i:'Лосось|Авокадо|Томаты черри кимчи|Фурикакэ васаби|Кинза|Соус соевый|Соус Кимчи',ph:'кухня 4.jpeg'},
+{n:'Закуска с паштетом из говяжьей печени',p:'550 ₽',d:'Паштет · санчос · карамелизованный лук · грецкий орех',i:'Паштет говяжья печень|Санчос|Лук карамелизованный|Орех грецкий|Молоко|Сливки|Бальзамик',ph:'кухня 5.jpeg'},
+{n:'Томаты кимчи',p:'490 ₽',d:'Свежие черри в маринаде кимчи · кинза',i:'Томаты черри кимчи|Кинза|Соевый соус|Соус Кимчи|Соус сладкий чили',ph:'кухня 5.jpeg'},
+{n:'Жюльен с морепродуктами',p:'790 ₽',d:'Гребешок · кальмар · креветка · моцарелла · сливки',i:'Гребешок|Кальмар|Креветка|Лук резанец|Моцарелла|Лук|Шампиньоны|Сливки 22%',ph:'кухня 6.jpeg'},
+{n:'Стейк из говяжьей печени',p:'890 ₽',d:'Печень · картофельное пюре · вишнёвый соус · лук порей фри',i:'Печень говяжья|Пюре картофельное|Соус вишнёвый|Лук порей фри|Соус Деми Глас',ph:'кухня 7.jpeg'},
+{n:'Судак с пюре из цветной капусты и брокколи',p:'1 290 ₽',d:'Судак · батат · крем брокколи · крем цветная капуста · унаги',i:'Судак|Батат|Крем брокколи|Крем цветная капуста|Соус чили сладкий|Соус Унаги',ph:'кухня 7.jpeg'},
+{n:'Булгур с уткой и соусом демиглас',p:'750 ₽',d:'Утка конфи · булгур · сливки · смородина · кедровый орех · пармезан',i:'Булгур|Соус Деми Глас|Утка конфи|Сливки 22%|Смородина чёрная|Лук|Орех кедровый|Пармезан|Базилик',ph:'кухня 7.jpeg'},
+{n:'Орзо с ростбифом',p:'990 ₽',d:'Орзо · сливки · ростбиф · деми глас · икра нерки · грецкий орех',i:'Орзо|Сливки 22%|Ростбиф|Соус Деми Глас|Пармезан|Икра красная|Орех грецкий',ph:'кухня 7.jpeg'},
+{n:'Ролл с бататом',p:'590 ₽',d:'Запечённый батат · креметте · икра тобико · огурец',i:'Батат|Икра Тобико|Креметте|Огурцы|Нори|Соевый соус',ph:'десерт 2.jpeg'},
+{n:'Ролл с жареным лососем',p:'890 ₽',d:'Жареный лосось · ореховый соус · креметте · унаги · кунжут',i:'Лосось|Соус ореховый|Креметте|Огурцы|Васаби|Соус Унаги|Кунжут|Нори',ph:'десерт 2.jpeg'},
+{n:'Ролл с тунцом',p:'890 ₽',d:'Тунец · томаты · огурцы · авокадо · соус Том Ям с масаго',i:'Тунец|Томаты|Огурцы|Авокадо|Соус Унаги|Соус Том Ям с масаго|Креметте|Нори',ph:'десерт 2.jpeg'},
+{n:'Крем-брюле',p:'550 ₽',d:'Классический крем-брюле · клубника · мята · голубика',i:'Сахар тростниковый|Яйцо|Сливки 22%|Клубника|Мята|Голубика',ph:'десерт 1.jpeg'}]},
+{c:'Постное меню',x:[
+{n:'Большой зелёный салат',p:'1 100 ₽',d:'Авокадо · кабачки · морковь · шпинат · латук · мангольд',i:'Авокадо|Кабачки|Морковь|Шпинат|Латук|Лоло россо|Мангольд|Миндаль|Семена Чиа',ph:'кухня 3.jpeg'},
+{n:'Салат со шпинатом, киноа, сельдереем и яблоком',p:'590 ₽',d:'Заправка на кунжутном масле · миндаль',i:'Кунжутное масло|Миндаль|Яблоки|Сельдерей|Шпинат|Киноа',ph:'кухня 3.jpeg'},
+{n:'Цветная капуста с соусом из кокосового молока и карри',p:'590 ₽',d:'Запечённая капуста · кокос · карри',i:'Карри|Молоко кокосовое|Цветная капуста',ph:'кухня 7.jpeg'},
+{n:'Рис с овощами',p:'300 ₽',d:'Рис · перец · кабачки · лук · морковь · соевый соус',i:'Рис|Перец|Кабачки|Лук|Морковь|Соевый соус',ph:'кухня 3.jpeg'},
+{n:'Ролл овощной',p:'600 ₽',d:'Романо · огурцы · перец · авокадо · печёные овощи · унаги',i:'Романо|Огурцы|Перец|Авокадо|Овощи печёные|Нори|Рис|Соус Унаги',ph:'десерт 2.jpeg'},
+{n:'Суп из корнеплодов',p:'590 ₽',d:'Сезонные корнеплоды · сухарики',i:'Корнеплоды|Сухарики|Масло оливковое',ph:'кухня 5.jpeg'}]},
+{c:'Правильное питание · с КБЖУ',x:[
+{n:'Стейк лосося с лимоном',p:'1 500 ₽',v:'120/50 г',d:'Лосось на пару с лимоном',i:'Лосось на пару|Лимон',kc:'231,08',kp:'28,05',kf:'11,33',ku:'1,74',ph:'кухня 5.jpeg'},
+{n:'Стейк тунца с лимоном',p:'1 200 ₽',v:'120/50 г',d:'Тунец на пару с лимоном',i:'Тунец красный на пару|Лимон',kc:'160,64',kp:'27,69',kf:'1,73',ku:'2,22',ph:'кухня 5.jpeg'},
+{n:'Кальмар на пару с лимоном',p:'690 ₽',v:'105/50 г',d:'Кальмар на пару с лимоном',i:'Кальмар на пару|Лимон',kc:'145,1',kp:'19,35',kf:'4,46',ku:'1,5',ph:'кухня 5.jpeg'},
+{n:'Креветки на пару',p:'1 300 ₽',v:'150 г',d:'С лимоном',i:'Креветки|Лимон',kc:'138',kp:'22,8',kf:'1,8',ku:'5,55',ph:'кухня 5.jpeg'},
+{n:'Куриная грудка на пару',p:'490 ₽',v:'150 г',d:'Чистый белок без добавок',i:'Куриная грудка',kc:'169,5',kp:'35,4',kf:'2,85',ku:'0',ph:'кухня 5.jpeg'},
+{n:'Медальоны из говядины на пару',p:'1 800 ₽',v:'150 г',d:'Говяжья вырезка на пару',i:'Говяжья вырезка',kc:'157,8',kp:'29,7',kf:'3,75',ku:'0',ph:'кухня 5.jpeg'},
+{n:'Гречка отварная',p:'250 ₽',v:'150 г',i:'Гречка',kc:'82,8',kp:'3,38',kf:'0,9',ku:'15,37',ph:'кухня 3.jpeg'},
+{n:'Бурый рис отварной',p:'500 ₽',v:'150 г',i:'Рис бурый',kc:'151,5',kp:'6',kf:'0,45',ku:'31,95',ph:'кухня 3.jpeg'},
+{n:'Брокколи на пару',p:'390 ₽',v:'127 г',i:'Брокколи',kc:'35,94',kp:'3,43',kf:'0,38',ku:'5,97',ph:'кухня 3.jpeg'},
+{n:'Цветная капуста на пару',p:'250 ₽',v:'127 г',i:'Цветная капуста',kc:'38,1',kp:'3,05',kf:'0,38',ku:'6,1',ph:'кухня 3.jpeg'},
+{n:'Брюссельская капуста на пару',p:'250 ₽',v:'127 г',i:'Брюссельская капуста',kc:'59,69',kp:'6,1',kf:'0,51',ku:'10,29',ph:'кухня 3.jpeg'},
+{n:'Соус Цацики',p:'170 ₽',v:'50 г',d:'Греческий соус с йогуртом и огурцом',i:'Йогурт греческий|Огурцы|Сок лимона|Мята|Соль',kc:'29,32',kp:'3,26',kf:'0,8',ku:'2,16',ph:'кухня 5.jpeg'},
+{n:'Соус Чесночный',p:'170 ₽',v:'50 г',d:'Сметанный с чесноком и укропом',i:'Сметана 20%|Чеснок|Укроп|Соль',kc:'98,53',kp:'1,39',kf:'9,14',ku:'2,44',ph:'кухня 5.jpeg'},
+{n:'Соус Сальса',p:'200 ₽',v:'50 г',d:'Из свежих томатов',i:'Томаты|Соус сладкий чили|Сок лимона|Лук красный|Кинза',kc:'12,33',kp:'0,33',kf:'0,01',ku:'2,86',ph:'кухня 5.jpeg'},
+{n:'Соус Томатный',p:'170 ₽',v:'50 г',d:'Из томлёных томатов',i:'Томаты|Базилик|Масло оливковое|Сахар|Соль',kc:'109,09',kp:'3,67',kf:'1,33',ku:'20,45',ph:'кухня 5.jpeg'},
+{n:'Королевские финики',p:'390 ₽',v:'2 шт · 60 г',d:'Сладкий полезный десерт',i:'Финики королевские',kc:'166,2',kp:'1,08',kf:'0,3',ku:'44,28',ph:'десерт 1.jpeg'},
+{n:'Королевские финики с грецким орехом',p:'550 ₽',v:'70 г',d:'Финики · грецкий орех · золото',i:'Финики королевские|Грецкий орех|Золото',kc:'231',kp:'2,46',kf:'6,43',ku:'45,3',ph:'десерт 1.jpeg'}]}
+],
+bar:[
+{c:"Author's Cocktails · 1 100 ₽",x:[
+{n:'French',p:'1 100 ₽',v:'150 мл',d:'Просекко · джин · лайм · бузина · киви · мята',i:'Просекко|Джин|Сок лайма|Сироп бузины|Сироп киви|Свежая мята',ph:'бар 2.jpeg'},
+{n:'Rose Glasses',p:'1 100 ₽',v:'390 мл',d:'Джин · лимон · личи · роза · малина',i:'Джин|Сок лимона|Пюре личи|Сироп роза|Сироп малина',ph:'бар 2.jpeg'},
+{n:'Up Your Cool',p:'1 100 ₽',v:'390 мл',d:'Джин · крыжовник · яблоко · алоэ вера · тоник',i:'Джин|Пюре крыжовник|Сок лайма|Сироп зелёное яблоко|Алоэ вера|Тоник',ph:'бар 2.jpeg'},
+{n:'Dominant',p:'1 100 ₽',v:'200 мл',d:'Водка · сливочный ликёр · сливки · макадамия · шоколад',i:'Водка|Сливочный ликёр|Сливки|Сироп макадамия|Шоколад',ph:'бар 2.jpeg'},
+{n:'Last Word',p:'1 100 ₽',v:'200 мл',d:'Джин · лимон · красный базилик · ваниль',i:'Джин|Сок лимона|Красный базилик|Сироп ваниль|Сахарный сироп',ph:'бар 2.jpeg'},
+{n:'Drink, Drink, Drink',p:'1 100 ₽',v:'390 мл',d:'Джин · мандарин · лимон · юдзу · тоник',i:'Джин|Сок мандарина|Сок лимона|Сироп юдзу|Тоник',ph:'бар 2.jpeg'},
+{n:'Electric Blue',p:'1 100 ₽',v:'290 мл',d:'Джин · лайм · лаванда · голубая малина · чай чанг шу',i:'Джин|Сок лайма|Сироп лаванда|Сироп голубая малина|Чай Чанг Шу',ph:'бар 2.jpeg'},
+{n:'Drunk Duchess Pear',p:'1 100 ₽',v:'500 мл',d:'Бурбон · лимонад дюшес · лимон · груша',i:'Бурбон|Лимонад Дюшес|Сок лимона|Свежая груша',ph:'бар 3.jpeg'},
+{n:'The Master and Margarita',p:'1 100 ₽',v:'180 мл',d:'Серебряная текила · апельсиновый ликёр · лайм · гибискус',i:'Серебряная текила|Апельсиновый ликёр|Сок лайма|Сироп гибискус',ph:'бар 3.jpeg'},
+{n:'Aperol Flip',p:'1 100 ₽',v:'180 мл',d:'Апероль · просекко · лимон · малина',i:'Апероль|Просекко|Сок лимона|Сироп малина',ph:'бар 4.jpeg'},
+{n:'The Mafia',p:'1 100 ₽',v:'160 мл',d:'Джин · малина · лайм · сироп малины',i:'Джин|Пюре малины|Сок лайма|Сироп малина',ph:'бар 4.jpeg'},
+{n:'Sunset',p:'1 100 ₽',v:'230 мл',d:'Белый ром · гуава · лайм · фиалка · клубника',i:'Ром белый|Напиток гуава|Сок лайма|Сироп фиалка|Сироп клубника',ph:'бар 5.jpeg'},
+{n:'Pina Colada',p:'1 100 ₽',v:'350 мл',d:'Белый и тёмный ром · ананас · кокос · ириска · сливки',i:'Белый ром|Тёмный ром|Сок ананаса|Сироп кокос|Сироп ириска|Сливки',ph:'бар 5.jpeg'}]},
+{c:'Classic Cocktails · 950 ₽',x:[
+{n:'Aperol Spritz',p:'950 ₽',v:'350 мл',d:'Апероль · просекко · содовая · апельсин',ph:'бар 4.jpeg'},
+{n:'Bellini',p:'950 ₽',v:'150 мл',d:'Просекко · персиковый ликёр · персиковое пюре · лимон',ph:'бар 4.jpeg'},
+{n:'Pornstar Martini',p:'950 ₽',v:'300 мл',d:'Просекко · водка · ваниль · маракуйя · лимон',ph:'бар 4.jpeg'},
+{n:'Glintvegn on White Wine',p:'950 ₽',v:'250 мл',d:'Белое вино · мёд · яблоко · апельсин · корица · кардамон',ph:'бар 4.jpeg'},
+{n:'Glintvegn on Red Wine',p:'950 ₽',v:'250 мл',d:'Красное вино · мёд · яблоко · апельсин · корица · кардамон',ph:'бар 4.jpeg'},
+{n:'Old Fashioned',p:'950 ₽',v:'190 мл',d:'Бурбон · ангостура · тростниковый сахар · вишня',ph:'бар 4.jpeg'},
+{n:'New York Sour',p:'950 ₽',v:'200 мл',d:'Бурбон · красное вино · лимон · сахар',ph:'бар 4.jpeg'},
+{n:'Whiskey & Cola',p:'950 ₽',v:'290 мл',d:'Купажированный виски · кола · лимон',ph:'бар 1.jpeg'},
+{n:'Cuba Libre',p:'950 ₽',v:'290 мл',d:'Золотой ром · кола · лайм',ph:'бар 5.jpeg'},
+{n:'Mojito',p:'950 ₽',v:'390 мл',d:'Светлый ром · лайм · мята · сахар · содовая',ph:'бар 5.jpeg'},
+{n:'Mojito Strawberry',p:'950 ₽',v:'390 мл',d:'Светлый ром · клубника · лайм · мята · содовая',ph:'бар 5.jpeg'},
+{n:'Mai Thai',p:'950 ₽',v:'250 мл',d:'Золотой и тёмный ром · апельсиновый ликёр · ананас · миндаль',ph:'бар 5.jpeg'},
+{n:'Daiquiri',p:'950 ₽',v:'100 мл',d:'Светлый ром · сахар · лайм',ph:'бар 5.jpeg'},
+{n:'Cosmopolitan',p:'950 ₽',v:'130 мл',d:'Водка · апельсиновый ликёр · сахар · морс · лимон',ph:'бар 4.jpeg'},
+{n:'Paloma',p:'950 ₽',v:'300 мл',d:'Серебряная текила · грейпфрут · клубника · лайм',ph:'бар 4.jpeg'},
+{n:'Forever Orange',p:'950 ₽',v:'300 мл',d:'Серебряная текила · маракуйя · сахарный сироп · лайм',ph:'бар 4.jpeg'},
+{n:'Margarita',p:'950 ₽',v:'100 мл',d:'Серебряная текила · апельсиновый ликёр · лайм · соль',ph:'бар 4.jpeg'},
+{n:'Negroni',p:'950 ₽',v:'200 мл',d:'Джин · красный вермут · ликёр Кампари',ph:'бар 4.jpeg'},
+{n:'Gin & Tonic',p:'950 ₽',v:'290 мл',d:'Джин · тоник · лимон',ph:'бар 4.jpeg'},
+{n:'Long Island',p:'950 ₽',v:'500 мл',d:'Водка · ром · текила · джин · апельс. ликёр · кола · лимон',ph:'бар 4.jpeg'},
+{n:'Martini Bianco & Tonic',p:'950 ₽',v:'320 мл',d:'Белый вермут · тоник · лимон',ph:'бар 4.jpeg'},
+{n:'Martini Rosso & Tonic',p:'950 ₽',v:'320 мл',d:'Красный вермут · тоник · апельсин',ph:'бар 4.jpeg'},
+{n:'Martini Fiero & Tonic',p:'950 ₽',v:'320 мл',d:'Розовый вермут · тоник · апельсин',ph:'бар 4.jpeg'}]},
+{c:'Белое вино',x:[
+{n:'Loco Cimbali Chardonnay',p:'1 100 / 5 500 ₽',v:'150 мл / 0.75 л',d:'Россия, Крым · сухое',ph:'бар 6.jpeg'},
+{n:'Pradio Priara Pinot Grigio',p:'1 200 / 6 000 ₽',v:'150 мл / 0.75 л',d:'Италия · сухое',ph:'бар 6.jpeg'},
+{n:'Chenin Blanc Simonsig',p:'1 100 / 5 500 ₽',v:'150 мл / 0.75 л',d:'Южная Африка, Вестерн Кейп · п/сухое',ph:'бар 6.jpeg'},
+{n:'Paddle Creek Sauvignon Blanc',p:'1 200 / 6 000 ₽',v:'150 мл / 0.75 л',d:'Новая Зеландия · сухое',ph:'бар 6.jpeg'},
+{n:"Le Grand Noir Winemaker's Selection Chardonnay",p:'5 000 ₽',v:'0.75 л',d:'Франция · сухое',ph:'бар 6.jpeg'},
+{n:'Nastl Gruner Veltliner Klassik',p:'6 000 ₽',v:'0.75 л',d:'Австрия · сухое',ph:'бар 6.jpeg'},
+{n:'Herederos del Marques de Riscal Verdejo',p:'6 500 ₽',v:'0.75 л',d:'Испания · сухое',ph:'бар 6.jpeg'},
+{n:'Staraya Doroga Na Dganhot White Usadba Mezyb',p:'7 000 ₽',v:'0.75 л',d:'Россия, Кубань · сухое',ph:'бар 6.jpeg'},
+{n:'Riesling Galitskiy & Galitskiy',p:'7 500 ₽',v:'0.75 л',d:'Россия, Кубань · сухое',ph:'бар 6.jpeg'},
+{n:'Jean-Marc Brocard Chablis',p:'12 000 ₽',v:'0.75 л',d:'Франция · сухое',ph:'бар 6.jpeg'},
+{n:'Nik Weis St. Urbans-Hof Mosel Riesling',p:'8 000 ₽',v:'0.75 л',d:'Германия · п/сухое',ph:'бар 6.jpeg'}]},
+{c:'Красное вино',x:[
+{n:'Luigi Bosca Malbec',p:'1 100 / 5 500 ₽',v:'150 мл / 0.75 л',d:'Аргентина, Мендоса · сухое',ph:'бар 7.jpeg'},
+{n:'Petrichor Red Shumrinka',p:'1 100 / 5 500 ₽',v:'150 мл / 0.75 л',d:'Россия, Кубань · сухое',ph:'бар 7.jpeg'},
+{n:'Le Grand Noir Pinot Noir',p:'1 100 / 5 500 ₽',v:'150 мл / 0.75 л',d:'Франция, Лангедок-Руссильон · сухое',ph:'бар 7.jpeg'},
+{n:'Primasole Primitivo Cielo',p:'1 100 / 5 500 ₽',v:'150 мл / 0.75 л',d:'Италия · п/сухое',ph:'бар 7.jpeg'},
+{n:'Matsu El Picaro',p:'5 500 ₽',v:'0.75 л',d:'Испания, Кастилия и Леон · сухое',ph:'бар 7.jpeg'},
+{n:'South Vertical Cabernet Franc Reserve Chateau de Talu',p:'7 000 ₽',v:'0.75 л',d:'Россия, Кубань · сухое',ph:'бар 7.jpeg'},
+{n:'Cote Rocheuse The Red Book, Chapter 2',p:'7 000 ₽',v:'0.75 л',d:'Россия, Кубань · сухое',ph:'бар 7.jpeg'},
+{n:'Tenacity McLaren Vale / Barossa Valley Shiraz',p:'7 500 ₽',v:'0.75 л',d:'Австралия, Южная Австралия · сухое',ph:'бар 7.jpeg'},
+{n:'Nipozzano Frescobaldi Chianti Rufina Reserva',p:'9 000 ₽',v:'0.75 л',d:'Италия · сухое',ph:'бар 7.jpeg'},
+{n:'Crab & More Zinfandel',p:'5 500 ₽',v:'0.75 л',d:'США, Калифорния · п/сухое',ph:'бар 7.jpeg'}]},
+{c:'Розовое вино',x:[
+{n:'Flamingo Nikolaev & Sons',p:'850 / 4 250 ₽',v:'150 мл / 0.75 л',d:'Россия, Кубань · сухое',ph:'бар 6.jpeg'},
+{n:'Nastl Zweigelt Rose',p:'1 100 / 5 500 ₽',v:'150 мл / 0.75 л',d:'Австрия · сухое',ph:'бар 6.jpeg'}]},
+{c:'Игристое вино',x:[
+{n:'Prosecco Passaparola DOC, Dry',p:'1 100 / 5 500 ₽',v:'150 мл / 0.75 л',d:'Италия, Венето · брют',ph:'бар 6.jpeg'},
+{n:'Grande Cuvee 1531 Cremant de Limoux Rose',p:'1 350 / 7 000 ₽',v:'150 мл / 0.75 л',d:'Франция, Лангедок-Руссильон · брют',ph:'бар 6.jpeg'},
+{n:'Lambrusco Aleotti',p:'800 / 4 000 ₽',v:'150 мл / 0.75 л',d:'Италия · п/сладкое',ph:'бар 6.jpeg'},
+{n:'Cava Castell Llord',p:'5 500 ₽',v:'0.75 л',d:'Испания · брют',ph:'бар 6.jpeg'},
+{n:'Asti Bruni',p:'5 500 ₽',v:'0.75 л',d:'Италия, Пьемонт · сладкое',ph:'бар 6.jpeg'}]},
+{c:'Шампанское',x:[
+{n:'Alain Bailly Petronille',p:'12 000 ₽',v:'0.75 л',d:'Франция, Шампань · брют',ph:'бар 6.jpeg'},
+{n:'Moët & Chandon Imperial Brut',p:'16 500 ₽',v:'0.75 л',d:'Франция, Шампань · брют',ph:'бар 6.jpeg'},
+{n:'Follement Rose Beurton Et Fils',p:'19 000 ₽',v:'0.75 л',d:'Франция, Шампань · брют',ph:'бар 6.jpeg'}]},
+{c:'Виски · 50 мл',x:[
+{n:'Jim Beam',p:'750 ₽',v:'50 мл',d:'Bourbon · США · 40%',ph:'бар 1.jpeg'},
+{n:'Bushmills Original',p:'750 ₽',v:'50 мл',d:'Blended · Ирландия · 40%',ph:'бар 1.jpeg'},
+{n:'Jameson',p:'800 ₽',v:'50 мл',d:'Blended · Ирландия · 40%',ph:'бар 1.jpeg'},
+{n:"Jack Daniel's",p:'850 ₽',v:'50 мл',d:'Tennessee · США · 40%',ph:'бар 1.jpeg'},
+{n:'Chivas Regal Extra 12 YO',p:'1 300 ₽',v:'50 мл',d:'Blended · Шотландия · 40%',ph:'бар 1.jpeg'},
+{n:'Glenfiddich 12 YO',p:'1 350 ₽',v:'50 мл',d:'Single Malt · Шотландия · 40%',ph:'бар 1.jpeg'},
+{n:'Macallan Double Cask 12 YO',p:'2 500 ₽',v:'50 мл',d:'Single Malt · Шотландия · 40%',ph:'бар 1.jpeg'},
+{n:'Macallan Double Cask 18 YO',p:'6 500 ₽',v:'50 мл',d:'Single Malt · Шотландия · 43%',ph:'бар 1.jpeg'}]},
+{c:'Коньяк · 50 мл',x:[
+{n:'Hennessy VS',p:'1 250 ₽',v:'50 мл',d:'Франция · 40%',ph:'бар 1.jpeg'},
+{n:'H by Hine VSOP',p:'1 350 ₽',v:'50 мл',d:'Франция · 40%',ph:'бар 1.jpeg'},
+{n:'Hennessy VSOP',p:'1 700 ₽',v:'50 мл',d:'Франция · 40%',ph:'бар 1.jpeg'},
+{n:'Hennessy XO',p:'5 500 ₽',v:'50 мл',d:'Франция · 40%',ph:'бар 1.jpeg'}]},
+{c:'Водка · 50 мл',x:[
+{n:'Onegin',p:'600 ₽',v:'50 мл',d:'Россия · 40%',ph:'бар 1.jpeg'},
+{n:'Mamont',p:'600 ₽',v:'50 мл',d:'Россия · 40%',ph:'бар 1.jpeg'},
+{n:'Beluga Noble',p:'600 ₽',v:'50 мл',d:'Россия · 40%',ph:'бар 1.jpeg'}]},
+{c:'Настойки · 50 мл',x:[
+{n:'Beluga Noble Botanicals Pear and Linden',p:'650 ₽',v:'50 мл',d:'Россия · 30%',ph:'бар 1.jpeg'},
+{n:'Onegin Gourmet',p:'650 ₽',v:'50 мл',d:'Россия · 20% · вишня, яблоко, рябина, смородина',ph:'бар 1.jpeg'}]},
+{c:'Джин · 50 мл',x:[
+{n:'Edinburgh Gin Gooseberry & Elderflower',p:'650 ₽',v:'50 мл',d:'Шотландия · 40%',ph:'бар 1.jpeg'},
+{n:'Drumshanbo Gunpowder Irish Gin',p:'850 ₽',v:'50 мл',d:'Ирландия · 43%',ph:'бар 1.jpeg'},
+{n:'Bombay Sapphire',p:'850 ₽',v:'50 мл',d:'Великобритания · 47%',ph:'бар 1.jpeg'},
+{n:'Aqva Lvce Dry Gin',p:'900 ₽',v:'50 мл',d:'Италия · 47%',ph:'бар 1.jpeg'}]},
+{c:'Текила · 50 мл',x:[
+{n:'El Tequileno Blanco',p:'750 ₽',v:'50 мл',d:'Мексика, Халиско · 40%',ph:'бар 1.jpeg'},
+{n:'El Tequileno Reposado',p:'850 ₽',v:'50 мл',d:'Мексика, Халиско · 40%',ph:'бар 1.jpeg'},
+{n:'Jose Cuervo 1800 Blanco',p:'850 ₽',v:'50 мл',d:'Мексика, Халиско · 40%',ph:'бар 1.jpeg'},
+{n:'Cenote Blanco',p:'1 250 ₽',v:'50 мл',d:'Мексика, Халиско · 40%',ph:'бар 1.jpeg'}]},
+{c:'Ром · 50 мл',x:[
+{n:'Takamaka Blanc',p:'650 ₽',v:'50 мл',d:'Сейшельские острова · 38%',ph:'бар 1.jpeg'},
+{n:'Takamaka Dark Spiced',p:'650 ₽',v:'50 мл',d:'Сейшельские острова · 38%',ph:'бар 1.jpeg'},
+{n:'Matusalem Gran Reserva 15 YO',p:'750 ₽',v:'50 мл',d:'Доминиканская Республика · 40%',ph:'бар 1.jpeg'},
+{n:'Takamaka Extra Noir',p:'800 ₽',v:'50 мл',d:'Сейшельские острова · 43%',ph:'бар 1.jpeg'},
+{n:'Diplomatico Botucal Reserva Exclusiva',p:'1 200 ₽',v:'50 мл',d:'Венесуэла · 40%',ph:'бар 1.jpeg'},
+{n:'Zacapa Centenario Solera Gran Reserva 23 YO',p:'1 700 ₽',v:'50 мл',d:'Гватемала · 40%',ph:'бар 1.jpeg'}]},
+{c:'Ликёры · 50 мл',x:[
+{n:'Baileys',p:'650 ₽',v:'50 мл',d:'Ирландия · 17%',ph:'бар 1.jpeg'},
+{n:'Jagermeister',p:'650 ₽',v:'50 мл',d:'Германия · 35%',ph:'бар 1.jpeg'}]},
+{c:'Вермут · 100 мл',x:[
+{n:'Martini Bianco',p:'600 ₽',v:'100 мл',d:'Италия · 15%',ph:'бар 1.jpeg'},
+{n:'Martini Rosso',p:'600 ₽',v:'100 мл',d:'Италия · 16%',ph:'бар 1.jpeg'},
+{n:'Martini Fiero',p:'600 ₽',v:'100 мл',d:'Италия · 16%',ph:'бар 1.jpeg'}]},
+{c:'Пиво',x:[
+{n:'Spaten',p:'700 ₽',v:'0.5 л',d:'Светлый лагер · 5.2% · хмель, цитрус, травы',ph:'бар 1.jpeg'},
+{n:'Franziskaner Hefe-Weissbier',p:'700 ₽',v:'0.5 л',d:'Светлое нефильтрованное · 5.0% · фруктовые ноты',ph:'бар 1.jpeg'},
+{n:'Abbe Brune',p:'700 ₽',v:'0.5 л',d:'Тёмный эль · 6.5% · кофе, шоколад, яблоки',ph:'бар 1.jpeg'},
+{n:'Corona Extra',p:'700 ₽',v:'0.33 л',d:'Лагер · Мексика · 4.5%',ph:'бар 1.jpeg'},
+{n:'Stella Artois (безалкогольное)',p:'650 ₽',v:'0.44 л',d:'Светлое безалкогольное · солод и хмелевая горчинка',ph:'бар 1.jpeg'}]},
+{c:'Сидр',x:[
+{n:'Royal Apple Demi-Sec',p:'1 250 ₽',v:'0.75 л',d:'Яблочный · полусухой · 5.0% · Беларусь',ph:'бар 1.jpeg'},
+{n:'Royal Apple Demi-Sweet',p:'700 ₽',v:'0.33 л',d:'Яблочный · полусладкий · 5.0% · Беларусь',ph:'бар 1.jpeg'},
+{n:'Royal With Pear',p:'700 ₽',v:'0.33 л',d:'Грушевый · полусладкий · 5.0% · Беларусь',ph:'бар 1.jpeg'}]}
+],
+drinks:[
+{c:'Авторские чаи · 1 400 ₽ · 0.8 л',x:[
+{n:'Слива, маракуйя, саган-дайля',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Да Хун Пао и персик',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Виноградный глинтвейн',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Марокканский чай',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Мандарин, базилик, пряности',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Груша, ваниль, корица',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Ананас, облепиха, мёд Люй Я Бао',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Облепиха, имбирь, мёд',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Имбирь, лимон, малина',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Имбирь и лимон',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Вишня, каркаде, шу пуэр',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Вишня, клубника, лимон',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Киви и клубника',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Клубника и базилик',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Клубника и малина',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Киви и яблоко',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Манго и маракуйя',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Грейпфрут и клубника',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Гранат, мёд, саган-дайля',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Ежевика и груша',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Алоэ энд гузберри',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Масала',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Чёрная смородина',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Лесные ягоды',p:'1 400 ₽',v:'0.8 л',ph:'бар 7.jpeg'}]},
+{c:'Премиум · Чайная церемония · 1 500 ₽',x:[
+{n:'Уи Да Хун Пао первый сорт',p:'1 500 ₽',d:'Бодрящий',ph:'бар 7.jpeg'},
+{n:'Лао Ча Тоу',p:'1 500 ₽',d:'Бодрящий',ph:'бар 7.jpeg'},
+{n:'Многолетний дикорастущий пуэр шу',p:'1 500 ₽',d:'Бодрящий',ph:'бар 7.jpeg'},
+{n:'Пуэр шен Хайвань Лао Тун Чжи',p:'1 500 ₽',d:'Бодрящий',ph:'бар 7.jpeg'},
+{n:'Гуань Инь Ван',p:'1 500 ₽',d:'Релаксант',ph:'бар 7.jpeg'},
+{n:'Тай Пин Хоу Куй',p:'1 500 ₽',d:'Релаксант',ph:'бар 7.jpeg'},
+{n:'Люй Я Бао',p:'1 500 ₽',d:'Релаксант',ph:'бар 7.jpeg'},
+{n:'G.A.B.A.',p:'1 500 ₽',d:'Релаксант',ph:'бар 7.jpeg'}]},
+{c:'Классические чаи · 850 ₽ · 0.8 л',x:[
+{n:'Пуэр Шу Юннань 2010',p:'850 ₽',v:'0.8 л',d:'Бодрящий',ph:'бар 7.jpeg'},
+{n:'Шен Пуэр рассыпной 2010',p:'850 ₽',v:'0.8 л',d:'Бодрящий',ph:'бар 7.jpeg'},
+{n:'Да Хун Пао',p:'850 ₽',v:'0.8 л',d:'Бодрящий',ph:'бар 7.jpeg'},
+{n:'Ассам',p:'850 ₽',v:'0.8 л',d:'Бодрящий',ph:'бар 7.jpeg'},
+{n:'Те Гуань Инь Мао Ча',p:'850 ₽',v:'0.8 л',d:'Релаксант',ph:'бар 7.jpeg'},
+{n:'Лун Цзин',p:'850 ₽',v:'0.8 л',d:'Релаксант',ph:'бар 7.jpeg'},
+{n:'Моли Чжень Ло (жасминовый улун)',p:'850 ₽',v:'0.8 л',d:'Релаксант',ph:'бар 7.jpeg'},
+{n:'Най Сян Цзин Сюань (молочный улун)',p:'850 ₽',v:'0.8 л',d:'Релаксант',ph:'бар 7.jpeg'},
+{n:'Бай Му Дань (белый пион)',p:'850 ₽',v:'0.8 л',d:'Релаксант',ph:'бар 7.jpeg'},
+{n:'Лань Гуй Жень (женьшеневый улун)',p:'850 ₽',v:'0.8 л',d:'Релаксант',ph:'бар 7.jpeg'}]},
+{c:'Цветочные чаи · 1 000 ₽ · 0.8 л',x:[
+{n:'Чёрный с добавками',p:'1 000 ₽',v:'0.8 л',d:'Мята · чабрец · гвоздика · бергамот',ph:'бар 7.jpeg'},
+{n:'Зелёный с добавками',p:'1 000 ₽',v:'0.8 л',d:'Мята · чабрец · лаванда · ромашка',ph:'бар 7.jpeg'},
+{n:'Лун Цзин · мята · хризантема · лаванда',p:'1 000 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Молочный улун и гибискус',p:'1 000 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Шу пуэр · лемонграсс · гибискус',p:'1 000 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Ромашка и лаванда',p:'1 000 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Ромашка',p:'1 000 ₽',v:'0.8 л',ph:'бар 7.jpeg'},
+{n:'Гречишный',p:'1 000 ₽',v:'0.8 л',ph:'бар 7.jpeg'}]},
+{c:'Холодные чаи',x:[
+{n:'Персик · лимон · каркаде',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 7.jpeg'},
+{n:'Киви · лайм · молочный улун',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 7.jpeg'}]},
+{c:'Кофе',x:[
+{n:'Эспрессо',p:'350 ₽',v:'0.03 л',ph:'бар 6.jpeg'},
+{n:'Эспрессо двойной',p:'400 ₽',v:'0.06 л',ph:'бар 6.jpeg'},
+{n:'Американо',p:'400 ₽',v:'0.2 л',ph:'бар 6.jpeg'},
+{n:'Капучино',p:'550 ₽',v:'0.35 л',ph:'бар 6.jpeg'},
+{n:'Капучино с топпингом',p:'600 ₽',v:'0.35 л',ph:'бар 6.jpeg'},
+{n:'Латте',p:'550 ₽',v:'0.5 л',ph:'бар 6.jpeg'},
+{n:'Латте с топпингом',p:'600 ₽',v:'0.5 л',ph:'бар 6.jpeg'},
+{n:'Раф',p:'600 ₽',v:'0.35 л',ph:'бар 6.jpeg'},
+{n:'Гляссе',p:'550 ₽',v:'0.35 л',ph:'бар 6.jpeg'},
+{n:'Какао классический',p:'550 ₽',v:'0.35 л',ph:'бар 6.jpeg'},
+{n:'Какао с маршмэллоу',p:'600 ₽',v:'0.35 л',ph:'бар 6.jpeg'},
+{n:'Капучино айс',p:'550 ₽',v:'0.5 л',ph:'бар 6.jpeg'},
+{n:'Латте айс',p:'550 ₽',v:'0.5 л',ph:'бар 6.jpeg'},
+{n:'Matcha N-Shake (латте)',p:'650 ₽',v:'0.5 л',ph:'бар 6.jpeg'},
+{n:'Молоко / Сливки',p:'50 ₽',v:'0.05 л',ph:'бар 6.jpeg'},
+{n:'Альтернативное молоко',p:'100 ₽',ph:'бар 6.jpeg'}]},
+{c:'Авторские лимонады · 0.5 / 1 л · 650 / 1 300 ₽',x:[
+{n:'Манго и маракуйя',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'},
+{n:'Тархун и лайм',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'},
+{n:'Алоэ · крыжовник · лайм',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'},
+{n:'Ананас · клубника · личи',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'},
+{n:'Ананас · кокос · лайм',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'},
+{n:'Грейпфрут · груша · клубника',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'},
+{n:'Киви · яблоко · фейхоа',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'},
+{n:'Киви · клубника · лайм',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'},
+{n:'Клубника · базилик · лайм',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'},
+{n:'Вишня · клюква · лайм',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'},
+{n:'Ежевика · крыжовник · черника · лайм',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'},
+{n:'Мохито чёрная смородина',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'},
+{n:'Мохито клубника и малина',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'},
+{n:'Малина и маракуйя',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'},
+{n:'Клубника и малина',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'},
+{n:'Клюква и чёрная смородина',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'},
+{n:'Апельсин и лимон',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'},
+{n:'Яблоко и лайм',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'},
+{n:'Огурец и розмарин',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'},
+{n:'Ананас',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'},
+{n:'Груша',p:'650 / 1 300 ₽',v:'0.5 / 1 л',ph:'бар 5.jpeg'}]},
+{c:'Соки и вода',x:[
+{n:'Swell ананас',p:'450 ₽',v:'0.25 л',d:'Стекло',ph:'бар 6.jpeg'},
+{n:'Rich в ассортименте',p:'450 ₽',v:'0.2 л',d:'Яблоко · вишня · томат · персик · апельсин',ph:'бар 6.jpeg'},
+{n:'Сок свежевыжатый',p:'800 / 950 ₽',v:'0.3 / 0.5 л',d:'Апельсин · яблоко · грейпфрут · морковь',ph:'бар 6.jpeg'},
+{n:'Сок свежевыжатый ананасовый',p:'1 200 / 1 600 ₽',v:'0.3 / 0.5 л',ph:'бар 6.jpeg'},
+{n:'San Benedetto',p:'600 / 1 100 ₽',v:'0.25 / 0.75 л',d:'С газом / без · стекло',ph:'бар 6.jpeg'},
+{n:'Baikal Pearl',p:'550 / 950 ₽',v:'0.25 / 0.75 л',d:'Без газа · стекло',ph:'бар 6.jpeg'},
+{n:'Baikal Reserve',p:'550 / 950 ₽',v:'0.25 / 0.75 л',d:'С газом · стекло',ph:'бар 6.jpeg'},
+{n:'Coca-Cola',p:'550 ₽',v:'0.33 л',ph:'бар 6.jpeg'},
+{n:'Coca-Cola Zero',p:'550 ₽',v:'0.33 л',ph:'бар 6.jpeg'},
+{n:'Sprite',p:'550 ₽',v:'0.33 л',ph:'бар 6.jpeg'},
+{n:'Fanta',p:'550 ₽',v:'0.33 л',ph:'бар 6.jpeg'},
+{n:'Rich Tonic',p:'550 ₽',v:'0.33 л',d:'Indian / Bitter Lemon',ph:'бар 6.jpeg'},
+{n:'Red Bull',p:'600 ₽',v:'0.25 л',d:'Энергетический напиток',ph:'бар 6.jpeg'},
+{n:'Red Bull Sugarfree',p:'600 ₽',v:'0.25 л',d:'Энергетический напиток',ph:'бар 6.jpeg'}]},
+{c:'Смузи · 0.5 л · на молоке / соке · 750 / 850 ₽',x:[
+{n:'Лесные ягоды',p:'750 / 850 ₽',v:'0.5 л',ph:'бар 5.jpeg'},
+{n:'Вишня · клубника · банан',p:'750 / 850 ₽',v:'0.5 л',ph:'бар 5.jpeg'},
+{n:'Малина · ежевика · ананас',p:'750 / 850 ₽',v:'0.5 л',ph:'бар 5.jpeg'},
+{n:'Малина · груша · манго',p:'750 / 850 ₽',v:'0.5 л',ph:'бар 5.jpeg'},
+{n:'Киви и яблоко',p:'750 / 850 ₽',v:'0.5 л',ph:'бар 5.jpeg'},
+{n:'Маракуйя и клубника',p:'750 / 850 ₽',v:'0.5 л',ph:'бар 5.jpeg'}]},
+{c:'Молочные коктейли · 0.5 л · 750 ₽',x:[
+{n:'Клубника',p:'750 ₽',v:'0.5 л',ph:'бар 5.jpeg'},
+{n:'Банан',p:'750 ₽',v:'0.5 л',ph:'бар 5.jpeg'},
+{n:'Ваниль',p:'750 ₽',v:'0.5 л',ph:'бар 5.jpeg'},
+{n:'Карамель',p:'750 ₽',v:'0.5 л',ph:'бар 5.jpeg'},
+{n:'Сникерс',p:'750 ₽',v:'0.5 л',ph:'бар 5.jpeg'},
+{n:'Орео',p:'750 ₽',v:'0.5 л',ph:'бар 5.jpeg'},
+{n:'Баунти',p:'750 ₽',v:'0.5 л',ph:'бар 5.jpeg'},
+{n:'Шоколад',p:'750 ₽',v:'0.5 л',ph:'бар 5.jpeg'}]},
+{c:'Закуски и сладости',x:[
+{n:'Вяленое мясо',p:'450 ₽',v:'50 г',d:'Курица · индейка · страус · говядина · свинина · оленина · конина · кролик',ph:'бар 1.jpeg'},
+{n:'Арахис солёный',p:'550 ₽',v:'150 г',ph:'бар 1.jpeg'},
+{n:'Микс орешков с пармезаном и крекеры с васаби',p:'720 ₽',v:'100 г',d:'Миндаль · кешью · фисташки · нут с пармезаном · крекеры с васаби',ph:'бар 1.jpeg'},
+{n:'Миндаль в специях',p:'720 ₽',v:'100 г',ph:'бар 1.jpeg'},
+{n:'Кешью в специях',p:'720 ₽',v:'80 г',ph:'бар 1.jpeg'},
+{n:'Микс орешки в специях',p:'720 ₽',v:'75 г',d:'Арахис · миндаль · кешью',ph:'бар 1.jpeg'},
+{n:'Чипсы в ассортименте',p:'350 ₽',v:'70 г',ph:'бар 1.jpeg'},
+{n:'Вафельные шарики в шоколаде',p:'720 ₽',v:'100 г',ph:'десерт 1.jpeg'},
+{n:'Миндаль в шоколаде / Трюфель в какао',p:'720 ₽',v:'100 г',ph:'десерт 1.jpeg'},
+{n:'Фундук в молочном шоколаде',p:'720 ₽',v:'100 г',ph:'десерт 1.jpeg'},
+{n:'Мороженое (шарики)',p:'500 ₽',d:'Ваниль · шоколад · клубника',ph:'десерт 1.jpeg'}]}
+]
+};
+
+// ═══ KBZU LOOKUP (вес + ккал/Б/Ж/У) ═══
+const KBZU_DATA={
+// Салаты
+'Цезарь с креветками':{v:'250 г',kc:'521',kp:'24,77',kf:'41,82',ku:'26,21'},
+'Цезарь с курицей':{v:'230 г',kc:'478',kp:'28,80',kf:'36,95',ku:'14,40'},
+'Оливье со слабосолёным лососем':{v:'237 г',kc:'643',kp:'34,79',kf:'46,46',ku:'21,02'},
+'Оливье с куриной грудкой':{v:'222 г',kc:'460',kp:'17,29',kf:'31,24',ku:'21,85'},
+'Салат с печёной свёклой':{v:'232 г',kc:'532',kp:'13,42',kf:'40,18',ku:'18,80'},
+'Салат по-деревенски':{v:'262 г'},
+'Салат греческий':{v:'304 г',kc:'396',kp:'13,22',kf:'30,57',ku:'14,38'},
+'Баклажан темпура':{v:'452 г',kc:'803',kp:'45,33',kf:'59,21',ku:'17,72'},
+'Тёплый салат с мясом бычка':{v:'235 г',kc:'408',kp:'17,25',kf:'30,86',ku:'10,48'},
+'Руккола с креветками':{v:'250 г',kc:'381',kp:'15,98',kf:'27,74',ku:'18,12'},
+'Гриль-салат с морепродуктами':{v:'365 г',kc:'329',kp:'22,86',kf:'12,73',ku:'26,21'},
+// RAW
+'Тартар из лосося':{v:'152 г',kc:'547',kp:'20,01',kf:'25,84',ku:'13,01'},
+'Тартар из тунца':{v:'115 г',kc:'247',kp:'18,72',kf:'16,98',ku:'2,17'},
+'Тартар из говядины':{v:'160 г',kc:'379',kp:'17,76',kf:'27,22',ku:'13,61'},
+// Закуски
+'Брускетта с лососем':{v:'183 г',kc:'406',kp:'15,81',kf:'26,96',ku:'24,54'},
+'Брускетта с лососем спайси':{v:'235 г',kc:'595',kp:'16,10',kf:'25,86',ku:'29,98'},
+'Брускетта с ростбифом':{v:'181 г',kc:'430',kp:'19,68',kf:'26,21',ku:'27,16'},
+'Закуска с сельдью':{v:'280 г',kc:'503',kp:'18,99',kf:'30,90',ku:'37,01'},
+'Мясная тарелка халяль':{v:'215 г',kc:'655',kp:'32,90',kf:'45,64',ku:'5,83'},
+'Мясная тарелка':{v:'180 г',kc:'414',kp:'42,52',kf:'18,84',ku:'17,46'},
+'Овощной сет':{v:'755 г',kc:'533',kp:'18,15',kf:'32,67',ku:'45,17'},
+'Сырная тарелка':{v:'326 г',kc:'1102',kp:'55,57',kf:'71,21',ku:'61,82'},
+'Маслины Каламата':{v:'100 г',kc:'376',kp:'18,25',kf:'25,28',ku:'5,70'},
+'Оливки':{v:'120 г',kc:'376',kp:'1,13',kf:'38,34',ku:'9,10'},
+// Горячие закуски
+'Попкорн из креветок':{v:'244 г',kc:'558',kp:'26,85',kf:'31,79',ku:'45,77'},
+'Попкорн из курицы':{v:'262 г',kc:'534',kp:'27,55',kf:'23,74',ku:'41,37'},
+'Сырные палочки':{v:'211 г',kc:'814',kp:'22,30',kf:'52,69',ku:'56,16'},
+// Стейки
+'Стейк Миньон':{v:'205 г',kc:'472',kp:'30,06',kf:'38,88',ku:'0,87'},
+'Стейк Рибай':{v:'100 г',kc:'293',kp:'47,97',kf:'52,03',ku:'0'},
+'Стейк Стриплойн':{v:'100 г',kc:'230',kp:'16',kf:'18',ku:'0,16'},
+'Стейк Денвер':{v:'295 г',kc:'904',kp:'44,01',kf:'87,34',ku:'3,89'},
+// Горячее
+'Стейк из лосося со шпинатом':{v:'265 г',kc:'469',kp:'17,09',kf:'31,24',ku:'25,40'},
+'Гречка с креветками':{v:'225 г',kc:'286',kp:'21,96',kf:'14,28',ku:'34,78'},
+'Куриное бедро с булгуром':{v:'220 г'},
+'Куриный стейк тандури':{v:'330 г',kc:'774',kp:'57,68',kf:'9,83',ku:'31,44'},
+'Шницель куриный':{v:'230 г',kc:'608',kp:'27,73',kf:'17,18',ku:'37,21'},
+'Цыплёнок на гриле':{v:'452 г',kc:'803',kp:'45,33',kf:'59,21',ku:'17,72'},
+'Котлетки из индейки':{v:'340 г',kc:'604',kp:'29,33',kf:'30,82',ku:'34,91'},
+'Щёчки бычка':{v:'330 г',kc:'499',kp:'38,11',kf:'24,18',ku:'33,44'},
+'Говядина в азиатском стиле':{v:'389 г',kc:'497',kp:'27,43',kf:'12,29',ku:'65,49'},
+'Говяжьи рёбра копчёные':{v:'321 г',kc:'566',kp:'22,58',kf:'47,69',ku:'12,55'},
+'Брискет':{v:'260 г',kc:'619',kp:'29,85',kf:'50,01',ku:'11,28'},
+'Бефстроганов':{v:'360 г',kc:'609',kp:'30,98',kf:'40,28',ku:'27,07'},
+'Каша из топора':{v:'365 г',kc:'765',kp:'31,42',kf:'55,97',ku:'19,40'},
+// Паста
+'Паппарделле с лососем':{v:'211 г',kc:'689',kp:'21,21',kf:'53,33',ku:'12,47'},
+'Лапша с курицей и креветками':{v:'265 г'},
+'Фетучини с куриным бедром':{v:'288 г',kc:'680',kp:'35,98',kf:'28,87',ku:'67,58'},
+'Лингвини карбонара':{v:'218 г',kc:'818',kp:'21,29',kf:'64,37',ku:'36,72'},
+'Пенне с ростбифом':{v:'228 г',kc:'623',kp:'27,77',kf:'57,69',ku:'45,44'},
+// Бургеры
+'Бургер «Барвиха»':{v:'562 г',kc:'1235',kp:'42,14',kf:'85,77',ku:'69,23'},
+'Бургер «Классика»':{v:'400 г',kc:'985',kp:'32,08',kf:'62,98',ku:'73,56'},
+'Бургер «Сырный»':{v:'515 г',kc:'1228',kp:'46,28',kf:'93,58',ku:'70,36'},
+'Бургер с камамбером':{v:'504 г',kc:'1480',kp:'47,28',kf:'103,98',ku:'91,19'},
+'Бургер с рваной говядиной':{v:'400 г',kc:'1085',kp:'38,98',kf:'69,98',ku:'70,36'},
+'Бургер с хрустящим цыплёнком':{v:'348 г',kc:'945',kp:'36,98',kf:'58,98',ku:'62,36'},
+'Халяль бургер «Классика»':{v:'400 г',kc:'1085',kp:'38,98',kf:'69,98',ku:'70,36'},
+'Халяль бургер «Сырный»':{v:'475 г',kc:'1180',kp:'42,28',kf:'76,98',ku:'74,36'},
+// Япония
+'Ролл Барвиха':{v:'167 г',kc:'263',kp:'12,03',kf:'5,07',ku:'40,08'},
+'Ролл Филадельфия':{v:'256 г',kc:'449',kp:'25,38',kf:'22,06',ku:'38,30'},
+'Ролл Калифорния с лососем':{v:'224 г',kc:'343',kp:'17,19',kf:'12,48',ku:'42,44'},
+'Ролл Калифорния с креветкой':{v:'220 г',kc:'299',kp:'17,10',kf:'7,02',ku:'39,96'},
+'Ролл Калифорния с крабом':{v:'204 г',kc:'294',kp:'13,86',kf:'8,57',ku:'42,00'},
+'Ролл с авокадо и лососем':{v:'178 г',kc:'317',kp:'10,08',kf:'11,86',ku:'42,34'},
+'Ролл опалённый лосось с апельсином':{v:'212 г',kc:'369',kp:'14,91',kf:'15,25',ku:'42,57'},
+'Ролл креветка темпура':{v:'286 г',kc:'512',kp:'17,51',kf:'22,55',ku:'59,67'},
+'Тёплый ролл с креветкой и лососем':{v:'271 г',kc:'627',kp:'22,85',kf:'17,22',ku:'94,09'},
+// Гунканы
+'Гункан кани':{v:'71 г',kc:'132',kp:'8,02',kf:'6,23',ku:'14,36'},
+'Гункан магуро':{v:'68 г',kc:'135',kp:'9,47',kf:'4,83',ku:'10,34'},
+'Гункан сяке':{v:'68 г',kc:'159',kp:'8,69',kf:'9,34',ku:'10,68'},
+// Поке
+'Поке с креветкой':{v:'363 г',kc:'483',kp:'20,61',kf:'13,07',ku:'48,99'},
+'Поке с лососем спайси':{v:'323 г',kc:'439',kp:'20,46',kf:'29,18',ku:'27,46'},
+'Поке с лососем':{v:'273 г',kc:'431',kp:'18,81',kf:'20,68',ku:'41,80'},
+'Поке с тунцом':{v:'273 г',kc:'426',kp:'21,28',kf:'18,84',ku:'42,65'},
+// Пицца
+'Пицца Барвиха':{v:'332 г',kc:'1209',kp:'41,48',kf:'77,02',ku:'99,82'},
+'Пицца Маргарита':{v:'260 г',kc:'996',kp:'30,14',kf:'48,67',ku:'96,99'},
+'Пицца Пепперони':{v:'320 г',kc:'986',kp:'34,14',kf:'56,87',ku:'98,12'},
+'Пицца Цезарь':{v:'362 г',kc:'862',kp:'49,89',kf:'33,80',ku:'98,60'},
+'Пицца Четыре сыра':{v:'260 г',kc:'962',kp:'37,98',kf:'47,66',ku:'96,28'},
+'Пицца Халяль':{v:'450 г',kc:'1101',kp:'53,41',kf:'72,21',ku:'69,23'},
+// Супы
+'Борщ халяль':{v:'382 г',kc:'485',kp:'25,40',kf:'24,83',ku:'40,43'},
+'Суп куриный':{v:'370 г',kc:'305',kp:'15,49',kf:'17,21',ku:'27,72'},
+'Том ям с морепродуктами':{v:'386 г',kc:'354',kp:'38,35',kf:'17,84',ku:'16,59'},
+'Суп тыквенный с креветкой':{v:'400 г'},
+'Крем-суп грибной капучино':{v:'307 г'},
+'Сырный суп с гриссини':{v:'355 г',kc:'426',kp:'12,18',kf:'31,28',ku:'23,89'},
+'Хлеб с ароматным маслом':{v:'241 г',kc:'711',kp:'11,77',kf:'35,14',ku:'85,90'},
+// Гарниры
+'Овощи на гриле':{v:'230 г',kc:'130',kp:'3,35',kf:'6,41',ku:'14,08'},
+'Гречка с грибами':{v:'185 г',kc:'132',kp:'4,53',kf:'3,89',ku:'17,47'},
+'Пюре картофельное':{v:'150 г',kc:'348',kp:'5,40',kf:'18,23',ku:'38,25'},
+'Мини картофель':{v:'130 г',kc:'209',kp:'5,69',kf:'4,10',ku:'40,03'},
+'Картофель фри':{v:'130 г',kc:'364',kp:'3,98',kf:'15,28',ku:'40,49'},
+'Батат фри':{v:'120 г',kc:'208',kp:'2,88',kf:'7,79',ku:'36,18'},
+// Десерты
+'Тирамису':{v:'153 г',kc:'538',kp:'12,62',kf:'40,18',ku:'31,73'},
+'Шоколадный фондан':{v:'171 г',kc:'550',kp:'9,96',kf:'35,79',ku:'44,56'},
+'Чизкейк':{v:'187 г',kc:'608',kp:'9,59',kf:'42,83',ku:'45,31'},
+'Медовик':{v:'287 г',kc:'786',kp:'18,68',kf:'29,15',ku:'91,61'},
+'Фруктовая тарелка':{v:'773 г',kc:'638',kp:'15,19',kf:'11,76',ku:'113,31'},
+'Крем-брюле':{v:'150 г',kc:'430',kp:'6,80',kf:'28,40',ku:'34,20'}
+};
+
+// Авто-аплай: подтягиваем v/КБЖУ из KBZU_DATA по подстроке имени, не перетирая существующие значения
+(function augmentMenuWithKbzu(){
+  const keys=Object.keys(KBZU_DATA).sort((a,b)=>b.length-a.length);
+  function find(name){
+    if(KBZU_DATA[name])return KBZU_DATA[name];
+    for(const k of keys){if(name.indexOf(k)!==-1)return KBZU_DATA[k]}
+    return null;
+  }
+  ['hookahs','food','bar','drinks'].forEach(t=>{
+    (MENU[t]||[]).forEach(s=>s.x.forEach(it=>{
+      const k=find(it.n);
+      if(!k)return;
+      if(!it.v&&k.v)it.v=k.v;
+      if(!it.kc&&k.kc){it.kc=k.kc;it.kp=k.kp||'—';it.kf=k.kf||'—';it.ku=k.ku||'—'}
+    }));
+  });
+})();
+
+// ═══ MENU RENDERER ═══
+let activeTab='hookahs';
+const flat=[];
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function renderMenu(){
+  flat.length=0;
+  const root=document.getElementById('menuRoot');
+  const sections=MENU[activeTab]||[];
+  root.innerHTML=sections.map(s=>`
+    <div class="menu-grid">
+      <div class="menu-cat"><span class="menu-cat-t">${esc(s.c)}</span></div>
+      ${s.x.map(it=>{
+        const idx=flat.length;
+        flat.push({...it,_cat:s.c});
+        const desc=it.d || (it.i?it.i.split('|').slice(0,3).join(' · '):'');
+        return `<button class="menu-item" data-fi="${idx}" type="button">
+          <div><div class="mi-name">${esc(it.n)}</div>${desc?`<div class="mi-desc">${esc(desc)}</div>`:''}</div>
+          <div class="mi-right">${it.v?`<span class="mi-vol">${esc(it.v)}</span>`:''}<span class="mi-price">${esc(it.p)}</span></div>
+        </button>`;
+      }).join('')}
+    </div>`).join('');
+}
+
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    activeTab=btn.dataset.tab;
+    renderMenu();
+    document.getElementById('menu').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+
+document.addEventListener('click',e=>{
+  const btn=e.target.closest('.menu-item[data-fi]');
+  if(btn)openItem(flat[+btn.dataset.fi]);
+});
+
+function openItem(it){
+  document.getElementById('dmName').textContent=it.n;
+  document.getElementById('dmPrice').textContent=it.p+(it.v?'  ·  '+it.v:'');
+  document.getElementById('dmCat').textContent=it._cat||'';
+  const story=document.getElementById('dmStory');
+  const storyText=it.d || (it.i?it.i.split('|').slice(0,4).join(' · '):'');
+  story.textContent=storyText;
+  story.style.display=storyText?'':'none';
+  const img=document.getElementById('dmPhoto');
+  img.src='';img.src=it.ph||'кальян 1.jpeg';
+  const tagsEl=document.getElementById('dmTags');
+  const tagsParent=tagsEl.parentElement;
+  if(it.i){
+    tagsEl.innerHTML=it.i.split('|').map(t=>`<span class="dm-tag">${esc(t)}</span>`).join('');
+    tagsParent.style.display='';
+  }else{tagsParent.style.display='none'}
+  const kbzu=document.getElementById('dmKbzu');
+  if(it.kc){
+    kbzu.style.display='block';
+    document.getElementById('dmKcal').textContent=it.kc;
+    document.getElementById('dmProt').textContent=it.kp;
+    document.getElementById('dmFat').textContent=it.kf;
+    document.getElementById('dmCarb').textContent=it.ku;
+  }else{kbzu.style.display='none'}
+  document.getElementById('dishModal').classList.add('active');
+  document.body.style.overflow='hidden';
+}
+function closeDish(){
+  document.getElementById('dishModal').classList.remove('active');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDish()});
+
+// (REVEAL вынесен в начало скрипта)
+
+// ═══ PHONE MASK ═══
+const ph=document.getElementById('ph');
+ph&&ph.addEventListener('input',e=>{let v=e.target.value.replace(/\D/g,'');if(v.startsWith('8'))v='7'+v.slice(1);if(v.startsWith('7')){let f='+7';if(v.length>1)f+=' ('+v.slice(1,4);if(v.length>=5)f+=') '+v.slice(4,7);if(v.length>=8)f+='-'+v.slice(7,9);if(v.length>=10)f+='-'+v.slice(9,11);e.target.value=f}});
+
+// ═══ COMING-SOON FORM ═══
+async function handleSoonForm(e){
+  e.preventDefault();
+  const f=e.target;
+  const inputs=f.querySelectorAll('input');
+  const data={kind:'subscribe_opening',name:inputs[0].value,phone:inputs[1].value,city:document.getElementById('soonCity').textContent};
+  const btn=f.querySelector('.soon-cta');
+  btn.innerHTML='Отправка...';btn.disabled=true;
+  let ok=false;
+  if(typeof BOOKING_WEBHOOK!=='undefined'&&BOOKING_WEBHOOK){
+    try{const r=await fetch(BOOKING_WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});ok=r.ok}catch(err){ok=false}
+  }
+  btn.innerHTML='Спасибо! Мы напишем ✓';btn.style.background='#1a4a1a';btn.style.color='#7ecb7e';btn.disabled=true;
+  setTimeout(()=>{
+    if(!BOOKING_WEBHOOK||!ok){
+      const msg=encodeURIComponent(`Заявка на открытие · ${data.city}\nИмя: ${data.name||'-'}\nТел: ${data.phone||'-'}`);
+      window.open(`https://t.me/BARVIKHAGROUP?text=${msg}`,'_blank');
+    }
+  },900);
+}
+// Маска телефона soon
+document.addEventListener('DOMContentLoaded',()=>{
+  const sp=document.getElementById('soonPhone');
+  if(sp)sp.addEventListener('input',e=>{let v=e.target.value.replace(/\D/g,'');if(v.startsWith('8'))v='7'+v.slice(1);if(v.startsWith('7')){let f='+7';if(v.length>1)f+=' ('+v.slice(1,4);if(v.length>=5)f+=') '+v.slice(4,7);if(v.length>=8)f+='-'+v.slice(7,9);if(v.length>=10)f+='-'+v.slice(9,11);e.target.value=f}});
+});
+
+// ═══ BOOKING FORM (real webhook + Telegram fallback) ═══
+// Подставьте сюда URL вашего webhook (Cloudflare Worker / Make / n8n / собственный API)
+// Эндпоинт должен принимать POST {name, phone, date, time, guests, comment, city, loc} → отправлять в Telegram-бот
+const BOOKING_WEBHOOK='';   // напр.: 'https://api.barvikhagroup.ru/booking' или Cloudflare Worker URL
+const TG_FALLBACK='https://t.me/BARVIKHAGROUP';
+
+async function handleForm(e){
+  e.preventDefault();
+  const form=e.target;
+  const b=document.getElementById('fsb');
+  const inputs=form.querySelectorAll('input,select,textarea');
+  const data={};
+  inputs.forEach(el=>{
+    const ph=el.placeholder||'';const name=el.name||el.id||ph||el.tagName;
+    if(el.type==='date')data.date=el.value;
+    else if(el.tagName==='SELECT'){data[el.options[0].text.toLowerCase().includes('время')?'time':'guests']=el.value}
+    else if(el.type==='tel')data.phone=el.value;
+    else if(el.tagName==='TEXTAREA')data.comment=el.value;
+    else if(el.type==='text')data.name=el.value;
+  });
+  // city/loc из URL
+  const urlKey=new URLSearchParams(location.search).get('city')||'msk_arbat';
+  const ld=(typeof LOC_DATA!=='undefined'&&LOC_DATA[urlKey])||{};
+  data.city=ld.city||'';data.loc=ld.loc||'';data.addr=ld.addr||'';
+
+  b.textContent='Отправка...';b.disabled=true;
+  let ok=false;
+  if(BOOKING_WEBHOOK){
+    try{
+      const r=await fetch(BOOKING_WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+      ok=r.ok;
+    }catch(err){ok=false}
+  }
+  // Успех (или нет webhook) — показываем зелёный + ведём в Telegram
+  b.textContent='Заявка принята ✓';
+  b.style.cssText='width:100%;background:#1a4a1a;color:#7ecb7e;font-family:var(--hd);font-size:.6rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;padding:1.05rem 2rem;border:1px solid #3a7a3a;cursor:default;margin-top:.35rem';
+  setTimeout(()=>{
+    // Если webhook не сконфигурирован/упал — открываем Telegram с предзаполненным сообщением
+    if(!BOOKING_WEBHOOK||!ok){
+      const msg=encodeURIComponent(`Бронь ${data.city} · ${data.loc}\nИмя: ${data.name||'-'}\nТел: ${data.phone||'-'}\nДата: ${data.date||'-'} ${data.time||''}\nГостей: ${data.guests||'-'}\n${data.comment?'Комментарий: '+data.comment:''}`);
+      window.open(`${TG_FALLBACK}?text=${msg}`,'_blank');
+    }
+  },900);
+}
+
+// ═══ INITIAL RENDER ═══
+renderMenu();
+
+// Share: native Web Share API → fallback в clipboard
+window.shareLocation=async function(btn){
+  const ld=(typeof LOC_DATA!=='undefined'&&LOC_DATA[currentKey])||{};
+  const title=`Барвиха · ${ld.loc||'заведение'}`;
+  const text=`${ld.city||''}, ${ld.addr||''} · бронь в Барвихе`;
+  const url=location.href;
+  try{
+    if(navigator.share){await navigator.share({title,text,url});return}
+  }catch(e){if(e.name==='AbortError')return}
+  // Fallback: копируем в буфер
+  try{
+    await navigator.clipboard.writeText(url);
+    const orig=btn.innerHTML;
+    btn.innerHTML='<span style="color:#7ecb7e">Ссылка скопирована ✓</span>';
+    setTimeout(()=>{btn.innerHTML=orig},2200);
+  }catch(e){
+    prompt('Скопируйте ссылку:',url);
+  }
+};
+
+// FAB STACK — показываем после прокрутки 1 экрана, скрываем у формы
+(function(){
+  const fab=document.getElementById('fabStack');
+  const booking=document.getElementById('booking');
+  if(!fab)return;
+  function update(){
+    const y=window.scrollY,vh=window.innerHeight;
+    const shouldShow=y>vh*0.6;
+    let inBooking=false;
+    if(booking){const r=booking.getBoundingClientRect();inBooking=r.top<vh*0.5&&r.bottom>vh*0.3}
+    fab.classList.toggle('on',shouldShow&&!inBooking);
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  update();
+})();
+
+// UTM / source tracking
+(function(){
+  const cityKey=new URLSearchParams(location.search).get('city')||'unknown';
+  const PAGE='loc_'+cityKey;
+  function init(){
+    document.querySelectorAll('a[href^="https://t.me/"]').forEach(a=>{
+      if(a.dataset.bvTracked)return;a.dataset.bvTracked='1';
+      const src=a.dataset.src||'cta';
+      const u=new URL(a.href);
+      if(!u.searchParams.has('start')&&!u.searchParams.has('text')){u.searchParams.set('start',`src_${PAGE}_${src}`);a.href=u.toString()}
+    });
+    document.querySelectorAll('a[href^="tel:"]').forEach(a=>{
+      if(a.dataset.bvTracked)return;a.dataset.bvTracked='1';
+      a.addEventListener('click',()=>{try{const k='_bv_taps';const arr=JSON.parse(localStorage.getItem(k)||'[]');arr.push({t:Date.now(),src:a.dataset.src||'tel',page:PAGE});localStorage.setItem(k,JSON.stringify(arr.slice(-50)))}catch(e){}});
+    });
+  }
+  if(document.readyState!=='loading')init();else document.addEventListener('DOMContentLoaded',init);
+  // Перезапускаем при динамической вставке (карты, share)
+  setTimeout(init,1500);
+})();
+</script>
+</body>
+</html>
