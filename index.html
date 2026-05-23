@@ -9,18 +9,18 @@
 <meta property="og:description" content="24 заведения · 9 городов · Премиум кальяны, авторская кухня, бар, VIP. Забронируй стол прямо сейчас."/>
 <meta property="og:image" content="https://barvikhagroup.ru/img/main/large-logo.png"/>
 <meta property="og:type" content="website"/>
-<meta name="theme-color" content="#C9A84C"/>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23000'/><text y='24' x='4' font-size='24' fill='%23C9A84C' font-family='serif' font-weight='bold'>B</text></svg>"/>
+<meta name="theme-color" content="#DBC278"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23000'/><text y='24' x='4' font-size='24' fill='%23DBC278' font-family='serif' font-weight='bold'>B</text></svg>"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
   --bg:#000;--s1:#060606;--s2:#0d0d0d;--s3:#111;
-  --gold:#C9A84C;--gold-lt:#E8D5A3;--gold-dk:#8B6914;
-  --gold-grad:linear-gradient(135deg,#8B6914 0%,#C9A84C 30%,#E8D5A3 55%,#C9A84C 75%,#8B6914 100%);
-  --white:#F5F0E8;--muted:rgba(245,240,232,.38);--border:rgba(255,255,255,.06);
-  --b-gold:rgba(201,168,76,.18);--b-gold2:rgba(201,168,76,.35);
-  --glow:0 0 50px rgba(201,168,76,.25),0 0 100px rgba(201,168,76,.1);
+  --gold:#DBC278;--gold-lt:#EBDCA9;--gold-dk:#9C7E3A;
+  --gold-grad:linear-gradient(135deg,#9C7E3A 0%,#DBC278 30%,#EBDCA9 55%,#DBC278 75%,#9C7E3A 100%);
+  --white:#ECEDED;--muted:rgba(236,237,237,.38);--border:rgba(255,255,255,.06);
+  --b-gold:rgba(219,194,120,.18);--b-gold2:rgba(219,194,120,.35);
+  --glow:0 0 50px rgba(219,194,120,.25),0 0 100px rgba(219,194,120,.1);
   --hd:'Montserrat',sans-serif;--bd:'Inter',sans-serif;
   --ease:cubic-bezier(.22,.61,.36,1)
 }
@@ -121,15 +121,15 @@ button{font-family:var(--bd)}
 .hero-atm::before{
   content:'';position:absolute;inset:0;
   background:
-    radial-gradient(ellipse at 15% 40%,rgba(201,168,76,.09) 0%,transparent 50%),
-    radial-gradient(ellipse at 85% 25%,rgba(201,168,76,.06) 0%,transparent 45%),
+    radial-gradient(ellipse at 15% 40%,rgba(219,194,120,.09) 0%,transparent 50%),
+    radial-gradient(ellipse at 85% 25%,rgba(219,194,120,.06) 0%,transparent 45%),
     radial-gradient(ellipse at 50% 90%,rgba(150,100,20,.05) 0%,transparent 40%)
 }
 .hero-grid-bg{
   position:absolute;inset:0;
   background-image:
-    linear-gradient(rgba(201,168,76,.022) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(201,168,76,.022) 1px,transparent 1px);
+    linear-gradient(rgba(219,194,120,.022) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(219,194,120,.022) 1px,transparent 1px);
   background-size:70px 70px
 }
 .hero-vign{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 25%,rgba(0,0,0,.75) 100%)}
@@ -153,12 +153,12 @@ button{font-family:var(--bd)}
 }
 .hero-brand-sub{
   font-family:var(--hd);font-size:clamp(.7rem,2vw,1.1rem);font-weight:300;letter-spacing:.6em;
-  color:rgba(245,240,232,.35);margin:.5rem 0 .4rem;
+  color:rgba(236,237,237,.35);margin:.5rem 0 .4rem;
   opacity:0;animation:fu 1s var(--ease) forwards .5s
 }
 .hero-tagline{
   font-family:var(--hd);font-size:clamp(.6rem,1.2vw,.75rem);font-weight:400;letter-spacing:.2em;
-  text-transform:uppercase;color:rgba(245,240,232,.3);margin-bottom:3rem;
+  text-transform:uppercase;color:rgba(236,237,237,.3);margin-bottom:3rem;
   opacity:0;animation:fu 1s var(--ease) forwards .65s
 }
 
@@ -197,7 +197,7 @@ button{font-family:var(--bd)}
 }
 .city-card::after{
   content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(201,168,76,.06) 0%,transparent 60%);
+  background:linear-gradient(135deg,rgba(219,194,120,.06) 0%,transparent 60%);
   opacity:0;transition:opacity .4s
 }
 .city-card:hover{background:#080808}
@@ -209,7 +209,7 @@ button{font-family:var(--bd)}
   background-clip:text;animation:goldShimmer 4s ease-in-out infinite
 }
 .city-card:hover .cc-arr{opacity:1;transform:translateX(0)}
-.city-card:hover .cc-bg{color:rgba(201,168,76,.07)}
+.city-card:hover .cc-bg{color:rgba(219,194,120,.07)}
 
 .cc-top{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
 .cc-num{
@@ -230,7 +230,7 @@ button{font-family:var(--bd)}
 .cc-meta{display:flex;align-items:center;justify-content:space-between}
 .cc-count{font-size:.6rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
 .cc-status{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--hd);font-size:.46rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;padding:.3rem .55rem;margin-bottom:.55rem;border:1px solid var(--b-gold)}
-.cc-status.soon{color:rgba(245,240,232,.55);background:rgba(255,255,255,.02)}
+.cc-status.soon{color:rgba(236,237,237,.55);background:rgba(255,255,255,.02)}
 .cc-status.today{color:#000;background:var(--gold);border-color:var(--gold);animation:goldShimmer 6s ease-in-out infinite}
 .cc-status .cs-d{width:5px;height:5px;border-radius:50%;background:currentColor;animation:urgPulse 1.6s ease-in-out infinite}
 .city-card.is-soon{opacity:.55}
@@ -244,7 +244,7 @@ button{font-family:var(--bd)}
 .cc-bg{
   position:absolute;right:-.05em;bottom:-.15em;
   font-family:var(--hd);font-size:5.5rem;font-weight:800;letter-spacing:-.04em;
-  color:rgba(201,168,76,.03);line-height:1;
+  color:rgba(219,194,120,.03);line-height:1;
   pointer-events:none;user-select:none;
   transition:color .4s;
   z-index:0
@@ -388,7 +388,7 @@ button{font-family:var(--bd)}
 }
 .feat::after{
   content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(201,168,76,.05) 0%,transparent 60%);
+  background:linear-gradient(135deg,rgba(219,194,120,.05) 0%,transparent 60%);
   opacity:0;transition:opacity .4s
 }
 .feat:hover{background:#090909}
@@ -420,13 +420,13 @@ button{font-family:var(--bd)}
 .fr-bg::before{
   content:'';position:absolute;left:-10%;top:50%;
   width:720px;height:720px;transform:translateY(-50%);
-  background:radial-gradient(circle,rgba(201,168,76,.07) 0%,rgba(201,168,76,.025) 35%,transparent 65%);
+  background:radial-gradient(circle,rgba(219,194,120,.07) 0%,rgba(219,194,120,.025) 35%,transparent 65%);
   pointer-events:none;filter:blur(8px)
 }
 .fr-bg::after{
   content:'';position:absolute;right:-15%;bottom:-10%;
   width:520px;height:520px;
-  background:radial-gradient(circle,rgba(201,168,76,.04) 0%,transparent 60%);
+  background:radial-gradient(circle,rgba(219,194,120,.04) 0%,transparent 60%);
   pointer-events:none
 }
 .fr-inner{display:grid;grid-template-columns:5fr 7fr;gap:6rem;align-items:center;position:relative;z-index:1}
@@ -434,7 +434,7 @@ button{font-family:var(--bd)}
 /* Дышащее золотое свечение позади фото */
 .fr-photo-wrap::before{
   content:'';position:absolute;inset:-50px;z-index:-1;
-  background:radial-gradient(ellipse at 38% 48%,rgba(201,168,76,.22) 0%,rgba(201,168,76,.08) 35%,transparent 65%);
+  background:radial-gradient(ellipse at 38% 48%,rgba(219,194,120,.22) 0%,rgba(219,194,120,.08) 35%,transparent 65%);
   filter:blur(38px);pointer-events:none;
   animation:photoAura 6s ease-in-out infinite
 }
@@ -457,7 +457,7 @@ button{font-family:var(--bd)}
 }
 .fr-photo.in img.fr-static{opacity:1;transform:none}
 .fr-photo.in:hover img.fr-static{
-  filter:saturate(1) contrast(1.08) drop-shadow(0 25px 80px rgba(201,168,76,.18)) drop-shadow(0 25px 60px rgba(0,0,0,.7));
+  filter:saturate(1) contrast(1.08) drop-shadow(0 25px 80px rgba(219,194,120,.18)) drop-shadow(0 25px 60px rgba(0,0,0,.7));
   transform:scale(1.015)
 }
 .fr-photo-overlay{
@@ -487,7 +487,7 @@ button{font-family:var(--bd)}
 }
 .fr-photo-quote{
   font-family:var(--bd);font-size:.74rem;font-style:italic;line-height:1.65;
-  color:rgba(245,240,232,.5);margin-top:.3rem;max-width:90%
+  color:rgba(236,237,237,.5);margin-top:.3rem;max-width:90%
 }
 /* Stats - inline with subtle separators and animated underline */
 .fr-nums{
@@ -509,7 +509,7 @@ button{font-family:var(--bd)}
   background:var(--gold);transform:scaleX(0);transform-origin:left;
   transition:transform .55s var(--ease)
 }
-.frn:hover{background:rgba(201,168,76,.025)}
+.frn:hover{background:rgba(219,194,120,.025)}
 .frn:hover::after{transform:scaleX(1)}
 .frn:hover .frn-v{transform:translateY(-1px)}
 .frn-v{
@@ -531,7 +531,7 @@ button{font-family:var(--bd)}
 .fr-steps{position:relative;padding-left:2.1rem}
 .fr-steps::before{
   content:'';position:absolute;left:.55rem;top:1.4rem;bottom:1.4rem;width:1px;
-  background:linear-gradient(to bottom,transparent,rgba(201,168,76,.45) 15%,rgba(201,168,76,.25) 50%,rgba(201,168,76,.45) 85%,transparent)
+  background:linear-gradient(to bottom,transparent,rgba(219,194,120,.45) 15%,rgba(219,194,120,.25) 50%,rgba(219,194,120,.45) 85%,transparent)
 }
 .fr-step{
   display:flex;gap:1.4rem;padding:1.4rem 0;
@@ -554,7 +554,7 @@ button{font-family:var(--bd)}
 }
 .fr-step:hover{transform:translateX(6px)}
 .fr-step:hover::before{
-  border-color:var(--gold);box-shadow:0 0 0 4px var(--bg),0 0 18px rgba(201,168,76,.5)
+  border-color:var(--gold);box-shadow:0 0 0 4px var(--bg),0 0 18px rgba(219,194,120,.5)
 }
 .fr-step:hover::after{transform:scale(1)}
 .fr-step-n{
@@ -577,11 +577,11 @@ button{font-family:var(--bd)}
 }
 .fr-cta::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 40%,rgba(255,255,255,.28) 50%,transparent 60%);transform:translateX(-100%);transition:transform .55s}
 .fr-cta:hover::after{transform:translateX(100%)}
-.fr-cta:hover{box-shadow:0 12px 40px -8px rgba(201,168,76,.45),var(--glow);transform:translateY(-2px)}
+.fr-cta:hover{box-shadow:0 12px 40px -8px rgba(219,194,120,.45),var(--glow);transform:translateY(-2px)}
 /* Urgency-strip — живые индикаторы */
 .fr-urgency{display:grid;grid-template-columns:repeat(3,1fr);gap:.65rem;margin:2rem 0 1.5rem}
 .fr-urg{
-  background:linear-gradient(135deg,rgba(201,168,76,.07),rgba(201,168,76,.02));
+  background:linear-gradient(135deg,rgba(219,194,120,.07),rgba(219,194,120,.02));
   border:1px solid var(--b-gold);padding:.95rem 1.1rem;
   position:relative;overflow:hidden
 }
@@ -592,7 +592,7 @@ button{font-family:var(--bd)}
   box-shadow:0 0 8px rgba(93,217,93,.6);animation:urgPulse 1.6s ease-in-out infinite
 }
 @keyframes urgPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
-.fr-urg-l{font-family:var(--hd);font-size:.42rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,240,232,.5);display:block;margin-bottom:.35rem}
+.fr-urg-l{font-family:var(--hd);font-size:.42rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(236,237,237,.5);display:block;margin-bottom:.35rem}
 .fr-urg-v{font-family:var(--hd);font-size:.95rem;font-weight:300;letter-spacing:.02em;color:var(--white);display:flex;align-items:baseline}
 .fr-urg-v b{font-weight:500;
   background:var(--gold-grad);background-size:200% 100%;
@@ -602,7 +602,7 @@ button{font-family:var(--bd)}
 .fr-lead{
   margin-top:1.85rem;
   padding:1.7rem 1.6rem 1.5rem;border:1px solid var(--b-gold);
-  background:linear-gradient(135deg,rgba(201,168,76,.04),rgba(0,0,0,.3));
+  background:linear-gradient(135deg,rgba(219,194,120,.04),rgba(0,0,0,.3));
   position:relative;overflow:hidden
 }
 .fr-lead::before{
@@ -623,7 +623,7 @@ button{font-family:var(--bd)}
 }
 .fr-form input::placeholder{color:rgba(255,255,255,.2)}
 .fr-form select option{background:#0d0d0d}
-.fr-form input:focus,.fr-form select:focus{border-color:var(--gold);background:rgba(201,168,76,.04)}
+.fr-form input:focus,.fr-form select:focus{border-color:var(--gold);background:rgba(219,194,120,.04)}
 .fr-form .frf-full{grid-column:1/-1}
 .fr-form .fr-cta{margin-top:.45rem;width:100%;justify-content:center;padding:1.1rem 2rem}
 .fr-lead-note{font-size:.66rem;color:rgba(255,255,255,.3);margin-top:.85rem;text-align:center;letter-spacing:.04em}
@@ -632,7 +632,7 @@ button{font-family:var(--bd)}
 .tst-bg{background:var(--s1);position:relative;overflow:hidden}
 .tst-bg::before{
   content:'';position:absolute;top:-15%;right:-10%;width:680px;height:680px;
-  background:radial-gradient(circle,rgba(201,168,76,.05) 0%,transparent 65%);
+  background:radial-gradient(circle,rgba(219,194,120,.05) 0%,transparent 65%);
   pointer-events:none;filter:blur(20px)
 }
 .tst-hd{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:3.5rem;position:relative;z-index:1}
@@ -650,12 +650,12 @@ button{font-family:var(--bd)}
 }
 .tst-card::after{
   content:'\201C';position:absolute;top:.7rem;right:1.2rem;
-  font-family:'Cormorant Garamond',serif;font-size:5rem;color:rgba(201,168,76,.12);
+  font-family:'Cormorant Garamond',serif;font-size:5rem;color:rgba(219,194,120,.12);
   line-height:1;font-weight:600
 }
 .tst-card:hover{transform:translateY(-4px);border-color:var(--b-gold);box-shadow:0 20px 50px -20px rgba(0,0,0,.6)}
 .tst-card:hover::before{transform:scaleY(1)}
-.tst-quote{font-family:var(--bd);font-size:.88rem;line-height:1.75;color:rgba(245,240,232,.88);font-style:italic;flex:1;position:relative;z-index:1}
+.tst-quote{font-family:var(--bd);font-size:.88rem;line-height:1.75;color:rgba(236,237,237,.88);font-style:italic;flex:1;position:relative;z-index:1}
 .tst-meta{display:flex;align-items:center;gap:.95rem;border-top:1px solid var(--border);padding-top:1.1rem;position:relative;z-index:1}
 .tst-ava{
   width:48px;height:48px;flex-shrink:0;
@@ -663,7 +663,7 @@ button{font-family:var(--bd)}
   display:flex;align-items:center;justify-content:center;
   font-family:var(--hd);font-size:.78rem;font-weight:400;letter-spacing:.05em;
   color:var(--gold);
-  background:linear-gradient(135deg,rgba(201,168,76,.08),rgba(0,0,0,.4))
+  background:linear-gradient(135deg,rgba(219,194,120,.08),rgba(0,0,0,.4))
 }
 .tst-info{flex:1;min-width:0}
 .tst-name{font-family:var(--hd);font-size:.86rem;font-weight:400;letter-spacing:.04em;color:var(--white);margin-bottom:.25rem}
@@ -707,31 +707,31 @@ button{font-family:var(--bd)}
 .atm-play{
   position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;
   width:78px;height:78px;border-radius:50%;
-  background:rgba(201,168,76,.92);color:#000;
+  background:rgba(219,194,120,.92);color:#000;
   display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;
-  box-shadow:0 0 0 0 rgba(201,168,76,.7);animation:atmPulse 2.4s ease-in-out infinite;
+  box-shadow:0 0 0 0 rgba(219,194,120,.7);animation:atmPulse 2.4s ease-in-out infinite;
   transition:transform .35s,box-shadow .35s
 }
-@keyframes atmPulse{0%{box-shadow:0 0 0 0 rgba(201,168,76,.55)}70%{box-shadow:0 0 0 28px rgba(201,168,76,0)}100%{box-shadow:0 0 0 0 rgba(201,168,76,0)}}
+@keyframes atmPulse{0%{box-shadow:0 0 0 0 rgba(219,194,120,.55)}70%{box-shadow:0 0 0 28px rgba(219,194,120,0)}100%{box-shadow:0 0 0 0 rgba(219,194,120,0)}}
 .atm-play:hover{transform:translate(-50%,-50%) scale(1.1);background:#fff}
 .atm-play svg{margin-left:4px}
 .atm-meta{position:absolute;bottom:1.2rem;left:1.2rem;right:1.2rem;z-index:3;display:flex;justify-content:space-between;align-items:flex-end}
-.atm-meta-l{font-family:var(--hd);font-size:.52rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,240,232,.55)}
+.atm-meta-l{font-family:var(--hd);font-size:.52rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(236,237,237,.55)}
 .atm-meta-r{font-family:var(--hd);font-size:.52rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
 .atm-txt h2{margin-bottom:1.25rem}
 .atm-txt p{font-size:.92rem;color:var(--muted);line-height:1.9;margin-bottom:1.5rem}
 .atm-bullets{display:flex;flex-direction:column;gap:1rem;margin-top:1rem}
-.atm-bul{display:flex;align-items:flex-start;gap:1rem;font-size:.84rem;color:rgba(245,240,232,.85);line-height:1.6}
+.atm-bul{display:flex;align-items:flex-start;gap:1rem;font-size:.84rem;color:rgba(236,237,237,.85);line-height:1.6}
 .atm-bul-ico{width:24px;height:24px;flex-shrink:0;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:var(--hd);font-size:.6rem;font-weight:700;margin-top:1px}
 
 /* ═══ KARAOKE INVITE ═══ */
 .kar-inv-bg{background:var(--bg);position:relative;overflow:hidden}
-.kar-inv-bg::before{content:'';position:absolute;left:50%;top:50%;width:760px;height:760px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(201,168,76,.06) 0%,rgba(170,80,180,.04) 35%,transparent 70%);filter:blur(40px);pointer-events:none}
+.kar-inv-bg::before{content:'';position:absolute;left:50%;top:50%;width:760px;height:760px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(219,194,120,.06) 0%,rgba(170,80,180,.04) 35%,transparent 70%);filter:blur(40px);pointer-events:none}
 .kar-inv-grid{display:grid;grid-template-columns:5fr 6fr;gap:5rem;align-items:center;position:relative;z-index:1}
 .kar-inv-img-wrap{position:relative;aspect-ratio:4/5;max-height:580px;overflow:hidden;border:1px solid var(--b-gold)}
 .kar-inv-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85) contrast(1.08) brightness(.7);transition:transform 1.4s var(--ease)}
 .kar-inv-img-wrap:hover img{transform:scale(1.04)}
-.kar-inv-img-wrap::before{content:'';position:absolute;inset:0;z-index:1;background:radial-gradient(circle at 70% 30%,rgba(201,168,76,.18),transparent 50%),radial-gradient(circle at 30% 80%,rgba(170,80,180,.12),transparent 55%);mix-blend-mode:screen;animation:karPulseImg 6s ease-in-out infinite;pointer-events:none}
+.kar-inv-img-wrap::before{content:'';position:absolute;inset:0;z-index:1;background:radial-gradient(circle at 70% 30%,rgba(219,194,120,.18),transparent 50%),radial-gradient(circle at 30% 80%,rgba(170,80,180,.12),transparent 55%);mix-blend-mode:screen;animation:karPulseImg 6s ease-in-out infinite;pointer-events:none}
 @keyframes karPulseImg{0%,100%{opacity:.55}50%{opacity:1}}
 .kar-inv-img-wrap::after{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,transparent 50%);pointer-events:none}
 .kar-inv-tag{position:absolute;top:1.4rem;left:1.4rem;z-index:3;font-family:var(--hd);font-size:.5rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);padding:.55rem .9rem;border:1px solid var(--b-gold);background:rgba(0,0,0,.55);backdrop-filter:blur(8px)}
@@ -739,10 +739,10 @@ button{font-family:var(--bd)}
 .kar-inv-txt h2{margin-bottom:1.4rem;font-family:var(--hd);font-size:clamp(2rem,4vw,3rem);font-weight:200;letter-spacing:.05em;line-height:1.05}
 .kar-inv-txt p{font-size:.94rem;color:var(--muted);line-height:1.95;margin-bottom:1.5rem}
 .kar-inv-points{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem 2.4rem;margin:1.8rem 0 2.2rem}
-.kar-inv-pt{font-size:.84rem;color:rgba(245,240,232,.85);line-height:1.55;display:flex;align-items:flex-start;gap:.7rem}
+.kar-inv-pt{font-size:.84rem;color:rgba(236,237,237,.85);line-height:1.55;display:flex;align-items:flex-start;gap:.7rem}
 .kar-inv-pt::before{content:'';width:14px;height:1px;background:var(--gold);margin-top:.55em;flex-shrink:0}
 .kar-inv-cta{display:inline-flex;align-items:center;gap:.85rem;font-family:var(--hd);font-size:.6rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);padding:1.05rem 2rem;border:1px solid var(--b-gold);transition:background .35s,color .35s,box-shadow .35s}
-.kar-inv-cta:hover{background:var(--gold);color:#000;box-shadow:0 12px 40px -8px rgba(201,168,76,.35)}
+.kar-inv-cta:hover{background:var(--gold);color:#000;box-shadow:0 12px 40px -8px rgba(219,194,120,.35)}
 
 /* ═══ MENU PREVIEW — что вас ждёт ═══ */
 .mpv-bg{background:var(--s1);position:relative}
@@ -764,7 +764,7 @@ button{font-family:var(--bd)}
 .mpv-name{font-family:var(--hd);font-size:1.05rem;font-weight:300;letter-spacing:.04em;color:var(--white)}
 .mpv-desc{font-size:.78rem;color:var(--muted);line-height:1.65;flex:1}
 .mpv-foot{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--border);padding-top:.95rem;margin-top:.4rem}
-.mpv-vol{font-family:var(--hd);font-size:.55rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,240,232,.45)}
+.mpv-vol{font-family:var(--hd);font-size:.55rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(236,237,237,.45)}
 .mpv-price{
   font-family:var(--hd);font-size:1.15rem;font-weight:300;
   background:var(--gold-grad);background-size:200% 100%;
@@ -792,11 +792,11 @@ button{font-family:var(--bd)}
   color:var(--muted);border:1px solid var(--b-gold);padding:.75rem 1.4rem;
   transition:all .3s;cursor:pointer;background:transparent
 }
-.cs-link:hover{color:var(--gold);border-color:var(--b-gold2);background:rgba(201,168,76,.06)}
+.cs-link:hover{color:var(--gold);border-color:var(--b-gold2);background:rgba(219,194,120,.06)}
 .cs-link svg{width:14px;height:14px;flex-shrink:0}
 .cs-wa{opacity:.72}
 .cs-wa:hover{opacity:1}
-.cs-soon{margin-left:auto;padding:.18rem .5rem;font-size:.5rem;letter-spacing:.16em;background:rgba(201,168,76,.12);color:var(--gold);border:1px solid rgba(201,168,76,.3);border-radius:2px}
+.cs-soon{margin-left:auto;padding:.18rem .5rem;font-size:.5rem;letter-spacing:.16em;background:rgba(219,194,120,.12);color:var(--gold);border:1px solid rgba(219,194,120,.3);border-radius:2px}
 
 /* ═══ EXIT-INTENT MODAL ═══ */
 .exit-modal{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:200;display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity .35s}
@@ -808,27 +808,27 @@ button{font-family:var(--bd)}
 .exit-modal.on .exit-wrap{transform:none}
 .exit-x{position:absolute;top:.75rem;right:.75rem;background:transparent;border:none;color:var(--muted);font-size:1.6rem;line-height:1;cursor:pointer;width:32px;height:32px;transition:color .2s}
 .exit-x:hover{color:var(--gold)}
-.exit-tag{display:inline-block;font-family:var(--hd);font-size:.55rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);padding-bottom:.5rem;border-bottom:1px solid rgba(201,168,76,.3);margin-bottom:1.25rem}
+.exit-tag{display:inline-block;font-family:var(--hd);font-size:.55rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);padding-bottom:.5rem;border-bottom:1px solid rgba(219,194,120,.3);margin-bottom:1.25rem}
 .exit-h{font-family:var(--hd);font-size:1.85rem;font-weight:300;color:var(--white);margin:0 0 .85rem;letter-spacing:.02em;line-height:1.15}
 .exit-p{font-family:var(--bd);font-size:.85rem;color:var(--muted);line-height:1.55;margin:0 0 1.75rem}
 .exit-form{display:flex;flex-direction:column;gap:.65rem}
 .exit-form input{font-family:var(--bd);font-size:1rem;padding:.95rem 1rem;background:#181818;border:1px solid var(--b-gold);color:var(--white);outline:none;text-align:center;letter-spacing:.04em}
 .exit-form input:focus{border-color:var(--gold)}
 .exit-cta{font-family:var(--hd);font-size:.62rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;padding:1.05rem 2rem;background:linear-gradient(135deg,var(--gold) 0%,#d4b256 100%);color:#0a0a0a;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
-.exit-cta:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(201,168,76,.3)}
+.exit-cta:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(219,194,120,.3)}
 .exit-fine{display:block;margin-top:1rem;font-family:var(--bd);font-size:.7rem;color:var(--muted);opacity:.65}
 
 /* ═══ FLOATING CTA STACK ═══ */
 .fab-stack{position:fixed;right:1.5rem;bottom:1.5rem;z-index:80;display:flex;flex-direction:column;gap:.6rem;align-items:flex-end;opacity:0;transform:translateY(20px);transition:opacity .4s,transform .4s;pointer-events:none}
 .fab-stack.on{opacity:1;transform:none;pointer-events:auto}
-.fab{display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;text-decoration:none;font-family:var(--hd);font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:.6rem;box-shadow:0 8px 28px rgba(0,0,0,.45),0 0 0 1px rgba(201,168,76,.18)}
+.fab{display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;text-decoration:none;font-family:var(--hd);font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:.6rem;box-shadow:0 8px 28px rgba(0,0,0,.45),0 0 0 1px rgba(219,194,120,.18)}
 .fab-tg{width:46px;height:46px;border-radius:50%;background:#229ED9;transition:transform .25s}
 .fab-tg:hover{transform:scale(1.08)}
 .fab-wa{width:46px;height:46px;border-radius:50%;background:#25D366;position:relative;transition:transform .25s;opacity:.78}
 .fab-wa:hover{transform:scale(1.08);opacity:1}
-.fab-wa .fab-soon{position:absolute;top:-5px;right:-12px;background:#0a0a0a;color:var(--gold);border:1px solid rgba(201,168,76,.5);padding:2px 5px;font-size:.45rem;letter-spacing:.1em;border-radius:2px}
+.fab-wa .fab-soon{position:absolute;top:-5px;right:-12px;background:#0a0a0a;color:var(--gold);border:1px solid rgba(219,194,120,.5);padding:2px 5px;font-size:.45rem;letter-spacing:.1em;border-radius:2px}
 .fab-book{padding:.85rem 1.5rem;background:linear-gradient(135deg,var(--gold) 0%,#d4b256 100%);color:#0a0a0a;border-radius:30px;transition:transform .25s,box-shadow .25s}
-.fab-book:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(201,168,76,.4),0 0 0 1px rgba(201,168,76,.5)}
+.fab-book:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(219,194,120,.4),0 0 0 1px rgba(219,194,120,.5)}
 @media(max-width:768px){
   .fab-stack{right:.75rem;bottom:.75rem;gap:.5rem;display:none} /* на мобиле уже есть sticky-бар на location */
 }
@@ -843,7 +843,7 @@ button{font-family:var(--bd)}
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
   animation:goldShimmer 10s ease-in-out infinite
 }
-.ft-logo-since{font-family:var(--hd);font-size:.5rem;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:rgba(201,168,76,.45);margin-bottom:1rem}
+.ft-logo-since{font-family:var(--hd);font-size:.5rem;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:rgba(219,194,120,.45);margin-bottom:1rem}
 .ft-desc{font-size:.8rem;color:var(--muted);line-height:1.75}
 .ft-col h4{font-family:var(--hd);font-size:.54rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem}
 .ft-col ul{list-style:none}
@@ -894,12 +894,12 @@ button{font-family:var(--bd)}
 .cities-sec{position:relative}
 .cities-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem}
 .cities-hd-r{font-size:.82rem;color:var(--muted);line-height:1.7;text-align:right;max-width:260px}
-.geo-cta{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1.4rem 1.6rem;background:rgba(201,168,76,.04);border:1px solid var(--b-gold);margin-bottom:2.5rem;flex-wrap:wrap}
+.geo-cta{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1.4rem 1.6rem;background:rgba(219,194,120,.04);border:1px solid var(--b-gold);margin-bottom:2.5rem;flex-wrap:wrap}
 .geo-cta-l{display:flex;flex-direction:column;gap:.3rem}
 .geo-lbl{font-family:var(--hd);font-size:.62rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
 .geo-sub{font-size:.78rem;color:var(--muted);line-height:1.5}
 .geo-btn{display:inline-flex;align-items:center;gap:.65rem;font-family:var(--hd);font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--white);background:transparent;border:1px solid var(--b-gold2);padding:.85rem 1.6rem;cursor:pointer;transition:all .3s}
-.geo-btn:hover{color:var(--gold);border-color:var(--gold);background:rgba(201,168,76,.08)}
+.geo-btn:hover{color:var(--gold);border-color:var(--gold);background:rgba(219,194,120,.08)}
 .geo-btn:disabled{opacity:.5;cursor:wait}
 .geo-results{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2.5rem}
 .geo-card{display:block;padding:1.25rem 1.4rem;background:#0c0c0c;border:1px solid var(--b-gold);text-decoration:none;transition:all .3s;position:relative}
@@ -941,7 +941,7 @@ button{font-family:var(--bd)}
 }
 @keyframes splUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 /* Sub word */
-.splash-sub{font-family:var(--hd);font-size:clamp(.85rem,3vw,1.45rem);font-weight:300;letter-spacing:.7em;color:rgba(201,168,76,.52);text-transform:uppercase;opacity:0;animation:fu .55s var(--ease) forwards .65s}
+.splash-sub{font-family:var(--hd);font-size:clamp(.85rem,3vw,1.45rem);font-weight:300;letter-spacing:.7em;color:rgba(219,194,120,.52);text-transform:uppercase;opacity:0;animation:fu .55s var(--ease) forwards .65s}
 /* Since */
 .splash-since{font-family:var(--hd);font-size:.48rem;font-weight:400;letter-spacing:.4em;color:var(--muted);opacity:0;animation:fu .45s ease forwards 1.05s}
 
@@ -1025,12 +1025,12 @@ html,body{max-width:100vw;overflow-x:hidden}
 /* ═══ FAQ MODAL ═══ */
 .faq-modal{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);opacity:0;pointer-events:none;transition:opacity .45s var(--ease);display:flex;align-items:center;justify-content:center;padding:5rem 1.5rem 2rem;overflow-y:auto}
 .faq-modal.on{opacity:1;pointer-events:all}
-.faq-modal-wrap{position:relative;max-width:920px;width:100%;background:linear-gradient(135deg,#0a0a0a,#000);border:1px solid var(--b-gold);max-height:calc(100vh - 7rem);overflow:hidden;display:flex;flex-direction:column;transform:translateY(28px);transition:transform .55s var(--ease);box-shadow:0 30px 90px rgba(0,0,0,.85),0 0 0 1px rgba(201,168,76,.04)}
+.faq-modal-wrap{position:relative;max-width:920px;width:100%;background:linear-gradient(135deg,#0a0a0a,#000);border:1px solid var(--b-gold);max-height:calc(100vh - 7rem);overflow:hidden;display:flex;flex-direction:column;transform:translateY(28px);transition:transform .55s var(--ease);box-shadow:0 30px 90px rgba(0,0,0,.85),0 0 0 1px rgba(219,194,120,.04)}
 .faq-modal.on .faq-modal-wrap{transform:none}
 .faq-modal-wrap::before{content:'';position:absolute;top:-1px;left:-1px;width:48px;height:48px;border-top:1.5px solid var(--gold);border-left:1.5px solid var(--gold);pointer-events:none;z-index:2}
 .faq-modal-wrap::after{content:'';position:absolute;bottom:-1px;right:-1px;width:48px;height:48px;border-bottom:1.5px solid var(--gold);border-right:1.5px solid var(--gold);pointer-events:none;z-index:2}
 .faq-close{position:absolute;top:1rem;right:1rem;z-index:5;width:38px;height:38px;background:rgba(0,0,0,.6);border:1px solid var(--b-gold);color:var(--white);font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s;font-family:var(--hd)}
-.faq-close:hover{background:rgba(201,168,76,.15);color:var(--gold);border-color:var(--gold)}
+.faq-close:hover{background:rgba(219,194,120,.15);color:var(--gold);border-color:var(--gold)}
 .faq-modal-inner{padding:3rem 2.8rem 2.5rem;overflow-y:auto;display:flex;flex-direction:column;gap:1.2rem}
 .faq-modal-h{font-family:var(--hd);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:200;letter-spacing:.05em;line-height:1.05;margin-top:.4rem}
 .faq-modal-p{font-size:.92rem;color:var(--muted);line-height:1.85;margin-bottom:.8rem;max-width:46rem}
@@ -1043,14 +1043,14 @@ html,body{max-width:100vw;overflow-x:hidden}
 
 /* ═══ FAQ (общий стиль аккордеона — используется и в модале, и на других страницах) ═══ */
 .faq-bg{background:var(--bg);position:relative;overflow:hidden}
-.faq-bg::before{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:680px;height:680px;background:radial-gradient(circle,rgba(201,168,76,.05) 0%,transparent 65%);pointer-events:none;filter:blur(28px)}
+.faq-bg::before{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:680px;height:680px;background:radial-gradient(circle,rgba(219,194,120,.05) 0%,transparent 65%);pointer-events:none;filter:blur(28px)}
 .faq-grid{display:grid;grid-template-columns:5fr 7fr;gap:5rem;align-items:start;position:relative;z-index:1}
 .faq-hd h2{font-family:var(--hd);font-size:clamp(2rem,4vw,3rem);font-weight:200;letter-spacing:.05em;line-height:1.05;margin-bottom:1.4rem}
 .faq-hd p{font-size:.92rem;color:var(--muted);line-height:1.95;margin-bottom:1.5rem}
 .faq-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border)}
 .faq-q{border-bottom:1px solid var(--border);padding:0;cursor:pointer;list-style:none;background:transparent;width:100%;text-align:left;font-family:inherit;color:inherit;border-left:0;border-right:0;border-top:0;transition:background .35s}
 .faq-q::-webkit-details-marker{display:none}
-.faq-q:hover{background:rgba(201,168,76,.025)}
+.faq-q:hover{background:rgba(219,194,120,.025)}
 .faq-q-h{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;gap:1.4rem;cursor:pointer;list-style:none}
 .faq-q-h::-webkit-details-marker{display:none}
 .faq-q-t{font-family:var(--hd);font-size:1rem;font-weight:300;letter-spacing:.03em;color:var(--white);transition:color .25s}
@@ -1061,6 +1061,30 @@ html,body{max-width:100vw;overflow-x:hidden}
 .faq-a a{color:var(--gold);border-bottom:1px solid var(--b-gold2);transition:border-color .25s}
 .faq-a a:hover{border-color:var(--gold)}
 @media(max-width:1024px){.faq-grid{grid-template-columns:1fr;gap:2.5rem}}
+
+/* ═══ МОДАЛКА БРОНИРОВАНИЯ ═══ */
+.bk-modal{position:fixed;inset:0;z-index:600;background:rgba(0,0,0,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity .35s var(--ease);overflow-y:auto}
+.bk-modal.on{opacity:1;pointer-events:auto}
+.bk-wrap{background:var(--s1);border:1px solid var(--b-gold);max-width:470px;width:100%;position:relative;padding:2.75rem 2.4rem 2.4rem;opacity:0;transform:translateY(20px) scale(.97);transition:opacity .4s var(--ease),transform .4s var(--ease);margin:auto}
+.bk-modal.on .bk-wrap{opacity:1;transform:none}
+.bk-wrap::before{content:'';position:absolute;top:-1px;left:-1px;width:38px;height:38px;border-top:1.5px solid var(--gold);border-left:1.5px solid var(--gold);pointer-events:none}
+.bk-wrap::after{content:'';position:absolute;bottom:-1px;right:-1px;width:38px;height:38px;border-bottom:1.5px solid var(--gold);border-right:1.5px solid var(--gold);pointer-events:none}
+.bk-close{position:absolute;top:.8rem;right:.8rem;background:transparent;border:1px solid var(--border);color:var(--muted);width:36px;height:36px;font-size:1.5rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s;font-family:var(--hd);z-index:2}
+.bk-close:hover{border-color:var(--gold);color:var(--gold);transform:rotate(90deg)}
+.bk-tag{font-family:var(--hd);font-size:.5rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.7rem}
+.bk-title{font-family:var(--hd);font-size:1.65rem;font-weight:300;letter-spacing:.04em;margin-bottom:.45rem;color:var(--white)}
+.bk-sub{font-size:.82rem;color:var(--muted);line-height:1.6;margin-bottom:1.6rem}
+.bk-form{display:flex;flex-direction:column;gap:.6rem}
+.bk-form input,.bk-form select{width:100%;background:rgba(0,0,0,.4);border:1px solid var(--border);color:var(--white);font-family:var(--bd);font-size:.9rem;font-weight:300;padding:.95rem 1.05rem;outline:none;transition:border-color .3s,background .3s;border-radius:0;-webkit-appearance:none;appearance:none}
+.bk-form input::placeholder{color:rgba(255,255,255,.25)}
+.bk-form select{color:rgba(255,255,255,.55)}
+.bk-form select option{background:#0d0d0d;color:var(--white)}
+.bk-form input:focus,.bk-form select:focus{border-color:var(--gold);background:rgba(219,194,120,.04)}
+.bk-row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.bk-submit{margin-top:.55rem;font-family:var(--hd);font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#000;background:var(--gold);padding:1.1rem 2rem;border:none;cursor:pointer;transition:box-shadow .3s,transform .2s;width:100%}
+.bk-submit:hover{box-shadow:var(--glow);transform:translateY(-2px)}
+.bk-submit:disabled{cursor:default;transform:none;box-shadow:none}
+.bk-note{font-size:.66rem;color:rgba(255,255,255,.3);margin-top:.85rem;text-align:center;letter-spacing:.03em;line-height:1.5}
 </style>
 </head>
 <body>
@@ -1071,11 +1095,11 @@ html,body{max-width:100vw;overflow-x:hidden}
     <svg class="nav-tree" viewBox="0 0 30 36" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="ntg" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#E8D5A3"/><stop offset="100%" stop-color="#8B6914"/>
+          <stop offset="0%" stop-color="#EBDCA9"/><stop offset="100%" stop-color="#9C7E3A"/>
         </linearGradient>
       </defs>
       <path d="M12 32 Q11.5 26 11 22 Q10 17 15 13 Q20 17 19 22 Q18.5 26 18 32Z" fill="url(#ntg)"/>
-      <g stroke="#C9A84C" stroke-width=".9" fill="none">
+      <g stroke="#DBC278" stroke-width=".9" fill="none">
         <ellipse cx="15" cy="7" rx="4.5" ry="2" transform="rotate(-90 15 7)" opacity=".9"/>
         <ellipse cx="22" cy="10" rx="4.5" ry="2" transform="rotate(-42 22 10)" opacity=".85"/>
         <ellipse cx="25" cy="17" rx="4.5" ry="2" transform="rotate(0 25 17)" opacity=".8"/>
@@ -1084,7 +1108,7 @@ html,body{max-width:100vw;overflow-x:hidden}
         <ellipse cx="5" cy="17" rx="4.5" ry="2" transform="rotate(0 5 17)" opacity=".8"/>
         <ellipse cx="8" cy="24" rx="4.5" ry="2" transform="rotate(-42 8 24)" opacity=".7"/>
       </g>
-      <g stroke="#E8D5A3" stroke-width=".7" fill="none" opacity=".55">
+      <g stroke="#EBDCA9" stroke-width=".7" fill="none" opacity=".55">
         <ellipse cx="15" cy="12" rx="3.5" ry="1.6" transform="rotate(-90 15 12)"/>
         <ellipse cx="20" cy="14" rx="3.5" ry="1.6" transform="rotate(-45 20 14)"/>
         <ellipse cx="21" cy="20" rx="3.5" ry="1.6"/>
@@ -1096,7 +1120,7 @@ html,body{max-width:100vw;overflow-x:hidden}
     <img src="https://barvikhagroup.ru/img/main/header-logo.png" alt="Barvikha" class="nav-logo-img"/>
   </a>
   <div class="nav-r">
-    <button class="nav-book" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Забронировать</button>
+    <button class="nav-book" onclick="openBooking()">Забронировать</button>
     <button class="brg" id="brg" aria-label="Меню"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -1109,7 +1133,7 @@ html,body{max-width:100vw;overflow-x:hidden}
     <li><a href="#franchise" class="ml">Франшиза</a></li>
     <li><a href="#" class="ml" onclick="event.preventDefault();closeBurger();openFaq()">Часто спрашивают</a></li>
     <li><a href="#contact" class="ml">Контакты</a></li>
-    <li><a href="#contact" class="ml" style="color:var(--gold)">Забронировать</a></li>
+    <li><a href="#" class="ml" style="color:var(--gold)" onclick="event.preventDefault();closeBurger();openBooking()">Забронировать</a></li>
   </ul>
 </div>
 
@@ -1531,49 +1555,49 @@ html,body{max-width:100vw;overflow-x:hidden}
     <div class="feat-grid">
 
       <button onclick="openFeat('drinks')" class="feat rv">
-        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><path d="M12 12 L28 42 L44 12 Z" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/><line x1="28" y1="42" x2="28" y2="50" stroke="#C9A84C" stroke-width="1.4"/><line x1="18" y1="50" x2="38" y2="50" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round"/><line x1="18" y1="28" x2="38" y2="28" stroke="#C9A84C" stroke-width=".8" opacity=".45"/><circle cx="40" cy="17" r="4" stroke="#C9A84C" stroke-width="1" opacity=".6"/><line x1="36" y1="17" x2="30" y2="22" stroke="#C9A84C" stroke-width="1" opacity=".5"/></svg></div>
+        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><path d="M12 12 L28 42 L44 12 Z" stroke="#DBC278" stroke-width="1.4" stroke-linejoin="round"/><line x1="28" y1="42" x2="28" y2="50" stroke="#DBC278" stroke-width="1.4"/><line x1="18" y1="50" x2="38" y2="50" stroke="#DBC278" stroke-width="1.8" stroke-linecap="round"/><line x1="18" y1="28" x2="38" y2="28" stroke="#DBC278" stroke-width=".8" opacity=".45"/><circle cx="40" cy="17" r="4" stroke="#DBC278" stroke-width="1" opacity=".6"/><line x1="36" y1="17" x2="30" y2="22" stroke="#DBC278" stroke-width="1" opacity=".5"/></svg></div>
         <div class="feat-t">Напитки</div>
         <p class="feat-p">Авторские коктейли, первоклассный алкоголь, элитный китайский чай и классические лимонады</p>
         <div class="feat-cta">Узнать подробнее <span>→</span></div>
       </button>
 
       <button onclick="openFeat('hookahs')" class="feat rv d1">
-        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><ellipse cx="28" cy="12" rx="12" ry="5" stroke="#C9A84C" stroke-width="1.4"/><rect x="24.5" y="17" width="7" height="14" stroke="#C9A84C" stroke-width="1.4"/><ellipse cx="28" cy="37" rx="11" ry="8" stroke="#C9A84C" stroke-width="1.4"/><path d="M17 45 Q11 47 10 52" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/><path d="M39 45 Q45 47 46 52" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/><path d="M24 7 Q22 3 24 0" stroke="#C9A84C" stroke-width="1" opacity=".45"/><path d="M28 5 Q30 1 28 -2" stroke="#C9A84C" stroke-width="1" opacity=".35"/><path d="M32 7 Q34 3 32 0" stroke="#C9A84C" stroke-width="1" opacity=".4"/></svg></div>
+        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><ellipse cx="28" cy="12" rx="12" ry="5" stroke="#DBC278" stroke-width="1.4"/><rect x="24.5" y="17" width="7" height="14" stroke="#DBC278" stroke-width="1.4"/><ellipse cx="28" cy="37" rx="11" ry="8" stroke="#DBC278" stroke-width="1.4"/><path d="M17 45 Q11 47 10 52" stroke="#DBC278" stroke-width="1.2" stroke-linecap="round"/><path d="M39 45 Q45 47 46 52" stroke="#DBC278" stroke-width="1.2" stroke-linecap="round"/><path d="M24 7 Q22 3 24 0" stroke="#DBC278" stroke-width="1" opacity=".45"/><path d="M28 5 Q30 1 28 -2" stroke="#DBC278" stroke-width="1" opacity=".35"/><path d="M32 7 Q34 3 32 0" stroke="#DBC278" stroke-width="1" opacity=".4"/></svg></div>
         <div class="feat-t">Кальяны</div>
         <p class="feat-p">Премиальные Wookah и Egeglas. Табаки WTO, Daily Hookah, Tangiers, Darkside — только лучшее</p>
         <div class="feat-cta">Узнать подробнее <span>→</span></div>
       </button>
 
       <button onclick="openFeat('food')" class="feat rv d2">
-        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><ellipse cx="28" cy="36" rx="18" ry="6" stroke="#C9A84C" stroke-width="1.4"/><path d="M10 36 Q10 18 28 18 Q46 18 46 36" stroke="#C9A84C" stroke-width="1.4" fill="none"/><circle cx="28" cy="18" r="3.5" stroke="#C9A84C" stroke-width="1.4"/><line x1="8" y1="18" x2="8" y2="44" stroke="#C9A84C" stroke-width="1.1" opacity=".4"/><line x1="48" y1="18" x2="48" y2="44" stroke="#C9A84C" stroke-width="1.1" opacity=".4"/></svg></div>
+        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><ellipse cx="28" cy="36" rx="18" ry="6" stroke="#DBC278" stroke-width="1.4"/><path d="M10 36 Q10 18 28 18 Q46 18 46 36" stroke="#DBC278" stroke-width="1.4" fill="none"/><circle cx="28" cy="18" r="3.5" stroke="#DBC278" stroke-width="1.4"/><line x1="8" y1="18" x2="8" y2="44" stroke="#DBC278" stroke-width="1.1" opacity=".4"/><line x1="48" y1="18" x2="48" y2="44" stroke="#DBC278" stroke-width="1.1" opacity=".4"/></svg></div>
         <div class="feat-t">Еда</div>
         <p class="feat-p">Собственная кухня: блюда шеф-повара, десерты, мороженое, снеки и натуральное вяленое мясо</p>
         <div class="feat-cta">Узнать подробнее <span>→</span></div>
       </button>
 
       <button onclick="openFeat('games')" class="feat rv d1">
-        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><rect x="8" y="18" width="40" height="24" rx="4" stroke="#C9A84C" stroke-width="1.4"/><circle cx="20" cy="30" r="4" stroke="#C9A84C" stroke-width="1.2"/><circle cx="36" cy="30" r="4" stroke="#C9A84C" stroke-width="1.2"/><line x1="28" y1="26" x2="28" y2="34" stroke="#C9A84C" stroke-width="1"/><line x1="24" y1="30" x2="32" y2="30" stroke="#C9A84C" stroke-width="1"/><line x1="18" y1="42" x2="14" y2="50" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/><line x1="38" y1="42" x2="42" y2="50" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><rect x="8" y="18" width="40" height="24" rx="4" stroke="#DBC278" stroke-width="1.4"/><circle cx="20" cy="30" r="4" stroke="#DBC278" stroke-width="1.2"/><circle cx="36" cy="30" r="4" stroke="#DBC278" stroke-width="1.2"/><line x1="28" y1="26" x2="28" y2="34" stroke="#DBC278" stroke-width="1"/><line x1="24" y1="30" x2="32" y2="30" stroke="#DBC278" stroke-width="1"/><line x1="18" y1="42" x2="14" y2="50" stroke="#DBC278" stroke-width="1.2" stroke-linecap="round"/><line x1="38" y1="42" x2="42" y2="50" stroke="#DBC278" stroke-width="1.2" stroke-linecap="round"/></svg></div>
         <div class="feat-t">Игры</div>
         <p class="feat-p">Зоны с игровыми приставками PS4 и широкий выбор настольных игр для весёлого времяпровождения</p>
         <div class="feat-cta">Узнать подробнее <span>→</span></div>
       </button>
 
       <button onclick="openFeat('vip')" class="feat rv d2">
-        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><path d="M10 24 L28 10 L46 24 L46 48 L10 48 Z" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/><path d="M20 48 L20 34 L36 34 L36 48" stroke="#C9A84C" stroke-width="1.2"/><line x1="10" y1="24" x2="46" y2="24" stroke="#C9A84C" stroke-width=".7" opacity=".38"/><path d="M24 18 Q28 14 32 18" stroke="#C9A84C" stroke-width="1" opacity=".5" fill="none"/></svg></div>
+        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><path d="M10 24 L28 10 L46 24 L46 48 L10 48 Z" stroke="#DBC278" stroke-width="1.4" stroke-linejoin="round"/><path d="M20 48 L20 34 L36 34 L36 48" stroke="#DBC278" stroke-width="1.2"/><line x1="10" y1="24" x2="46" y2="24" stroke="#DBC278" stroke-width=".7" opacity=".38"/><path d="M24 18 Q28 14 32 18" stroke="#DBC278" stroke-width="1" opacity=".5" fill="none"/></svg></div>
         <div class="feat-t">VIP</div>
         <p class="feat-p">Приватные комнаты для больших компаний — идеально для праздников и закрытых мероприятий</p>
         <div class="feat-cta">Узнать подробнее <span>→</span></div>
       </button>
 
       <button onclick="openFeat('streams')" class="feat rv d3">
-        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><rect x="6" y="10" width="44" height="30" rx="3" stroke="#C9A84C" stroke-width="1.4"/><line x1="28" y1="40" x2="28" y2="48" stroke="#C9A84C" stroke-width="1.4"/><line x1="18" y1="48" x2="38" y2="48" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round"/><circle cx="28" cy="25" r="7" stroke="#C9A84C" stroke-width="1.2"/><path d="M25 25 L27 28 L32 21" stroke="#C9A84C" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><rect x="6" y="10" width="44" height="30" rx="3" stroke="#DBC278" stroke-width="1.4"/><line x1="28" y1="40" x2="28" y2="48" stroke="#DBC278" stroke-width="1.4"/><line x1="18" y1="48" x2="38" y2="48" stroke="#DBC278" stroke-width="1.8" stroke-linecap="round"/><circle cx="28" cy="25" r="7" stroke="#DBC278" stroke-width="1.2"/><path d="M25 25 L27 28 L32 21" stroke="#DBC278" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="feat-t">Трансляции</div>
         <p class="feat-p">Огромные проекторы для прямых трансляций спортивных матчей и главных событий страны и мира</p>
         <div class="feat-cta">Узнать подробнее <span>→</span></div>
       </button>
 
       <button onclick="openFeat('karaoke')" class="feat feat-wide rv">
-        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><rect x="20" y="5" width="16" height="24" rx="8" stroke="#C9A84C" stroke-width="1.4"/><path d="M13 28c0 8.284 6.716 15 15 15s15-6.716 15-15" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/><line x1="28" y1="43" x2="28" y2="51" stroke="#C9A84C" stroke-width="1.4"/><line x1="18" y1="51" x2="38" y2="51" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round"/><line x1="20" y1="17" x2="36" y2="17" stroke="#C9A84C" stroke-width="1" opacity=".4"/><line x1="20" y1="22" x2="36" y2="22" stroke="#C9A84C" stroke-width="1" opacity=".3"/><circle cx="43" cy="12" r="4.5" stroke="#C9A84C" stroke-width="1" opacity=".55"/><path d="M41 12 L43 14 L47 9" stroke="#C9A84C" stroke-width=".9" stroke-linecap="round" stroke-linejoin="round" opacity=".7"/></svg></div>
+        <div class="feat-ico"><svg viewBox="0 0 56 56" fill="none"><rect x="20" y="5" width="16" height="24" rx="8" stroke="#DBC278" stroke-width="1.4"/><path d="M13 28c0 8.284 6.716 15 15 15s15-6.716 15-15" stroke="#DBC278" stroke-width="1.4" stroke-linecap="round"/><line x1="28" y1="43" x2="28" y2="51" stroke="#DBC278" stroke-width="1.4"/><line x1="18" y1="51" x2="38" y2="51" stroke="#DBC278" stroke-width="1.8" stroke-linecap="round"/><line x1="20" y1="17" x2="36" y2="17" stroke="#DBC278" stroke-width="1" opacity=".4"/><line x1="20" y1="22" x2="36" y2="22" stroke="#DBC278" stroke-width="1" opacity=".3"/><circle cx="43" cy="12" r="4.5" stroke="#DBC278" stroke-width="1" opacity=".55"/><path d="M41 12 L43 14 L47 9" stroke="#DBC278" stroke-width=".9" stroke-linecap="round" stroke-linejoin="round" opacity=".7"/></svg></div>
         <div>
           <div class="feat-t">Живая сцена · Karaoke</div>
           <p class="feat-p">Приватные комнаты с профессиональным звуком, тысячи треков на русском и английском. Идеально для вечеринки или просто хорошего настроения</p>
@@ -1595,11 +1619,11 @@ html,body{max-width:100vw;overflow-x:hidden}
       </div>
       <div class="cs-links rv">
         <a href="tel:+78002012781" class="cs-link">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="#C9A84C"/></svg>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="#DBC278"/></svg>
           8 800 201-27-81
         </a>
         <a href="https://t.me/BARVIKHAGROUP" target="_blank" class="cs-link" data-src="contact">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.93 6.842l-1.68 7.92c-.123.553-.453.688-.917.428l-2.54-1.872-1.226 1.18c-.136.136-.25.25-.512.25l.183-2.586 4.718-4.26c.205-.183-.045-.284-.318-.101L8.21 14.84l-2.505-.782c-.544-.17-.555-.544.114-.806l9.782-3.772c.453-.164.85.101.33.362z" fill="#C9A84C"/></svg>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.93 6.842l-1.68 7.92c-.123.553-.453.688-.917.428l-2.54-1.872-1.226 1.18c-.136.136-.25.25-.512.25l.183-2.586 4.718-4.26c.205-.183-.045-.284-.318-.101L8.21 14.84l-2.505-.782c-.544-.17-.555-.544.114-.806l9.782-3.772c.453-.164.85.101.33.362z" fill="#DBC278"/></svg>
           Telegram
         </a>
         <a href="#" class="cs-link cs-wa" onclick="event.preventDefault();alert('WhatsApp подключим после получения номера')">
@@ -1607,7 +1631,7 @@ html,body{max-width:100vw;overflow-x:hidden}
           WhatsApp <span class="cs-soon">скоро</span>
         </a>
         <a href="https://vk.com/barvikhagroup" target="_blank" class="cs-link" data-src="contact">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M4.5 6h15a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5h-15a.5.5 0 0 1-.5-.5v-11A.5.5 0 0 1 4.5 6zm5.5 4v5m0-5c0 0 0-2 2.5-2S15 12 15 12v3" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4.5 6h15a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5h-15a.5.5 0 0 1-.5-.5v-11A.5.5 0 0 1 4.5 6zm5.5 4v5m0-5c0 0 0-2 2.5-2S15 12 15 12v3" stroke="#DBC278" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
           ВКонтакте
         </a>
       </div>
@@ -1686,18 +1710,59 @@ html,body{max-width:100vw;overflow-x:hidden}
   </div>
 </div>
 
-<!-- ─── EXIT-INTENT MODAL ─── -->
-<div class="exit-modal" id="exitModal" onclick="if(event.target===this)closeExit()">
-  <div class="exit-wrap">
-    <button class="exit-x" onclick="closeExit()" aria-label="Закрыть">×</button>
-    <span class="exit-tag">Подождите</span>
-    <h3 class="exit-h">Получите —10% на первый визит</h3>
-    <p class="exit-p">Оставьте номер — менеджер пришлёт промокод в Telegram. Действителен на все 24 заведения сети, 30 дней.</p>
-    <form class="exit-form" onsubmit="handleExitForm(event)">
-      <input type="tel" id="exitPhone" placeholder="+7 (___) ___-__-__" required/>
-      <button type="submit" class="exit-cta" id="exitBtn">Получить промокод</button>
+<!-- ─── МОДАЛКА БРОНИРОВАНИЯ ─── -->
+<div class="bk-modal" id="bkModal" onclick="if(event.target===this)closeBooking()">
+  <div class="bk-wrap">
+    <button class="bk-close" onclick="closeBooking()" aria-label="Закрыть">×</button>
+    <span class="bk-tag">Бронирование</span>
+    <h2 class="bk-title">Забронировать стол</h2>
+    <p class="bk-sub">Оставьте заявку — менеджер свяжется в течение 15 минут и подтвердит бронь.</p>
+    <form class="bk-form" id="bkForm" onsubmit="handleBooking(event)">
+      <input type="text" name="name" placeholder="Ваше имя" required/>
+      <input type="tel" id="bkPhone" name="phone" placeholder="+7 (___) ___-__-__" required/>
+      <select name="venue" required>
+        <option value="" disabled selected>Выберите заведение</option>
+        <optgroup label="Москва">
+          <option>Москва-Сити</option>
+          <option>Красная площадь</option>
+          <option>Юго-Западная</option>
+          <option>Киевская</option>
+          <option>Павелецкая</option>
+          <option>Бауманская</option>
+          <option>Менделеевская</option>
+          <option>Марьино</option>
+          <option>Коломенская</option>
+          <option>Раменки</option>
+          <option>ЦСКА</option>
+          <option>Крылатское</option>
+          <option>Отрадное</option>
+          <option>Селигерская</option>
+          <option>Митино</option>
+          <option>Тёплый стан</option>
+          <option>Рублёвка</option>
+        </optgroup>
+        <optgroup label="Санкт-Петербург">
+          <option>Невский</option>
+        </optgroup>
+        <optgroup label="Махачкала">
+          <option>Махачкала — Центр</option>
+        </optgroup>
+      </select>
+      <div class="bk-row">
+        <input type="date" name="date" required aria-label="Дата"/>
+        <input type="time" name="time" required aria-label="Время"/>
+      </div>
+      <select name="guests" required>
+        <option value="" disabled selected>Количество гостей</option>
+        <option>1–2 гостя</option>
+        <option>3–4 гостя</option>
+        <option>5–6 гостей</option>
+        <option>7–10 гостей</option>
+        <option>Больше 10 — компания</option>
+      </select>
+      <button type="submit" class="bk-submit" id="bkSubmit">Отправить заявку</button>
     </form>
-    <span class="exit-fine">Без спама. Промокод — один раз.</span>
+    <p class="bk-note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
   </div>
 </div>
 
@@ -1710,7 +1775,7 @@ html,body{max-width:100vw;overflow-x:hidden}
     <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.92 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24a8.21 8.21 0 0 1-4.21-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.264 8.264 0 0 1-1.26-4.38c.01-4.54 3.7-8.25 8.27-8.25zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.74 2.79 4.29 3.8 2.12.84 2.55.67 3.01.62.46-.04 1.49-.6 1.7-1.19.21-.59.21-1.1.15-1.19-.06-.1-.22-.16-.45-.27-.24-.12-1.41-.7-1.62-.78-.22-.08-.38-.12-.54.12-.16.25-.62.78-.76.94-.14.17-.28.18-.51.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.32-1.65-.13-.24-.01-.36.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.17.04-.31-.02-.43-.06-.12-.51-1.31-.72-1.78-.18-.43-.37-.41-.5-.42a8.4 8.4 0 0 0-.47-.01h.5z" fill="#fff"/></svg>
     <span class="fab-soon">скоро</span>
   </a>
-  <button class="fab fab-book" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" title="Забронировать">
+  <button class="fab fab-book" onclick="openBooking()" title="Забронировать">
     <span>Бронь</span>
   </button>
 </div>
@@ -1793,7 +1858,7 @@ html,body{max-width:100vw;overflow-x:hidden}
       if(a>0.7)a=0.7;
       const px=(y*W + x)*4;
       if(wh){buf[px]=244;buf[px+1]=231;buf[px+2]=197}
-      else  {buf[px]=201;buf[px+1]=168;buf[px+2]=76}
+      else  {buf[px]=219;buf[px+1]=194;buf[px+2]=120}
       buf[px+3]=(a*255)|0;
     }
     ctx.putImageData(imgData,0,0);
@@ -1811,7 +1876,7 @@ html,body{max-width:100vw;overflow-x:hidden}
       if(a<0.015)continue;
       if(a>0.85)a=0.85;
       ctx.globalAlpha=a;
-      ctx.fillStyle=wh?'#f4e7c5':'#c9a84c';
+      ctx.fillStyle=wh?'#f4e7c5':'#dbc278';
       ctx.fillRect(x,y,s,s);
     }
     ctx.globalAlpha=1;
@@ -2041,7 +2106,7 @@ const pts=Array.from({length:40},()=>({
   cx.clearRect(0,0,cv.width,cv.height);
   pts.forEach(p=>{
     cx.beginPath();cx.arc(p.x,p.y,p.r,0,Math.PI*2);
-    cx.fillStyle=`rgba(201,168,76,${p.a*(1-p.life)})`;cx.fill();
+    cx.fillStyle=`rgba(219,194,120,${p.a*(1-p.life)})`;cx.fill();
     p.x+=p.dx;p.y+=p.dy;p.life+=.002;
     if(p.life>=1||p.y<-5){p.x=Math.random()*cv.width;p.y=cv.height+5;p.life=0}
   });
@@ -2189,6 +2254,27 @@ window.handleExitForm=function(e){
     });
   }
   if(document.readyState!=='loading')init();else document.addEventListener('DOMContentLoaded',init);
+})();
+
+// ═══ МОДАЛКА БРОНИРОВАНИЯ ═══
+window.openBooking=function(){const m=document.getElementById('bkModal');if(!m)return;m.classList.add('on');document.body.style.overflow='hidden'};
+window.closeBooking=function(){const m=document.getElementById('bkModal');if(!m)return;m.classList.remove('on');document.body.style.overflow=''};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBooking()});
+window.handleBooking=function(e){
+  e.preventDefault();
+  const form=e.target;
+  const btn=document.getElementById('bkSubmit');
+  btn.textContent='Заявка принята ✓';
+  btn.style.background='#1a4a1a';btn.style.color='#7ecb7e';btn.disabled=true;
+  setTimeout(()=>{
+    closeBooking();
+    btn.textContent='Отправить заявку';btn.style.background='';btn.style.color='';btn.disabled=false;
+    if(form&&form.reset)form.reset();
+  },2200);
+};
+(function(){
+  const ph=document.getElementById('bkPhone');
+  if(ph)ph.addEventListener('input',e=>{let v=e.target.value.replace(/\D/g,'');if(v.startsWith('8'))v='7'+v.slice(1);if(v.startsWith('7')){let f='+7';if(v.length>1)f+=' ('+v.slice(1,4);if(v.length>=5)f+=') '+v.slice(4,7);if(v.length>=8)f+='-'+v.slice(7,9);if(v.length>=10)f+='-'+v.slice(9,11);e.target.value=f}});
 })();
 </script>
 </body>
