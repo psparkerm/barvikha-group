@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>30 палитр — Барвиха</title>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;font-weight:300;background:#0a0a0a;color:#eee;overflow-x:hidden;line-height:1.5}
+
+.head{position:sticky;top:0;z-index:50;background:rgba(8,8,8,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);padding:1.1rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.head-t{font-family:'Tenor Sans';font-size:1rem;letter-spacing:.18em;text-transform:uppercase}
+.head-t b{color:#DBC278;font-weight:400}
+.head-s{font-family:'Inter';font-size:.72rem;letter-spacing:.06em;color:#888}
+
+.intro{padding:3rem 2rem 1.5rem;text-align:center;max-width:760px;margin:0 auto}
+.intro h1{font-family:'Tenor Sans';font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:400;letter-spacing:.04em;margin-bottom:.6rem}
+.intro p{font-size:.85rem;color:#888;line-height:1.7}
+.intro p b{color:#DBC278;font-weight:400}
+
+.grid{max-width:1380px;margin:0 auto;padding:1.5rem 1.5rem 4rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem}
+
+/* Карточка палитры — собственный scope CSS-переменных */
+.p{
+  --bg:#1A0F08; --s2:#2E1F15; --g:#B8895A; --gl:#E0C19B; --gd:#6B4423; --t:#F4E8D8;
+  background:var(--bg);color:var(--t);
+  border:1px solid rgba(255,255,255,.06);
+  display:flex;flex-direction:column;overflow:hidden;
+  transition:transform .25s,border-color .25s,box-shadow .25s;
+  position:relative
+}
+.p:hover{transform:translateY(-3px);border-color:var(--g);box-shadow:0 18px 50px -20px rgba(0,0,0,.6),0 0 0 1px var(--g)}
+.p-hd{padding:1.1rem 1.2rem .7rem;display:flex;align-items:flex-start;justify-content:space-between;gap:.7rem}
+.p-num{font-family:'Tenor Sans';font-size:.6rem;letter-spacing:.22em;color:var(--g);opacity:.8}
+.p-name{font-family:'Tenor Sans';font-size:1rem;letter-spacing:.04em;color:var(--t);margin-top:.2rem;line-height:1.2}
+.p-mood{font-size:.66rem;color:var(--t);opacity:.55;margin-top:.3rem;line-height:1.4}
+
+.p-swatch{display:grid;grid-template-columns:repeat(7,1fr);height:36px;border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04)}
+.p-swatch span{display:block;position:relative}
+.p-swatch span::after{content:attr(data-hx);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Inter';font-size:.5rem;letter-spacing:.02em;color:rgba(255,255,255,.7);opacity:0;transition:opacity .2s;mix-blend-mode:difference;font-weight:500}
+.p:hover .p-swatch span::after{opacity:1}
+
+.p-mock{background:var(--s2);padding:1.15rem 1.2rem 1.15rem;display:flex;flex-direction:column;gap:.7rem}
+.pm-eyebrow{font-family:'Tenor Sans';font-size:.5rem;letter-spacing:.24em;text-transform:uppercase;color:var(--g);display:inline-flex;align-items:center;gap:.55rem}
+.pm-eyebrow::before{content:'';width:16px;height:1px;background:var(--g);opacity:.7}
+.pm-t{font-family:'Tenor Sans';font-size:1.15rem;letter-spacing:.05em;line-height:1}
+.pm-s{font-size:.7rem;color:var(--t);opacity:.55}
+.pm-row{display:flex;gap:.45rem;align-items:center;margin-top:.35rem;flex-wrap:wrap}
+.pm-btn{font-family:'Tenor Sans';font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:#000;background:var(--g);padding:.6rem 1rem;border:none;cursor:pointer;transition:box-shadow .25s}
+.pm-btn:hover{box-shadow:0 8px 20px -6px var(--g)}
+.pm-btn-o{font-family:'Tenor Sans';font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--t);opacity:.6;background:transparent;border:1px solid var(--gd);padding:.55rem .85rem;cursor:pointer}
+
+.p-foot{padding:.85rem 1.2rem;border-top:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;align-items:center;gap:.6rem;font-family:'Tenor Sans';font-size:.55rem;letter-spacing:.18em;text-transform:uppercase}
+.p-foot .acc{color:var(--g)}
+.p-pick{cursor:pointer;background:transparent;border:1px solid var(--g);color:var(--g);padding:.4rem .8rem;font-family:'Tenor Sans';font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;transition:all .25s}
+.p-pick:hover{background:var(--g);color:#000}
+.p-open{position:absolute;inset:0;cursor:zoom-in;background:transparent;border:none;z-index:1}
+.p-open:hover ~ .p-hover{opacity:1}
+.p-hover{position:absolute;top:.6rem;right:.6rem;font-family:'Tenor Sans';font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:var(--g);background:rgba(0,0,0,.55);border:1px solid var(--g);padding:.4rem .65rem;opacity:0;transition:opacity .25s;pointer-events:none;z-index:2;backdrop-filter:blur(6px)}
+.p:hover .p-hover{opacity:.95}
+.p-foot,.p-mock,.p-hd,.p-swatch{position:relative;z-index:3;pointer-events:none}
+.p-foot .p-pick,.p-mock button{pointer-events:auto}
+
+@media(max-width:480px){
+  .grid{grid-template-columns:1fr;padding:1rem .9rem 3rem}
+}
+
+/* ═══ FULLSCREEN PREVIEW ═══ */
+.fs{position:fixed;inset:0;z-index:200;background:#0a0a0a;opacity:0;pointer-events:none;transition:opacity .35s;overflow-y:auto;overflow-x:hidden}
+.fs.on{opacity:1;pointer-events:all}
+.fs-inner{
+  --bg:#1A0F08; --s1:#211410; --s2:#2E1F15; --s3:#3A2A1D; --g:#B8895A; --gl:#E0C19B; --gd:#6B4423; --t:#F4E8D8;
+  background:var(--bg);color:var(--t);min-height:100vh;font-family:'Inter';display:flex;flex-direction:column
+}
+.fs-nav{position:sticky;top:0;z-index:10;background:rgba(0,0,0,.55);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08);padding:.95rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.fs-nav-l{display:flex;align-items:center;gap:1rem;font-family:'Tenor Sans';font-size:.62rem;letter-spacing:.2em;text-transform:uppercase}
+.fs-nav-num{color:var(--g)}
+.fs-nav-r{display:flex;align-items:center;gap:.6rem}
+.fs-btn{font-family:'Tenor Sans';font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--t);background:transparent;border:1px solid rgba(255,255,255,.18);padding:.55rem .95rem;cursor:pointer;transition:all .25s;display:inline-flex;align-items:center;gap:.5rem}
+.fs-btn:hover{border-color:var(--g);color:var(--g)}
+.fs-btn.primary{background:var(--g);border-color:var(--g);color:#000}
+.fs-btn.primary:hover{box-shadow:0 12px 30px -10px var(--g);color:#000}
+.fs-close{font-size:1.1rem;line-height:1;padding:.4rem .65rem}
+
+.fs-hero{padding:5.5rem 2rem 4rem;position:relative;border-bottom:1px solid rgba(184,137,90,.18)}
+.fs-hero::before{content:'';position:absolute;top:0;left:0;width:60px;height:60px;border-top:1.5px solid var(--g);border-left:1.5px solid var(--g)}
+.fs-hero::after{content:'';position:absolute;bottom:0;right:0;width:60px;height:60px;border-bottom:1.5px solid var(--g);border-right:1.5px solid var(--g)}
+.fs-wrap{max-width:1180px;margin:0 auto;padding:0 1rem}
+.fs-crumbs{font-family:'Tenor Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,232,216,.5);display:flex;align-items:center;gap:.7rem;margin-bottom:1.6rem}
+.fs-crumbs .sep{color:var(--g);opacity:.5}
+.fs-crumbs .cur{color:var(--g)}
+.fs-status{display:inline-flex;align-items:center;gap:.6rem;font-family:'Tenor Sans';font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:#7ecb7e;border:1px solid rgba(126,203,126,.35);padding:.55rem 1rem;background:rgba(0,0,0,.35);margin-bottom:1.5rem}
+.fs-status .dot{width:9px;height:9px;border-radius:50%;background:currentColor;box-shadow:0 0 12px currentColor}
+.fs-status .t{color:rgba(244,232,216,.55);font-weight:300}
+.fs-title{font-family:'Tenor Sans';font-size:clamp(2.8rem,7vw,6rem);font-weight:400;letter-spacing:.07em;line-height:.95;margin-bottom:.75rem}
+.fs-sub{font-family:'Tenor Sans';font-size:.85rem;letter-spacing:.28em;text-transform:uppercase;color:var(--g);margin-bottom:2.5rem}
+.fs-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(184,137,90,.22);border:1px solid rgba(184,137,90,.22);margin-bottom:2.5rem}
+.fs-mi{background:var(--s1);padding:1.1rem 1.55rem}
+.fs-mi-l{font-family:'Tenor Sans';font-size:.5rem;letter-spacing:.22em;text-transform:uppercase;color:var(--g);display:block;margin-bottom:.35rem}
+.fs-mi-v{font-size:.88rem;color:rgba(244,232,216,.88)}
+.fs-cta{display:flex;gap:.8rem;flex-wrap:wrap}
+.fs-cta-g{font-family:'Tenor Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:#000;background:var(--g);padding:1rem 2rem;border:none;cursor:pointer;transition:box-shadow .3s}
+.fs-cta-g:hover{box-shadow:0 14px 36px -10px var(--g)}
+.fs-cta-o{font-family:'Tenor Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,232,216,.7);background:transparent;border:1px solid rgba(184,137,90,.32);padding:1rem 1.75rem;cursor:pointer;transition:all .25s}
+.fs-cta-o:hover{border-color:var(--g);color:var(--g)}
+
+.fs-sec{padding:4rem 2rem;border-bottom:1px solid rgba(184,137,90,.12)}
+.fs-sec-lbl{font-family:'Tenor Sans';font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--g);display:inline-flex;align-items:center;gap:.8rem;margin-bottom:1rem}
+.fs-sec-lbl::before{content:'';width:30px;height:1px;background:var(--g);opacity:.7}
+.fs-sec-h{font-family:'Tenor Sans';font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:400;letter-spacing:.04em;margin-bottom:2rem;line-height:1.1}
+
+.fs-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(184,137,90,.18);border:1px solid rgba(184,137,90,.18)}
+.fs-card{background:var(--s2);padding:1.85rem 1.65rem;display:flex;flex-direction:column;gap:.6rem;min-height:200px;position:relative;transition:background .25s}
+.fs-card:hover{background:var(--s3)}
+.fs-card-i{font-family:'Tenor Sans';font-size:.5rem;letter-spacing:.26em;color:var(--g);display:inline-flex;align-items:center;gap:.5rem}
+.fs-card-i::after{content:'';width:14px;height:1px;background:var(--g);opacity:.5}
+.fs-card-t{font-family:'Tenor Sans';font-size:1.2rem;letter-spacing:.04em;margin-top:.3rem}
+.fs-card-s{font-size:.78rem;color:rgba(244,232,216,.55);line-height:1.65;flex:1}
+.fs-card-p{font-family:'Tenor Sans';font-size:1rem;color:var(--g);margin-top:.4rem}
+
+.fs-quote{background:var(--s2);border:1px solid rgba(184,137,90,.18);padding:2.2rem 2.2rem;position:relative;max-width:780px;margin:0 auto}
+.fs-quote::before{content:'\201C';position:absolute;top:.6rem;right:1.4rem;font-family:'Tenor Sans';font-size:5rem;color:var(--g);opacity:.16;line-height:1}
+.fs-quote-stars{color:var(--g);font-size:.95rem;letter-spacing:.06em;margin-bottom:1rem}
+.fs-quote-text{font-size:.95rem;line-height:1.85;color:rgba(244,232,216,.92);font-style:italic;margin-bottom:1.4rem}
+.fs-quote-a{display:flex;align-items:center;gap:1rem;border-top:1px solid rgba(184,137,90,.12);padding-top:1.1rem}
+.fs-quote-ava{width:42px;height:42px;border-radius:50%;border:1px solid var(--g);color:var(--g);font-family:'Tenor Sans';font-size:.72rem;display:flex;align-items:center;justify-content:center}
+.fs-quote-name{font-family:'Tenor Sans';font-size:.85rem;letter-spacing:.04em;color:var(--t)}
+.fs-quote-src{font-size:.66rem;color:rgba(244,232,216,.4)}
+
+.fs-swatch-row{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:rgba(184,137,90,.18);border:1px solid rgba(184,137,90,.18);margin-top:1rem}
+.fs-sw{background:var(--s1);padding:1rem .85rem;text-align:center;font-family:'Inter';font-size:.62rem;color:rgba(244,232,216,.6);min-height:100px;display:flex;flex-direction:column;gap:.5rem;align-items:center;justify-content:center}
+.fs-sw-c{width:100%;height:34px;border:1px solid rgba(255,255,255,.06)}
+.fs-sw-l{font-family:'Tenor Sans';font-size:.5rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,232,216,.5)}
+
+.fs-footer{padding:3rem 2rem;background:rgba(0,0,0,.35);border-top:1px solid rgba(184,137,90,.18);display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.fs-footer-l{font-family:'Tenor Sans';font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,232,216,.5)}
+
+@media(max-width:780px){
+  .fs-meta{grid-template-columns:1fr 1fr}
+  .fs-cards{grid-template-columns:1fr}
+  .fs-swatch-row{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div class="head-t">30 палитр <b>·</b> Барвиха</div>
+  <div class="head-s">наведи на свотчи — увидишь HEX · нажми «Выбрать» и пришли мне №</div>
+</div>
+
+<div class="intro">
+  <h1>Тёплая коричнево-золотая семья</h1>
+  <p>30 вариаций «премиум-кальянной»: виски, шампань, медь, карамель, бронза, табак, орех. У каждой свой характер — от мягкого <b>quiet luxury</b> до сочного <b>винтажного бара</b>. Кликни «Выбрать» и пришли номер — применю на 4 страницы сайта.</p>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<!-- ═══ FULLSCREEN PREVIEW ═══ -->
+<div class="fs" id="fs" aria-hidden="true">
+  <div class="fs-inner" id="fsInner">
+    <div class="fs-nav">
+      <div class="fs-nav-l">
+        <span class="fs-nav-num" id="fsNum">№ 01</span>
+        <span id="fsName">—</span>
+      </div>
+      <div class="fs-nav-r">
+        <button class="fs-btn" id="fsPrev" title="Предыдущая">← Пред.</button>
+        <button class="fs-btn" id="fsNext" title="Следующая">След. →</button>
+        <button class="fs-btn primary" id="fsApply">Выбрать эту →</button>
+        <button class="fs-btn fs-close" id="fsClose" title="Закрыть (Esc)">✕</button>
+      </div>
+    </div>
+
+    <section class="fs-hero">
+      <div class="fs-wrap">
+        <div class="fs-crumbs">Барвиха Групп<span class="sep">/</span>Москва<span class="sep">/</span><span class="cur" id="fsCity">Красная площадь</span></div>
+        <div class="fs-status"><span class="dot"></span>Открыто сейчас<span class="t">· до 03:00</span></div>
+        <h1 class="fs-title">КРАСНАЯ<br>ПЛОЩАДЬ</h1>
+        <div class="fs-sub">Барвиха Лаунж · Красная площадь</div>
+        <div class="fs-meta">
+          <div class="fs-mi"><span class="fs-mi-l">Адрес</span><span class="fs-mi-v">Ветошный пер., 13 · ГУМ</span></div>
+          <div class="fs-mi"><span class="fs-mi-l">Пн–Чт, Вс</span><span class="fs-mi-v">12:00 — 03:00</span></div>
+          <div class="fs-mi"><span class="fs-mi-l">Пт – Сб</span><span class="fs-mi-v">12:00 — 06:00</span></div>
+          <div class="fs-mi"><span class="fs-mi-l">Телефон</span><span class="fs-mi-v">+7 (999) 113-30-01</span></div>
+        </div>
+        <div class="fs-cta">
+          <button class="fs-cta-g">Забронировать стол</button>
+          <button class="fs-cta-o">Маршрут</button>
+          <button class="fs-cta-o">Telegram</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="fs-sec">
+      <div class="fs-wrap">
+        <span class="fs-sec-lbl">Меню</span>
+        <h2 class="fs-sec-h">Что вас ждёт</h2>
+        <div class="fs-cards">
+          <div class="fs-card">
+            <span class="fs-card-i">01</span>
+            <div class="fs-card-t">Кальяны</div>
+            <div class="fs-card-s">60+ авторских миксов на электрочаше. Премиальные колбы Wookah и Egeglas.</div>
+            <div class="fs-card-p">от 2 500 ₽</div>
+          </div>
+          <div class="fs-card">
+            <span class="fs-card-i">02</span>
+            <div class="fs-card-t">Кухня</div>
+            <div class="fs-card-s">120+ блюд авторской кухни. Шеф-повар с опытом в Мишлен-ресторанах.</div>
+            <div class="fs-card-p">от 450 ₽</div>
+          </div>
+          <div class="fs-card">
+            <span class="fs-card-i">03</span>
+            <div class="fs-card-t">Бар</div>
+            <div class="fs-card-s">40+ авторских коктейлей. Крафтовые настойки и редкие выдержанные напитки.</div>
+            <div class="fs-card-p">от 380 ₽</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fs-sec">
+      <div class="fs-wrap">
+        <span class="fs-sec-lbl">Отзывы гостей</span>
+        <h2 class="fs-sec-h">Что говорят о нас</h2>
+        <div class="fs-quote">
+          <div class="fs-quote-stars">★★★★★</div>
+          <p class="fs-quote-text">«Атмосфера — топ. Кальянщики реально слышат, что просишь, а не суют классику. Кухня выше, чем в большинстве ресторанов на которые ходим. Будем возвращаться.»</p>
+          <div class="fs-quote-a">
+            <div class="fs-quote-ava">ЕМ</div>
+            <div><div class="fs-quote-name">Елена М.</div><div class="fs-quote-src">Яндекс.Карты · 2 нед. назад</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fs-sec">
+      <div class="fs-wrap">
+        <span class="fs-sec-lbl">Палитра</span>
+        <h2 class="fs-sec-h">Цвета этой темы</h2>
+        <div class="fs-swatch-row" id="fsSwatches"></div>
+      </div>
+    </section>
+
+    <div class="fs-footer">
+      <div class="fs-footer-l">Барвиха Групп · превью палитры</div>
+      <div class="fs-nav-r">
+        <button class="fs-btn" id="fsPrev2">← Предыдущая</button>
+        <button class="fs-btn primary" id="fsApply2">Выбрать эту палитру</button>
+        <button class="fs-btn" id="fsNext2">Следующая →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const PALETTES=[
+  {n:'Whisky & Cognac',     mood:'Виски-янтарь · кожа · вечерний свет',         bg:'#1A0F08', s1:'#211410', s2:'#2E1F15', s3:'#3A2A1D', g:'#B8895A', gl:'#E0C19B', gd:'#6B4423', t:'#F4E8D8'},
+  {n:'Champagne & Espresso',mood:'Aman / Мишлен · quiet luxury',                bg:'#1C1612', s1:'#261D17', s2:'#2D241D', s3:'#382C23', g:'#D4B582', gl:'#EDD9B5', gd:'#8B6F47', t:'#F5EDE0'},
+  {n:'Copper & Cocoa',      mood:'Индустриальный лофт · бруклинский бар',       bg:'#161210', s1:'#211915', s2:'#2A1F1A', s3:'#352822', g:'#C8895F', gl:'#E8BFA0', gd:'#7C4E2C', t:'#F5E9DD'},
+  {n:'Caramel & Mahogany',  mood:'Викторианский кабинет · кожа · сигары',       bg:'#14100C', s1:'#1F1812', s2:'#281E16', s3:'#33271C', g:'#C9985A', gl:'#E5C896', gd:'#5C3A1E', t:'#F3E9D8'},
+  {n:'Amber Old Fashioned', mood:'Тёплый янтарь · бар с пожилым виски',         bg:'#1D1308', s1:'#241810', s2:'#2C1E14', s3:'#352519', g:'#C18B4B', gl:'#E3BC7E', gd:'#704927', t:'#F4E8CC'},
+  {n:'Bronze Velvet',       mood:'Бронзовый бархат · оперная ложа',             bg:'#1B130E', s1:'#231915', s2:'#2C2018', s3:'#372820', g:'#A87142', gl:'#D9A37A', gd:'#583A20', t:'#F1E2CB'},
+  {n:'Toffee & Tobacco',    mood:'Ирис + табак · лаунж после полуночи',         bg:'#1E1610', s1:'#251D17', s2:'#2E251D', s3:'#382D23', g:'#D9A66A', gl:'#ECCB95', gd:'#7A5132', t:'#F5E9D5'},
+  {n:'Tan & Truffle',       mood:'Загар + трюфель · приглушённый',              bg:'#181311', s1:'#1F1916', s2:'#27201B', s3:'#322822', g:'#BF945E', gl:'#DFC18D', gd:'#6A4624', t:'#F2E7D5'},
+  {n:'Almond & Ink',        mood:'Миндаль на чернилах · литературный',          bg:'#14120F', s1:'#1B1814', s2:'#231F1A', s3:'#2D2822', g:'#C9A574', gl:'#E5CDA3', gd:'#7A593A', t:'#F4ECD9'},
+  {n:'Honey & Walnut',      mood:'Мёд и орех · уют деревенского клуба',         bg:'#1C1410', s1:'#231A14', s2:'#2C211A', s3:'#372A22', g:'#D4A056', gl:'#EBC788', gd:'#7A4F22', t:'#F4E8CD'},
+  {n:'Saffron Dust',        mood:'Шафрановая пыль · восточный лаунж',           bg:'#1A130C', s1:'#211A14', s2:'#2A211B', s3:'#352923', g:'#C8A464', gl:'#E6CC97', gd:'#705028', t:'#F3E9CD'},
+  {n:'Hazelnut Lounge',     mood:'Фундук · мягкий, бархатный, ровный',          bg:'#181208', s1:'#1F1810', s2:'#271F18', s3:'#322820', g:'#B89368', gl:'#DBBA94', gd:'#664626', t:'#F1E7CF'},
+  {n:'Wheat & Wenge',       mood:'Пшеница на венге · светлее акцент',           bg:'#15110D', s1:'#1C1813', s2:'#241F1A', s3:'#2F2820', g:'#DDB07A', gl:'#EED0A3', gd:'#7C5630', t:'#F5EBD5'},
+  {n:'Vintage Brass',       mood:'Винтажная латунь · музей',                    bg:'#181210', s1:'#1F1815', s2:'#27201B', s3:'#322822', g:'#B0894C', gl:'#D6B57F', gd:'#5A3E1A', t:'#F1E7CF'},
+  {n:'Sandalwood',          mood:'Сандал · восток · мягкий розовый подтон',     bg:'#19120E', s1:'#201914', s2:'#28201A', s3:'#332822', g:'#BE9670', gl:'#DDBC9C', gd:'#6B4A2C', t:'#F2E8D6'},
+  {n:'Smoked Almond',       mood:'Копчёный миндаль · дымный',                   bg:'#14100E', s1:'#1B1714', s2:'#231F1B', s3:'#2D2823', g:'#C19872', gl:'#DEBE9A', gd:'#6E4A2A', t:'#F3E9D7'},
+  {n:'Persimmon Tea',       mood:'Хурма + улун · оранжевее акцент',             bg:'#1B130D', s1:'#221A14', s2:'#2B211B', s3:'#352822', g:'#CB8957', gl:'#E5B68C', gd:'#7B4924', t:'#F4E8D2'},
+  {n:'Tawny Port',          mood:'Винный портвейн · с красной нотой',           bg:'#1A0E0A', s1:'#22150F', s2:'#2A1D16', s3:'#35241B', g:'#C28653', gl:'#E1B189', gd:'#702E1A', t:'#F2E2CE'},
+  {n:'Maple Smoke',         mood:'Кленовый дым · светлый и ясный',              bg:'#17110B', s1:'#1E1813', s2:'#26201A', s3:'#312921', g:'#BF8B4E', gl:'#DFB880', gd:'#6E4925', t:'#F2E8D0'},
+  {n:'Cinnamon Bourbon',    mood:'Корица в бурбоне · согревающий',              bg:'#190F0A', s1:'#21160F', s2:'#2A1D16', s3:'#35251D', g:'#C9844E', gl:'#E5B284', gd:'#7A4520', t:'#F4E5CB'},
+  {n:'Roasted Pecan',       mood:'Жаренный пекан · тёмно-золотой',              bg:'#16100B', s1:'#1D1610', s2:'#251E17', s3:'#30271F', g:'#B8784A', gl:'#D9A77F', gd:'#5E3818', t:'#F0E2CB'},
+  {n:'Espresso Crema',      mood:'Кофейная крема · светлый, мягкий',            bg:'#1D1612', s1:'#241D18', s2:'#2D241D', s3:'#382E25', g:'#D2A479', gl:'#EAC9A4', gd:'#7E5532', t:'#F5ECD8'},
+  {n:'Antique Gold',        mood:'Старое золото · музейная позолота',           bg:'#181006', s1:'#1F170D', s2:'#271F14', s3:'#32281B', g:'#B89557', gl:'#DBBC87', gd:'#5F3F12', t:'#F1E7C9'},
+  {n:'Olive Brass',         mood:'Оливковая латунь · чуть холоднее',            bg:'#15120C', s1:'#1B1813', s2:'#231F1A', s3:'#2D2822', g:'#A89055', gl:'#CFB789', gd:'#5C4920', t:'#F0E8CC'},
+  {n:'Sienna Velvet',       mood:'Сиена в бархате · насыщенно земляной',        bg:'#170E0A', s1:'#1E1410', s2:'#261B17', s3:'#31231E', g:'#B07747', gl:'#D3A57C', gd:'#5A341A', t:'#F0E1CB'},
+  {n:'Rose Cognac',         mood:'Розовый коньяк · с тёплой розовинкой',        bg:'#1B130F', s1:'#221A16', s2:'#2A211D', s3:'#352923', g:'#C58970', gl:'#E1B69A', gd:'#6E4232', t:'#F4E8D6'},
+  {n:'Burnished Wheat',     mood:'Полированная пшеница · бежевее',              bg:'#15120D', s1:'#1C1913', s2:'#24201A', s3:'#2D2822', g:'#B59C6E', gl:'#D8C29A', gd:'#5E4B26', t:'#F2EAD3'},
+  {n:'Walnut Glow',         mood:'Орех с подсветкой · насыщенный',              bg:'#18110A', s1:'#201810', s2:'#291F17', s3:'#332720', g:'#A47840', gl:'#CCA478', gd:'#5A3815', t:'#F1E5C8'},
+  {n:'Toffee Latte',        mood:'Ирисный латте · мягкий и сладкий',            bg:'#1A1310', s1:'#211A16', s2:'#2A221D', s3:'#352B25', g:'#C99B6E', gl:'#E5C397', gd:'#74502E', t:'#F4ECD7'},
+  {n:'Bourbon Glass',       mood:'Стакан бурбона · насыщенный, шарм',           bg:'#16100A', s1:'#1D1610', s2:'#251E17', s3:'#30271F', g:'#B9824D', gl:'#DBAE82', gd:'#693D1A', t:'#F1E5CB'}
+];
+
+function card(p, i){
+  const num=String(i+1).padStart(2,'0');
+  return `<article class="p" style="--bg:${p.bg};--s2:${p.s2};--g:${p.g};--gl:${p.gl};--gd:${p.gd};--t:${p.t}">
+    <button class="p-open" type="button" onclick="openFs(${i})" aria-label="Открыть палитру №${num} на всю страницу"></button>
+    <span class="p-hover">Открыть на всю страницу ⤢</span>
+    <div class="p-hd">
+      <div>
+        <div class="p-num">№ ${num}</div>
+        <div class="p-name">${p.n}</div>
+        <div class="p-mood">${p.mood}</div>
+      </div>
+    </div>
+    <div class="p-swatch">
+      <span data-hx="${p.bg}" style="background:${p.bg}"></span>
+      <span data-hx="${p.s1}" style="background:${p.s1}"></span>
+      <span data-hx="${p.s2}" style="background:${p.s2}"></span>
+      <span data-hx="${p.s3}" style="background:${p.s3}"></span>
+      <span data-hx="${p.gd}" style="background:${p.gd}"></span>
+      <span data-hx="${p.g}"  style="background:${p.g}"></span>
+      <span data-hx="${p.gl}" style="background:${p.gl}"></span>
+    </div>
+    <div class="p-mock">
+      <span class="pm-eyebrow">Барвиха · Москва</span>
+      <div class="pm-t">КРАСНАЯ ПЛОЩАДЬ</div>
+      <div class="pm-s">Барвиха Лаунж · 5 VIP-салонов · открыто до 03:00</div>
+      <div class="pm-row">
+        <button class="pm-btn" type="button" onclick="event.stopPropagation();openFs(${i})">Забронировать стол</button>
+        <button class="pm-btn-o" type="button" onclick="event.stopPropagation();openFs(${i})">Маршрут</button>
+      </div>
+    </div>
+    <div class="p-foot">
+      <span class="acc">${p.g}</span>
+      <button class="p-pick" type="button" onclick="event.stopPropagation();pick(${i+1}, ${JSON.stringify(p.n).replace(/"/g,'&quot;')})">Выбрать №${num}</button>
+    </div>
+  </article>`;
+}
+
+document.getElementById('grid').innerHTML = PALETTES.map(card).join('');
+
+// ═══ FULLSCREEN ═══
+const fs=document.getElementById('fs');
+const fsInner=document.getElementById('fsInner');
+let curIdx=0;
+
+function applyPaletteToFs(p,i){
+  curIdx=i;
+  // Применяем CSS-переменные к контейнеру
+  fsInner.style.setProperty('--bg',p.bg);
+  fsInner.style.setProperty('--s1',p.s1);
+  fsInner.style.setProperty('--s2',p.s2);
+  fsInner.style.setProperty('--s3',p.s3);
+  fsInner.style.setProperty('--g',p.g);
+  fsInner.style.setProperty('--gl',p.gl);
+  fsInner.style.setProperty('--gd',p.gd);
+  fsInner.style.setProperty('--t',p.t);
+  // Также подменим rgba(184,137,90,...) на динамические через прямые CSS-правила.
+  // Для простоты — пересоберём rgba из текущего акцента/текста
+  const hex2rgb=h=>{h=h.replace('#','');return [parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)].join(',')};
+  const rgbG=hex2rgb(p.g);
+  const rgbT=hex2rgb(p.t);
+  // Динамические rgba — через style-блок в head
+  let dyn=document.getElementById('fsDyn');
+  if(!dyn){dyn=document.createElement('style');dyn.id='fsDyn';document.head.appendChild(dyn)}
+  dyn.textContent=`
+    .fs-hero,.fs-sec{border-color:rgba(${rgbG},.18)!important}
+    .fs-meta,.fs-cards,.fs-swatch-row{background:rgba(${rgbG},.18)!important;border-color:rgba(${rgbG},.18)!important}
+    .fs-quote{border-color:rgba(${rgbG},.18)!important}
+    .fs-quote-a{border-top-color:rgba(${rgbG},.12)!important}
+    .fs-cta-o{border-color:rgba(${rgbG},.32)!important;color:rgba(${rgbT},.7)!important}
+    .fs-mi-v{color:rgba(${rgbT},.88)!important}
+    .fs-card-s{color:rgba(${rgbT},.55)!important}
+    .fs-crumbs{color:rgba(${rgbT},.5)!important}
+    .fs-status .t{color:rgba(${rgbT},.55)!important}
+    .fs-quote-text{color:rgba(${rgbT},.92)!important}
+    .fs-quote-src{color:rgba(${rgbT},.4)!important}
+    .fs-footer-l{color:rgba(${rgbT},.5)!important}
+    .fs-sw-l{color:rgba(${rgbT},.5)!important}
+    .fs-sw{color:rgba(${rgbT},.6)!important}
+    .fs-footer{border-top-color:rgba(${rgbG},.18)!important}
+  `;
+  // Шапка
+  document.getElementById('fsNum').textContent='№ '+String(i+1).padStart(2,'0');
+  document.getElementById('fsName').textContent=p.n;
+  // Свотчи
+  const sw=document.getElementById('fsSwatches');
+  sw.innerHTML=[
+    {l:'Фон',c:p.bg},{l:'Секции',c:p.s1},{l:'Карточки',c:p.s2},{l:'Глубже',c:p.s3},
+    {l:'Глубокий',c:p.gd},{l:'Акцент',c:p.g},{l:'Светлый',c:p.gl}
+  ].map(x=>`<div class="fs-sw"><div class="fs-sw-c" style="background:${x.c}"></div><div class="fs-sw-l">${x.l}</div><div>${x.c}</div></div>`).join('');
+}
+
+function openFs(i){
+  applyPaletteToFs(PALETTES[i],i);
+  fs.classList.add('on');
+  document.body.style.overflow='hidden';
+  fs.scrollTop=0;
+}
+function closeFs(){
+  fs.classList.remove('on');
+  document.body.style.overflow='';
+}
+function nextPal(){applyPaletteToFs(PALETTES[(curIdx+1)%PALETTES.length],(curIdx+1)%PALETTES.length);fs.scrollTop=0}
+function prevPal(){applyPaletteToFs(PALETTES[(curIdx-1+PALETTES.length)%PALETTES.length],(curIdx-1+PALETTES.length)%PALETTES.length);fs.scrollTop=0}
+
+document.getElementById('fsClose').addEventListener('click',closeFs);
+document.getElementById('fsNext').addEventListener('click',nextPal);
+document.getElementById('fsPrev').addEventListener('click',prevPal);
+document.getElementById('fsNext2').addEventListener('click',nextPal);
+document.getElementById('fsPrev2').addEventListener('click',prevPal);
+document.getElementById('fsApply').addEventListener('click',()=>pick(curIdx+1,PALETTES[curIdx].n));
+document.getElementById('fsApply2').addEventListener('click',()=>pick(curIdx+1,PALETTES[curIdx].n));
+
+document.addEventListener('keydown',e=>{
+  if(!fs.classList.contains('on'))return;
+  if(e.key==='Escape')closeFs();
+  else if(e.key==='ArrowRight')nextPal();
+  else if(e.key==='ArrowLeft')prevPal();
+});
+
+function pick(num, name){
+  const txt = `Палитра №${String(num).padStart(2,'0')} — ${name}`;
+  if(navigator.clipboard){navigator.clipboard.writeText(String(num)).catch(()=>{});}
+  alert(`✓ Выбрано: ${txt}\n\nПришли в чате номер «${num}» — применю на index/location/moscow/karaoke.`);
+}
+</script>
+</body>
+</html>

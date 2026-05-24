@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Барвиха · Тест 30 шрифтов</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23000'/><text y='24' x='4' font-size='24' fill='%23DBC278' font-family='serif' font-weight='bold'>B</text></svg>"/>
+
+<!-- Google Fonts: всё разбито на 3 запроса, чтобы URL не обрезался -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Manrope:wght@400;800&family=Onest:wght@400;800&family=Unbounded:wght@400;800&family=Inter:wght@400;700&family=Raleway:wght@400;700;800&family=Oswald:wght@400;600;700&family=PT+Sans:wght@400;700&family=Nunito:wght@400;700;800&family=Rubik:wght@400;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Golos+Text:wght@400;700;900&family=Jost:wght@400;700;800&family=Mulish:wght@400;700;900&family=Russo+One&family=Tenor+Sans&family=Cuprum:wght@400;700&family=Yeseva+One&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Cormorant+Garamond:wght@400;500;600;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900&family=Prata&family=Marcellus&family=Spectral:wght@400;600;800&family=PT+Serif:wght@400;700&family=Old+Standard+TT:wght@400;700&family=Bona+Nova:ital,wght@0,400;0,700&family=EB+Garamond:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet"/>
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --bg:#000;
+  --bg-1:#070707;
+  --gold:#DBC278;
+  --gold-soft:#C9B070;
+  --gold-deep:#8E7438;
+  --line-strong:rgba(219,194,120,.32);
+  --text:#F2EFE6;
+  --text-soft:rgba(242,239,230,.62);
+  --text-mute:rgba(242,239,230,.38);
+  --ease:cubic-bezier(.22,.61,.36,1)
+}
+
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+/* ── HEADER ── */
+.page-hd{padding:3.5rem 2.5rem 2rem;border-bottom:1px solid rgba(219,194,120,.14);position:sticky;top:0;background:rgba(0,0,0,.94);backdrop-filter:blur(18px);z-index:50}
+.page-hd-eb{font-family:'Inter',sans-serif;font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:.65rem;display:inline-flex;align-items:center;gap:.85rem}
+.page-hd-eb::before{content:'';width:28px;height:1px;background:var(--gold)}
+.page-hd-t{font-family:'Inter',sans-serif;font-size:1.55rem;font-weight:300;letter-spacing:.04em;color:var(--text)}
+.page-hd-p{margin-top:.6rem;color:var(--text-soft);max-width:42rem;font-size:.86rem;line-height:1.65}
+.page-hd-nav{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.4rem;margin-top:1.2rem;max-height:280px;overflow-y:auto;padding-right:.4rem}
+.page-hd-nav a{font-family:'Inter',sans-serif;font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-soft);padding:.45rem .7rem;border:1px solid rgba(255,255,255,.06);transition:all .22s var(--ease)}
+.page-hd-nav a:hover{border-color:var(--gold);color:var(--gold)}
+@media(max-width:768px){.page-hd{position:relative}.page-hd-nav{max-height:none}}
+
+/* ── SAMPLE BLOCK ── */
+.sample{padding:5rem 2.5rem;border-bottom:1px solid rgba(219,194,120,.1);position:relative;background:var(--bg)}
+.sample:nth-child(even){background:var(--bg-1)}
+
+.sample-meta{display:flex;align-items:baseline;justify-content:space-between;gap:1.5rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.sample-name{font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:.85rem}
+.sample-name::before{content:'';width:36px;height:1px;background:var(--gold);opacity:.7}
+.sample-num{font-family:'Inter',sans-serif;font-size:.6rem;letter-spacing:.28em;color:var(--text-mute)}
+.sample-desc{margin-top:.55rem;color:var(--text-soft);font-size:.82rem;line-height:1.65;max-width:44rem;font-family:'Inter',sans-serif}
+
+.sample-eb{font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:.85rem;margin-bottom:1.1rem;font-family:'Inter',sans-serif}
+.sample-eb::before{content:'';width:28px;height:1px;background:var(--gold);opacity:.7}
+
+.sample-hero{
+  font-size:clamp(3.2rem,10.5vw,8rem);
+  font-weight:700;letter-spacing:.04em;line-height:.92;
+  background-image:linear-gradient(105deg,#9C7E3A 0%,#DBC278 28%,#EBDCA9 45%,#F4E8BE 50%,#EBDCA9 55%,#DBC278 72%,#9C7E3A 100%);
+  background-size:220% 100%;
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+  margin:.4rem 0 1.6rem;
+  animation:goldFlow 14s cubic-bezier(.45,.05,.55,.95) infinite
+}
+@keyframes goldFlow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+.sample-h2{
+  font-size:clamp(1.85rem,4.4vw,3.2rem);
+  font-weight:400;letter-spacing:.02em;line-height:1.05;
+  color:var(--text);margin-bottom:1.2rem
+}
+
+.sample-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:rgba(219,194,120,.14);border:1px solid rgba(219,194,120,.14);margin-top:2rem}
+.sample-card{background:#080808;padding:1.3rem 1.5rem;position:relative}
+.sample-card-l{font-size:.55rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);opacity:.75;margin-bottom:.45rem;font-family:'Inter',sans-serif}
+.sample-card-n{font-size:1.3rem;font-weight:400;letter-spacing:.04em;color:var(--text);line-height:1.05}
+.sample-card-s{margin-top:.5rem;font-size:.75rem;color:var(--text-soft);font-family:'Inter',sans-serif}
+
+/* ── ШРИФТЫ ── */
+.fnt-montserrat .sample-hero,.fnt-montserrat .sample-h2,.fnt-montserrat .sample-card-n{font-family:'Montserrat',sans-serif}
+.fnt-montserrat .sample-hero{font-weight:700}
+
+.fnt-manrope .sample-hero,.fnt-manrope .sample-h2,.fnt-manrope .sample-card-n{font-family:'Manrope',sans-serif}
+.fnt-manrope .sample-hero{font-weight:800}
+
+.fnt-onest .sample-hero,.fnt-onest .sample-h2,.fnt-onest .sample-card-n{font-family:'Onest',sans-serif}
+.fnt-onest .sample-hero{font-weight:800}
+
+.fnt-unbounded .sample-hero,.fnt-unbounded .sample-h2,.fnt-unbounded .sample-card-n{font-family:'Unbounded',sans-serif}
+.fnt-unbounded .sample-hero{font-weight:800;letter-spacing:.02em}
+
+.fnt-inter .sample-hero,.fnt-inter .sample-h2,.fnt-inter .sample-card-n{font-family:'Inter',sans-serif}
+.fnt-inter .sample-hero{font-weight:700}
+
+.fnt-raleway .sample-hero,.fnt-raleway .sample-h2,.fnt-raleway .sample-card-n{font-family:'Raleway',sans-serif}
+.fnt-raleway .sample-hero{font-weight:800}
+
+.fnt-oswald .sample-hero,.fnt-oswald .sample-h2,.fnt-oswald .sample-card-n{font-family:'Oswald',sans-serif}
+.fnt-oswald .sample-hero{font-weight:700;letter-spacing:.06em}
+
+.fnt-ptsans .sample-hero,.fnt-ptsans .sample-h2,.fnt-ptsans .sample-card-n{font-family:'PT Sans',sans-serif}
+.fnt-ptsans .sample-hero{font-weight:700}
+
+.fnt-nunito .sample-hero,.fnt-nunito .sample-h2,.fnt-nunito .sample-card-n{font-family:'Nunito',sans-serif}
+.fnt-nunito .sample-hero{font-weight:800}
+
+.fnt-rubik .sample-hero,.fnt-rubik .sample-h2,.fnt-rubik .sample-card-n{font-family:'Rubik',sans-serif}
+.fnt-rubik .sample-hero{font-weight:900}
+
+.fnt-comfortaa .sample-hero,.fnt-comfortaa .sample-h2,.fnt-comfortaa .sample-card-n{font-family:'Comfortaa',sans-serif}
+.fnt-comfortaa .sample-hero{font-weight:700}
+
+.fnt-golos .sample-hero,.fnt-golos .sample-h2,.fnt-golos .sample-card-n{font-family:'Golos Text',sans-serif}
+.fnt-golos .sample-hero{font-weight:900;letter-spacing:.02em}
+
+.fnt-jost .sample-hero,.fnt-jost .sample-h2,.fnt-jost .sample-card-n{font-family:'Jost',sans-serif}
+.fnt-jost .sample-hero{font-weight:800;letter-spacing:.02em}
+
+.fnt-mulish .sample-hero,.fnt-mulish .sample-h2,.fnt-mulish .sample-card-n{font-family:'Mulish',sans-serif}
+.fnt-mulish .sample-hero{font-weight:900}
+
+.fnt-russo .sample-hero,.fnt-russo .sample-h2,.fnt-russo .sample-card-n{font-family:'Russo One',sans-serif}
+.fnt-russo .sample-hero{font-weight:400;letter-spacing:.04em}
+
+.fnt-tenor .sample-hero,.fnt-tenor .sample-h2,.fnt-tenor .sample-card-n{font-family:'Tenor Sans',sans-serif}
+.fnt-tenor .sample-hero{font-weight:400;letter-spacing:.06em}
+
+.fnt-cuprum .sample-hero,.fnt-cuprum .sample-h2,.fnt-cuprum .sample-card-n{font-family:'Cuprum',sans-serif}
+.fnt-cuprum .sample-hero{font-weight:700;letter-spacing:.04em}
+
+.fnt-yeseva .sample-hero,.fnt-yeseva .sample-h2,.fnt-yeseva .sample-card-n{font-family:'Yeseva One',serif}
+.fnt-yeseva .sample-hero{font-weight:400;letter-spacing:.02em}
+
+.fnt-forum .sample-hero,.fnt-forum .sample-h2,.fnt-forum .sample-card-n{font-family:'Forum',serif}
+.fnt-forum .sample-hero{font-weight:400;letter-spacing:.02em}
+
+.fnt-cormorant .sample-hero,.fnt-cormorant .sample-h2,.fnt-cormorant .sample-card-n{font-family:'Cormorant Garamond',serif}
+.fnt-cormorant .sample-hero{font-weight:700;letter-spacing:.01em}
+
+.fnt-bodoni .sample-hero,.fnt-bodoni .sample-h2,.fnt-bodoni .sample-card-n{font-family:'Bodoni Moda',serif}
+.fnt-bodoni .sample-hero{font-weight:900;letter-spacing:.01em}
+
+.fnt-prata .sample-hero,.fnt-prata .sample-h2,.fnt-prata .sample-card-n{font-family:'Prata',serif}
+.fnt-prata .sample-hero{font-weight:400;letter-spacing:.02em}
+
+.fnt-marcellus .sample-hero,.fnt-marcellus .sample-h2,.fnt-marcellus .sample-card-n{font-family:'Marcellus',serif}
+.fnt-marcellus .sample-hero{font-weight:400;letter-spacing:.02em}
+
+.fnt-spectral .sample-hero,.fnt-spectral .sample-h2,.fnt-spectral .sample-card-n{font-family:'Spectral',serif}
+.fnt-spectral .sample-hero{font-weight:800;letter-spacing:.01em}
+
+.fnt-ptserif .sample-hero,.fnt-ptserif .sample-h2,.fnt-ptserif .sample-card-n{font-family:'PT Serif',serif}
+.fnt-ptserif .sample-hero{font-weight:700}
+
+.fnt-oldstandard .sample-hero,.fnt-oldstandard .sample-h2,.fnt-oldstandard .sample-card-n{font-family:'Old Standard TT',serif}
+.fnt-oldstandard .sample-hero{font-weight:700;letter-spacing:.02em}
+
+.fnt-bonanova .sample-hero,.fnt-bonanova .sample-h2,.fnt-bonanova .sample-card-n{font-family:'Bona Nova',serif}
+.fnt-bonanova .sample-hero{font-weight:700;letter-spacing:.02em}
+
+.fnt-ebgaramond .sample-hero,.fnt-ebgaramond .sample-h2,.fnt-ebgaramond .sample-card-n{font-family:'EB Garamond',serif}
+.fnt-ebgaramond .sample-hero{font-weight:700;letter-spacing:.01em}
+
+.fnt-lora .sample-hero,.fnt-lora .sample-h2,.fnt-lora .sample-card-n{font-family:'Lora',serif}
+.fnt-lora .sample-hero{font-weight:700;letter-spacing:.02em}
+
+.fnt-merriweather .sample-hero,.fnt-merriweather .sample-h2,.fnt-merriweather .sample-card-n{font-family:'Merriweather',serif}
+.fnt-merriweather .sample-hero{font-weight:900;letter-spacing:0}
+
+/* ── FOOT ── */
+.foot{padding:3rem 2.5rem;text-align:center;border-top:1px solid rgba(219,194,120,.14)}
+.foot a{color:var(--gold);font-family:'Inter',sans-serif;font-size:.6rem;letter-spacing:.28em;text-transform:uppercase}
+
+@media(max-width:600px){
+  .page-hd,.sample,.foot{padding-left:1.25rem;padding-right:1.25rem}
+}
+</style>
+</head>
+<body>
+
+<header class="page-hd">
+  <span class="page-hd-eb">Лаборатория шрифтов</span>
+  <h1 class="page-hd-t">30 вариантов начертаний для заголовков</h1>
+  <p class="page-hd-p">Один и тот же блок (hero «БАРВИХА» + eyebrow + H2 + карточки городов) показан в 30 разных шрифтах. Все с кириллицей, через Google Fonts. Скрольни ниже, выбери — пришли номер.</p>
+  <nav class="page-hd-nav">
+    <a href="#s01">01 Montserrat</a>
+    <a href="#s02">02 Manrope</a>
+    <a href="#s03">03 Onest</a>
+    <a href="#s04">04 Unbounded</a>
+    <a href="#s05">05 Inter</a>
+    <a href="#s06">06 Raleway</a>
+    <a href="#s07">07 Oswald</a>
+    <a href="#s08">08 PT Sans</a>
+    <a href="#s09">09 Nunito</a>
+    <a href="#s10">10 Rubik</a>
+    <a href="#s11">11 Comfortaa</a>
+    <a href="#s12">12 Golos Text</a>
+    <a href="#s13">13 Jost</a>
+    <a href="#s14">14 Mulish</a>
+    <a href="#s15">15 Russo One</a>
+    <a href="#s16">16 Tenor Sans</a>
+    <a href="#s17">17 Cuprum</a>
+    <a href="#s18">18 Yeseva One</a>
+    <a href="#s19">19 Forum</a>
+    <a href="#s20">20 Cormorant</a>
+    <a href="#s21">21 Bodoni Moda</a>
+    <a href="#s22">22 Prata</a>
+    <a href="#s23">23 Marcellus</a>
+    <a href="#s24">24 Spectral</a>
+    <a href="#s25">25 PT Serif</a>
+    <a href="#s26">26 Old Standard</a>
+    <a href="#s27">27 Bona Nova</a>
+    <a href="#s28">28 EB Garamond</a>
+    <a href="#s29">29 Lora</a>
+    <a href="#s30">30 Merriweather</a>
+  </nav>
+</header>
+
+<!-- ═══════════════ SANS-SERIF ═══════════════ -->
+
+<section class="sample fnt-montserrat" id="s01">
+  <div class="sample-meta"><div><span class="sample-name">Montserrat (текущий)</span><p class="sample-desc">Sans · нейтральный геометрический · текущий на сайте. База без характера.</p></div><span class="sample-num">01 / 30 · SANS</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-manrope" id="s02">
+  <div class="sample-meta"><div><span class="sample-name">Manrope</span><p class="sample-desc">Sans · слегка скруглённый, тёплый, человечный. Хорошая альтернатива Montserrat если хочется мягче.</p></div><span class="sample-num">02 / 30 · SANS</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-onest" id="s03">
+  <div class="sample-meta"><div><span class="sample-name">Onest</span><p class="sample-desc">Sans · премиум-замена Inter. Геометрический, чёткий, российская разработка с отличной кириллицей.</p></div><span class="sample-num">03 / 30 · SANS</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-unbounded" id="s04">
+  <div class="sample-meta"><div><span class="sample-name">Unbounded</span><p class="sample-desc">Sans display · характерные формы букв («Б» с верхней засечкой). Брендовый, узнаваемый.</p></div><span class="sample-num">04 / 30 · SANS</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-inter" id="s05">
+  <div class="sample-meta"><div><span class="sample-name">Inter</span><p class="sample-desc">Sans · корпоративный стандарт (используется в Linear, Vercel). Очень чистый, нейтральный.</p></div><span class="sample-num">05 / 30 · SANS</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-raleway" id="s06">
+  <div class="sample-meta"><div><span class="sample-name">Raleway</span><p class="sample-desc">Sans display · элегантный, тонкие штрихи, премиум-вайб. Хорошо в крупных размерах.</p></div><span class="sample-num">06 / 30 · SANS</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-oswald" id="s07">
+  <div class="sample-meta"><div><span class="sample-name">Oswald</span><p class="sample-desc">Sans condensed · узкий, вытянутый, плакатный. Эстетика лайфстайл-журналов.</p></div><span class="sample-num">07 / 30 · SANS</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-ptsans" id="s08">
+  <div class="sample-meta"><div><span class="sample-name">PT Sans</span><p class="sample-desc">Sans · официальный российский шрифт (ParaType). Сделан с учётом кириллицы. Не премиум, но очень стабильный.</p></div><span class="sample-num">08 / 30 · SANS</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-nunito" id="s09">
+  <div class="sample-meta"><div><span class="sample-name">Nunito</span><p class="sample-desc">Sans · округлый, дружелюбный. Подходит для брендов, которые хотят быть «ближе к гостю». Менее премиум.</p></div><span class="sample-num">09 / 30 · SANS</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-rubik" id="s10">
+  <div class="sample-meta"><div><span class="sample-name">Rubik</span><p class="sample-desc">Sans · современный, слегка округлый, очень характерные пропорции. Energy / контркультура.</p></div><span class="sample-num">10 / 30 · SANS</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-comfortaa" id="s11">
+  <div class="sample-meta"><div><span class="sample-name">Comfortaa</span><p class="sample-desc">Sans · максимально округлый, мягкий, «лоунж». Уютный, не строгий. Подходит для премиум-кальянной.</p></div><span class="sample-num">11 / 30 · SANS</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-golos" id="s12">
+  <div class="sample-meta"><div><span class="sample-name">Golos Text</span><p class="sample-desc">Sans · российский премиум-шрифт, специально для русского интерфейса (Госуслуги). Очень характерные буквы.</p></div><span class="sample-num">12 / 30 · SANS</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-jost" id="s13">
+  <div class="sample-meta"><div><span class="sample-name">Jost</span><p class="sample-desc">Sans · современная вариация на тему Futura. Геометрический, чистый. «Холодный люкс».</p></div><span class="sample-num">13 / 30 · SANS</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-mulish" id="s14">
+  <div class="sample-meta"><div><span class="sample-name">Mulish</span><p class="sample-desc">Sans · нейтральный современный, очень читаемый. Альтернатива Inter с чуть более яркой кириллицей.</p></div><span class="sample-num">14 / 30 · SANS</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-russo" id="s15">
+  <div class="sample-meta"><div><span class="sample-name">Russo One</span><p class="sample-desc">Sans display · техногенный, плакатный, мощный. Русский характер, заметность. Для бренда с энергией.</p></div><span class="sample-num">15 / 30 · SANS</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-tenor" id="s16">
+  <div class="sample-meta"><div><span class="sample-name">Tenor Sans</span><p class="sample-desc">Sans display · вытянутые, тонкие пропорции с лёгкими нюансами. Эстетика модных бутиков.</p></div><span class="sample-num">16 / 30 · SANS</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-cuprum" id="s17">
+  <div class="sample-meta"><div><span class="sample-name">Cuprum</span><p class="sample-desc">Sans condensed · узкий, deco-style, российский. Эстетика конструктивизма и старых афиш.</p></div><span class="sample-num">17 / 30 · SANS</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-yeseva" id="s18">
+  <div class="sample-meta"><div><span class="sample-name">Yeseva One</span><p class="sample-desc">Display serif · стилизованный romantic-serif, очень декоративный. «Бутиковая» вывеска.</p></div><span class="sample-num">18 / 30 · DISPLAY</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<!-- ═══════════════ SERIF ═══════════════ -->
+
+<section class="sample fnt-forum" id="s19">
+  <div class="sample-meta"><div><span class="sample-name">Forum</span><p class="sample-desc">Serif · классический русский, дореволюционный вайб. Спокойная элегантность.</p></div><span class="sample-num">19 / 30 · SERIF</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-cormorant" id="s20">
+  <div class="sample-meta"><div><span class="sample-name">Cormorant Garamond</span><p class="sample-desc">Serif · деликатный, узкий, романтичный. Премиум с тонкими штрихами.</p></div><span class="sample-num">20 / 30 · SERIF</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-bodoni" id="s21">
+  <div class="sample-meta"><div><span class="sample-name">Bodoni Moda</span><p class="sample-desc">Serif · максимально контрастный, Vogue / Tom Ford. Жирно, броско, fashion-люкс.</p></div><span class="sample-num">21 / 30 · SERIF</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-prata" id="s22">
+  <div class="sample-meta"><div><span class="sample-name">Prata</span><p class="sample-desc">Serif · высокий узкий, парадный. Декоративные «носики» — лучше всего на крупных размерах.</p></div><span class="sample-num">22 / 30 · SERIF</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-marcellus" id="s23">
+  <div class="sample-meta"><div><span class="sample-name">Marcellus</span><p class="sample-desc">Serif · неоклассика, lapidary-stиль (вырезка по камню). Сдержанно, без излишеств.</p></div><span class="sample-num">23 / 30 · SERIF</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-spectral" id="s24">
+  <div class="sample-meta"><div><span class="sample-name">Spectral</span><p class="sample-desc">Serif современный · отличная кириллица, чёткий, читаемый. Баланс «деловой + премиум».</p></div><span class="sample-num">24 / 30 · SERIF</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-ptserif" id="s25">
+  <div class="sample-meta"><div><span class="sample-name">PT Serif</span><p class="sample-desc">Serif · классический русский от ParaType. Книжный, спокойный, надёжный.</p></div><span class="sample-num">25 / 30 · SERIF</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-oldstandard" id="s26">
+  <div class="sample-meta"><div><span class="sample-name">Old Standard TT</span><p class="sample-desc">Serif · антиква по образцам XIX века. Старинный, академический вайб (книги, манускрипты).</p></div><span class="sample-num">26 / 30 · SERIF</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-bonanova" id="s27">
+  <div class="sample-meta"><div><span class="sample-name">Bona Nova</span><p class="sample-desc">Serif · возрождённый польский шрифт 1971 года. Премиум с характером и тёплыми засечками.</p></div><span class="sample-num">27 / 30 · SERIF</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-ebgaramond" id="s28">
+  <div class="sample-meta"><div><span class="sample-name">EB Garamond</span><p class="sample-desc">Serif · возрождение Garamond XVI века. Эталон editorial-luxe (Aman, NYT-стиль).</p></div><span class="sample-num">28 / 30 · SERIF</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-lora" id="s29">
+  <div class="sample-meta"><div><span class="sample-name">Lora</span><p class="sample-desc">Serif · мягкий, calligraphic-вайб. Журнальная эстетика, balance между классикой и современностью.</p></div><span class="sample-num">29 / 30 · SERIF</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<section class="sample fnt-merriweather" id="s30">
+  <div class="sample-meta"><div><span class="sample-name">Merriweather</span><p class="sample-desc">Serif slab · жирный, тяжёлый, плотный. Эстетика «steakhouse» — мощно, без полутонов.</p></div><span class="sample-num">30 / 30 · SERIF</span></div>
+  <span class="sample-eb">Наша география</span><div class="sample-hero">БАРВИХА</div><h2 class="sample-h2">Выберите ваш город</h2>
+  <div class="sample-cards"><div class="sample-card"><div class="sample-card-l">01 · Москва</div><div class="sample-card-n">Москва</div><div class="sample-card-s">17 заведений</div></div><div class="sample-card"><div class="sample-card-l">02 · СПб</div><div class="sample-card-n">Санкт-Петербург</div><div class="sample-card-s">1 заведение</div></div><div class="sample-card"><div class="sample-card-l">03 · Махачкала</div><div class="sample-card-n">Махачкала</div><div class="sample-card-s">1 заведение</div></div></div>
+</section>
+
+<footer class="foot">
+  <a href="index.html">← Вернуться на сайт</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Master Blend — Барвиха</title>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+:root{
+  /* MASTER BLEND — объединение №01 Whisky + №05 Amber Old Fashioned + №13 Wheat & Wenge */
+  /* Более коричневый, насыщенный фон (не чёрный, а тёплое какао-дерево) */
+  --bg:#2A1B11;
+  --s1:#33221A;
+  --s2:#3B2A20;
+  --s3:#453324;
+  --s4:#503D2D;
+  --gold:#C49262;       /* среднее между Whisky #B8895A, Amber #C18B4B и Wheat #DDB07A */
+  --gold-lt:#E5C490;    /* между E0C19B, E3BC7E, EED0A3 */
+  --gold-dk:#6F4827;    /* между 6B4423, 704927, 7C5630 */
+  --text:#F4E9D5;       /* тёплый кремовый */
+  --muted:rgba(244,233,213,.5);
+  --soft:rgba(244,233,213,.7);
+  --line:rgba(196,146,98,.22);
+  --line-2:rgba(196,146,98,.35);
+}
+
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-weight:300;line-height:1.6;overflow-x:hidden;min-height:100vh}
+a{color:inherit;text-decoration:none}
+
+/* Фоновая текстура — мягкий градиент чтобы коричневый «дышал» */
+body::before{content:'';position:fixed;inset:0;background:
+  radial-gradient(ellipse at 15% 20%,rgba(196,146,98,.07) 0%,transparent 55%),
+  radial-gradient(ellipse at 85% 80%,rgba(196,146,98,.04) 0%,transparent 50%),
+  linear-gradient(180deg,transparent 0%,rgba(20,12,8,.25) 100%);
+  pointer-events:none;z-index:0}
+body>*{position:relative;z-index:1}
+
+/* ═══ NAV ═══ */
+.nav{position:sticky;top:0;z-index:50;background:rgba(42,27,17,.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.nav-l{font-family:'Tenor Sans';font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--text);display:flex;align-items:center;gap:.7rem}
+.nav-l .badge{font-size:.55rem;letter-spacing:.2em;color:var(--gold);border:1px solid var(--line-2);padding:.35rem .75rem}
+.nav-r{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap}
+.nav-link{font-family:'Tenor Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);padding:.5rem 0;transition:color .25s}
+.nav-link:hover{color:var(--gold)}
+.btn{font-family:'Tenor Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;padding:.85rem 1.5rem;border:none;cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:.55rem;white-space:nowrap}
+.btn-g{background:var(--gold);color:#1a0f08}
+.btn-g:hover{box-shadow:0 14px 36px -12px var(--gold);transform:translateY(-1px)}
+.btn-o{background:transparent;color:var(--soft);border:1px solid var(--line-2)}
+.btn-o:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ═══ HERO ═══ */
+.hero{padding:5.5rem 2rem 4.5rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:1.5rem;left:1.5rem;width:60px;height:60px;border-top:1.5px solid var(--gold);border-left:1.5px solid var(--gold);opacity:.7}
+.hero::after{content:'';position:absolute;bottom:1.5rem;right:1.5rem;width:60px;height:60px;border-bottom:1.5px solid var(--gold);border-right:1.5px solid var(--gold);opacity:.7}
+.wrap{max-width:1180px;margin:0 auto;padding:0 1rem}
+.crumbs{font-family:'Tenor Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:.7rem;margin-bottom:1.6rem}
+.crumbs .sep{color:var(--gold);opacity:.5}
+.crumbs .cur{color:var(--gold)}
+.status{display:inline-flex;align-items:center;gap:.65rem;font-family:'Tenor Sans';font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:#9bd49b;border:1px solid rgba(155,212,155,.4);padding:.55rem 1rem;background:rgba(0,0,0,.25);margin-bottom:1.6rem}
+.status .dot{width:9px;height:9px;border-radius:50%;background:currentColor;box-shadow:0 0 12px currentColor;animation:pulse 1.6s ease-in-out infinite}
+.status .t{color:var(--muted);font-weight:300;letter-spacing:.05em}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
+.h1{font-family:'Tenor Sans';font-size:clamp(2.8rem,7vw,6.2rem);font-weight:400;letter-spacing:.07em;line-height:.95;margin-bottom:.6rem}
+.h1-sub{font-family:'Tenor Sans';font-size:.9rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:2.5rem}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-2);border:1px solid var(--line-2);margin-bottom:2.5rem}
+.mi{background:var(--s1);padding:1.1rem 1.55rem}
+.mi-l{font-family:'Tenor Sans';font-size:.5rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.35rem}
+.mi-v{font-size:.88rem;color:var(--soft)}
+.cta{display:flex;gap:.7rem;flex-wrap:wrap}
+
+/* ═══ SECTION ═══ */
+.section{padding:5rem 2rem;border-top:1px solid var(--line)}
+.sec-lbl{font-family:'Tenor Sans';font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:.85rem;margin-bottom:1rem}
+.sec-lbl::before{content:'';width:30px;height:1px;background:var(--gold);opacity:.7}
+.sec-h{font-family:'Tenor Sans';font-size:clamp(1.7rem,3.3vw,2.5rem);font-weight:400;letter-spacing:.04em;margin-bottom:2.5rem;line-height:1.1}
+
+/* ═══ MENU CARDS ═══ */
+.mm{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-2);border:1px solid var(--line-2);margin-bottom:2rem}
+.mc{background:var(--s2);padding:2rem 1.85rem 1.85rem;display:flex;flex-direction:column;gap:.55rem;min-height:240px;position:relative;transition:background .3s,transform .3s;cursor:pointer}
+.mc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--gold-lt),var(--gold),var(--gold-dk));transform:scaleY(0);transform-origin:bottom;transition:transform .35s}
+.mc:hover{background:var(--s3);transform:translateY(-3px)}
+.mc:hover::before{transform:scaleY(1)}
+.mc-i{font-family:'Tenor Sans';font-size:.5rem;letter-spacing:.28em;color:var(--gold);display:inline-flex;align-items:center;gap:.55rem;margin-bottom:.3rem}
+.mc-i::after{content:'';width:18px;height:1px;background:var(--gold);opacity:.55}
+.mc-t{font-family:'Tenor Sans';font-size:1.3rem;letter-spacing:.04em;line-height:1.05}
+.mc-s{font-size:.78rem;color:var(--muted);line-height:1.65;flex:1;margin-top:.25rem}
+.mc-p{font-family:'Tenor Sans';font-size:1rem;color:var(--gold);margin-top:.5rem;letter-spacing:.04em}
+.mc-arr{font-family:'Tenor Sans';font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);opacity:0;transform:translateX(-4px);transition:all .3s;margin-top:.6rem}
+.mc:hover .mc-arr{opacity:1;transform:translateX(0)}
+
+/* ═══ FEATURES ═══ */
+.feat{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-2);border:1px solid var(--line-2)}
+.fi{background:var(--s1);padding:1.5rem 1.4rem;display:flex;flex-direction:column;gap:.4rem;min-height:140px}
+.fi-i{font-family:'Tenor Sans';font-size:1.2rem;color:var(--gold);font-weight:400;margin-bottom:.3rem}
+.fi-t{font-family:'Tenor Sans';font-size:.85rem;letter-spacing:.04em;color:var(--text)}
+.fi-s{font-size:.7rem;color:var(--muted);line-height:1.55}
+
+/* ═══ QUOTE ═══ */
+.quote{background:var(--s2);border:1px solid var(--line);padding:2.4rem 2.4rem;position:relative;max-width:760px;margin:0 auto}
+.quote::before{content:'\201C';position:absolute;top:.5rem;right:1.5rem;font-family:'Tenor Sans';font-size:6rem;color:var(--gold);opacity:.13;line-height:1}
+.q-stars{color:var(--gold);font-size:1rem;letter-spacing:.06em;margin-bottom:1.1rem}
+.q-text{font-size:.95rem;line-height:1.85;color:var(--soft);font-style:italic;margin-bottom:1.5rem}
+.q-a{display:flex;align-items:center;gap:1.1rem;border-top:1px solid var(--line);padding-top:1.2rem}
+.q-ava{width:46px;height:46px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-family:'Tenor Sans';font-size:.75rem;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(196,146,98,.08),rgba(0,0,0,.3))}
+.q-name{font-family:'Tenor Sans';font-size:.88rem;letter-spacing:.04em;color:var(--text)}
+.q-src{font-size:.66rem;color:var(--muted);margin-top:.15rem}
+
+/* ═══ VIP ═══ */
+.vip-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:3rem;align-items:start}
+.vip-block{background:var(--s2);border:1px solid var(--line-2);padding:2.4rem 2.2rem 2.1rem;position:relative}
+.vip-block::before{content:'';position:absolute;top:-1px;left:-1px;width:40px;height:40px;border-top:1.5px solid var(--gold);border-left:1.5px solid var(--gold)}
+.vip-block::after{content:'';position:absolute;bottom:-1px;right:-1px;width:40px;height:40px;border-bottom:1.5px solid var(--gold);border-right:1.5px solid var(--gold)}
+.vip-h{font-family:'Tenor Sans';font-size:1.4rem;letter-spacing:.05em;margin:.4rem 0 .9rem}
+.vip-p{font-size:.85rem;color:var(--muted);line-height:1.85;margin-bottom:1.5rem}
+.vip-feats{display:flex;flex-direction:column;gap:.65rem;margin-bottom:1.5rem}
+.vf{display:flex;align-items:flex-start;gap:.75rem;font-size:.8rem;color:var(--soft);line-height:1.55}
+.vf-i{width:20px;height:20px;flex-shrink:0;border:1px solid var(--gold);color:var(--gold);font-family:'Tenor Sans';font-size:.6rem;display:flex;align-items:center;justify-content:center;margin-top:1px}
+
+/* ═══ PALETTE SWATCHES ═══ */
+.pal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--line-2);border:1px solid var(--line-2)}
+.sw{background:var(--s1);padding:1.4rem 1rem;text-align:center;min-height:140px;display:flex;flex-direction:column;gap:.6rem;align-items:center}
+.sw-c{width:100%;height:50px;border:1px solid rgba(0,0,0,.15);box-shadow:0 6px 18px -8px rgba(0,0,0,.4)}
+.sw-l{font-family:'Tenor Sans';font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-top:.3rem}
+.sw-h{font-family:'Inter';font-size:.72rem;color:var(--soft);letter-spacing:.03em}
+
+/* ═══ FOOTER ═══ */
+.footer{padding:3.5rem 2rem;border-top:1px solid var(--line-2);background:rgba(20,12,8,.35);display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.foot-l{font-family:'Tenor Sans';font-size:.7rem;letter-spacing:.22em;text-transform:uppercase}
+.foot-l .accent{color:var(--gold);margin-left:.6rem}
+.foot-s{font-size:.7rem;color:var(--muted)}
+
+/* ═══ APPLY-BAR (закреплённая снизу плашка с кнопкой "применить") ═══ */
+.apply-bar{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);background:rgba(42,27,17,.92);backdrop-filter:blur(18px);border:1px solid var(--gold);padding:.85rem 1.4rem;display:flex;align-items:center;gap:1.2rem;z-index:60;flex-wrap:wrap;box-shadow:0 18px 50px -15px rgba(0,0,0,.7)}
+.apply-bar-l{font-family:'Tenor Sans';font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--soft)}
+.apply-bar-l b{color:var(--gold);font-weight:400}
+
+@media(max-width:780px){
+  .meta{grid-template-columns:1fr 1fr}
+  .mm{grid-template-columns:1fr}
+  .feat{grid-template-columns:1fr 1fr}
+  .pal-grid{grid-template-columns:repeat(4,1fr)}
+  .vip-grid{grid-template-columns:1fr;gap:1.5rem}
+  .nav{padding:.85rem 1.1rem}
+  .hero,.section{padding-left:1.1rem;padding-right:1.1rem}
+}
+@media(max-width:480px){
+  .pal-grid{grid-template-columns:repeat(2,1fr)}
+  .feat{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-l">Барвиха Групп <span class="badge">Master Blend</span></div>
+  <div class="nav-r">
+    <a class="nav-link" href="#menu">Меню</a>
+    <a class="nav-link" href="#vip">VIP</a>
+    <a class="nav-link" href="#reviews">Отзывы</a>
+    <a class="nav-link" href="#palette">Палитра</a>
+    <button class="btn btn-g">Забронировать</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="crumbs">Барвиха Групп<span class="sep">/</span>Москва<span class="sep">/</span><span class="cur">Красная площадь</span></div>
+    <div class="status"><span class="dot"></span>Открыто сейчас<span class="t">· до 03:00</span></div>
+    <h1 class="h1">КРАСНАЯ<br>ПЛОЩАДЬ</h1>
+    <div class="h1-sub">Барвиха Лаунж · Красная площадь</div>
+    <div class="meta">
+      <div class="mi"><span class="mi-l">Адрес</span><span class="mi-v">Ветошный пер., 13 · ГУМ</span></div>
+      <div class="mi"><span class="mi-l">Пн–Чт, Вс</span><span class="mi-v">12:00 — 03:00</span></div>
+      <div class="mi"><span class="mi-l">Пт – Сб</span><span class="mi-v">12:00 — 06:00</span></div>
+      <div class="mi"><span class="mi-l">Телефон</span><span class="mi-v">+7 (999) 113-30-01</span></div>
+    </div>
+    <div class="cta">
+      <button class="btn btn-g">Забронировать стол →</button>
+      <button class="btn btn-o">Маршрут</button>
+      <button class="btn btn-o">Позвонить</button>
+      <button class="btn btn-o">Telegram</button>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="section" id="menu">
+  <div class="wrap">
+    <span class="sec-lbl">Меню</span>
+    <h2 class="sec-h">Цифровое меню сети</h2>
+    <div class="mm">
+      <div class="mc">
+        <span class="mc-i">01</span>
+        <div class="mc-t">Кальяны</div>
+        <div class="mc-s">60+ авторских миксов на электрочаше · колбы Wookah и Egeglas, табаки WTO, Tangiers</div>
+        <div class="mc-p">от 2 500 ₽</div>
+        <span class="mc-arr">Открыть →</span>
+      </div>
+      <div class="mc">
+        <span class="mc-i">02</span>
+        <div class="mc-t">Кухня</div>
+        <div class="mc-s">120+ блюд авторской кухни от шефа с опытом в Мишлен-ресторанах</div>
+        <div class="mc-p">от 450 ₽</div>
+        <span class="mc-arr">Открыть →</span>
+      </div>
+      <div class="mc">
+        <span class="mc-i">03</span>
+        <div class="mc-t">Бар</div>
+        <div class="mc-s">40+ авторских коктейлей · крафтовые настойки и редкие выдержанные напитки</div>
+        <div class="mc-p">от 380 ₽</div>
+        <span class="mc-arr">Открыть →</span>
+      </div>
+    </div>
+    <div style="margin-top:1.5rem">
+      <button class="btn btn-g">Открыть полное меню →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+  <div class="wrap">
+    <span class="sec-lbl">Особенности</span>
+    <h2 class="sec-h">Что внутри</h2>
+    <div class="feat">
+      <div class="fi"><div class="fi-i">01</div><div class="fi-t">Живой звук</div><div class="fi-s">Резидент-DJ и саксофон по пятницам</div></div>
+      <div class="fi"><div class="fi-i">02</div><div class="fi-t">Караоке</div><div class="fi-s">5 приватных салонов до 30 гостей</div></div>
+      <div class="fi"><div class="fi-i">03</div><div class="fi-t">Трансляции</div><div class="fi-s">Все главные матчи на проекторах</div></div>
+      <div class="fi"><div class="fi-i">04</div><div class="fi-t">PS5 / Игры</div><div class="fi-s">Игровая зона в каждом VIP-салоне</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIP -->
+<section class="section" id="vip">
+  <div class="wrap">
+    <span class="sec-lbl">VIP</span>
+    <h2 class="sec-h">11 приватных салонов</h2>
+    <div class="vip-grid">
+      <div class="vip-block">
+        <span class="sec-lbl" style="margin-bottom:0">Master Suite</span>
+        <h3 class="vip-h">До 30 гостей · собственная сцена</h3>
+        <p class="vip-p">Закрытый зал с караоке-сценой и звукорежиссёром. Свой вход, свой кальянный мастер, отдельная карта напитков и бар. Идеально для дней рождения и корпоративов.</p>
+        <div class="vip-feats">
+          <div class="vf"><span class="vf-i">✓</span><span>Приватная сцена со звукорежиссёром</span></div>
+          <div class="vf"><span class="vf-i">✓</span><span>Персональный кальянный мастер</span></div>
+          <div class="vf"><span class="vf-i">✓</span><span>Гибкое меню под мероприятие</span></div>
+          <div class="vf"><span class="vf-i">✓</span><span>Бесплатное оформление под событие</span></div>
+        </div>
+        <button class="btn btn-g">Забронировать VIP →</button>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1px;background:var(--line-2);border:1px solid var(--line-2)">
+        <div class="mc" style="min-height:auto;cursor:default">
+          <span class="mc-i">A</span>
+          <div class="mc-t">VIP Vintage</div>
+          <div class="mc-s">8–12 гостей · кожа, дерево, тёплый свет</div>
+        </div>
+        <div class="mc" style="min-height:auto;cursor:default">
+          <span class="mc-i">B</span>
+          <div class="mc-t">VIP Lounge</div>
+          <div class="mc-s">10–14 гостей · диваны, проектор для матчей</div>
+        </div>
+        <div class="mc" style="min-height:auto;cursor:default">
+          <span class="mc-i">C</span>
+          <div class="mc-t">VIP Karaoke</div>
+          <div class="mc-s">12–20 гостей · сцена, микрофоны, свет</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="section" id="reviews">
+  <div class="wrap">
+    <span class="sec-lbl">Отзывы гостей</span>
+    <h2 class="sec-h">Что говорят о нас</h2>
+    <div class="quote">
+      <div class="q-stars">★★★★★</div>
+      <p class="q-text">«Атмосфера — топ. Кальянщики реально слышат, что просишь, а не суют классику. Кухня выше, чем в большинстве ресторанов на которые ходим. Будем возвращаться.»</p>
+      <div class="q-a">
+        <div class="q-ava">ЕМ</div>
+        <div><div class="q-name">Елена М.</div><div class="q-src">Яндекс.Карты · 2 нед. назад</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PALETTE -->
+<section class="section" id="palette">
+  <div class="wrap">
+    <span class="sec-lbl">Палитра темы</span>
+    <h2 class="sec-h">Master Blend · цвета</h2>
+    <p style="font-size:.92rem;color:var(--muted);line-height:1.85;max-width:680px;margin-bottom:2rem">
+      Объединение трёх ваших фаворитов: <b style="color:var(--gold)">Whisky &amp; Cognac</b>, <b style="color:var(--gold)">Amber Old&nbsp;Fashioned</b> и <b style="color:var(--gold)">Wheat &amp; Wenge</b>. Фон сделан более коричневым — насыщенное «какао-дерево» вместо чёрного.
+    </p>
+    <div class="pal-grid">
+      <div class="sw"><div class="sw-c" style="background:#2A1B11"></div><div class="sw-l">Фон</div><div class="sw-h">#2A1B11</div></div>
+      <div class="sw"><div class="sw-c" style="background:#33221A"></div><div class="sw-l">Секции</div><div class="sw-h">#33221A</div></div>
+      <div class="sw"><div class="sw-c" style="background:#3B2A20"></div><div class="sw-l">Карточки</div><div class="sw-h">#3B2A20</div></div>
+      <div class="sw"><div class="sw-c" style="background:#453324"></div><div class="sw-l">Глубже</div><div class="sw-h">#453324</div></div>
+      <div class="sw"><div class="sw-c" style="background:#6F4827"></div><div class="sw-l">Глубокий</div><div class="sw-h">#6F4827</div></div>
+      <div class="sw"><div class="sw-c" style="background:#C49262"></div><div class="sw-l">Акцент</div><div class="sw-h">#C49262</div></div>
+      <div class="sw"><div class="sw-c" style="background:#E5C490"></div><div class="sw-l">Светлый</div><div class="sw-h">#E5C490</div></div>
+    </div>
+    <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;font-family:'Tenor Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)">
+      <span>Текст: <b style="color:var(--text)">#F4E9D5</b></span>
+      <span>Линии: <b style="color:var(--gold)">rgba(196,146,98,.22)</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="foot-l">Барвиха Групп <span class="accent">Master Blend</span></div>
+  <div class="foot-s">Эскиз палитры — открой на всю страницу, оцени, нажми «Применить»</div>
+</div>
+
+<!-- APPLY BAR -->
+<div class="apply-bar">
+  <span class="apply-bar-l">Палитра <b>Master Blend</b> · нравится?</span>
+  <button class="btn btn-o" onclick="window.location.href='palette-preview.html'">← К сетке палитр</button>
+  <button class="btn btn-g" onclick="alert('Напиши в чате: «применить Master Blend» — и я подставлю эту палитру в index/location/moscow/karaoke.')">Применить эту →</button>
+</div>
+
+</body>
+</html>
