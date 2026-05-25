@@ -9,10 +9,10 @@
 <meta property="og:description" content="21 заведение · 4 города · 5 на запуске. Премиум кальяны, авторская кухня, бар. Забронируй стол прямо сейчас."/>
 <meta property="og:image" content="https://barvikhagroup.ru/img/main/large-logo.png"/>
 <meta property="og:type" content="website"/>
-<meta name="theme-color" content="#DBC278"/>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23000'/><text y='24' x='4' font-size='24' fill='%23DBC278' font-family='serif' font-weight='bold'>B</text></svg>"/>
+<meta name="theme-color" content="#C49262"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23000'/><text y='24' x='4' font-size='24' fill='%23C49262' font-family='serif' font-weight='bold'>B</text></svg>"/>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 
 <style>
 
@@ -20,21 +20,21 @@
 
 :root{
   /* Палитра */
-  --bg:#000;
-  --bg-1:#070707;
-  --bg-2:#0c0c0c;
-  --bg-3:#121212;
-  --gold:#DBC278;
-  --gold-soft:#C9B070;
-  --gold-deep:#9C7E3A;
-  --line:rgba(219,194,120,.14);
-  --line-strong:rgba(219,194,120,.32);
+  --bg:#2A1B11;
+  --bg-1:#33221A;
+  --bg-2:#3B2A20;
+  --bg-3:#453324;
+  --gold:#C49262;
+  --gold-soft:#A07642;
+  --gold-deep:#6F4827;
+  --line:rgba(196,146,98,.14);
+  --line-strong:rgba(196,146,98,.32);
   --hair:rgba(255,255,255,.06);
-  --text:#F2EFE6;
-  --text-soft:rgba(242,239,230,.62);
-  --text-mute:rgba(242,239,230,.38);
+  --text:#F4E9D5;
+  --text-soft:rgba(244,233,213,.62);
+  --text-mute:rgba(244,233,213,.38);
   /* Шрифты */
-  --serif:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  --serif:'Tenor Sans','Helvetica Neue',Arial,sans-serif;
   --sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
   --italic:'Cormorant Garamond',Georgia,serif;
   /* Анимация */
@@ -56,8 +56,8 @@ img,svg,video{display:block;max-width:100%;height:auto}
 /* Scrollbar */
 ::-webkit-scrollbar{width:6px;height:6px}
 ::-webkit-scrollbar-track{background:#000}
-::-webkit-scrollbar-thumb{background:rgba(219,194,120,.18);border-radius:3px}
-::-webkit-scrollbar-thumb:hover{background:rgba(219,194,120,.32)}
+::-webkit-scrollbar-thumb{background:rgba(196,146,98,.18);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:rgba(196,146,98,.32)}
 
 /* Tap highlight off */
 *{-webkit-tap-highlight-color:transparent}
@@ -107,7 +107,7 @@ h1,h2,h3,h4{
   white-space:nowrap;line-height:1
 }
 .btn-primary{background:var(--gold);color:#0a0a0a;border-color:var(--gold)}
-.btn-primary:hover{background:#EBDCA9;border-color:#EBDCA9;box-shadow:0 18px 40px -16px rgba(219,194,120,.55)}
+.btn-primary:hover{background:#E5C490;border-color:#E5C490;box-shadow:0 18px 40px -16px rgba(196,146,98,.55)}
 .btn-ghost{background:transparent;color:var(--text);border-color:rgba(255,255,255,.18)}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
 .btn-line{background:transparent;color:var(--gold);border-color:var(--line-strong)}
@@ -121,22 +121,24 @@ h1,h2,h3,h4{
 /* ═══ NAV ═══ */
 .nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
-  display:grid;grid-template-columns:auto 1fr auto;align-items:center;
-  gap:2.5rem;padding:1.25rem 2.5rem;
+  display:grid;grid-template-columns:1fr auto;align-items:center;
+  gap:2.5rem;padding:1.5rem 2.5rem;
   transition:padding .4s var(--ease),background .4s var(--ease),border-color .4s var(--ease);
   border-bottom:1px solid transparent
 }
 .nav.scrolled{
-  padding:.85rem 2.5rem;
+  padding:1rem 2.5rem;
   background:rgba(0,0,0,.78);
   backdrop-filter:blur(20px) saturate(1.1);
   -webkit-backdrop-filter:blur(20px) saturate(1.1);
   border-color:var(--hair)
 }
-.nav-logo{display:flex;align-items:center;transition:opacity .25s var(--ease)}
-.nav-logo:hover{opacity:.82}
-.nav-logo-img{height:48px;width:auto;display:block;transition:height .35s var(--ease)}
-.nav.scrolled .nav-logo-img{height:40px}
+.nav-logo{
+  display:flex;align-items:center;gap:.65rem;
+  font-family:var(--serif);font-size:1.05rem;font-weight:700;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--text)
+}
+.nav-logo svg{width:24px;height:30px;flex-shrink:0}
 .nav-menu{
   display:flex;align-items:center;justify-content:center;gap:2.5rem;
   list-style:none
@@ -164,7 +166,7 @@ h1,h2,h3,h4{
   padding:.85rem 1.6rem;border:none;cursor:pointer;line-height:1;
   transition:all .3s var(--ease)
 }
-.nav-book:hover{background:#EBDCA9;box-shadow:0 12px 30px -14px rgba(219,194,120,.6)}
+.nav-book:hover{background:#E5C490;box-shadow:0 12px 30px -14px rgba(196,146,98,.6)}
 .brg{
   display:none;width:36px;height:36px;
   flex-direction:column;justify-content:center;align-items:center;gap:6px;
@@ -181,10 +183,8 @@ h1,h2,h3,h4{
 @media(max-width:1024px){
   .nav-menu{display:none}
   .brg{display:flex}
-  .nav{grid-template-columns:auto 1fr auto;gap:1rem;padding:1rem 1.75rem}
-  .nav.scrolled{padding:.75rem 1.75rem}
-  .nav-logo-img{height:38px}
-  .nav.scrolled .nav-logo-img{height:32px}
+  .nav{grid-template-columns:1fr auto;gap:1rem;padding:1.2rem 1.75rem}
+  .nav.scrolled{padding:.9rem 1.75rem}
 }
 @media(max-width:560px){
   .nav,.nav.scrolled{padding:1rem 1.25rem}
@@ -233,20 +233,34 @@ h1,h2,h3,h4{
   background:var(--bg)
 }
 /* Угловые декорации — фирменный premium-приём */
-
+.hero-corner{
+  position:absolute;width:54px;height:54px;z-index:4;pointer-events:none;
+  opacity:0;animation:fadeIn 1.2s var(--ease) forwards 1.2s
+}
+.hero-corner.tl{top:6rem;left:2.5rem;border-top:1px solid var(--line-strong);border-left:1px solid var(--line-strong)}
+.hero-corner.tr{top:6rem;right:2.5rem;border-top:1px solid var(--line-strong);border-right:1px solid var(--line-strong)}
+.hero-corner.bl{bottom:6rem;left:2.5rem;border-bottom:1px solid var(--line-strong);border-left:1px solid var(--line-strong)}
+.hero-corner.br{bottom:6rem;right:2.5rem;border-bottom:1px solid var(--line-strong);border-right:1px solid var(--line-strong)}
+@media(max-width:768px){
+  .hero-corner{width:36px;height:36px}
+  .hero-corner.tl,.hero-corner.tr{top:5rem}
+  .hero-corner.bl,.hero-corner.br{bottom:5rem}
+  .hero-corner.tl,.hero-corner.bl{left:1.25rem}
+  .hero-corner.tr,.hero-corner.br{right:1.25rem}
+}
 .hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
 .hero-bg::before{
   content:'';position:absolute;inset:0;
   background:
-    radial-gradient(ellipse 80% 50% at 50% 100%,rgba(219,194,120,.13),transparent 65%),
-    radial-gradient(ellipse 60% 40% at 20% 30%,rgba(219,194,120,.04),transparent 55%),
-    radial-gradient(ellipse 60% 40% at 80% 20%,rgba(219,194,120,.03),transparent 55%)
+    radial-gradient(ellipse 80% 50% at 50% 100%,rgba(196,146,98,.13),transparent 65%),
+    radial-gradient(ellipse 60% 40% at 20% 30%,rgba(196,146,98,.04),transparent 55%),
+    radial-gradient(ellipse 60% 40% at 80% 20%,rgba(196,146,98,.03),transparent 55%)
 }
 .hero-bg::after{
   content:'';position:absolute;inset:0;
   background-image:
-    linear-gradient(rgba(219,194,120,.015) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(219,194,120,.015) 1px,transparent 1px);
+    linear-gradient(rgba(196,146,98,.015) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(196,146,98,.015) 1px,transparent 1px);
   background-size:80px 80px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%)
 }
 .hero-noise{
@@ -279,13 +293,13 @@ h1,h2,h3,h4{
 .hero-name span{
   background-image:linear-gradient(
     105deg,
-    #9C7E3A 0%,
-    #DBC278 28%,
-    #EBDCA9 45%,
+    #6F4827 0%,
+    #C49262 28%,
+    #E5C490 45%,
     #F4E8BE 50%,
-    #EBDCA9 55%,
-    #DBC278 72%,
-    #9C7E3A 100%
+    #E5C490 55%,
+    #C49262 72%,
+    #6F4827 100%
   );
   background-size:220% 100%;
   background-position:0% 50%;
@@ -302,7 +316,7 @@ h1,h2,h3,h4{
   100%{background-position:0%   50%}
 }
 @keyframes goldBreath{
-  0%,100%{filter:drop-shadow(0 0 20px rgba(219,194,120,.14)) brightness(1)}
+  0%,100%{filter:drop-shadow(0 0 20px rgba(196,146,98,.14)) brightness(1)}
   50%   {filter:drop-shadow(0 0 28px rgba(235,220,169,.30)) brightness(1.04)}
 }
 @media (prefers-reduced-motion:reduce){
@@ -386,16 +400,16 @@ h1,h2,h3,h4{
 }
 
 /* ═══ REVEAL ═══ */
-.rv{opacity:0;transform:translateY(18px);transition:opacity .45s var(--ease),transform .45s var(--ease)}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .rv.in{opacity:1;transform:none}
-.rv-d1{transition-delay:.05s}.rv-d2{transition-delay:.1s}.rv-d3{transition-delay:.15s}.rv-d4{transition-delay:.2s}
+.rv-d1{transition-delay:.08s}.rv-d2{transition-delay:.16s}.rv-d3{transition-delay:.24s}.rv-d4{transition-delay:.32s}
 
 /* ═══ CITIES ═══ */
 .cities{background:var(--bg);position:relative}
 .geo{
   display:flex;align-items:center;justify-content:space-between;
   gap:1.5rem;padding:1.4rem 1.7rem;position:relative;
-  border:1px solid var(--line);background:rgba(219,194,120,.025);
+  border:1px solid var(--line);background:rgba(196,146,98,.025);
   margin-bottom:2.5rem;flex-wrap:wrap
 }
 .geo::before,.geo::after{
@@ -477,11 +491,11 @@ h1,h2,h3,h4{
   position:absolute;right:-.1em;bottom:-.25em;z-index:0;
   font-family:var(--serif);font-weight:700;letter-spacing:-.04em;line-height:.85;
   font-size:clamp(8rem,18vw,14rem);
-  color:rgba(219,194,120,.04);
+  color:rgba(196,146,98,.04);
   pointer-events:none;user-select:none;
   transition:color .5s var(--ease)
 }
-.city-card.featured:hover .cc-mark{color:rgba(219,194,120,.08)}
+.city-card.featured:hover .cc-mark{color:rgba(196,146,98,.08)}
 
 @media(max-width:900px){
   .city-open{grid-template-columns:1fr;gap:1px}
@@ -610,7 +624,7 @@ h1,h2,h3,h4{
   position:absolute;bottom:3.2rem;right:1.6rem;z-index:3;pointer-events:none;
   font-family:var(--serif);font-size:clamp(2.4rem,5.5vw,4rem);
   font-weight:700;letter-spacing:-.02em;line-height:.9;
-  color:rgba(219,194,120,.18);text-transform:uppercase
+  color:rgba(196,146,98,.18);text-transform:uppercase
 }
 @media(max-width:1024px){
   .atm-grid{grid-template-columns:1fr;gap:3rem}
@@ -623,7 +637,7 @@ h1,h2,h3,h4{
 .kar::before{
   content:'';position:absolute;left:60%;top:50%;width:560px;height:560px;
   transform:translate(-50%,-50%);
-  background:radial-gradient(circle,rgba(219,194,120,.06) 0%,transparent 65%);
+  background:radial-gradient(circle,rgba(196,146,98,.06) 0%,transparent 65%);
   filter:blur(30px);pointer-events:none
 }
 .kar-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:1}
@@ -678,7 +692,7 @@ h1,h2,h3,h4{
 .kar-visual::before{
   content:'';position:absolute;inset:0;pointer-events:none;z-index:1;
   background:
-    radial-gradient(circle at 50% 38%,rgba(219,194,120,.18) 0%,transparent 35%),
+    radial-gradient(circle at 50% 38%,rgba(196,146,98,.18) 0%,transparent 35%),
     radial-gradient(circle at 80% 78%,rgba(170,80,180,.06) 0%,transparent 45%)
 }
 /* Лучи света от центра */
@@ -686,7 +700,7 @@ h1,h2,h3,h4{
   position:absolute;inset:0;z-index:1;pointer-events:none;
   background:repeating-conic-gradient(
     from 0deg at 50% 38%,
-    rgba(219,194,120,.08) 0deg,
+    rgba(196,146,98,.08) 0deg,
     transparent 6deg,
     transparent 24deg
   );
@@ -702,8 +716,8 @@ h1,h2,h3,h4{
   background:
     radial-gradient(circle at 38% 32%,#fff5d0 0%,#dbc278 18%,#8e7438 55%,#3a2c0e 85%,#0a0805 100%);
   box-shadow:
-    0 0 60px rgba(219,194,120,.45),
-    0 0 120px rgba(219,194,120,.18),
+    0 0 60px rgba(196,146,98,.45),
+    0 0 120px rgba(196,146,98,.18),
     inset -10px -15px 30px rgba(0,0,0,.7);
   animation:karPulse 3.5s ease-in-out infinite
 }
@@ -728,7 +742,7 @@ h1,h2,h3,h4{
   position:absolute;bottom:1.4rem;right:1.6rem;z-index:3;pointer-events:none;
   font-family:var(--serif);font-size:clamp(2.4rem,5.5vw,4.2rem);
   font-weight:700;letter-spacing:-.02em;line-height:.9;
-  color:rgba(219,194,120,.16);text-transform:uppercase
+  color:rgba(196,146,98,.16);text-transform:uppercase
 }
 @media(max-width:560px){
   .kar-disco{top:32%}
@@ -741,7 +755,8 @@ h1,h2,h3,h4{
 .menu-card.featured{grid-column:span 2}
 .menu-card.featured .menu-img{aspect-ratio:16/7}
 .menu-card.featured .menu-name{font-size:1.55rem}
-.menu-mark{display:none}
+.menu-mark{position:absolute;top:.55rem;right:1.05rem;z-index:3;font-family:var(--serif);font-size:clamp(2.6rem,5vw,3.8rem);font-weight:700;color:rgba(196,146,98,.42);line-height:1;letter-spacing:-.02em;pointer-events:none;text-shadow:0 2px 12px rgba(0,0,0,.65)}
+.menu-card.featured .menu-mark{font-size:clamp(3.6rem,7vw,5.4rem);top:.7rem;right:1.4rem}
 .menu-card{
   background:var(--bg-1);border:1px solid var(--hair);
   position:relative;overflow:hidden;cursor:pointer;
@@ -753,7 +768,7 @@ h1,h2,h3,h4{
   background:var(--gold);transform:scaleX(0);transform-origin:left;
   transition:transform .55s var(--ease);z-index:3
 }
-.menu-card:hover{border-color:var(--line-strong);transform:translateY(-6px);box-shadow:0 30px 60px -28px rgba(0,0,0,.7),0 0 0 1px rgba(219,194,120,.08)}
+.menu-card:hover{border-color:var(--line-strong);transform:translateY(-6px);box-shadow:0 30px 60px -28px rgba(0,0,0,.7),0 0 0 1px rgba(196,146,98,.08)}
 .menu-card:hover::after{transform:scaleX(1)}
 .menu-img{aspect-ratio:4/3;overflow:hidden;position:relative}
 .menu-img img{
@@ -797,7 +812,7 @@ h1,h2,h3,h4{
 .menu-modal-link{font-family:var(--serif);font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--text-mute);background:transparent;border:1px solid var(--line);padding:.55rem .95rem;cursor:pointer;transition:all .25s;text-decoration:none;display:inline-flex;align-items:center;gap:.4rem}
 .menu-modal-link:hover{border-color:var(--gold);color:var(--gold)}
 .menu-modal-close{background:rgba(0,0,0,.5);border:1px solid var(--line);color:var(--text);width:34px;height:34px;font-size:1.2rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:var(--serif);transition:all .25s}
-.menu-modal-close:hover{background:rgba(219,194,120,.18);color:var(--gold)}
+.menu-modal-close:hover{background:rgba(196,146,98,.18);color:var(--gold)}
 .menu-modal-body{flex:1;position:relative;background:var(--bg)}
 .menu-modal-body iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:var(--bg)}
 .menu-modal-loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--text-mute);font-family:var(--serif);font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;background:var(--bg);pointer-events:none;transition:opacity .3s}
@@ -819,6 +834,71 @@ h1,h2,h3,h4{
   .menu-card.featured{grid-column:span 1}
   .menu-card.featured .menu-img{aspect-ratio:4/3}
   .menu-grid>:last-child{max-width:none}
+}
+
+/* ═══ FEATURES ═══ */
+.feat{background:var(--bg-1);position:relative}
+.feat-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem
+}
+.feat-card{
+  background:var(--bg);padding:2.4rem 1.9rem 1.9rem;
+  position:relative;overflow:hidden;cursor:pointer;
+  display:flex;flex-direction:column;align-items:flex-start;gap:1rem;
+  text-align:left;color:var(--text);width:100%;
+  border:1px solid var(--line);
+  transition:transform .5s var(--ease),border-color .35s var(--ease),background .4s var(--ease)
+}
+.feat-card.featured{grid-column:span 2;padding:2.6rem 2.2rem 2.1rem}
+.feat-card.featured .feat-name{font-size:1.05rem}
+.feat-card.featured .feat-desc{font-size:.92rem;max-width:38rem}
+.feat-card::after{
+  content:'';position:absolute;left:0;right:0;bottom:0;height:1px;
+  background:var(--gold);transform:scaleX(0);transform-origin:left;
+  transition:transform .55s var(--ease)
+}
+.feat-card:hover{background:var(--bg-2);border-color:var(--line-strong);transform:translateY(-4px)}
+.feat-card:hover::after{transform:scaleX(1)}
+.feat-card:hover .feat-mark{color:rgba(196,146,98,.6);transform:translate(-2px,-1px)}
+.feat-card:hover .feat-arrow{opacity:1;transform:translateX(0)}
+.feat-card:hover .feat-icon{transform:translateY(-3px);color:var(--gold)}
+.feat-mark{
+  position:absolute;top:.55rem;right:1.1rem;z-index:2;pointer-events:none;
+  font-family:var(--serif);font-size:clamp(2.6rem,4.6vw,3.6rem);font-weight:200;
+  color:rgba(196,146,98,.22);line-height:1;letter-spacing:-.02em;
+  transition:color .4s var(--ease),transform .4s var(--ease)
+}
+.feat-card.featured .feat-mark{font-size:clamp(3.4rem,6vw,4.8rem);top:.6rem;right:1.4rem}
+.feat-icon{
+  width:42px;height:42px;color:var(--gold-soft);
+  transition:transform .4s var(--ease),color .4s var(--ease);
+  position:relative;z-index:1
+}
+.feat-icon svg{width:100%;height:100%;stroke:currentColor}
+.feat-name{
+  font-family:var(--serif);font-size:.95rem;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--text);position:relative;z-index:1
+}
+.feat-desc{font-size:.86rem;color:var(--text-soft);line-height:1.65;flex:1;position:relative;z-index:1}
+.feat-more{
+  display:flex;align-items:center;gap:.55rem;margin-top:.4rem;padding-top:1rem;
+  border-top:1px solid var(--hair);width:100%;
+  font-family:var(--serif);font-size:.58rem;font-weight:500;
+  letter-spacing:.28em;text-transform:uppercase;color:var(--gold);
+  position:relative;z-index:1
+}
+.feat-arrow{
+  display:inline-block;
+  opacity:.5;transform:translateX(-3px);
+  transition:all .35s var(--ease)
+}
+@media(max-width:1024px){
+  .feat-grid{grid-template-columns:repeat(2,1fr)}
+  .feat-card.featured{grid-column:span 2}
+}
+@media(max-width:560px){
+  .feat-grid{grid-template-columns:1fr}
+  .feat-card.featured{grid-column:span 1}
 }
 
 /* ═══ CONTACT STRIP ═══ */
@@ -845,17 +925,17 @@ h1,h2,h3,h4{
   background:var(--gold);transform:scaleX(0);transform-origin:left;
   transition:transform .4s var(--ease)
 }
-.cs-link:hover{background:rgba(219,194,120,.05);border-color:var(--line-strong);color:var(--gold)}
+.cs-link:hover{background:rgba(196,146,98,.05);border-color:var(--line-strong);color:var(--gold)}
 .cs-link:hover::after{transform:scaleX(1)}
 .cs-link svg{width:15px;height:15px;flex-shrink:0}
 .cs-link.cs-link-pri{background:var(--gold);color:#0a0a0a;border-color:var(--gold);font-weight:700;letter-spacing:.22em}
 .cs-link.cs-link-pri svg path,.cs-link.cs-link-pri svg circle,.cs-link.cs-link-pri svg rect{stroke:#0a0a0a;fill:#0a0a0a}
-.cs-link.cs-link-pri:hover{background:#EBDCA9;color:#0a0a0a;border-color:#EBDCA9;box-shadow:0 12px 30px -14px rgba(219,194,120,.6)}
+.cs-link.cs-link-pri:hover{background:#E5C490;color:#0a0a0a;border-color:#E5C490;box-shadow:0 12px 30px -14px rgba(196,146,98,.6)}
 .cs-link.cs-link-pri:hover::after{transform:scaleX(0)}
 .cs-soon{
   margin-left:.3rem;padding:.18rem .45rem;
   font-size:.5rem;letter-spacing:.16em;
-  background:rgba(219,194,120,.12);color:var(--gold);
+  background:rgba(196,146,98,.12);color:var(--gold);
   border:1px solid var(--line-strong)
 }
 @media(max-width:900px){
@@ -896,7 +976,7 @@ h1,h2,h3,h4{
   padding-bottom:.4rem;border-bottom:1px solid var(--line-strong);
   align-self:flex-start;transition:border-color .3s,color .3s
 }
-.foot-fr-cta:hover{color:#EBDCA9;border-color:var(--gold)}
+.foot-fr-cta:hover{color:#E5C490;border-color:var(--gold)}
 .foot-soc{display:flex;gap:.55rem;margin-top:1rem}
 .foot-soc a{
   width:36px;height:36px;border:1px solid var(--hair);
@@ -935,7 +1015,7 @@ h1,h2,h3,h4{
 .fab-tg,.fab-wa{
   width:48px;height:48px;border-radius:50%;
   display:flex;align-items:center;justify-content:center;
-  box-shadow:0 10px 30px rgba(0,0,0,.45),0 0 0 1px rgba(219,194,120,.2);
+  box-shadow:0 10px 30px rgba(0,0,0,.45),0 0 0 1px rgba(196,146,98,.2);
   transition:transform .25s
 }
 .fab-tg{background:#229ED9}
@@ -954,10 +1034,10 @@ h1,h2,h3,h4{
   font-family:var(--serif);font-size:.62rem;font-weight:700;letter-spacing:.22em;
   text-transform:uppercase;color:#0a0a0a;background:var(--gold);
   padding:.95rem 1.65rem;border-radius:30px;border:none;cursor:pointer;line-height:1;
-  box-shadow:0 12px 32px rgba(219,194,120,.35);
+  box-shadow:0 12px 32px rgba(196,146,98,.35);
   transition:transform .25s,box-shadow .25s
 }
-.fab-book:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(219,194,120,.5)}
+.fab-book:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(196,146,98,.5)}
 @media(max-width:768px){
   .fab{right:1rem;bottom:1rem;gap:.5rem}
   .fab-tg,.fab-wa{width:44px;height:44px}
@@ -1007,7 +1087,7 @@ h1,h2,h3,h4{
   padding:1.05rem 2rem;border:none;cursor:pointer;width:100%;
   transition:background .3s
 }
-.fm-cta:hover{background:#EBDCA9}
+.fm-cta:hover{background:#E5C490}
 
 /* ═══ FAQ MODAL ═══ */
 .faq-modal-wrap{max-width:880px;padding:2.8rem 2.4rem 2.4rem;max-height:calc(100vh - 4rem);display:flex;flex-direction:column}
@@ -1017,7 +1097,7 @@ h1,h2,h3,h4{
   list-style:none;transition:background .3s
 }
 .faq-q::-webkit-details-marker{display:none}
-.faq-q:hover{background:rgba(219,194,120,.025)}
+.faq-q:hover{background:rgba(196,146,98,.025)}
 .faq-q-h{
   display:flex;justify-content:space-between;align-items:center;
   padding:1.4rem 0;gap:1.4rem;cursor:pointer;list-style:none
@@ -1056,7 +1136,7 @@ h1,h2,h3,h4{
 .bk-form input::placeholder{color:var(--text-mute)}
 .bk-form select{color:var(--text-soft)}
 .bk-form select option{background:#0c0c0c;color:var(--text)}
-.bk-form input:focus,.bk-form select:focus{border-color:var(--gold);background:rgba(219,194,120,.04)}
+.bk-form input:focus,.bk-form select:focus{border-color:var(--gold);background:rgba(196,146,98,.04)}
 .bk-row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
 .bk-submit{
   margin-top:.5rem;font-family:var(--serif);font-size:.66rem;font-weight:700;
@@ -1064,7 +1144,7 @@ h1,h2,h3,h4{
   padding:1.1rem 2rem;border:none;cursor:pointer;width:100%;
   transition:background .3s,transform .2s
 }
-.bk-submit:hover{background:#EBDCA9;transform:translateY(-1px)}
+.bk-submit:hover{background:#E5C490;transform:translateY(-1px)}
 .bk-submit:disabled{cursor:default;transform:none}
 .bk-note{font-size:.68rem;color:var(--text-mute);margin-top:.85rem;text-align:center;line-height:1.5}
 
@@ -1074,7 +1154,7 @@ h1,h2,h3,h4{
   button,a.btn,.cs-link,.nav-book,.fab-book{min-height:44px}
 }
 @media(hover:none) and (pointer:coarse){
-  .city-card:hover,.menu-card:hover,.kar-img:hover,.geo-card:hover{transform:none}
+  .city-card:hover,.menu-card:hover,.feat-card:hover,.kar-img:hover,.geo-card:hover{transform:none}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
@@ -1095,7 +1175,7 @@ html,body{max-width:100vw;overflow-x:hidden}
   <ul class="nav-menu">
     <li><a href="#cities">Заведения</a></li>
     <li><a href="#atmosphere">Атмосфера</a></li>
-    <li><a href="karaoke.html">Караоке</a></li>
+    <li><a href="#karaoke">Караоке</a></li>
     <li><a href="#menu">Меню</a></li>
     <li><a href="#" onclick="event.preventDefault();openFaq()">Вопросы</a></li>
   </ul>
@@ -1129,6 +1209,10 @@ html,body{max-width:100vw;overflow-x:hidden}
   <div class="hero-bg"></div>
   <div class="hero-noise"></div>
   <canvas id="heroSmoke"></canvas>
+  <span class="hero-corner tl" aria-hidden="true"></span>
+  <span class="hero-corner tr" aria-hidden="true"></span>
+  <span class="hero-corner bl" aria-hidden="true"></span>
+  <span class="hero-corner br" aria-hidden="true"></span>
 
   <div class="hero-inner">
     <span class="hero-eyebrow">Премиум-лаунж · с 2017</span>
@@ -1300,6 +1384,37 @@ html,body{max-width:100vw;overflow-x:hidden}
   </div>
 </section>
 
+<!-- ═══ KARAOKE ═══ -->
+<section class="section kar" id="karaoke" data-divider>
+  <div class="wrap">
+    <div class="kar-grid">
+      <div class="kar-img kar-visual rv">
+        <span class="corner-tl" aria-hidden="true"></span>
+        <span class="corner-br" aria-hidden="true"></span>
+        <span class="kar-img-tag">Karaoke · Live</span>
+        <div class="kar-rays" aria-hidden="true"></div>
+        <div class="kar-disco" aria-hidden="true"></div>
+        <span class="kar-big">Караоке</span>
+      </div>
+      <div class="kar-txt rv rv-d1">
+        <span class="eyebrow">Авторский формат сети</span>
+        <h2 class="h-1">Караоке<br>в Барвихе</h2>
+        <p>Шесть заведений сети с приватной сценой и резидентным звукорежиссёром. Каталог из десяти тысяч треков, профессиональный звук, фактурные диваны и игра света от диско-шара.</p>
+        <div class="kar-points">
+          <div class="kar-pt"><span class="kp-n">01</span><span>Профессиональный звук и сценический свет</span></div>
+          <div class="kar-pt"><span class="kp-n">02</span><span>Бэк-вокал и звукорежиссёр на каждом вечере</span></div>
+          <div class="kar-pt"><span class="kp-n">03</span><span>10 000+ треков · добавляем по запросу</span></div>
+          <div class="kar-pt"><span class="kp-n">04</span><span>Минимум три часа · депозит включает кухню и бар</span></div>
+        </div>
+        <a href="karaoke.html" class="btn btn-line btn-arrow">
+          Все заведения с караоке
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ MENU PREVIEW ═══ -->
 <section class="section menu" id="menu" data-divider>
   <div class="wrap">
@@ -1372,7 +1487,7 @@ html,body{max-width:100vw;overflow-x:hidden}
     <div class="menu-modal-hd">
       <div class="menu-modal-l"><span>Меню Барвиха</span></div>
       <div class="menu-modal-r">
-        <a class="menu-modal-link" id="menuModalExt" href="http://localhost:3000/ru/mendeleevskaia" target="_blank" rel="noopener">Открыть отдельно ↗</a>
+        <a class="menu-modal-link" id="menuModalExt" href="https://barvihamenu-production.up.railway.app/" target="_blank" rel="noopener">Открыть отдельно ↗</a>
         <button class="menu-modal-close" onclick="closeMenuModal()" aria-label="Закрыть">×</button>
       </div>
     </div>
@@ -1382,6 +1497,70 @@ html,body{max-width:100vw;overflow-x:hidden}
     </div>
   </div>
 </div>
+
+<!-- ═══ FEATURES ═══ -->
+<section class="section feat" id="features" data-divider>
+  <div class="wrap">
+    <div class="section-hd">
+      <div class="section-hd-l rv">
+        <span class="eyebrow">Всё что нужно</span>
+        <h2 class="h-1">Для идеального<br>вечера</h2>
+      </div>
+      <p class="section-hd-r rv rv-d1">Каждая деталь продумана. Подберите формат и узнайте, что внутри.</p>
+    </div>
+    <div class="feat-grid">
+
+      <button class="feat-card featured rv" onclick="openFeat('hookahs')">
+        <span class="feat-mark">01</span>
+        <div class="feat-icon"><svg viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="10" rx="10" ry="4" stroke="currentColor" stroke-width="1.2"/><rect x="21" y="14" width="6" height="12" stroke="currentColor" stroke-width="1.2"/><ellipse cx="24" cy="32" rx="9" ry="7" stroke="currentColor" stroke-width="1.2"/></svg></div>
+        <div class="feat-name">Кальяны</div>
+        <p class="feat-desc">Электрочаша без угля и горечи. Премиальные колбы Wookah и Egeglas, табаки WTO, Tangiers, Darkside. К каждому столу — персональный мастер, кастомный микс под вкус гостя.</p>
+        <span class="feat-more">Подробнее <span class="feat-arrow">→</span></span>
+      </button>
+
+      <button class="feat-card rv rv-d1" onclick="openFeat('drinks')">
+        <span class="feat-mark">02</span>
+        <div class="feat-icon"><svg viewBox="0 0 48 48" fill="none"><path d="M10 10 L24 36 L38 10 Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><line x1="24" y1="36" x2="24" y2="42" stroke="currentColor" stroke-width="1.2"/><line x1="16" y1="42" x2="32" y2="42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="feat-name">Напитки</div>
+        <p class="feat-desc">Авторские коктейли, первоклассный алкоголь, элитный китайский чай и лимонады собственного приготовления.</p>
+        <span class="feat-more">Подробнее <span class="feat-arrow">→</span></span>
+      </button>
+
+      <button class="feat-card rv rv-d2" onclick="openFeat('food')">
+        <span class="feat-mark">03</span>
+        <div class="feat-icon"><svg viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="32" rx="16" ry="5" stroke="currentColor" stroke-width="1.2"/><path d="M8 32 Q8 16 24 16 Q40 16 40 32" stroke="currentColor" stroke-width="1.2" fill="none"/><circle cx="24" cy="16" r="3" stroke="currentColor" stroke-width="1.2"/></svg></div>
+        <div class="feat-name">Кухня</div>
+        <p class="feat-desc">Авторская европейская кухня шеф-повара, десерты и натуральное вяленое мясо.</p>
+        <span class="feat-more">Подробнее <span class="feat-arrow">→</span></span>
+      </button>
+
+      <button class="feat-card rv" onclick="openFeat('vip')">
+        <span class="feat-mark">04</span>
+        <div class="feat-icon"><svg viewBox="0 0 48 48" fill="none"><path d="M8 22 L24 10 L40 22 L40 40 L8 40 Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M18 40 L18 28 L30 28 L30 40" stroke="currentColor" stroke-width="1.2"/></svg></div>
+        <div class="feat-name">VIP-комнаты</div>
+        <p class="feat-desc">Приватные комнаты на 8–20 гостей. Свой вход, мастер и сервис — идеально для праздника.</p>
+        <span class="feat-more">Подробнее <span class="feat-arrow">→</span></span>
+      </button>
+
+      <button class="feat-card rv rv-d1" onclick="openFeat('karaoke')">
+        <span class="feat-mark">05</span>
+        <div class="feat-icon"><svg viewBox="0 0 48 48" fill="none"><rect x="18" y="6" width="12" height="20" rx="6" stroke="currentColor" stroke-width="1.2"/><path d="M12 24c0 6.627 5.373 12 12 12s12-5.373 12-12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><line x1="24" y1="36" x2="24" y2="42" stroke="currentColor" stroke-width="1.2"/></svg></div>
+        <div class="feat-name">Караоке</div>
+        <p class="feat-desc">Приватные комнаты с профессиональным звуком и 10 000+ треков. Сцена без посторонних глаз.</p>
+        <span class="feat-more">Подробнее <span class="feat-arrow">→</span></span>
+      </button>
+
+      <button class="feat-card rv rv-d2" onclick="openFeat('streams')">
+        <span class="feat-mark">06</span>
+        <div class="feat-icon"><svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="24" rx="2" stroke="currentColor" stroke-width="1.2"/><line x1="24" y1="34" x2="24" y2="40" stroke="currentColor" stroke-width="1.2"/><line x1="16" y1="40" x2="32" y2="40" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="24" cy="22" r="6" stroke="currentColor" stroke-width="1.2"/></svg></div>
+        <div class="feat-name">Трансляции</div>
+        <p class="feat-desc">Огромные проекторы для прямых трансляций главных спортивных событий.</p>
+        <span class="feat-more">Подробнее <span class="feat-arrow">→</span></span>
+      </button>
+
+    </div>
+  </div>
+</section>
 
 <!-- ═══ CONTACT STRIP ═══ -->
 <section class="cs" id="contact" data-divider>
@@ -1398,19 +1577,19 @@ html,body{max-width:100vw;overflow-x:hidden}
           Забронировать онлайн
         </a>
         <a href="tel:+78002012781" class="cs-link" data-src="contact">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="#DBC278"/></svg>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="#C49262"/></svg>
           8 800 201-27-81
         </a>
         <a href="https://t.me/BARVIKHAGROUP" target="_blank" class="cs-link" data-src="contact">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.93 6.842l-1.68 7.92c-.123.553-.453.688-.917.428l-2.54-1.872-1.226 1.18c-.136.136-.25.25-.512.25l.183-2.586 4.718-4.26c.205-.183-.045-.284-.318-.101L8.21 14.84l-2.505-.782c-.544-.17-.555-.544.114-.806l9.782-3.772c.453-.164.85.101.33.362z" fill="#DBC278"/></svg>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.93 6.842l-1.68 7.92c-.123.553-.453.688-.917.428l-2.54-1.872-1.226 1.18c-.136.136-.25.25-.512.25l.183-2.586 4.718-4.26c.205-.183-.045-.284-.318-.101L8.21 14.84l-2.505-.782c-.544-.17-.555-.544.114-.806l9.782-3.772c.453-.164.85.101.33.362z" fill="#C49262"/></svg>
           @BARVIKHAGROUP
         </a>
         <a href="https://www.instagram.com/barvikhagroup/" target="_blank" rel="nofollow noopener" class="cs-link" data-src="contact">
-          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#DBC278" stroke-width="1.4"/><circle cx="12" cy="12" r="4" stroke="#DBC278" stroke-width="1.4"/><circle cx="17.5" cy="6.5" r="1" fill="#DBC278"/></svg>
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#C49262" stroke-width="1.4"/><circle cx="12" cy="12" r="4" stroke="#C49262" stroke-width="1.4"/><circle cx="17.5" cy="6.5" r="1" fill="#C49262"/></svg>
           Instagram<sup class="meta-mark">*</sup>
         </a>
         <a href="https://vk.com/barvikhagroup" target="_blank" class="cs-link" data-src="contact">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M4.5 6h15a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5h-15a.5.5 0 0 1-.5-.5v-11A.5.5 0 0 1 4.5 6zm5.5 4v5m0-5c0 0 0-2 2.5-2S15 12 15 12v3" stroke="#DBC278" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4.5 6h15a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5h-15a.5.5 0 0 1-.5-.5v-11A.5.5 0 0 1 4.5 6zm5.5 4v5m0-5c0 0 0-2 2.5-2S15 12 15 12v3" stroke="#C49262" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
           ВКонтакте
         </a>
       </div>
@@ -1508,6 +1687,18 @@ html,body{max-width:100vw;overflow-x:hidden}
       </details>
     </div>
     <a href="https://t.me/BARVIKHAGROUP" target="_blank" class="faq-foot-cta" data-src="faq">Связаться с менеджером →</a>
+  </div>
+</div>
+
+<!-- ═══ FEAT MODAL ═══ -->
+<div class="modal" id="featModal" onclick="if(event.target===this)closeFeat()">
+  <div class="modal-wrap">
+    <button class="modal-close" onclick="closeFeat()" aria-label="Закрыть">×</button>
+    <span class="modal-tag" id="fmTag"></span>
+    <h2 class="modal-title" id="fmTitle"></h2>
+    <p class="modal-sub" id="fmDesc"></p>
+    <div class="fm-points" id="fmPoints"></div>
+    <button class="fm-cta" id="fmCta"></button>
   </div>
 </div>
 
@@ -1625,7 +1816,7 @@ document.querySelectorAll('[data-divider]').forEach(el=>dividerObs.observe(el));
       else if(t>.7)a*=(1-(t-.7)/.3);
       if(t>=1||p.y<-100){particles.splice(i,1);continue}
       const g=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);
-      g.addColorStop(0,`rgba(219,194,120,${a*.55})`);
+      g.addColorStop(0,`rgba(196,146,98,${a*.55})`);
       g.addColorStop(.5,`rgba(180,160,110,${a*.22})`);
       g.addColorStop(1,'rgba(150,130,90,0)');
       ctx.fillStyle=g;
@@ -1699,6 +1890,29 @@ document.querySelectorAll('[data-divider]').forEach(el=>dividerObs.observe(el));
   io.observe(wrap);
 })();
 
+// ═══ FEAT MODAL ═══
+const FEATS={
+  drinks:{tag:'Барная карта',title:'Напитки',desc:'Коктейльная карта, разработанная совместно с приглашёнными барменами. Каждая позиция — отдельная история вкуса.',points:['Авторские коктейли — 10+ позиций','Безалкогольные версии всех хитов','Элитный китайский улун и белый чай','Первоклассный крепкий алкоголь','Локальные крафтовые позиции','Сезонные лимитированные напитки'],cta:'Смотреть меню',href:'location.html'},
+  hookahs:{tag:'Электрочаша',title:'Кальяны',desc:'Электрическая чаша заменяет уголь: стабильная температура, нет горечи, нет запаха горения. К каждому столу — персональный мастер.',points:['60+ авторских табачных миксов','Колбы Wookah и Egeglas — премиум','WTO, Darkside, Tangiers, Daily Hookah','Стабильная температура без угля','Персональный кальянный мастер','Кастомный микс под вкус гостя'],cta:'Смотреть меню',href:'location.html'},
+  food:{tag:'Авторская кухня',title:'Европейская кухня',desc:'Меню шеф-повара разработано так, чтобы не перебивать вкус кальяна, но быть полноценным ужином. Кухня работает до 02:00.',points:['Закуски и снеки для кальяна','Горячие блюда от шеф-повара','Десерты и авторское мороженое','Натуральное вяленое мясо','Вегетарианские и безглютеновые опции','Сезонное обновление меню'],cta:'Смотреть меню',href:'location.html'},
+  vip:{tag:'Приватные комнаты',title:'VIP',desc:'Закрытые комнаты для больших компаний. Свой вход, свой мастер, своя атмосфера. Идеально для праздников и корпоративов.',points:['Вместимость 8–20 человек','Приватный вход и отдельная зона','Персональный сервис и мастер','Система для трансляций внутри','Дни рождения и корпоративы','Гибкое меню под мероприятие'],cta:'Забронировать VIP',href:'#bk'},
+  streams:{tag:'Прямые эфиры',title:'Трансляции',desc:'Огромные проекторы для прямых трансляций главных спортивных событий планеты. Кальян и матч — это уже традиция.',points:['Все матчи РПЛ и Лиги Чемпионов','UFC и профессиональный бокс','Формула-1 и MotoGP','Хоккей НХЛ и КХЛ','Тематические вечера по событиям','Атмосфера стадиона без толпы'],cta:'Забронировать стол',href:'#bk'},
+  karaoke:{tag:'Живая сцена',title:'Karaoke & Live',desc:'Приватные комнаты с профессиональным звуком и освещением. Тысячи треков, персональный саундчек и атмосфера настоящего выступления — без посторонних глаз.',points:['Приватные комнаты на 4–20 человек','10 000+ треков на русском и английском','Профессиональный звук и микрофоны','Цветовое сценическое освещение','Запись выступления по желанию','Доступно в большинстве заведений сети'],cta:'Забронировать комнату',href:'#bk'}
+};
+function openFeat(key){
+  const f=FEATS[key];if(!f)return;
+  document.getElementById('fmTag').textContent=f.tag;
+  document.getElementById('fmTitle').textContent=f.title;
+  document.getElementById('fmDesc').textContent=f.desc;
+  document.getElementById('fmPoints').innerHTML=f.points.map(p=>`<div class="fm-point">${p}</div>`).join('');
+  const btn=document.getElementById('fmCta');
+  btn.textContent=f.cta;
+  btn.onclick=()=>{closeFeat();if(f.href==='#bk'){openBooking()}else if(f.href.startsWith('#')){document.querySelector(f.href).scrollIntoView({behavior:'smooth'})}else{location.href=f.href}};
+  document.getElementById('featModal').classList.add('on');
+  document.body.style.overflow='hidden';
+}
+function closeFeat(){document.getElementById('featModal').classList.remove('on');document.body.style.overflow=''}
+
 // ═══ FAQ MODAL ═══
 function openFaq(){const m=document.getElementById('faqModal');if(!m)return;m.classList.add('on');document.body.style.overflow='hidden'}
 function closeFaq(){const m=document.getElementById('faqModal');if(!m)return;m.classList.remove('on');document.body.style.overflow='';m.querySelectorAll('details[open]').forEach(d=>d.removeAttribute('open'))}
@@ -1723,7 +1937,7 @@ function openBooking(){
 // Esc — закрывает наши модалки (виджет restoplace закрывается сам)
 document.addEventListener('keydown',e=>{
   if(e.key!=='Escape')return;
-  closeFaq();
+  closeFaq();closeFeat();
 });
 
 // ═══ ГЕОЛОКАЦИЯ → 3 ближайших заведения ═══
@@ -1886,10 +2100,9 @@ async function findNearest(){
 <script async src="https://app.restoplace.cc/widget.js?h=f5e57e4c969ae48c720e"></script>
 
 <script>
-// ═══ MENU MODAL — открывает Next-app меню (Барвиха Lounge) в iframe-окошке ═══
+// ═══ MENU MODAL — открывает Railway-меню в iframe-окошке ═══
 (function(){
-  // Локально — :3000. На проде заменить на свой домен.
-  const MENU_BASE='http://localhost:3000/ru/mendeleevskaia';
+  const MENU_BASE='https://barvihamenu-production.up.railway.app/';
   function openMenuModal(){
     const m=document.getElementById('menuModal');if(!m)return;
     const f=document.getElementById('menuModalFrame');
