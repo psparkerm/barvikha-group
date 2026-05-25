@@ -121,24 +121,22 @@ h1,h2,h3,h4{
 /* ═══ NAV ═══ */
 .nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
-  display:grid;grid-template-columns:1fr auto;align-items:center;
-  gap:2.5rem;padding:1.5rem 2.5rem;
+  display:grid;grid-template-columns:auto 1fr auto;align-items:center;
+  gap:2.5rem;padding:1.25rem 2.5rem;
   transition:padding .4s var(--ease),background .4s var(--ease),border-color .4s var(--ease);
   border-bottom:1px solid transparent
 }
 .nav.scrolled{
-  padding:1rem 2.5rem;
+  padding:.85rem 2.5rem;
   background:rgba(0,0,0,.78);
   backdrop-filter:blur(20px) saturate(1.1);
   -webkit-backdrop-filter:blur(20px) saturate(1.1);
   border-color:var(--hair)
 }
-.nav-logo{
-  display:flex;align-items:center;gap:.65rem;
-  font-family:var(--serif);font-size:1.05rem;font-weight:700;
-  letter-spacing:.22em;text-transform:uppercase;color:var(--text)
-}
-.nav-logo svg{width:24px;height:30px;flex-shrink:0}
+.nav-logo{display:flex;align-items:center;transition:opacity .25s var(--ease)}
+.nav-logo:hover{opacity:.82}
+.nav-logo-img{height:48px;width:auto;display:block;transition:height .35s var(--ease)}
+.nav.scrolled .nav-logo-img{height:40px}
 .nav-menu{
   display:flex;align-items:center;justify-content:center;gap:2.5rem;
   list-style:none
@@ -183,8 +181,10 @@ h1,h2,h3,h4{
 @media(max-width:1024px){
   .nav-menu{display:none}
   .brg{display:flex}
-  .nav{grid-template-columns:1fr auto;gap:1rem;padding:1.2rem 1.75rem}
-  .nav.scrolled{padding:.9rem 1.75rem}
+  .nav{grid-template-columns:auto 1fr auto;gap:1rem;padding:1rem 1.75rem}
+  .nav.scrolled{padding:.75rem 1.75rem}
+  .nav-logo-img{height:38px}
+  .nav.scrolled .nav-logo-img{height:32px}
 }
 @media(max-width:560px){
   .nav,.nav.scrolled{padding:1rem 1.25rem}
