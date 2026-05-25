@@ -233,21 +233,7 @@ h1,h2,h3,h4{
   background:var(--bg)
 }
 /* Угловые декорации — фирменный premium-приём */
-.hero-corner{
-  position:absolute;width:54px;height:54px;z-index:4;pointer-events:none;
-  opacity:0;animation:fadeIn 1.2s var(--ease) forwards 1.2s
-}
-.hero-corner.tl{top:6rem;left:2.5rem;border-top:1px solid var(--line-strong);border-left:1px solid var(--line-strong)}
-.hero-corner.tr{top:6rem;right:2.5rem;border-top:1px solid var(--line-strong);border-right:1px solid var(--line-strong)}
-.hero-corner.bl{bottom:6rem;left:2.5rem;border-bottom:1px solid var(--line-strong);border-left:1px solid var(--line-strong)}
-.hero-corner.br{bottom:6rem;right:2.5rem;border-bottom:1px solid var(--line-strong);border-right:1px solid var(--line-strong)}
-@media(max-width:768px){
-  .hero-corner{width:36px;height:36px}
-  .hero-corner.tl,.hero-corner.tr{top:5rem}
-  .hero-corner.bl,.hero-corner.br{bottom:5rem}
-  .hero-corner.tl,.hero-corner.bl{left:1.25rem}
-  .hero-corner.tr,.hero-corner.br{right:1.25rem}
-}
+
 .hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
 .hero-bg::before{
   content:'';position:absolute;inset:0;
@@ -400,9 +386,9 @@ h1,h2,h3,h4{
 }
 
 /* ═══ REVEAL ═══ */
-.rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .45s var(--ease),transform .45s var(--ease)}
 .rv.in{opacity:1;transform:none}
-.rv-d1{transition-delay:.08s}.rv-d2{transition-delay:.16s}.rv-d3{transition-delay:.24s}.rv-d4{transition-delay:.32s}
+.rv-d1{transition-delay:.05s}.rv-d2{transition-delay:.1s}.rv-d3{transition-delay:.15s}.rv-d4{transition-delay:.2s}
 
 /* ═══ CITIES ═══ */
 .cities{background:var(--bg);position:relative}
@@ -755,8 +741,7 @@ h1,h2,h3,h4{
 .menu-card.featured{grid-column:span 2}
 .menu-card.featured .menu-img{aspect-ratio:16/7}
 .menu-card.featured .menu-name{font-size:1.55rem}
-.menu-mark{position:absolute;top:.55rem;right:1.05rem;z-index:3;font-family:var(--serif);font-size:clamp(2.6rem,5vw,3.8rem);font-weight:700;color:rgba(196,146,98,.42);line-height:1;letter-spacing:-.02em;pointer-events:none;text-shadow:0 2px 12px rgba(0,0,0,.65)}
-.menu-card.featured .menu-mark{font-size:clamp(3.6rem,7vw,5.4rem);top:.7rem;right:1.4rem}
+.menu-mark{display:none}
 .menu-card{
   background:var(--bg-1);border:1px solid var(--hair);
   position:relative;overflow:hidden;cursor:pointer;
@@ -834,71 +819,6 @@ h1,h2,h3,h4{
   .menu-card.featured{grid-column:span 1}
   .menu-card.featured .menu-img{aspect-ratio:4/3}
   .menu-grid>:last-child{max-width:none}
-}
-
-/* ═══ FEATURES ═══ */
-.feat{background:var(--bg-1);position:relative}
-.feat-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem
-}
-.feat-card{
-  background:var(--bg);padding:2.4rem 1.9rem 1.9rem;
-  position:relative;overflow:hidden;cursor:pointer;
-  display:flex;flex-direction:column;align-items:flex-start;gap:1rem;
-  text-align:left;color:var(--text);width:100%;
-  border:1px solid var(--line);
-  transition:transform .5s var(--ease),border-color .35s var(--ease),background .4s var(--ease)
-}
-.feat-card.featured{grid-column:span 2;padding:2.6rem 2.2rem 2.1rem}
-.feat-card.featured .feat-name{font-size:1.05rem}
-.feat-card.featured .feat-desc{font-size:.92rem;max-width:38rem}
-.feat-card::after{
-  content:'';position:absolute;left:0;right:0;bottom:0;height:1px;
-  background:var(--gold);transform:scaleX(0);transform-origin:left;
-  transition:transform .55s var(--ease)
-}
-.feat-card:hover{background:var(--bg-2);border-color:var(--line-strong);transform:translateY(-4px)}
-.feat-card:hover::after{transform:scaleX(1)}
-.feat-card:hover .feat-mark{color:rgba(196,146,98,.6);transform:translate(-2px,-1px)}
-.feat-card:hover .feat-arrow{opacity:1;transform:translateX(0)}
-.feat-card:hover .feat-icon{transform:translateY(-3px);color:var(--gold)}
-.feat-mark{
-  position:absolute;top:.55rem;right:1.1rem;z-index:2;pointer-events:none;
-  font-family:var(--serif);font-size:clamp(2.6rem,4.6vw,3.6rem);font-weight:200;
-  color:rgba(196,146,98,.22);line-height:1;letter-spacing:-.02em;
-  transition:color .4s var(--ease),transform .4s var(--ease)
-}
-.feat-card.featured .feat-mark{font-size:clamp(3.4rem,6vw,4.8rem);top:.6rem;right:1.4rem}
-.feat-icon{
-  width:42px;height:42px;color:var(--gold-soft);
-  transition:transform .4s var(--ease),color .4s var(--ease);
-  position:relative;z-index:1
-}
-.feat-icon svg{width:100%;height:100%;stroke:currentColor}
-.feat-name{
-  font-family:var(--serif);font-size:.95rem;font-weight:500;
-  letter-spacing:.2em;text-transform:uppercase;color:var(--text);position:relative;z-index:1
-}
-.feat-desc{font-size:.86rem;color:var(--text-soft);line-height:1.65;flex:1;position:relative;z-index:1}
-.feat-more{
-  display:flex;align-items:center;gap:.55rem;margin-top:.4rem;padding-top:1rem;
-  border-top:1px solid var(--hair);width:100%;
-  font-family:var(--serif);font-size:.58rem;font-weight:500;
-  letter-spacing:.28em;text-transform:uppercase;color:var(--gold);
-  position:relative;z-index:1
-}
-.feat-arrow{
-  display:inline-block;
-  opacity:.5;transform:translateX(-3px);
-  transition:all .35s var(--ease)
-}
-@media(max-width:1024px){
-  .feat-grid{grid-template-columns:repeat(2,1fr)}
-  .feat-card.featured{grid-column:span 2}
-}
-@media(max-width:560px){
-  .feat-grid{grid-template-columns:1fr}
-  .feat-card.featured{grid-column:span 1}
 }
 
 /* ═══ CONTACT STRIP ═══ */
@@ -1154,7 +1074,7 @@ h1,h2,h3,h4{
   button,a.btn,.cs-link,.nav-book,.fab-book{min-height:44px}
 }
 @media(hover:none) and (pointer:coarse){
-  .city-card:hover,.menu-card:hover,.feat-card:hover,.kar-img:hover,.geo-card:hover{transform:none}
+  .city-card:hover,.menu-card:hover,.kar-img:hover,.geo-card:hover{transform:none}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
@@ -1172,10 +1092,13 @@ html,body{max-width:100vw;overflow-x:hidden}
 
 <!-- ═══ NAV ═══ -->
 <nav class="nav" id="nav">
+  <a href="#" class="nav-logo" aria-label="Барвиха — наверх" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">
+    <img src="logo.png" alt="Барвиха Лаунж" class="nav-logo-img"/>
+  </a>
   <ul class="nav-menu">
     <li><a href="#cities">Заведения</a></li>
     <li><a href="#atmosphere">Атмосфера</a></li>
-    <li><a href="#karaoke">Караоке</a></li>
+    <li><a href="karaoke.html">Караоке</a></li>
     <li><a href="#menu">Меню</a></li>
     <li><a href="#" onclick="event.preventDefault();openFaq()">Вопросы</a></li>
   </ul>
@@ -1209,10 +1132,6 @@ html,body{max-width:100vw;overflow-x:hidden}
   <div class="hero-bg"></div>
   <div class="hero-noise"></div>
   <canvas id="heroSmoke"></canvas>
-  <span class="hero-corner tl" aria-hidden="true"></span>
-  <span class="hero-corner tr" aria-hidden="true"></span>
-  <span class="hero-corner bl" aria-hidden="true"></span>
-  <span class="hero-corner br" aria-hidden="true"></span>
 
   <div class="hero-inner">
     <span class="hero-eyebrow">Премиум-лаунж · с 2017</span>
@@ -1384,37 +1303,6 @@ html,body{max-width:100vw;overflow-x:hidden}
   </div>
 </section>
 
-<!-- ═══ KARAOKE ═══ -->
-<section class="section kar" id="karaoke" data-divider>
-  <div class="wrap">
-    <div class="kar-grid">
-      <div class="kar-img kar-visual rv">
-        <span class="corner-tl" aria-hidden="true"></span>
-        <span class="corner-br" aria-hidden="true"></span>
-        <span class="kar-img-tag">Karaoke · Live</span>
-        <div class="kar-rays" aria-hidden="true"></div>
-        <div class="kar-disco" aria-hidden="true"></div>
-        <span class="kar-big">Караоке</span>
-      </div>
-      <div class="kar-txt rv rv-d1">
-        <span class="eyebrow">Авторский формат сети</span>
-        <h2 class="h-1">Караоке<br>в Барвихе</h2>
-        <p>Шесть заведений сети с приватной сценой и резидентным звукорежиссёром. Каталог из десяти тысяч треков, профессиональный звук, фактурные диваны и игра света от диско-шара.</p>
-        <div class="kar-points">
-          <div class="kar-pt"><span class="kp-n">01</span><span>Профессиональный звук и сценический свет</span></div>
-          <div class="kar-pt"><span class="kp-n">02</span><span>Бэк-вокал и звукорежиссёр на каждом вечере</span></div>
-          <div class="kar-pt"><span class="kp-n">03</span><span>10 000+ треков · добавляем по запросу</span></div>
-          <div class="kar-pt"><span class="kp-n">04</span><span>Минимум три часа · депозит включает кухню и бар</span></div>
-        </div>
-        <a href="karaoke.html" class="btn btn-line btn-arrow">
-          Все заведения с караоке
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ═══ MENU PREVIEW ═══ -->
 <section class="section menu" id="menu" data-divider>
   <div class="wrap">
@@ -1487,7 +1375,7 @@ html,body{max-width:100vw;overflow-x:hidden}
     <div class="menu-modal-hd">
       <div class="menu-modal-l"><span>Меню Барвиха</span></div>
       <div class="menu-modal-r">
-        <a class="menu-modal-link" id="menuModalExt" href="https://barvihamenu-production.up.railway.app/" target="_blank" rel="noopener">Открыть отдельно ↗</a>
+        <a class="menu-modal-link" id="menuModalExt" href="http://localhost:3000/ru/mendeleevskaia" target="_blank" rel="noopener">Открыть отдельно ↗</a>
         <button class="menu-modal-close" onclick="closeMenuModal()" aria-label="Закрыть">×</button>
       </div>
     </div>
@@ -1497,70 +1385,6 @@ html,body{max-width:100vw;overflow-x:hidden}
     </div>
   </div>
 </div>
-
-<!-- ═══ FEATURES ═══ -->
-<section class="section feat" id="features" data-divider>
-  <div class="wrap">
-    <div class="section-hd">
-      <div class="section-hd-l rv">
-        <span class="eyebrow">Всё что нужно</span>
-        <h2 class="h-1">Для идеального<br>вечера</h2>
-      </div>
-      <p class="section-hd-r rv rv-d1">Каждая деталь продумана. Подберите формат и узнайте, что внутри.</p>
-    </div>
-    <div class="feat-grid">
-
-      <button class="feat-card featured rv" onclick="openFeat('hookahs')">
-        <span class="feat-mark">01</span>
-        <div class="feat-icon"><svg viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="10" rx="10" ry="4" stroke="currentColor" stroke-width="1.2"/><rect x="21" y="14" width="6" height="12" stroke="currentColor" stroke-width="1.2"/><ellipse cx="24" cy="32" rx="9" ry="7" stroke="currentColor" stroke-width="1.2"/></svg></div>
-        <div class="feat-name">Кальяны</div>
-        <p class="feat-desc">Электрочаша без угля и горечи. Премиальные колбы Wookah и Egeglas, табаки WTO, Tangiers, Darkside. К каждому столу — персональный мастер, кастомный микс под вкус гостя.</p>
-        <span class="feat-more">Подробнее <span class="feat-arrow">→</span></span>
-      </button>
-
-      <button class="feat-card rv rv-d1" onclick="openFeat('drinks')">
-        <span class="feat-mark">02</span>
-        <div class="feat-icon"><svg viewBox="0 0 48 48" fill="none"><path d="M10 10 L24 36 L38 10 Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><line x1="24" y1="36" x2="24" y2="42" stroke="currentColor" stroke-width="1.2"/><line x1="16" y1="42" x2="32" y2="42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-        <div class="feat-name">Напитки</div>
-        <p class="feat-desc">Авторские коктейли, первоклассный алкоголь, элитный китайский чай и лимонады собственного приготовления.</p>
-        <span class="feat-more">Подробнее <span class="feat-arrow">→</span></span>
-      </button>
-
-      <button class="feat-card rv rv-d2" onclick="openFeat('food')">
-        <span class="feat-mark">03</span>
-        <div class="feat-icon"><svg viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="32" rx="16" ry="5" stroke="currentColor" stroke-width="1.2"/><path d="M8 32 Q8 16 24 16 Q40 16 40 32" stroke="currentColor" stroke-width="1.2" fill="none"/><circle cx="24" cy="16" r="3" stroke="currentColor" stroke-width="1.2"/></svg></div>
-        <div class="feat-name">Кухня</div>
-        <p class="feat-desc">Авторская европейская кухня шеф-повара, десерты и натуральное вяленое мясо.</p>
-        <span class="feat-more">Подробнее <span class="feat-arrow">→</span></span>
-      </button>
-
-      <button class="feat-card rv" onclick="openFeat('vip')">
-        <span class="feat-mark">04</span>
-        <div class="feat-icon"><svg viewBox="0 0 48 48" fill="none"><path d="M8 22 L24 10 L40 22 L40 40 L8 40 Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M18 40 L18 28 L30 28 L30 40" stroke="currentColor" stroke-width="1.2"/></svg></div>
-        <div class="feat-name">VIP-комнаты</div>
-        <p class="feat-desc">Приватные комнаты на 8–20 гостей. Свой вход, мастер и сервис — идеально для праздника.</p>
-        <span class="feat-more">Подробнее <span class="feat-arrow">→</span></span>
-      </button>
-
-      <button class="feat-card rv rv-d1" onclick="openFeat('karaoke')">
-        <span class="feat-mark">05</span>
-        <div class="feat-icon"><svg viewBox="0 0 48 48" fill="none"><rect x="18" y="6" width="12" height="20" rx="6" stroke="currentColor" stroke-width="1.2"/><path d="M12 24c0 6.627 5.373 12 12 12s12-5.373 12-12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><line x1="24" y1="36" x2="24" y2="42" stroke="currentColor" stroke-width="1.2"/></svg></div>
-        <div class="feat-name">Караоке</div>
-        <p class="feat-desc">Приватные комнаты с профессиональным звуком и 10 000+ треков. Сцена без посторонних глаз.</p>
-        <span class="feat-more">Подробнее <span class="feat-arrow">→</span></span>
-      </button>
-
-      <button class="feat-card rv rv-d2" onclick="openFeat('streams')">
-        <span class="feat-mark">06</span>
-        <div class="feat-icon"><svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="24" rx="2" stroke="currentColor" stroke-width="1.2"/><line x1="24" y1="34" x2="24" y2="40" stroke="currentColor" stroke-width="1.2"/><line x1="16" y1="40" x2="32" y2="40" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="24" cy="22" r="6" stroke="currentColor" stroke-width="1.2"/></svg></div>
-        <div class="feat-name">Трансляции</div>
-        <p class="feat-desc">Огромные проекторы для прямых трансляций главных спортивных событий.</p>
-        <span class="feat-more">Подробнее <span class="feat-arrow">→</span></span>
-      </button>
-
-    </div>
-  </div>
-</section>
 
 <!-- ═══ CONTACT STRIP ═══ -->
 <section class="cs" id="contact" data-divider>
@@ -1687,18 +1511,6 @@ html,body{max-width:100vw;overflow-x:hidden}
       </details>
     </div>
     <a href="https://t.me/BARVIKHAGROUP" target="_blank" class="faq-foot-cta" data-src="faq">Связаться с менеджером →</a>
-  </div>
-</div>
-
-<!-- ═══ FEAT MODAL ═══ -->
-<div class="modal" id="featModal" onclick="if(event.target===this)closeFeat()">
-  <div class="modal-wrap">
-    <button class="modal-close" onclick="closeFeat()" aria-label="Закрыть">×</button>
-    <span class="modal-tag" id="fmTag"></span>
-    <h2 class="modal-title" id="fmTitle"></h2>
-    <p class="modal-sub" id="fmDesc"></p>
-    <div class="fm-points" id="fmPoints"></div>
-    <button class="fm-cta" id="fmCta"></button>
   </div>
 </div>
 
@@ -1890,29 +1702,6 @@ document.querySelectorAll('[data-divider]').forEach(el=>dividerObs.observe(el));
   io.observe(wrap);
 })();
 
-// ═══ FEAT MODAL ═══
-const FEATS={
-  drinks:{tag:'Барная карта',title:'Напитки',desc:'Коктейльная карта, разработанная совместно с приглашёнными барменами. Каждая позиция — отдельная история вкуса.',points:['Авторские коктейли — 10+ позиций','Безалкогольные версии всех хитов','Элитный китайский улун и белый чай','Первоклассный крепкий алкоголь','Локальные крафтовые позиции','Сезонные лимитированные напитки'],cta:'Смотреть меню',href:'location.html'},
-  hookahs:{tag:'Электрочаша',title:'Кальяны',desc:'Электрическая чаша заменяет уголь: стабильная температура, нет горечи, нет запаха горения. К каждому столу — персональный мастер.',points:['60+ авторских табачных миксов','Колбы Wookah и Egeglas — премиум','WTO, Darkside, Tangiers, Daily Hookah','Стабильная температура без угля','Персональный кальянный мастер','Кастомный микс под вкус гостя'],cta:'Смотреть меню',href:'location.html'},
-  food:{tag:'Авторская кухня',title:'Европейская кухня',desc:'Меню шеф-повара разработано так, чтобы не перебивать вкус кальяна, но быть полноценным ужином. Кухня работает до 02:00.',points:['Закуски и снеки для кальяна','Горячие блюда от шеф-повара','Десерты и авторское мороженое','Натуральное вяленое мясо','Вегетарианские и безглютеновые опции','Сезонное обновление меню'],cta:'Смотреть меню',href:'location.html'},
-  vip:{tag:'Приватные комнаты',title:'VIP',desc:'Закрытые комнаты для больших компаний. Свой вход, свой мастер, своя атмосфера. Идеально для праздников и корпоративов.',points:['Вместимость 8–20 человек','Приватный вход и отдельная зона','Персональный сервис и мастер','Система для трансляций внутри','Дни рождения и корпоративы','Гибкое меню под мероприятие'],cta:'Забронировать VIP',href:'#bk'},
-  streams:{tag:'Прямые эфиры',title:'Трансляции',desc:'Огромные проекторы для прямых трансляций главных спортивных событий планеты. Кальян и матч — это уже традиция.',points:['Все матчи РПЛ и Лиги Чемпионов','UFC и профессиональный бокс','Формула-1 и MotoGP','Хоккей НХЛ и КХЛ','Тематические вечера по событиям','Атмосфера стадиона без толпы'],cta:'Забронировать стол',href:'#bk'},
-  karaoke:{tag:'Живая сцена',title:'Karaoke & Live',desc:'Приватные комнаты с профессиональным звуком и освещением. Тысячи треков, персональный саундчек и атмосфера настоящего выступления — без посторонних глаз.',points:['Приватные комнаты на 4–20 человек','10 000+ треков на русском и английском','Профессиональный звук и микрофоны','Цветовое сценическое освещение','Запись выступления по желанию','Доступно в большинстве заведений сети'],cta:'Забронировать комнату',href:'#bk'}
-};
-function openFeat(key){
-  const f=FEATS[key];if(!f)return;
-  document.getElementById('fmTag').textContent=f.tag;
-  document.getElementById('fmTitle').textContent=f.title;
-  document.getElementById('fmDesc').textContent=f.desc;
-  document.getElementById('fmPoints').innerHTML=f.points.map(p=>`<div class="fm-point">${p}</div>`).join('');
-  const btn=document.getElementById('fmCta');
-  btn.textContent=f.cta;
-  btn.onclick=()=>{closeFeat();if(f.href==='#bk'){openBooking()}else if(f.href.startsWith('#')){document.querySelector(f.href).scrollIntoView({behavior:'smooth'})}else{location.href=f.href}};
-  document.getElementById('featModal').classList.add('on');
-  document.body.style.overflow='hidden';
-}
-function closeFeat(){document.getElementById('featModal').classList.remove('on');document.body.style.overflow=''}
-
 // ═══ FAQ MODAL ═══
 function openFaq(){const m=document.getElementById('faqModal');if(!m)return;m.classList.add('on');document.body.style.overflow='hidden'}
 function closeFaq(){const m=document.getElementById('faqModal');if(!m)return;m.classList.remove('on');document.body.style.overflow='';m.querySelectorAll('details[open]').forEach(d=>d.removeAttribute('open'))}
@@ -1937,7 +1726,7 @@ function openBooking(){
 // Esc — закрывает наши модалки (виджет restoplace закрывается сам)
 document.addEventListener('keydown',e=>{
   if(e.key!=='Escape')return;
-  closeFaq();closeFeat();
+  closeFaq();
 });
 
 // ═══ ГЕОЛОКАЦИЯ → 3 ближайших заведения ═══
@@ -2100,9 +1889,10 @@ async function findNearest(){
 <script async src="https://app.restoplace.cc/widget.js?h=f5e57e4c969ae48c720e"></script>
 
 <script>
-// ═══ MENU MODAL — открывает Railway-меню в iframe-окошке ═══
+// ═══ MENU MODAL — открывает Next-app меню (Барвиха Lounge) в iframe-окошке ═══
 (function(){
-  const MENU_BASE='https://barvihamenu-production.up.railway.app/';
+  // Локально — :3000. На проде заменить на свой домен.
+  const MENU_BASE='http://localhost:3000/ru/mendeleevskaia';
   function openMenuModal(){
     const m=document.getElementById('menuModal');if(!m)return;
     const f=document.getElementById('menuModalFrame');
